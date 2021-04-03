@@ -1,0 +1,23 @@
+.. title: 2.6 is now 3.0
+.. slug: 2.6_is_now_3.0
+.. date: 2010-01-20 16:57:45
+.. tags: miro, work
+
+On the dev conference call today we talked about how many things have
+been fixed, changed, implemented, et al in the Miro 2.6 development
+cycle. We decided this isn't a .1 improvement--it should get it's own
+major version number.
+
+As such, we're changing the version number for the next version of Miro
+from 2.6 to 3.0.
+
+The effects of this are pretty small--it's just a name change. However,
+our Bugzilla Roadmap urls are specific to a version.
+
+Instead of using:
+
+http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=2.6
+
+Use this:
+
+http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0

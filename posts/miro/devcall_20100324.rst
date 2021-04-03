@@ -1,0 +1,61 @@
+.. title: Dev call 3/24/2010 minutes
+.. slug: devcall_20100324
+.. date: 2010-03-24 14:19:49
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0>`__)
+(was Miro 2.6)
+
+* release today or tomorrow
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* coming along--changed dev schedule to end of april
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* coming along
+
+Luc:
+
+* worked on video conversion project
+* wrote about it in the wiki at
+  https://develop.participatoryculture.org/trac/democracy/wiki/MiroVideoConversions
+* started implementing bits of it in a separate branch
+* looked over Miro Video Converter code
+* conversion project might land in 3.1
+
+Paul:
+
+* continued working on Miro Community 1.0 bugs
+* working on Twitter and Facebook support
+
+Ben:
+
+* worked through Miro 3.1 bugs
+* did some work on VLC problems, but is of the opinion we should switch
+  to gstreamer
+
+Will:
+
+* did the last set of Miro 3.0 release builds
+* went to LibrePlanet; talked to a lot of people about stuff
+* implemented Language preference in master branch
+
+Janet:
+
+* tested Miro 3.0 builds, Miro Video Converter, and Miro Community
+
+**bugzilla**
+
+* 9 bugs/feature-requests created
+* 1 bugs marked WORKSFORME
+* 2 bugs marked INVALID
+* 2 bugs marked DUPLICATE
+* 2 bugs marked WONTFIX
+* 3 bugs marked FIXED

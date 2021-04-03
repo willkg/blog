@@ -1,0 +1,77 @@
+.. title: Python Miro Community status: September 23rd, 2011
+.. slug: status_20110923
+.. date: 2011-09-23 09:51:05
+.. tags: pmc, dev, mirocommunity, python
+
+
+What is Python Miro Community
+=============================
+
+`Python Miro Community <http://python.mirocommunity.org>`_ is an index
+of Python-related videos on the Internet.  For the most part, it's a
+collection of videos from Python-related conferences.  Saw a session you
+liked and want to share it?  It's likely you can find it and share it
+with Python Miro Community.
+
+
+Status
+======
+
+The last month and a half have been pretty banal.  There have been
+several conferences (`DjangoCon 2011 <http://djangocon.us/>`_,
+`PyConAU 2011 <http://pycon-au.org/>`_, ...), but I haven't had time to pull
+in video, yet.  I started to look at things earlier this week and was met
+with a bunch of Miro Community problems.
+
+First, looks like either Blip.tv did something weird with their feeds or
+Miro Community decided to stop filtering duplicates, so there are currently
+over 500 videos in the review queue many of which are on the site already.
+I have no good way to figure out which are duplicates, though, so I'm going
+to write a script to make that possible/easier.
+
+Second, videos from PyCon 2011 and PyOhio 2011 that had been "universal
+subtitle-ized" were exceeding the width allotted to the video.  I've fixed
+this before, but I didn't remember how I did it and I decided this time
+around that I'd just change the layout of the page instead.  Now the video
+can take up as much width as it wants (which is good for other reasons, too)
+and I nixed bits of the page that Python Miro Community doesn't use.
+
+Irksome that things keep breaking, but that's the way it goes.  I'm
+sorry I didn't catch the latter one sooner.
+
+
+Universal Subtitles status
+==========================
+
+Carl was curious as to how many videos had been transcribed of the two 
+conferences we've added Universal Subtitles support for.  I wrote a
+script to go through the PyCon 2011 videos and PyOhio 2011 videos and
+figure out how many of them have been transcribed and translated with
+`Universal Subtitles <http://universalsubtitles.org>`_.
+
+:PyCon 2011: 3 videos fully transcribed, 1 video partially transcribed, some minor translation work
+:PyOhio 2011: 3 videos partially transcribed
+
+I'm disappointed.  It was a lot of work to get those videos working with
+Universal Subtitles.  It sucked that it took me so long to post them and it's
+probably the case we lost some of the energy because of that.  But I was
+hoping we'd have better results anyways.
+
+Carl wants to try one more time with DjangoCon 2011 and this time be more
+proactive and email the presenters.  If that doesn't work, then I'm not
+sure what we can do.  I can't spend the time to transcribe all the talks.
+Neither can Carl.  We could pay someone to do it, but that costs money and
+I don't think anyone is interested in paying for that.  Thus if we con't
+share the workload as a community, I'm probably going to ditch the
+Universal Subtitles support for now because it's a lot of work to put
+together.  Maybe we can try it again some day.
+
+
+PMC in GitHub
+=============
+
+I'm putting scripts, template fixes, and other Python Miro Community related
+things in Github: http://github.com/willkg/pmc
+
+I'm not sure how interesting it is outside of PMC, but it's there if you're
+interested.

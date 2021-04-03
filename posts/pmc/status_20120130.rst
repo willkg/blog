@@ -1,0 +1,51 @@
+.. title: Python Miro Community status: January 30th, 2012
+.. slug: status_20120130
+.. date: 2012-01-30 21:03:40
+.. tags: pmc, dev, mirocommunity, python
+
+What is Python Miro Community
+=============================
+
+`Python Miro Community <http://python.mirocommunity.org>`_ is an index
+of Python-related videos on the Internet.  For the most part, it's a
+collection of videos from Python-related conferences.  Saw a session you
+liked and want to share it?  It's likely you can find it and share it
+with Python Miro Community.
+
+
+Status
+======
+
+Kuma sent me an email pointing out that the download url for one of the
+PyOhio 2010 videos was kicking up an HTTP 404. We have this problem 
+semi-regularly with the blip.tv urls. A while back I wrote a script to go
+through a category of videos on Python Miro Community and verify that the
+urls were good.
+
+I ran the script on the PyOhio 2010 videos and 16 of 20 of them had bad
+download urls. That sucks.
+
+Between moving things around and changing their interface in a way that makes
+our uses for blip.tv painful, I'd like conferences to stop using blip.tv.
+Maybe YouTube is a better venue.
+
+Amongst other things, Universal Subtitles works better with videos posted on
+YouTube than blip.tv. In fact, if we switched to YouTube, it'd make it _so_
+much easier to add Universal Subtitles support and I wouldn't have to use
+Ogg Vorbis which doesn't work in Safari or on Apple devices.
+
+That's all I have to say about that.
+
+I haven't worked through my queue of conferences, yet. The queue of 
+oustanding tasks is maintained in the
+`PMC GitHub issue tracker <https://github.com/willkg/pmc/issues>`_.
+I'm pushing to catch up with things so that it's in a better state for
+`Pycon 2012 <https://us.pycon.org/2012/>`_.
+
+I'm going to PyCon 2012, though this time as a Mozillian. Looking forward to Erik's talks on 
+`Parsing horrible things with Python <https://us.pycon.org/2012/schedule/presentation/468/>`_
+and
+`Speedily practical large-scale tests <https://us.pycon.org/2012/schedule/presentation/473/>`_,
+Asheesh and Jessica's talk on `Diversity in practice: How the Boston Python
+Meetup grew to 1000 people and over 15% women <https://us.pycon.org/2012/schedule/presentation/168/>`_, Karen's talk on `Improving Documentation with "Beginner's Mind" (or: Fixing the Django Tutorial)
+<https://us.pycon.org/2012/schedule/presentation/422/>`_, and others, too.

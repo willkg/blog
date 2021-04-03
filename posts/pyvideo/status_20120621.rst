@@ -1,0 +1,54 @@
+.. title: pyvideo status: June 21st, 2012
+.. slug: status_20120621
+.. date: 2012-06-21 09:55:34
+.. tags: dev, python, richard, pyvideo
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+videos on the Internet. For the most part, it's a collection of videos
+from Python-related conferences. Saw a session you liked and want
+to share it?  It's likely you can find it, watch it, and share it
+with pyvideo.org.
+
+
+Status
+======
+
+It's been a few months since my last status report. Two things have
+happened and one thing hasn't.
+
+1. `richard <https://github.com/willkg/richard>`_ development progresses
+   and it's coming along nicely. There are a few more things I really
+   want before I think it's got a critical mass. Then I think we should
+   start doing releases.
+
+2. `steve <https://github.com/willkg/steve>`_ development started and
+   I'm adding functionality as I need it for adding conferences in
+   `the queue <http://pyvideo.org/suggestions/>`_.
+
+   Yes! We have a conferences-to-add queue in pyvideo now. And yes,
+   the queue is long. steve makes it possible to add a conference of
+   videos without doing them one-by-one.
+
+   Also, if you have a conference you don't see on the site, please
+   submit a suggestion to add it. There's a "Suggestion" link in
+   the navbar.
+
+So now for the thing that hasn't happened.
+
+1. Universal Subtitles (now renamed Amara) stopped working with blip.tv
+   videos a couple of months ago. I had hardcoded the embed code for
+   all the blip.tv videos on pyvideo.org. Because of this, I have to
+   go un-hardcode the embed code in order to get the videos to work
+   on the site at all, and it's possible we'll lose all the work we did
+   subtitling these videos.
+
+This really bums me out, but I'm not really sure what to do about it.
+
+That's where things are at. I essentially took a hiatus from curating
+pyvideo.org while we implemented and fixed a bunch of stuff in richard
+and while I set up the groundwork for steve. Those two are in a better
+position now, so I'll be able to more easily go back to curating
+pyvideo.org and fixing the various issues.

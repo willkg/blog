@@ -1,0 +1,24 @@
+.. title: 5/25/2005: pyblosxom development status
+.. slug: 2005_05_25
+.. date: 2005-05-25 13:06:08
+.. tags: python, dev, pyblosxom
+
+I'm going to try to fix a couple of issues before releasing
+PyBlosxom 1.2.1 and contributed plugins pack 1.2.2.  The issues
+are as follows:
+
+* w3cdate plugin doesn't expand "w3cdate" variable in head or foot 
+  templates
+  `(w3cdate variable details) <http://article.gmane.org/gmane.comp.web.pyblosxom.user/1170>`_
+* comments plugin borks in unusual circumstances
+  `(comments borks details) <http://article.gmane.org/gmane.comp.web.pyblosxom.user/1169>`_
+* comments plugin requires the email field
+  `(comments email field) <http://article.gmane.org/gmane.comp.web.pyblosxom.user/1157>`_
+
+I'm working on PyBlosxom Manual changes as well.  I think it's good to add
+a chapter on comments and I need to flesh out the chapter on syndication, too.
+If anyone wants to help with the PyBlosxom Manual, let me know--I'm happy
+to pass off some of the writing/collection/verification work to other people.
+
+If you find any problems with PyBlosxom 1.2 or the contributed plugins pack--let
+me know those issues as well.

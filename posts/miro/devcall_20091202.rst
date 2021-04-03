@@ -1,0 +1,60 @@
+.. title: Dev call 12/02/2009 minutes
+.. slug: devcall_20091202
+.. date: 2009-12-02 11:19:44
+.. tags: miro, work
+
+**minutes**
+
+2.5.4 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=2.5.4>`__)
+
+* Will fixed an additional bug on Monday that Janet tested and it looks
+  fine.
+* Will is going to build builds today. Then we'll test them and
+  probably do a release Thursday morning and update the appcast file on
+  Friday.
+
+2.6 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=2.6>`__)
+
+* subtitle work is almost done
+* menus need to be refactored to finish up subtitle work
+* lots of little bugs to work on left--we could use the help if anyone
+  is interested in contributing!
+
+Paul
+
+* spent the week working on bugs in Miro Community
+* started working on custom templates allowing admins to change the way
+  their site works
+* ten or so bugs left on the 0.9 roadmap to do
+* going to triage the bugs in order to push out a 0.9 sooner
+
+Janet
+
+* working on finding an automated ui tester
+* worked on Miro Community testing, too
+
+Will
+
+* did a bunch of fixes
+* getting ready to push out a 2.5.4
+* plans to work on refactoring the menus next
+
+Ben
+
+* implemented subtitle support on linux
+* worked on osx bug fixes
+* started looking into VLC freeze issues
+
+**bugzilla**
+
+* 7 bugs/feature-requests created
+* 2 bugs marked DUPLICATE
+* 6 bugs marked FIXED
+* 1 bugs marked WORKSFORME
+* 2 bugs marked INVALID
+
+**notes**
+
+I wasn't on last week's devcall. Thus, no notes.

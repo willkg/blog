@@ -1,0 +1,29 @@
+.. title: PyOhio 2011 videos being posted
+.. slug: status_20110803
+.. date: 2011-08-03 14:41:32
+.. tags: pmc, dev, miro, mirocommunity, python, work
+
+
+`PyOhio 2011 <http://pyohio.org/>`_ happened last weekend.  I'm
+currently working with Carl at `Next Day Video <http://www.nextdayvideo.com/>`_
+to get the videos they're posting to the blip.tv feed into 
+`Python Miro Community <http://python.mirocommunity.org/>`_.
+
+I'm using a similar process to what we used with PyCon 2011 videos, but
+we don't have to figure it out on the fly this time around, so things
+are going much smoother.
+
+As of now, there are three videos posted with more coming as they're
+uploaded and work their way through the workflow.
+
+* `Data-Transfer Objects are a Disease.  Meet the cure.
+  <http://python.mirocommunity.org/video/4373/pyohio-2011-data-transfer-obje>`_
+* `Using Fabric - from a sysadmin's perspective
+  <http://python.mirocommunity.org/video/4372/pyohio-2011-using-fabric-from->`_
+* `Aspen: A Next-generation Web Framework
+  <http://python.mirocommunity.org/video/4371/pyohio-2011-aspen-a-next-gener>`_
+
+If you have some spare time, please consider helping out with subtitling
+the videos.  Whenever a video is subtitled, it becomes accessible to a
+much wider audience.  If you help out with subtitling, please let me
+know so that I can thank you.

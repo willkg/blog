@@ -1,0 +1,43 @@
+.. title: Dev call 10/21/2009 minutes
+.. slug: devcall_20091021
+.. date: 2009-10-21 11:23:35
+.. tags: miro, work
+
+**minutes**
+
+Nick and Luc weren't on the call. Janet and Will had colds. Ben's side
+of the call had some weird 15 second delay. That made it a dicey call
+that we ended on IRC.
+
+Minutes for this morning's call:
+
+Paul:
+
+* Working on Miro Community finishing up version 0.8.
+
+Ben:
+
+* Worked on a lot of bugs, especially 12101. Checked in a few fixes
+  into master which look pretty good, but need testing.
+* Worked on a bunch of other bugs.
+* Worked on 12229 to allow for distribution of RSS and content on a
+  DVD.
+
+Will:
+
+* Worked on extracting binary kit stuff from the repository.
+* Planning to work on Karmic packages for 2.5.3.
+
+Janet:
+
+* Sick.
+* Hoping to get to testing the changes Ben made for 12101.
+* Spent some time testing Miro Community and is getting geared up to
+  start testing Luc's subtitle code.
+
+**bugzilla**
+
+* 14 bugs created
+* 2 bugs marked FIXED
+* 1 bug marked DUPLICATE
+* 1 bug marked INVALID

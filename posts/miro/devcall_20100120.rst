@@ -1,0 +1,56 @@
+.. title: Dev call 1/20/2010 minutes
+.. slug: devcall_20100120
+.. date: 2010-01-20 11:12:25
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0>`__)
+(was Miro 2.6)
+
+* went through the last P1 bugs one by one
+* need more outside testing
+* shooting for a release candidate next week
+* renaming to Miro 3.0
+
+Miro Community 0.9 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=0.9>`__)
+
+* 0.9 will get released monday (new themes, new awesome, ...)
+* almost there.... doing bug fixes now
+
+Janet
+
+* spent time regression testing on Windows and OSX
+* worked on subtitle support tests
+* worked on eggplant tests
+* planning to work on Miro Community 0.9 testing for the rest of the
+  week
+
+Ben
+
+* worked on getting external subtitle files working with vlc
+* working on other vlc quirkiness
+* worked on some other stuff
+
+Will
+
+* synced translations, finished up dependency upgrades on Windows,
+  fixed gst_extractor, fixed moviedata_util, fixed a bunch of little
+  bugs, added tests, peer reviewed code, updated copyright dates,
+  upgraded to libtorrent 0.14.8, did some bug triage, and implemented
+  most of the item edit dialog.
+* has a week or two of work left on Miro 3.0
+
+Paul
+
+* worked on the last feature bits for 0.9
+* working on bug fixes now--almost done
+
+**bugzilla**
+
+* 26 bugs/feature-requests created
+* 21 bugs marked FIXED
+* 5 bugs marked WORKSFORME
+* 3 bugs marked INVALID

@@ -1,0 +1,51 @@
+.. title: pyvideo status: February 3rd, 2013
+.. slug: status_20130203
+.. date: 2013-02-03 15:00:00
+.. tags: dev, python, richard, pyvideo
+
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+conference and user-group videos on the Internet. Saw a session you
+liked and want to share it? It's likely you can find it, watch it,
+and share it with pyvideo.org.
+
+
+Status
+======
+
+* `Videos for PyCon AU 2012 <http://pyvideo.org/category/30/pycon-au-2012>`_
+  are posted.
+
+  That's probably the last conference I'm going to do on my own. More about
+  that later.
+
+* I've made some big changes to `richard <https://github.com/willkg/richard>`_.
+  For one, formatted fields use Markdown instead of HTML now (yay!). I've
+  improved the API. I've made a lot of layout tweaks and user interface
+  improvements.
+
+* I pushed out `steve v0.1 <https://steve.readthedocs.org/en/v0.1/>`_ and
+  then promptly made a bunch of fixes, tweaks and changes. So I need to
+  do a new release soon. steve is the utility people can use to generate
+  conference data for pyvideo.org. See `the commandline chapter 
+  <https://steve.readthedocs.org/en/v0.1/commandline.html>`_ for details.
+
+
+I've been working on getting steve and richard to the point where I'm
+neither doing all the work nor am I the bottleneck for work being done.
+
+I still need to write up a blog post on how to use steve to generate JSON
+files for pyvideo.org. That will make it possible for anyone to add
+conference video.
+
+I'm working on changing richard to allow for other people to edit
+video metadata. It'll continue to be curated, but this will make it
+possible for other people to help because there are like 1600 videos
+and the repository continues to grow and I'm just one man. I have some
+of this worked out on paper, but it needs to be implemented.
+
+That's the current push. I'm hoping to have a lot of this done for
+PyCon 2013.

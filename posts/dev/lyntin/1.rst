@@ -1,0 +1,15 @@
+.. title: Lyntin development progress
+.. slug: 1
+.. date: 2002-11-11 18:55:02
+.. tags: dev, lyntin, python
+
+I was looking to release 3.0 this week, but I'm going to re-write
+the ticker functionality and the logging functionality so they're
+both managers.  I also want to investigate decoupling hooks from
+the hooks module or at least provide some registration mechanism
+so that module writers can create their own hooks and access
+hooks written by other module writers.
+
+I also want to review all the mailing-list archives for things I
+intended to do, but then didn't do as well as Sebastian's emails
+to see what ideas he had that are now appropriate to do.

@@ -1,0 +1,55 @@
+.. title: pyvideo status: February 15th, 2014
+.. slug: status_20140215
+.. date: 2014-02-15 22:28
+.. tags: dev, python, richard, pyvideo
+
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+conference and user-group videos on the Internet. Saw a session you
+liked and want to share it? It's likely you can find it, watch it,
+and share it with pyvideo.org.
+
+
+Status
+======
+
+Over the last year, a number of things have led to a tangled mess of
+tasks that need to be done that were blocked on other tasks that were
+complicated by the fact that I had half-done a bunch of things. I've
+been chipping away at various aspects of things, but most of them
+were blocked on me finishing infrastructure changes I started in
+November when we moved everything to `Rackspace <http://rackspace.com/>`_.
+
+I finally got my local pyvideo environment working and a staging
+environment working. I finally sorted out my postgres issues, so I've
+got backups and restores working (yes--I test restores). I finally
+fixed all the problems with my deploy script so I can deploy
+when I want to and can do it reliably.
+
+Now that I've got all that working, I pushed changes to the footer
+recognizing that Sheila and I are co-adminning (and have been for some
+time) and that Rackspace is graciously hosting pyvideo.
+
+In the queue of things to do:
+
+* finish up some changes to richard and then update pyvideo to the
+  latest richard
+
+* re-encode all the .flv files I have from blip.tv into something
+  more HTML5-palatable (I could use help with this--my encoding-fu
+  sucks)
+
+* fix other blip.tv metadata fallout--for example most of the
+  PyGotham videos have terrible metadata (my fault)
+
+* continue working on process and tools to make pyvideo easier
+  to contribute to
+
+That about covers it for this status report.
+
+Questions, comments, thoughts, etc--send me email or twart me at 
+`@PyvideoOrg <https://twitter.com/PyvideoOrg>`_ or 
+or `@willcage <https://twitter.com/willcage>`_.

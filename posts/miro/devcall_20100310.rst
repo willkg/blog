@@ -1,0 +1,52 @@
+.. title: Dev call 3/10/2010 minutes
+.. slug: devcall_20100310
+.. date: 2010-03-10 20:52:34
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0>`__)
+(was Miro 2.6)
+
+* should be pushed out soon
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* work is coming along nicely--probably done with development by the
+  end of March.
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* coming along
+
+Luc:
+
+* added support for running unit tests on osx
+* made some other clean-ups in the mac build
+
+Will:
+
+* worked on Miro 3.1
+* wrote an article for Gnome Journal
+* continued research
+
+Paul:
+
+* spent some time on Miro Guide fixing bugs from django-refactor going
+  live
+* Miro Guide should be fine now for the Miro 3.0 launch
+* continued working on Miro Community 1.0 stuff
+
+Janet:
+
+* continued working on eggplant tests for Miro
+* tested other things
+
+**bugzilla**
+
+* 9 bugs/feature-requests created
+* 9 bugs marked FIXED
+* 1 bugs marked WORKSFORME

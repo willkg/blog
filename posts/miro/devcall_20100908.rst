@@ -1,0 +1,68 @@
+.. title: Dev call 9/8/2010 minutes
+.. slug: devcall_20100908
+.. date: 2010-09-08 11:06:27
+.. tags: miro, work
+
+Miro 3.5 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5>`__)
+
+* focusing on P1 issues and trying to get the release done
+
+Miro Community 1.1.2 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.1.2>`__)
+
+* focusing on small bugs that should get fixed before the long haul for
+  1.2.
+
+Paul:
+
+* reviewed Miro Guide patches
+* worked on Miro Community fixes
+* talked with Anne and Dean about Miro Community future
+
+Janet:
+
+* worked on Miro 3.5 regression testing focusing on OSX
+
+Luc:
+
+* worked on OSX issues
+* looking at P3-P5 issues and worked on them
+
+Ben:
+
+* lost his Internet connection
+* worked on bugs anyhow (git ftw)
+
+Will:
+
+* peer reviewed and fiddled with conversions code
+* worked on the libfaac bug
+* fixed the Windows system tray suckage bug
+
+Order of business
+
+* We talked about the Miro 3.5 schedule. We're focusing on P1 bugs only
+  at this point. Nothing should get added to the list without
+  discussion.
+* Priority is being put on finishing development work on Miro 3.5. Any
+  help with this would be huge. There are a series of bugs on the
+  roadmap that need to be fixed. If you want to help out but don't know
+  where to start, see http://getmiro.com/userguide/contributing.html.
+  If there are bugs you want fixed that aren't in our queue, consider
+  submitting a patch.
+* If you can't contribute work, please consider contributing funding by
+  `donating <https://www.miroguide.com/donate>`__. Your money goes
+  directly to ongoing development of Miro and related projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro:**
+
+* 11 bugs/feature-requests created
+* 7 bugs marked FIXED
+* 1 bugs marked DUPLICATE
+* 1 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 12 bugs marked INCOMPLETE

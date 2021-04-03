@@ -1,0 +1,66 @@
+Dev call August 24th, 2011
+#tags miro::work
+
+**Miro status**
+
+* `4.1 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.1>`_
+* We're working on Miro 4.1.
+
+
+Will:
+
+* committed gtk/gstreamer overhaul changes
+* fixed nightly build issues and tweaked scripts to be more
+  similar
+* planning to work with Ben on the rest of the overhaul stuff
+
+
+Janet:
+
+* Universal subtitles testing.  Catching up on tests and things.
+* Tested Miro device support and sync support.
+* Tested WinSparkle changes for Windows XP issues.
+
+
+Paul:
+
+* Back from vacation.
+* Continued working on installer changes.
+* Worked on Puppet scripts for dev server for Miro Community.
+
+
+Kaz:
+
+* Continued working on metadata extractor/priority code.
+
+
+Jonas:
+
+* Continued working on WinSparkle support for Miro on Windows.
+
+
+Geoffrey:
+
+* Worked on sharing podcasts and bugfixes for sharing changes.
+
+
+Ben:
+
+* Worked on hybrid view bits.
+* Worked on building a new Windows vm for Windows overhaul stuff.
+
+
+**Order of business:**
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .

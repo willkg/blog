@@ -1,0 +1,70 @@
+.. title: Dev call July 20th, 2011
+.. slug: devcall_20110720
+.. date: 2011-07-20 16:57:29
+.. tags: miro, work
+
+
+**Miro status**
+
+* `4.1 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.1>`_
+* We're now working on Miro 4.1.
+
+Kaz:
+
+* working on re-implementing metadata bits
+
+Jonas:
+
+* working on winsparkle support for Miro on Windows
+
+Geoffrey:
+
+* working on drag and drop enhancements
+
+Paul:
+
+* working on auto-fill options for device syncing
+* working on getting new zugo installer into Miro on Windows
+
+Ben:
+
+* working on OSX Lion support
+* reworked filename type code
+
+Janet:
+
+* working on adding and tweaking regression tests
+* working on testing the Miro Mobile app
+* working on testing Universal Subtitles
+
+Will:
+
+* built new linux build box
+* working on gstreamer/webkit/gtk overhaul
+
+
+**Order of business:**
+
+* talked about 4.0.2.1 which will have OSX Lion support and will
+  fix the French translation; we're hoping to get it out this week.
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .
+
+
+**Bugzilla stats for Miro for the last week:**
+
+* 35 bugs/feature-requests created
+* 3 bugs marked DUPLICATE
+* 5 bugs marked FIXED
+* 1 bugs marked INVALID

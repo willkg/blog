@@ -1,0 +1,55 @@
+.. title: PyOhio 2010 videos posted to Python Miro Community
+.. slug: status_20100812
+.. date: 2010-08-12 13:47:27
+.. tags: pmc, python, dev, miro, work, mirocommunity
+
+Last night, I spent a few hours going through all the videos from
+`PyOhio 2010 <http://www.pyohio.org/Home>`__, added metadata from the
+PyOhio site, added notes about video issues, and approved all of the
+videos except one which I'm talking with Carl about.
+
+It looks like PyOhio 2010 was a really great conference: the talks are
+really great, you can feel the energy in the rooms from the people who
+attended, the questions are interesting, and the videos from the
+conference are fantastic. Also, I'm a huge +1 on using the headset
+mics--they absolutely make a difference in being able to hear the
+presenter throughout the video.
+
+Here are three sessions I watched all the way through:
+
+* **Teach Me Python Bugfixing** -
+  http://python.mirocommunity.org/video/1794/pyohio-2010-teach-me-python-bu
+  This session walks new people through how to contribute to Python
+  core. It's worth watching for new contributors. I also think this is
+  useful for illustrating the barriers to entry and required workflow
+  knowledge for new contributors.
+* **PyPy and Unladen-Swallow: Making your Python Fast** -
+  http://python.mirocommunity.org/video/1804/pyohio-2010-pypy-and-unladen-s
+  Alex did a
+  `test-run <http://python.mirocommunity.org/video/1784/pypy-and-unladen-swallow-makin>`__
+  of this talk at `ChiPy <http://chipy.org/>`__. I studied programming
+  languages and compilers in grad school and find these talks really
+  interesting. I liked the analysis of "slow" in respects to the
+  language and the cpython implementation--it's towards the beginning.
+* **Wrangling the bits, standardizing how apps get built** -
+  http://python.mirocommunity.org/video/1789/pyohio-2010-wrangling-the-bits
+  This covers things in virtualenv I didn't know where there. It also
+  talks about
+  `modern-package-template <http://pypi.python.org/pypi/modern-package-template>`__
+  which I didn't know existed and fabric which I haven't played with
+  before. Rick also mentions searching Google Code for "after_install"
+  and "fabfile" for virtualenv and fabric usage examples. He says
+  there's a wealth of code snippets in there. I watched the session and
+  immediately started adjusting my scripts. This session had mic
+  problems and the session starts at 7:20. I'm working with Carl to get
+  the first 7:20 clipped.
+
+Sessions from PyOhio 2010 are in the `PyOhio 2010
+category <http://python.mirocommunity.org/category/pyohio-2010>`__. Take
+some time today to browse the sessions and watch the ones that interest
+you.
+
+Also, I'm sitting on videos for two other conferences: DjangoConf EU and
+Kiwi PyCon. I'm hoping to get to them in the next couple of weeks. I did
+PyOhio 2010 videos last night because Carl needed someone to spot-check
+them to make sure the uploads were good.

@@ -1,0 +1,97 @@
+.. title: Dev call 10/20/2010
+.. slug: devcall_20101020
+.. date: 2010-10-20 11:33:50
+.. tags: miro, work
+
+Miro 3.5 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5>`__)
+
+* did a Miro 3.5 rc3
+* fixed some bugs, but we're ready for a release
+
+Miro 3.5.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5.1>`__)
+
+* there will probably be a 3.5.1--I want to wait until after 3.5 is out
+  to figure out the details.
+
+Miro Community 1.1.2 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.1.2>`__)
+
+* Asheesh is the new MC for MC
+* working on bugs
+
+**Janet:**
+
+* Regression testing Miro 3.5 rc3 all week long. Some bugs, but
+  everything is currently fixed right now.
+* We have had new people testing Miro 3.5 rc3 through Litmus which is
+  really great.
+* We've been tracking downloads for rc3 and it's looking ok, but we
+  would have hoped to have more help testing.
+
+**Will:**
+
+* Wishes we had more quantified Miro 3.5-rc3 testing. That would make
+  him feel more comfortable with where we're at with the release.
+* We have a list of things we should look at and/or fix for Miro 3.5.1.
+* Migrated our developer stuff from trac to mediawiki. (Sent email
+  about it.)
+* Updated the Miro User Manual for 3.5.
+
+**Kaz:**
+
+* Working on metadata for Miro 4.0.
+* Mutagen is working out really well.
+* Working on figuring out the ui and db components for metadata
+  storage, viewing, and possibly editing.
+
+**Paul:**
+
+* Spent the last week and a half spending quality time with getting
+  Miro on Windows to recognize USB devices.
+* Got it working on Linux. Now working on getting it working on Windows
+  and OSX.
+
+**Ben:**
+
+* Reworked configuration for Miro 4.0. (Sent email about it.)
+* Planning to work on performance tuning for Miro 4.0.
+
+**Asheesh:**
+
+* Started working on Miro Community this week.
+* Also working on building the Miro community (lowercase c) so that
+  there are fewer barriers to entry and it's more inviting.
+* Got his Miro Community system working and is now working on bugs.
+
+**Order of business:**
+
+* Talked about where we're at with the Miro 3.5 release. General
+  consensus is that we're ready.
+* Talked about id3 metadata bits and storage.
+* Talked a bit about device syncing.
+* Talked a little bit about streaming to external devices and Miro
+  streaming apps. Paul had looked into DLNA possibilities to allow
+  external devices control and stream content from Miro. Options look
+  to be either writing our own DLNA system, or adding
+  Twisted/Twisted.Web as dependencies and using an exisiting one. The
+  iPad guy wants to do this in Bonjour.
+* Miro users need your help translating! See `Translations for Miro 3.5
+  -- we need your
+  help! <http://bluesock.org/~willkg/blog/miro/translations_miro_3_5.html>`__
+  for details.
+* If you can't contribute your time, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro:**
+
+* 23 bugs/feature-requests created
+* 1 bugs marked DUPLICATE
+* 8 bugs marked FIXED
+* 3 bugs marked INVALID

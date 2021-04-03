@@ -1,0 +1,80 @@
+.. title: Dev call 10/13/2010 minutes
+.. slug: devcall_20101013
+.. date: 2010-10-13 12:57:33
+.. tags: miro, work
+
+Miro 3.5 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5>`__)
+
+* did a Miro 3.5 rc2
+* fixed some bugs, planning to do an rc3
+* need help testing and translating Miro 3.5
+* probably a release on or around October 20th
+
+Miro Community 1.1.2 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.1.2>`__)
+
+* focusing on small bugs that should get fixed before the long haul for
+  1.2.
+
+Janet:
+
+* rc2 has been out for a little over a week
+* ran regression tests on rc2
+* no idea how many downloads we have for rc2, but there are a lot of
+  new litmus testers which is a good sign
+* worked on automating universal subtitles testing
+
+Ben:
+
+* working on 4.0 refactoring work
+* worked on bug 14609
+
+Will:
+
+* wasn't around last week
+* worked on triaging and fixing rc2 bugs
+* we need an rc3--too many big changes
+
+Paul:
+
+* worked on syncing stuff on Windows--problems with gio bits not
+  implemented
+
+Kaz:
+
+* worked on making sure Miro works with Python 2.7--it does
+* working on audio metadata research for Miro 4.0
+
+Order of business:
+
+* there were no devcall notes last week because I wasn't on the call
+* Kaz has joined the PCF Miro team! Welcome Kaz!
+* WikiMedia is starting to use the Universal Subtitles stuff:
+
+  * http://commons.wikimedia.org/wiki/Commons:Universal_Subtitles?withJS=MediaWiki:MwEmbed.js
+  * http://videoonwikipedia.org/
+
+* we need to do a Miro 3.5 rc3
+* Miro users need your help translating! See `Translations for Miro 3.5
+  -- we need your
+  help! <http://bluesock.org/~willkg/blog/miro/translations_miro_3_5.html>`__
+  for details.
+* Miro users need your help testing! See `Miro 3.5 RC1 builds are
+  available <http://www.getmiro.com/blog/2010/09/miro-3-5-rc1-builds-are-available/>`__
+  for details.
+* If you can't contribute your time, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro:**
+
+* 27 bugs/feature-requests created
+* 4 bugs marked DUPLICATE
+* 3 bugs marked FIXED
+* 1 bugs marked WORKSFORME
+* 1 bugs marked INVALID

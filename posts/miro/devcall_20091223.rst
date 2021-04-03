@@ -1,0 +1,59 @@
+.. title: Dev call 12/23/2009 minutes
+.. slug: devcall_20091223
+.. date: 2009-12-23 12:50:28
+.. tags: miro, work
+
+**minutes**
+
+Miro 2.6 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=2.6>`__)
+
+* it's coming along
+
+Miro Community 0.9 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=0.9>`__)
+
+* it's coming along
+
+Paul
+
+* working towards the 0.9 Miro Community release
+* tweaking the Windows installer and trying out another installer
+  partner
+
+Luc
+
+* fixing browser-related issues
+* working on more Miro 2.6 bugs
+
+Will
+
+* updated the binary kits to libtorrent 0.14.7
+* spent time looking at sphinx-gsoc2009 to see if it was usable for a
+  Miro User Manual--it's not
+
+Janet
+
+* working on Miro Community testing
+* started to do performance comparisons between Miro 2.5.4 and what's
+  in master after Ben's and Will's performace fixes
+* got a license for Eggplant for Miro interface testing
+
+Ben
+
+* worked on performance work that makes things a lot faster for certain
+  operations
+* has one additional thing to check in performance wise
+
+**bugzilla**
+
+* 4 bugs/feature-requests created
+* 3 bugs marked DUPLICATE
+* 7 bugs marked FIXED
+
+**notes**
+
+We're working on Miro 2.6 targeted bugs. If there are issues that should
+be targeted for 2.6, let us know. If there's anything you can help with
+either by adding information or contributing patches to any of the bugs
+targeted for Miro 2.6, please do!

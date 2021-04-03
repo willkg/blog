@@ -1,0 +1,83 @@
+.. title: Python Miro Community status: 01-22-2011
+.. slug: status_20110122
+.. date: 2011-01-22 16:31:12
+.. tags: pmc, dev, miro, mirocommunity, python, work
+
+I took a hiatus from all things computer-related from the end of
+November through December on account of a new member of the family
+showing up. I'm back now and I've slimmed down the list of things I'm
+involved in so that things like Python Miro Community can get more of my
+spare time.
+
+**What is Python Miro Community?**
+
+Before I get too much further, `Python Miro
+Community <http://python.mirocommunity.org/>`__ is a web-site that
+indexes Python-related videos regardless of where those videos exist on
+the Internet. For the most part, we're collecting and indexing
+conference videos: PyCon, DjangoCon, KiwiPycon, PyOhio, PyCon AU, ....
+For each video I pull as much metadata as I can. This makes the videos
+searchable and more useful for people looking for stuff.
+
+**Added KiwiPyCon 2009 videos**
+
+Over the last week, I pulled in the KiwiPyCon 2009 videos. I also talked
+with Tim about KiwiPyCon 2010 videos. I'm looking forward to posting
+those as well. I don't know what the estimated timeframe looks like,
+yet.
+
+**Current queue of things to do**
+
+My queue of things to do is pretty much the same as it was `in
+November <http://bluesock.org/~willkg/blog/pmc/status_20101101.html>`__:
+
+* checking feeds for valid enclosures
+* importing a few lightning talks I've been sitting on
+* DjangoConf EU
+* Kiwi PyCon
+* PyCon APAC 2010
+* PyCon India
+* fixing video listing templates so they're all listing videos the
+  "long way"
+* converting `Python
+  Basics <http://python.mirocommunity.org/listing/tag/python-basics/>`__
+  and `Advanced
+  Python <http://python.mirocommunity.org/listing/tag/python-advanced/>`__
+  to playlists
+* keeping an eye on `Universal
+  Subtitles <http://universalsubtitles.org/>`__--looking forward to
+  adding that to the site
+
+Writing scripts for automated data checking turns out to be impossible
+to do without getting some additional functionality into `Miro
+Community <http://mirocommunity.org/>`__. I've created some bugs for the
+features I need, but I think I'm going to have to implement them myself
+on account of the MC crew being very short-staffed. That's fine, except
+I haven't had time to do it, yet.
+
+One thing in that list that I'm really excited about is adding support
+for `Universal Subtitles <http://universalsubtitles.org/>`__. I think
+that'll:
+
+#. kick ass
+#. potentially add a lot of value to the conference video
+
+**Going to need to get some funding**
+
+Also, `Miro Community <http://mirocommunity.org/>`__ is soon switching
+to a tiered service model. Between costs for running PMC going up (zero
+dollars per month to some amount per month) and PMC really needing more
+of my time, I'm considering doing a fund-raising month possibly with a
+`KickStarter <http://kickstarter.com/>`__ project. The other possibility
+is to add ads to the site, but I'm pretty sick of advertising and I
+can't imagine any of you like it much either. If you have any thoughts
+on that, let me know.
+
+**Exciting things**
+
+I'm seeing an increasing number of hits coming from
+`StackOverflow <http://stackoverflow.com/>`__. I think it's really
+exciting that people are helping other people learn by sending them
+links to videos.
+
+That's it for this status report!

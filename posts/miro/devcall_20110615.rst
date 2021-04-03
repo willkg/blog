@@ -1,0 +1,84 @@
+.. title: Dev call June 15th, 2011
+.. slug: devcall_20110615
+.. date: 2011-06-15 20:07:50
+.. tags: miro, work
+
+
+**Miro status**
+
+* `4.0.2 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0.2>`_
+* `4.1 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.1>`_
+* we're going to keep working on Miro 4.0.2 for another week or two
+* we're starting work on Miro 4.1
+
+Ben:
+
+* Worked on problematic bugs for 4.0.2.
+* Hoping to have an RC on Thursday or Friday.
+
+
+Janet:
+
+* Working on regression tests and testing bug fixes that have been
+  going in over the last couple of weeks.
+
+
+Will:
+
+* Moving along on the Windows overhaul.  Took a step back to make sure
+  I had all my ducks in a row in regards to knowing exactly the
+  situation I'm in and what the options are.
+* Spent some time looking at issues people were having.
+
+
+Paul:
+
+* On vacation last week.
+* Worked on speed issues with device support.
+* Worked on Miro Community bits.
+
+
+Geoffrey:
+
+* Worked on issues for 4.0.2.
+
+
+Kaz:
+
+* Worked on support for MusicBrainz/EchoNest.
+
+
+Jonas:
+
+* Worked on gzip support for feeds.
+* Worked on some other things for 4.0.2.
+
+
+**Order of business:**
+
+* Talked about the 4.0.2 timeline.
+* Talked about specifics of some issues people were having.
+* Talked about MusicBrainz/EchoNest support.
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .
+
+
+**Bugzilla stats for Miro for the last week:**
+
+* 58 bugs/feature-requests created
+* 3 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 7 bugs marked DUPLICATE
+* 2 bugs marked WONTFIX
+* 25 bugs marked FIXED

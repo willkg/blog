@@ -1,0 +1,13 @@
+.. title: OpenZaurus 3.5.2 released
+.. slug: 3.5.2
+.. date: 2004-11-30 21:03:33
+.. tags: zaurus
+
+The OpenEmbedded/OpenZaurus folks released 3.5.2 today.  I flashed with the 
+new image and it's pretty cool, though I don't notice any differences.  
+Mostly I just flashed and pressed a bunch of buttons and then shut it off.
+
+I need to get a case before I really want to bring it around with me.
+I'm still paranoid that I'm going to break it while using it.
+I need to get a wireless card or figure out how to sync with the docking
+station or something similar so I can back up my information.

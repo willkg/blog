@@ -1,0 +1,53 @@
+.. title: Dev call 6/23/2010 minutes
+.. slug: devcall_20100623
+.. date: 2010-06-23 11:14:39
+.. tags: miro, work
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* working on rebuilding the Windows build environment
+
+Miro Community 1.0.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0.1>`__)
+
+* working on scaling issues
+* working on minor bugs
+
+Nick:
+
+* first public demo of the subtitles widget. (see
+  http://blog.universalsubtitles.org/2010/06/16/launching-an-alpha-demo-of-our-subtitling-tool/)
+
+Paul:
+
+* worked on documentation-y stuff for Miro Community.
+* worked on scaling architecture
+
+Luc:
+
+* worked on table view crashes on OSX
+* worked on downloader shutdown slowness on OSX
+* add a conversions preference panel
+
+Will:
+
+* did a bunch of cleanup stuff:
+
+  * put bugzilla overlay in a repository,
+  * put the roadmap in the bugzilla-scripts repository to share with
+    others,
+  * worked with rob to get the userguide squared away in regards to
+    the new getmiro.com workflow
+
+* continued working on the downloader crashing problem in the new
+  windows build environment--I've ruled out some issues, but I haven't
+  figured it out, yet.
+* volunteered at the FSF on Tuesday. spent a few hours talking to a
+  friend about Windows build enviroments on Saturday.
+
+**bugzilla**
+
+*  8 bugs/feature-requests created
+*  3 bugs marked WONTFIX
+*  4 bugs marked FIXED

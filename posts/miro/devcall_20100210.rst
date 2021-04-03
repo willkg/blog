@@ -1,0 +1,70 @@
+.. title: Dev call 2/10/2010 minutes
+.. slug: devcall_20100210
+.. date: 2010-02-10 11:27:36
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0>`__)
+(was Miro 2.6)
+
+* we released a 3.0 rc1 and it's looking really good
+* we're planning to do an rc2, get wider testing, and possibly do a
+  release next week
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* we're working on 1.0 now--probably a 4-6 week dev cycle
+
+Paul:
+
+* fixed a couple of bugs with comments
+* fixed some other bugs with RSS feeds
+* fixed the disk space problem on Monday
+* working on moving thumbnails to S3
+
+Janet:
+
+* we did the Miro 3.0 rc1 release on thursday
+* did regression testing on Windows
+* blogged release on Miro Testing site and sent an email to the mailing
+  list
+* we've had around 100 downloads of rc1
+* we're ready for blogging it on the main blog
+* excited about 3.0--things are really coming together
+
+Will:
+
+* busy week
+* did bugzilla housekeeping
+* wants to upgrade bugzilla to the latest version
+* did some basic Miro extensions work
+
+Old wiki page about extensions:
+https://develop.participatoryculture.org/trac/democracy/wiki/extensionsystem.
+There is also an old (obsolete) section in the journey about extensions:
+https://develop.participatoryculture.org/trac/democracy/wiki/thejourney.
+
+Luc:
+
+* fixed some minor issues in master
+* working on fixing the downloader daemon shutdown slowness
+* +1 on doing an rc2
+* thinking about playback-during-download for a future release
+* wants to get unit tests working on OSX
+
+Ben:
+
+* checked in some more changes into master that should go out with 3.0
+  and suggests we do another RC.
+* still working on vlc-related fixes
+
+**bugzilla**
+
+* 17 bugs/feature-requests created
+* 2 bugs marked DUPLICATE
+* 10 bugs marked FIXED
+* 1 bugs marked INVALID
+* 1 bugs marked INCOMPLETE

@@ -1,0 +1,48 @@
+.. title: Debian cont...
+.. slug: 4
+.. date: 2004-03-25 17:28:48
+.. tags: computers, debian
+
+I'm on the UserLinux discussion list mostly because it's really
+interesting to watch a distribution get going and also because
+I'm hankering for a user-oriented distribution that I don't
+have to fiddle with that I can do regular non-fiddling things
+with.
+
+Anyhow, caught this email, which is fascinating--I had no idea
+(apologies to Mr. Perens for quoting without permission and out
+of context but I figure it's in the public archives anyhow)::
+
+   Date: Thu, 25 Mar 2004 13:41:44 -0800
+   From: Bruce Perens <---------------->
+   Reply-To: ---------------------------
+   To: ---------------------------
+   Subject: [Discuss] Meaning of the Debian Swirl
+
+   Fabio asked what the Debian Swirl means.
+
+   It's "magic smoke". Electrical engineer lore is that when you burn out
+   an electronic component, you cause the "magic smoke" that makes it work
+   to be released. Once the magic smoke is gone, the component doesn't work
+   any longer. Debian is supposed to be the magic smoke that makes your
+   computer work.
+
+       Thanks
+
+       Bruce
+
+
+That's cool--I had no idea.
+
+Also, I burned a Knoppix cd, brought my old Dell Inspiron 7000 
+laptop with a DLink wireless card right up, and installed Debian
+by typing::
+
+   knoppix-install
+
+
+(or something very very similar) at the prompt and selecting 
+debian-installation.  It worked, it was trivial, and it was 
+fantastic.  My laptop was up and running in 30 minutes (from when 
+I burned the cd to when the laptop had booted into Debian).
+Wonderful, wonderful, wonderful.  Now I can _use_ it.

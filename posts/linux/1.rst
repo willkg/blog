@@ -1,0 +1,21 @@
+.. title: bluesock.org moving....
+.. slug: 1
+.. date: 2003-11-02 13:49:57
+.. tags: bluesock, debian, redhat
+
+bluesock.org is (as of the time of this writing) a leased server
+hosted at rackspace.com and we've been there for a few years.  They've
+been great and we've never had problems with them.  Recently they informed
+us we needed to upgrade to RedHat 9.0 and it either involved a per-month
+rate increase or some finagling with the hardware and downtime.  I
+decided this was as good a time as any to switch over to a different
+hosting service with Debian.
+
+This will make the third Linux flavor that I'll have extensive 
+administration experience with.  The first two being RedHat (I've
+run many of the versions since 5.2) and Gentoo (which I've been
+running for a couple of years now).  I ran Mandrake for a bit, but
+never really did anything with it.  Same with Slackware.  I toyed
+with Debian a couple of times, but never got past the installation.
+
+It's all very exciting.  Hopefully, everything will turn out just right.

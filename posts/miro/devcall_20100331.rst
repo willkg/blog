@@ -1,0 +1,63 @@
+.. title: Dev call 3/31/2010 minutes
+.. slug: devcall_20100331
+.. date: 2010-03-31 11:30:27
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0>`__)
+(was Miro 2.6)
+
+* released!
+
+Miro 3.0.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0.1>`__)
+
+* Luc is working on bug 13120
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* planned feature freeze for April 30th
+* work is progressing
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* work is progressing
+
+Janet:
+
+* biggest feedback for MVC release is that there isn't a Linux version
+* only one minor issue and one bizarre issue for Miro 3.0 release so
+  far--we're doing really well
+* worked on testing for Miro regressions
+* working with interns on testing and testing test tools
+* continuing to implement eggplant tests and also move to selenium-rc
+  and looking into sikuli
+
+Luc:
+
+* working on bug 13120--it's totally bizarre
+* worked on Miro Video Converter, too
+
+Paul:
+
+* working on Miro Community
+* working on finishing up the admin changes
+* planning to do a feature freeze for 1.0 soon
+
+Will:
+
+* GNOME Miro Community article for GNOME Journal was released yesterday
+* worked on switching us over to Launchpad PPA for Miro releases for
+  Ubuntu
+
+**bugzilla**
+
+* 20 bugs/feature-requests created
+* 1 bugs marked WONTFIX
+* 4 bugs marked FIXED
+* 1 bugs marked WORKSFORME
+* 2 bugs marked INVALID

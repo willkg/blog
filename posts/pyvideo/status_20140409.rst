@@ -1,0 +1,37 @@
+.. title: pyvideo status: April 9th, 2014
+.. slug: status_20140409
+.. date: 2014-04-09 11:00
+.. tags: dev, python, richard, pyvideo
+
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+conference and user-group videos on the Internet. Saw a session you
+liked and want to share it? It's likely you can find it, watch it,
+and share it with pyvideo.org.
+
+
+Status
+======
+
+I fixed a few issues and finally (`finally`) pushed out major site
+updates. Some of them are implemented in the worst possible way
+(e.g. facet filters for the search page), but some of them are great
+(e.g. Amara subtitle support).
+
+I'm still struggling with a lot of technical debt on the site and a
+lack of time to really focus on it. That's mostly what's been making
+fixing the issues, improving the site and adding conferences take so
+long.
+
+Sheila and I will be at `PyCon US <https://us.pycon.org/2014/>`_ and
+hanging around for sprint days. If anyone is interested in sprinting,
+we'll be there. Even if we don't get any coding done, figuring out how
+to solve some of the bigger problems and planning what should be done
+in the next year would be a huge accomplishment.
+
+If you're at PyCon and see either of us, feel free to give us a piece
+of your mind in regards to how you use PyVideo and what could be
+better.

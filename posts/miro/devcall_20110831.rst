@@ -1,0 +1,82 @@
+.. title: Dev call August 31st, 2011
+.. slug: devcall_20110831
+.. date: 2011-08-31 23:03:49
+.. tags: miro, work
+
+
+**Miro status**
+
+* `4.1 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.1>`_
+* We're working on Miro 4.1.
+
+Will:
+
+* talked with Janet about translations
+* worked on gtk/gstreamer overhaul
+
+
+Geoffrey:
+
+* working on sharing feeds and podcasts--now merged
+* fixed some bugs in Miro
+
+
+Janet:
+
+* testing devices
+* talked with Nick about working out what 4.1 will look like
+* worked on figuring out the future of the build boxes
+
+
+Jonas:
+
+* worked on WinSparkle-related changes
+
+
+Kaz:
+
+* fixing problems with the metadata extractor
+
+
+Ben:
+
+* away for a few days
+* working on getting the gtk/gstreamer overhaul stuff Will did
+  running.  gstreamer on Windows seems to require directshow and that
+  somehow requires 3d support which sucks on VirtualBox.
+* will continue working on gtk/gstreamer overhaul
+* will continue working on itemfilter branch
+
+
+**Order of business:**
+
+* We might do a 4.0.4, but only to fix issues with Miro Mobile.
+
+* Talked about future of build boxes.  Janet's been working on a wiki
+  page for it at:
+  http://develop.participatoryculture.org/index.php/BuildBoxHosting
+
+* Talked about process questions:
+
+  * moving the Miro repository to Github
+
+    * Will and Paul will work on moving the Miro repository to Github
+
+  * Ben wants to start doing one-on-one developer chats
+
+  * we want to change workflows to require more peer review
+
+    * Ben will create a peer review qiki page
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .

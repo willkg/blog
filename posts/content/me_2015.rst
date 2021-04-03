@@ -1,0 +1,228 @@
+.. title: Me: 2015 retrospective
+.. slug: me_2015
+.. date: 2016-01-10 16:20
+.. tags: content, life, dev, python, pyvideo, mozilla
+
+My 2015 retrospective. Kind of like 2014, but less terrible and more snow.
+
+
+.. TEASER_END
+
+
+I spent a good portion of 2015 ending projects:
+
+* `elasticutils <https://github.com/mozilla/elasticutils>`_: I ended this
+  in 2015.
+
+* `Douglas <https://github.com/willkg/douglas>`_: Douglas was a successor to
+  PyBlosxom which I stopped using a few years ago. It fixed a bunch of issues
+  and added a few nice features, but it was clear that I needed it to do some
+  additional things like inter-blog-post linking and better handling of images
+  and I just didn't feel like implementing those and maintaining them.
+
+  Thus I moved my blog over to `Nikola <https://getnikola.com/>`_. I chose
+  Nikola because I could trivially get it to keep all the urls I had on my blog
+  already. Also, it was pretty easy to set up and had the features I needed.
+
+  In switching to Nikola, I ended Douglas.
+
+* `ernest <https://github.com/willkg/ernest>`_: Ernest was a dashboard for
+  Mozilla's Bugzilla that showed SUMO and Input sprints. I threw the initial
+  bits together in a couple of days at a Mozilla Summit, then we kind of kept
+  piling on things. It worked pretty well and met my needs more or less.
+
+  Towards the end it had a lot of technical debt and then something changed
+  either on Heroku or Bugzilla (I forget) that required a bunch of work, so
+  instead I ended it.
+
+* `Harold <https://github.com/willkg/harold>`_: I worked on Harold as an
+  experiment combining the AAQ of SUMO with the Feedback section of Input in a
+  way that didn't require accounts.
+
+  That's about as far as I got. Since I never continued this experiment, I
+  ended it.
+
+* `django-godfrey <https://github.com/willkg/django-godfrey>`_: One of the
+  problems I have with Django is that if you're using an API and expecting JSON
+  back, but request an invalid url, then you get an HTTP 404 with HTML.
+
+  I threw this together as an experiment, but after a while, I decided maybe
+  this is better as a middleware. It's entirely possible this is solved already
+  somewhere by now.
+
+  Anyhow, this was a terrible idea so I nixed this project. I never did any
+  releases, so it shouldn't affect anyone.
+
+
+I took over as maintainer:
+
+* `bleach <https://github.com/mozilla/bleach>`_: This was originally written
+  and maintained for a long time by James Socol. After a chat in October or
+  thereabouts, he decided it was a good idea to pass along maintenance to
+  Jannis Leidel and myself and have it be owned by Mozilla.
+
+  Since then, I've done some minor work in regards to defining the new security
+  bug reporting process, documentation tweaks, and (slowly) working over
+  existing issues and pull requests.
+
+  Jannis and I are doing slow maintenance on this project, so expect releases
+  for security issues, big bugs and then maybe twice a year.
+
+
+I also started a couple of new projects:
+
+* `pytest-wholenodeid <https://github.com/willkg/pytest-wholenodeid>`_: I wrote
+  this pytest plugin to show the entire node id for failed tests so that it's
+  easier to rerun the test after I've fixed it.
+
+  It's not the most exciting library ever, but it helped me a lot.
+
+* `Puente <https://github.com/mozilla/puente>`_: I wanted to transition projects
+  off of `Tower <https://github.com/mozilla/tower>`_, but the
+  Django/Jinja2/django-jinja/Babel situation didn't cover all the requirements
+  the projects I was working on had. I really didn't want to start a new library
+  because I'm tired of maintaining things long-term, but I didn't see any other
+  good options.
+
+  Thus I created Puente to act as a stop gap for now to make it easier to
+  transition off of Tower and identify the upstream changes that would need to
+  happen. I spent a lot of time writing documentation to make it really clear
+  how to transition off of Tower to Puente and also writing tests to make sure
+  Puente correctly covered all the cases it needed to cover. Input and MDN
+  transitioned without issues. SUMO had some issues. Marketplace had some
+  issues, too. I think it was successful, but I'm sure there were things I could
+  have done better.
+
+  I got a lot of help from Rob Hudson and Mike Cooper. They pointed out a lot of
+  issues and their comments and veiled threats fixed a lot of issues.
+
+
+At work, I spent most of my time on `fjord <https://github.com/mozilla/fjord>`_
+which powers `Mozilla Input <https://input.mozilla.org/>`_.
+
+2015 was a lot less interesting than 2014---which is a good thing.
+
+* I passed off writing up Django security release bugs to the Aaron and the
+  security team. This is great because they get the two-week heads-up and I
+  don't. Plus they generalize this work and do the same with security releases
+  from other frameworks, systems, etc. (Security)
+
+* I continued to hone Dennis and make it better. I regularly use Dennis to
+  identify issues with msgids *before* I push them to Verbatim/Pontoon for
+  translation. (L10N)
+
+* I spent a lot of time getting Input off of Tower. I put all the new code in
+  Input, but then after talking to Rob about how he should do the same for MDN,
+  I decided to turn it into a library with a migration guide. Thus was born
+  `Puente <https://github.com/mozilla/puente>`_.
+
+  My work on Dennis made it a lot easier to wrap my head around design decisions
+  for Puente balancing translators' needs and work flow requirements with
+  reducing the divergence of our l10n tools from normal Django projects.
+
+  I wrote up several upstream bugs which I'll fix when I get a chance (or pass
+  off to others--Rob Hudson already fixed one of them). That'll allow us to
+  ditch Puente, too. (L10N)
+
+* I stopped doing the Input status reports every other week. As far as I could
+  tell, they didn't have any impact on anyone. Given that, it seemed like wasted
+  work. I did continue to do the quarter-in-review reports. (Project Management)
+
+* Through 2015, I wrote up project plans for all the major projects we tackled.
+  I'm still on the fence about whether anyone noticed or cared much. Still, if
+  anyone did, they're there. (Project Management)
+
+* We upgraded to Django 1.7 and then to Django 1.8. The plan is to stick with
+  1.8 because it's an LTS. In doing this, we dealt with a lot of technical debt
+  and ditched a bunch of libraries. Input is a lot closer to a "normal Django
+  project" now. (Software engineering)
+
+* We added a suggestions framework to the Thank You page. Users would leave
+  feedback and Input would analyze it and offer suggested links.
+
+  For example, in some cases, people are leaving feedback about a problem
+  they're having that has a KB article on SUMO that addresses it. In these cases
+  Input should guide the user to that KB article. In this way, we get the
+  feedback that this is still a problem for some people and we also help the
+  user solve their problem.
+
+  There are some problems that only a handful of users experience that we're
+  unable to reproduce. For these, we can create a triggered suggestion that
+  looks for certain keywords and then if those show up in a user's feedback ask
+  the user for some additional information. This makes it a lot easier for us to
+  find users to work with to get the information we need to fix the problem.
+  This comes up a lot with video cards and drivers on Windows.
+
+  The suggestions framework allows for multiple suggesters which are essentially
+  structured as plugins. Creating new ones is pretty easy to do. (Software
+  engineering)
+
+* We switched to py.test. At first, I figured it wasn't a big deal. As time
+  went on, I'm very happy I switched. I really like a lot of things about
+  py.test and plan to use that going forward on everything.
+
+  Tests on Input take about 30 seconds to run. I spend a decent amount of time
+  making reducing bitrot in the tests and making sure each test tests something
+  important. (Software engineering)
+
+* Wrote up a `blog post for upgrading from Django 1.7 to Django 1.8 for Mozilla
+  sites that were based on Playdoh or had Playdoh-like things
+  <http://bluesock.org/~willkg/blog/mozilla/input_django_1_8_upgrade.html>`_.
+  I've heard that blog post helped a bunch of other Mozilla sites. I hope so
+  because it was a pain in the ass to write. (Communicating)
+
+* I tried out `Atom <https://atom.io>`_ for a couple of weeks, but I just
+  couldn't get over the sluggish horizontal split and how much space it wasted.
+  This is something I do in Emacs all the time, so it was really hard. I didn't
+  want to go back to my configuration of Emacs, so I decided to follow Josh
+  Mize's suggestion and try out `Spacemacs <http://spacemacs.org/>`_ and I've
+  been using it since.
+
+  It's a little goofy because one of the key features is vim keybindings (known
+  as Evil mode) and I'm fairly proficient with vim, but I decided to use the
+  Emacs keybindings (also known as Holy mode) instead. It's been nice.
+
+* Just before the year ended, I finally built a new desk. It's a little wobbly
+  side to side which is easy to fix. I set up the monitor arms and so I've got a
+  lot more horizontal space and hopefully don't have to play Towers of Hanoi
+  with equipment and paperwork anymore.
+
+
+Challenges for the year:
+
+* In February, it snowed every couple of days for 6 weeks. We got more snow than
+  anywhere else in the USA and 3x more than we usually get in an entire winter
+  season. It was nuts. I had snowbanks on either side of my driveway taller
+  than I am. Our 6 foot chainlink fence was completely buried. I gave up on one
+  car and the section of driveway it was parked on--we didn't see it until
+  Spring.
+
+* I still have too many things I'm working on, but it's a lot easier now than it
+  was. In the next few weeks, I'll be putting down pyvideo, richard and steve. I
+  spent some time working on them in 2015, but more importantly, I spent a ton
+  of time feeling guilty and otherwise terrible about them. More on in another
+  blog post.
+
+* Wearing a lot of hats on Fjord/Input is hard. Plus it feels like a constant
+  battle to get anyone outside of User Advocacy and my manager to care.
+
+  That struggle is at an end for me. I'm switching to `MDN
+  <https://developer.mozilla.org>`_. On the one hand, I've followed MDN for a
+  long time as a project since SUMO and MDN are sort of like siblings in a lot
+  of ways so I'm a little wary. Having said that the team is awesome. I'm
+  psyched to get a chance to work with them. I hope I'm helpful.
+
+
+In 2016, I want to:
+
+* Find more time to tinker. I had like zero tinker time in 2014 or 2015--it was
+  just too nuts. No tinker means I'm falling behind (or at least feeling like
+  I'm falling behind).
+
+* Clean up my office. It's a mess. It really bugs me.
+
+* Find some friends. I have family and I have work and that's pretty much it.
+  It'd be nice to do other things.
+
+
+That's 2015 in a nutshell!

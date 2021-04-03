@@ -1,0 +1,52 @@
+.. title: My PyBlosxom setup (5/15/2005)
+.. slug: setup-20050515
+.. date: 2005-05-15 10:39:46
+.. tags: blog, pyblosxom
+
+I figured I'd take some time to share my PyBlosxom setup. As of this
+writing, I'm running PyBlosxom under Python 2.3.4 on Debian with Apache
+1.3.33. I'm running PyBlosxom 1.2 (with some minor adjustments). I have
+the following plugins:
+
+* **booklist** - displays a list of books that I'm reading
+* **comments**
+* **wbgcomment_blacklist** - rejects comments that have certain
+  blacklisted terms in them (which has the minor nuissance that no one
+  can talk about Texas Hold'em on here)
+* **conditionalhttp** - returns a 304 if the content hasn't been
+  modified
+* **filter** - filters out CVS and other directories from my blog
+* **gecko** - tells people to use Firefox at the top if they aren't
+  already doing so
+* **plugininfo** - lists the plugins that I'm using
+* **pycategories** - lists the categories in a hierarchy
+* **pyfilenamemtime** - allows me to set the mtime of the blog entry in
+  the file name
+* **pyinclude** - allows me to include files with python scriptlets in
+  the head and foot templates
+* **pystaticfile** - (poorly named) allows "static" content on my site
+  but renders it in the existing template structure
+* **readmore** - allows me to break up my entries into a summary and
+  extended section (I don't think I ever use this)
+* **rss2renderer** - builds the RSS 2.0 feed
+* **tipsparser** - parses tips files
+* **title** - urlencodes the title of a blog entry and tosses it in
+  $urlencodedtitle (which is better for Google Links)
+* **wbgamazon** - builds Amazon links
+* **wbgarchives** - builds archive pages for entire years
+* **wbgdebug** - allows me to look at the debug output of my blog by
+  tossing debug=yes in the querystring
+* **wbggrep** - my incredibly hacked "search" engine
+* **wbgpager** - builds paging navigation when there are more entries
+  to display than I want to display at one time
+* **wbgrecent** - summarizes recent activity on my blog
+
+I write most of my entries using vi or emacs and for the most part I
+write them in HTML.
+
+There was a time where I wrote blog entries on whatever was in my head
+to build content and thus test PyBlosxom. Recently, I've been doing
+development summaries and writing about life changes. I think a good
+portion of my blog entries talk about how I don't have much free time.
+
+I have no idea who my audience is or what they look for here.

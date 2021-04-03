@@ -1,0 +1,57 @@
+.. title: Dev call 11/04/2009 minutes
+.. slug: devcall_20091104
+.. date: 2009-11-04 11:27:25
+.. tags: miro, work
+
+**minutes**
+
+Paul:
+
+* Is sick.
+* Bug fixes and small features for Miro Community.
+* We have a lot of sites and things seem pretty stable.
+* Working on Miro Community 0.9 now. 0.9 isn't very feature-full, but
+  it improves on things for style, look and feel, and such.
+
+Luc:
+
+* Worked a couple of days on subtitle support for Miro on Windows using
+  VLC. Building a test application in C. Once he's got that working,
+  he'll transcribe it to Python and ctypes.
+* Switched gears to help Will to fix libtorrent build problems with the
+  new binary kit system. Bumped into problems getting it to compile on
+  OSX 10.4 (expletive expletive expletive). Worked around it.
+
+Will:
+
+* Continued working on libtorrent and binary kit changes.
+* Wants to do a 2.5.4 that includes vlc 1.0.3, libtorrent/unicode fixes
+  on Windows, and database fixes from Ben.
+
+Ben:
+
+* Fixed database problems with duplicate ids.
+* Spent time removing sorts.pyx and filetypes.pyx from the codebase.
+  This reduces complexity of the build.
+* Wants to push out a 2.5.4 with database fixes he's done recently.
+* Wants to finish the fasttypes removal work on OSX.
+* Talked about the sniffer code.
+
+Janet:
+
+* Tested changes in Miro and Miro Community.
+* Working on making it easier to assign tasks to volunteers and get
+  more volunteers involved in the process without losing track of them.
+* Wrote up a wiki page for subtitle implementation work and testing.
+  This will become the specification of what we're implementing now
+  that we're mostly done research.
+  https://develop.participatoryculture.org/trac/democracy/wiki/SubtitleImplementationDetails
+* Is having her wisdom teeth taken out next week.
+
+**bugzilla**
+
+* 19 bugs/feature-requests created
+* 1 bugs marked DUPLICATE
+* 7 bugs marked FIXED
+* 1 bugs marked WONTFIX
+* 2 bugs marked INVALID

@@ -1,0 +1,71 @@
+.. title: Dev call 4/7/2010 minutes
+.. slug: devcall_20100407
+.. date: 2010-04-07 12:52:46
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0.1>`__)
+
+* need confirmations on 13120 fix: Luc and Will will follow up on this
+* need a better ui for when the zugo installer fails to download the
+  miro installer; bug 13121; Janet's following up on this
+* need to update translations; Will will do this
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* coming along nicely
+* seriously considering dropping support for OSX 10.4
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* coming along nicely
+
+Luc:
+
+* Bug 13120 - Worked with Anne to find the possible cause of the
+  problem, but it's still completely mysterious. Implemented a
+  workaround that works on Anne's machine, but waiting for additional
+  confirmation for other machines (David and additional GS person).
+  Seems like the workaround should fix it for everyone, but it'd be
+  good to have additional confirmation.
+* Worked on some other less important things.
+
+Janet:
+
+* It was a forgettable week.
+* Did some testing on the search bug, Miro Video Converter, continued
+  refining regression tests and made some new ones.
+* Will follow up with Zugo and Nick about bug 13121 and required
+  interface changes.
+
+Ben:
+
+* Worked on bugs from 3.0.
+* Working on replacing httpclient with libcurl (_so\_ much better so
+  far).
+
+Paul:
+
+* Pushed out Miro Community v0.9.5 with a bunch of fixes.
+* Working design-side of new features for 1.0.
+* In good shape for Miro 1.0--probably 6 weeks of work.
+
+Will:
+
+* Did some follow-up work on some bugs, but mostly spent the week
+  playing catch-up with real life stuff.
+
+OSX information
+
+There were around 470,000 visitors to the Miro Guide site who were using
+OSX. Breakdown:
+
+::
+
+      OSX 10.6 - 50%
+      OSX 10.5 - 35%
+      OSX 10.4 - 12%

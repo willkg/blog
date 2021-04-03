@@ -1,0 +1,45 @@
+.. title: Python Miro Community status: July 16th, 2011
+.. slug: status_20110716
+.. date: 2011-07-16 22:06:14
+.. tags: pmc, dev, miro, mirocommunity, python, work
+
+
+It's been a while since the last status post on the status of
+`Python Miro Community <http://python.mirocommunity.org/>`_.
+The reasons are many, but mostly because I've been blocked on
+other things and hadn't really finished anything.  Boo.
+
+To recap, Python Miro Community is a curated index of Python-related
+video from around the Internet including Python-related conference
+sessions.  Catch the sessions you missed, show sessions to your colleagues,
+and remind yourself why you really want to be attending these
+conferences in person.
+
+Anyhow, it's been a slow few months.  Most of the `PyCon 2011 
+<http://us.pycon.org/>`_ videos are posted with the exceptions of the
+lightning talks which I still have to watch and fill out the descriptions
+for.
+
+Miro Community released 1.2.1 which allows me to do rss feeds that exceed
+the 30-video maximum they have.  That allows me to run my script which
+verifies download urls.  The PyCon 2011 category was fine.
+
+The PyCon 2010 category was not fine.  Of the 120 videos in the category,
+over 60 of them had bad download urls.  This really bothers me.  I don't
+know why the urls are going sour.  I've fixed all the ones in the PyCon
+2011 category and will monitor them going forward periodically.
+
+I still need to go through the other categories.
+
+Carl kicked me into using `GitHub
+<http://github.com/>`_ for PMC related things.  That's at
+`https://github.com/willkg/pmc <https://github.com/willkg/pmc>`_.
+I'm slowly (very slowly) adding scripts I use to run the site as well
+as documentation covering workflow and other things.  Going forward,
+I'll be using GitHub to coordinate and organize everything.
+
+The other thing I need to do is move my todo items from my org-mode file
+over to the issues tracker.  That'll make it easier for other people to
+help if they're so inclined.
+
+That's where things are at.

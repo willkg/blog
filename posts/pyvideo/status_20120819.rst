@@ -1,0 +1,71 @@
+.. title: pyvideo status: August 19th, 2012
+.. slug: status_20120819
+.. date: 2012-08-19 13:56:10
+.. tags: dev, python, richard, pyvideo
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+videos on the Internet. For the most part, it's a collection of
+videos from Python-related conferences. Saw a session you liked and
+want to share it? It's likely you can find it, watch it, and share
+it with pyvideo.org.
+
+
+Status
+======
+
+I've been working with Carl from `NextDayVideo
+<http://www.nextdayvideo.com/>`_ to get the API working so that he
+can push straight from his system to `pyvideo.org <http://pyvideo.org/>`_
+after he's done his post-processing for a conference. That'll mean that
+conferences his company videos will make it to pyvideo a lot faster.
+That's good because they video a lot of Python-related conferences.
+
+In the process of doing that, I made a lot of headway on fixing the
+`richard <https://github.com/willkg/richard/>`_ API and also
+`steve <https://github.com/willkg/steve/>`_.
+
+Wait, what? Who are all these people?
+
+So, richard is the video index website software that runs pyvideo.org.
+It has an admin that allows you to add videos one by one, but there's no
+way to add a collection of videos and no way to batch-process videos.
+Each conference is pretty different. I decided it would be far too 
+time-consuming to write one web ui that could do everything I need if
+only because I don't really know what I need because each conference is
+different. Instead, I decided to write a command line utility and library
+of utility functions that make it easy to script something for a specific
+set of videos. That's steve.
+
+Today I finished up enough of steve to do PyCon AU 2011. I'm also in the
+middle of a couple of other conferences, but since PyCon AU 2012 is
+happening right now, I figured I'd switch gears and finish that one first.
+It took about 3 hours for 30 videos. That's not bad considering I spent
+some of that time fixing bugs in steve.
+
+Anyhow, this is a milestone in the whole richard/steve/pyvideo.org thing.
+
+
+The future
+==========
+
+The future is that I don't want to be doing all this work. Going forward,
+I want other people to use steve to build a bunch of JSON files that they
+send to me. Then I'll curate that and add it to the site. In this way, it
+spreads the work around and I don't have to do it all.
+
+The future also allows anyone to suggest fixes to the data for videos that
+are already on pyvideo.org in a way that I can go through a queue of these
+fixes and approve/deny them quickly. In this way, we continue to have a
+curated index of videos, but it's easy to suggest fixes and thus more likely
+they'll happen.
+
+Both of those are down the road, but definitely before the end of this year.
+
+Both of those are really important because a single person can't run an
+index of videos this size.
+
+That's where things are at! I'll be working through the `conference backlog
+<http://pyvideo.org/suggestions/videos>`_ slowly over the next few months.

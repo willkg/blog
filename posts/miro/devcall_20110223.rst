@@ -1,0 +1,79 @@
+.. title: Dev call February 23rd, 2011
+.. slug: devcall_20110223
+.. date: 2011-02-23 10:58:12
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+- lots of flux in git-master, but the code is starting to stabilize
+- working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+- working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+- one week until code freeze
+
+Janet:
+
+- spent the last couple of days testing device syncing support
+- having internet connectivity problems, a macbook with a broken
+  backlight, and a dead laptop
+- tested subtitle support
+- worked on litmus tests for devices
+
+Geoffrey:
+
+* merged transcoding branch
+* continued working on P1 bugs
+
+Ben:
+
+* worked on P1 bugs, performance issues, and bunch of other things
+
+Jonas:
+
+* worked on magnet uri support---has it working from the Download Item
+  menu
+
+Kaz:
+
+* worked on the new edit item menu
+* added import progress meter
+
+Paul:
+
+* worked on ui overhaul bugs and device syncing bugs
+
+Will:
+
+* subtitles have a lot of problems, so I'm working on those
+* spent a little time working with Miro on Windows
+* continuing to work on bugs
+
+Order of business:
+
+* How do we extend our device support? We talked about adding a "report
+  this device" button. Talked about putting together a form backed by a
+  Google app to collect information from users.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://manual.getmiro.com/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 74 bugs/feature-requests created
+* 6 bugs marked WORKSFORME
+* 6 bugs marked INVALID
+* 4 bugs marked DUPLICATE
+* 65 bugs marked FIXED
+* 2 bugs marked INCOMPLETE

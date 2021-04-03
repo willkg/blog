@@ -1,0 +1,182 @@
+.. title: pyvideo status: January 15th, 2016
+.. slug: status_20160115
+.. date: 2016-01-15 18:30
+.. tags: dev, python, richard, pyvideo
+
+
+What is pyvideo.org
+===================
+
+`pyvideo.org`_ is an index of Python-related conference and user-group videos on
+the Internet. Saw a session you liked and want to share it? It's likely you can
+find it, watch it, and share it with pyvideo.org.
+
+This is the latest status report for all things happening on the site.
+
+It's also an announcement about the end.
+
+.. Note::
+
+   **Update:** :doc:`See the March 16th blog post <status_20160316>`
+   covering the current status of pyvideo.org and pyvideo-data.
+
+
+.. TEASER_END
+
+Status
+======
+
+Back in April of 2015, I added a rough playlist feature. Since then, 80
+playlists have been created. Looking at the creation dates, it's a few every
+week since I did the feature.
+
+Sheila has added a bunch of conferences and we continued to tweak `steve`_ to
+meet our conference-data-adding needs.
+
+That's about it for progress since April 2015.
+
+
+Where things are at
+===================
+
+Right now, things are not great.
+
+I'm pretty tired of working on pyvideo and I haven't had the time or energy to
+do much on it in a while. The software that runs it (`richard`_ and `steve`_ and
+the ansible stuff and all the other bits that make it go) is woefully bitrotted.
+There are security issues. There's tons of technical debt. We're using libraries
+that have undergone significant API changes. `Persona`_ is going away and I'm
+very skittish about securing personally identifyable information for what's
+essentially a hobby site. There's tons of poor architectural decisions to undo.
+If we move forward, there's a lot of work to do.
+
+pyvideo never grew beyond me and Sheila. I haven't done any work onboarding new
+people or even getting pyvideo in good shape for other people to help out in a
+couple of years. The work I did do early on in pyvideo's history never panned
+out. There is currently no pyvideo community. The IRC channel has been dead for
+months. The issue tracker is solely people asking us to index new conferences
+and wondering why we haven't done so, yet.
+
+When I started Python Miro Community and later pyvideo, I wanted to accomplish
+a few things:
+
+1. Build an index of video regardless of where the video was hosted on the
+   Internet.
+2. Make it easy to search to find the videos you're looking for.
+3. Build infrastructure to make the video accessible to people who are
+   differently abled and speak different languages.
+4. Build infrastructure letting people download the video so they can watch it
+   on their devices.
+
+I've been working on this for like 5 years now. I think I made a dent in the
+first, but had a lot of difficulties with the others.
+
+The world has changed a lot since I started this work. Back then, there were
+multiple video hosts and people were interested in hosting video on their terms.
+Now it seems like everyone puts it on YouTube. YouTube has subtitles. It
+supports HTML5. It has playlists. Lots of people have accounts. Should we be
+building an index of YouTube video?
+
+Search on pyvideo has always been terrible. I did the initial work with whoosh
+and django-haystack. I've wanted to switch it over to Elasticsearch for a while,
+but never did. As we added videos to the index and have a wider span of years, I
+claim search results got worse.
+
+Amara is probably great, but I never wrapped my head around the service enough
+to really get it working right. I've followed Khan Academy and their use of
+Amara and they've gone through some interesting transformations over the years.
+Regardless, I still can't get it working well on pyvideo.
+
+I originally started pyvideo figuring I'd keep it English-only and then people
+who were interested in curating an index in other languages could spin up their
+own richard instances to do so. I still think that's the right idea for various
+reasons. Instead, I caved and added a bunch of non-English langauges to pyvideo
+which dealt with multiple languages very poorly. We never got strings
+translated. We never handled multiple languages correctly in search or
+navigating. It's a big mess.
+
+I don't like doing funding work because that kind of work needs all the skills
+I'm not good at. Carl suggested I write up a grant proposal with the PSF a while
+back which they granted (thank you, PSF!) but I only spent half of it because I
+never finished the work I promised to do. We did the gittip thing and I think
+that might have made a dent in domain name costs but then it dried up. I've
+watched other groups that are far more interesting and valuable to the world
+than pyvideo flounder with raising money for development and infrastructure
+costs. I never wanted to do ads. Thus I've been stuck in a situation where I
+should do funding work, but I really don't want to spend the time and energy on
+it (this is a hobby project) and thus we've never had any funds to do anything
+which is unsustainable for any kind of non-trivial endeavor. pyvideo is
+definitely a non-trivial endeavor.
+
+For a while now, I've felt really guilty about all of this. What's wrong with
+me? Why didn't I spend more time on pyvideo? Why didn't I prioritize pyvideo
+over other things in my life like jobs and family? Why do I feel so awful about
+the state of pyvideo all the time? How does the failure of my hobby project
+reflect on my competency as a software engineer? I hear these questions from
+other people about their projects, too. I'm not going to talk more about that
+here because there are much much better treatises on these topics by other
+people, but this is what's in my heart right now.
+
+Anyhow, so that's where things are at. To summarize:
+
+1. pyvideo software has a lot of problems and requires a lot of work
+2. pyvideo never achieved my dreams
+3. I'm tired
+
+
+So, what now?
+=============
+
+I'm ending pyvideo. This journey is over.
+
+Sheila and I did some work to export all the data into JSON and put it into a
+`pyvideo-data`_ repository with some workflow infrastructure to let people
+continue adding to and honing the data. Sheila felt this was important for the
+various research projects looking at gender and race balance at conferences,
+linguistics usage and other things. [#]_
+
+The `pyvideo.org`_ website will get shut down at some point this year. I'm not
+passing it off to someone else. Why? Because I don't think what we've got now is
+worth continuing. I think if someone really wants to continue pyvideo, they're
+better off starting something new without all the debt. Maybe a statically
+generated site?
+
+I think that covers everything.
+
+.. [#] This is the most important thing to come out of pyvideo. I hope someone
+       shows up to curate this data going forward.
+
+
+Many thanks
+===========
+
+Yes, this is the end. Yes, I'm bummed pyvideo didn't match my hopes and dreams,
+but that's more my fault and in spite of the efforts of individuals and
+organizations who helped a lot along the way:
+
+* Participatory Culture Foundation and Nick Reville who built Miro Community
+  which is where this all started.
+* Carl Karsten and Ryan Verner and Next Day Video who footed the bill for
+  pyvideo for the first couple of years and helped guide the creation of the
+  site.
+* Jesse Noller who reached out with help from Rackspace for hosting. That helped
+  a ton.
+* Rackspace who have hosted pyvideo for several years now. They occasionally
+  bill Sheila still, but generally have been wonderful.
+* Steve Holden who always patiently listened to my kvetching and encouraged me.
+* Deb, Fateh, Asheesh, Chris and Bassam who provided a lot of support and advice
+  over the years.
+* Sheila Miguez who is an amazingly patient and capable friend who did a ton of
+  work on pyvideo and without whom I would have ended it a couple of years ago
+  for sure.
+* And lastly all the people who I talked with at PyCons and other places who
+  appreciated the work Sheila and I were doing.
+
+
+That's it!
+
+.. _pyvideo.org: http://pyvideo.org/
+.. _steve: https://github.com/pyvideo/steve
+.. _richard: https://github.com/pyvideo/richard
+.. _Persona: https://login.persona.org/about
+.. _pyvideo-data: https://github.com/pyvideo/pyvideo-data/

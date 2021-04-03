@@ -1,0 +1,37 @@
+.. title: pyvideo status: September 6th, 2012
+.. slug: status_20120906
+.. date: 2012-09-06 23:44:12
+.. tags: dev, python, richard, pyvideo
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+videos on the Internet. For the most part, it's a collection of
+videos from Python-related conferences. Saw a session you liked and
+want to share it? It's likely you can find it, watch it, and share
+it with pyvideo.org.
+
+
+Status
+======
+
+I posted the `videos for EuroPython 2012 <http://pyvideo.org/category/21/europython-2012>`_
+last night. Many thanks to Omar who pulled together metadata for the
+conference.
+
+If you look at the videos on the site, the data is kind of a mess. I spent
+a bunch of time reconciling issues with the data from the YouTube feed with
+data from the EuroPython 2012 site and fixed a lot of issues, but there's
+still a lot left to do.
+
+I spent about 10 hours working on the data for EuroPython 2012.
+
+My current plan is to leave it like this for now and forge ahead to catch
+up with other conferences from 2012. Then I'll go back and continue working
+on a system for crowd-sourcing metadata fixes. That will make it easier for
+anyone to fix data they see is wrong and also remove me as a bottleneck
+to a better index of Python video.
+
+I'm working on SciPy 2012, PyCon AU 2012, and PyCon DE 2011. You can see
+the `queue of conferences here <http://pyvideo.org/suggestions/videos>`_.

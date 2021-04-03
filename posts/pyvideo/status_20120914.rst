@@ -1,0 +1,47 @@
+.. title: pyvideo status: September 14th, 2012
+.. slug: status_20120914
+.. date: 2012-09-14 13:06:41
+.. tags: dev, python, richard, pyvideo
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+conference and user-group videos on the Internet. Saw a session you
+liked and want to share it? It's likely you can find it, watch it,
+and share it with pyvideo.org.
+
+
+Status
+======
+
+I posted the `videos for SciPy US 2012 <http://pyvideo.org/category/20/scipy_2012>`_
+earlier today. They're missing summaries and Carl is forwarding me a bunch
+of data correction requests. I'll work through that over the next few
+days.
+
+SciPy 2012 had ok metadata. I spent about 3 hours on SciPy 2012 over
+the last few weeks.
+
+Next in the hopper are PyCon AU 2012, DjangoCon US 2012 and PyCon DE 2011.
+You can see
+the `queue of conferences here <http://pyvideo.org/suggestions/videos>`_.
+
+
+Thinking about a tip jar
+========================
+
+pyvideo.org takes a lot of time. Plus the software it runs on is pretty
+cool and could/should be used for other domains. This is less of a hobby
+and more of a part-time job.
+
+I've been (slowly) working on collaboration features in richard that make
+it easier to delegate the work to other people. Even with that, I'll be
+spending a lot of time on this.
+
+One thing I was thinking about doing was adding a tip jar sort of thing to
+pyvideo.org. My questions to you are:
+
+1. is that offensive?
+2. is this site valuable enough to you that you would tip me?
+3. what systems are good for this sort of thing? PayPal? gittip?

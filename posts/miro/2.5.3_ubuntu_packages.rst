@@ -1,0 +1,11 @@
+.. title: Miro 2.5.3 packages for Ubuntu Karmic released!
+.. slug: 2.5.3_ubuntu_packages
+.. date: 2009-10-22 10:29:10
+.. tags: miro, work, ubuntu
+
+I just pushed out packages for Karmic for Miro 2.5.3. Until Karmic is
+out, consider these packages **beta** quality. If you use these packages
+and run into problems, let us know as soon as you can.
+
+`Ubuntu installation
+instructions <http://getmiro.com/download/for-ubuntu/>`__

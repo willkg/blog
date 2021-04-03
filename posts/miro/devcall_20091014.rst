@@ -1,0 +1,56 @@
+.. title: Dev call 10/14/2009 minutes
+.. slug: devcall_20091014
+.. date: 2009-10-14 11:48:18
+.. tags: miro, work
+
+**note**
+
+I wasn't on the call for 10/7/2009, so I don't have notes for that day.
+
+**minutes**
+
+Will:
+
+* Planning to push 2.5.3 out.
+* Planning to keep working on extracting binary kit stuff.
+* Then get miro working on Karmic Koala.
+* Then moving libtorrent out of portable.
+* Will be in Providence, RI from October 23rd through 26th.
+
+Luc:
+
+* Continuing work on subtitle work.
+* Perian doesn't support subtitles in subfolders. Luc is looking into
+  fixing Perian and then sending a patch upstream.
+* Luc is going to start looking into VLC support next.
+
+Ben:
+
+* Planning to work on 12101. One of the theories is that when torrents
+  are downloading, Miro is doing a lot of disk thrashing.
+* Remove torrent metadata from the updates.
+* Tweak status so that we only persist to disk every now and then.
+* Plans to work on bug 12229.
+* It's difficult to figure out how many people are affected by 12101.
+
+Paul:
+
+* Working on Miro Community 0.8 release. It's coming along nicely.
+
+Janet:
+
+* Tested Miro Community and Miro 2.5 branch builds.
+* Working on testing plans for Miro Community post 0.8 release.
+
+2.5.3 status:
+
+* Talked about 12277 and 12276 and where we're going with that plan.
+* Hopefully we'll get it out today or tomorrow.
+
+**bugzilla**
+
+* 8 bugs created
+* 1 bug marked DUPLICATE
+* 4 bugs marked FIXED
+* 2 bugs marked WORKSFORME
+* 1 bug marked WONTFIX

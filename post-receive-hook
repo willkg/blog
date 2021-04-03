@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -o errexit
+
+# Set up local variables and export GIT_WORK_TREE because it
+# gets used.
+GITROOT=/home/willkg/projects/blog.git
+
+echo ">>> checking out main"
+cd ..
+env -i git reset --hard
+
+# unset GIT_INDEX_FILE
+
+# unset GIT_DIR so that pip works right with git-based requirements.
+unset GIT_DIR
+
+# If venv doesn't exist, create it.
+if [[ ! -d ./venv ]]
+then
+    echo ">>> creating virtual environment"
+    python3 -m venv ./venv
+fi
+
+# Activate the venv.
+echo ">>> Activate virtualenv"
+. ./venv/bin/activate
+
+# Update requirements to pick up new nikola changes, etc.
+echo ">>> update requirements"
+pip install -U -r ./requirements.txt
+
+# Create logs directory if it doesn't exist.
+if [[ ! -d ./logs/ ]]
+then
+    echo ">>> logs directory doesn't exist; creating"
+    mkdir ./logs/
+fi
+
+# Compile the blog, time it and generate logs.
+echo ">>> compile"
+time ./compile.sh > ./logs/build.log

@@ -1,0 +1,40 @@
+.. title: My status with Debian
+.. slug: 5
+.. date: 2004-10-12 17:08:23
+.. tags: computers, debian, bluesock
+
+I have Debian GNU/Linux happily running on my laptop, though my laptop
+is pretty pokey (it's an Inspiron 7000 that I bought in 1998).
+
+My server at Serverbeach (bluesock.org) runs Debian and it was doing
+fine until the kernel switched the / mount to read-only and then died.
+Rebooting caused the server to fsck everything and I lost /var/lib
+and /var/cache...  Then things got pretty interesting for a few hours.
+My friend gave me a tarball of his /var/lib (minus some random stuff)
+and from that and some useful files in /var/backup, I was able to
+bring most of the server back to life.  Additionally, I found some
+of the files that were missing in lost+found.  Tawdry things like
+mailing list archives dating back to 2000.  Time to institute a more
+rigorous backup system that includes more data....
+
+My dad loaned me one of his monster servers (see figure 1) because it
+was non-functional.  My roommate pulled all the stuff out and put it
+back in again and now it works fine...  Not clear what the actual
+issue was.  Anyhow, once I get it booting, I'm going to slap Debian
+on that machine and start using it for development.  Then I'll switch
+my pokey laptop to mirroring/backing-up bluesock.org.
+
+I've been really happy with Debian.  As happy as I was with Gentoo, except
+I don't have to wait hours for X and various other large things to compile.
+
+.. code-block::
+
+    ____
+   ||__||   <---- server
+   ||__||
+   |    |
+   |    |
+   |____|   . <-- me
+
+
+*Figure 1: an ascii picture of me standing next to the server*

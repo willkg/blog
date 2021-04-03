@@ -1,0 +1,103 @@
+.. title: Dev call February 16th, 2011
+.. slug: devcall_20110216
+.. date: 2011-02-16 11:23:28
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* lots of flux in git-master, but the code is starting to stabilize
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+
+Will:
+
+* Did a bunch of stuff last week.
+* I'm sitting on a couple of ui overhaul enhancements, but they're
+  pretty minor. After those, I'll be working on P1 bugs.
+
+Ben:
+
+* Working on performance issues. There are several places that are
+  problematic that still need work.
+* Hasn't really looked at the roadmap in a while.
+* Now has a working Macbook.
+
+Geoffrey:
+
+* Doing great!
+* Finishing up work on transcoding, but it's under control. It's tight
+  timing-wise, but he's pretty sure he'll hit a March 1st code freeze.
+
+Kaz:
+
+* Still working on a few new ui things. Both should be pretty doable
+  and shouldn't take a lot of time.
+* Still has a few tweaks to do and implementation of things on OSX.
+* Overall is in good shape for the code freeze as long as nothing
+  substantial comes up.
+
+Jonas:
+
+* Working on magnet uri related changes. There are a lot of problems
+  and it's not clear how much work there is to do for this.
+* Ben agreed to work with Jonas on magnet uri stuff.
+
+Janet:
+
+* Sikuli rc2 came out and it's awesome. Now we can execute tests on
+  Linux and Windows.
+* Needs ui overhaul bugs finished in order to continue working on
+  Sikuli test cases.
+
+Paul:
+
+* Paul's mic doesn't work, but we think he's doing ok.
+
+Asheesh:
+
+* Miro Community 1.2 is the awesome! Life in Miro Community is all pina
+  coladas and sunshine.
+* Excited for a MC 1.2 release in the very near future.
+
+Order of business:
+
+* Where are we at?
+
+  * Unfinished ui overhaul bugs are blocking Janet from writing tests.
+  * Magnet URI project might be big--we'll know more soon.
+  * Transcoding should be working by March 1st, but it's tight
+    timing-wise.
+  * WindowsServer problem is probably going to take serious time to
+    work out.
+  * There are still some unresolved performance issues.
+
+* Otherwise everyone thinks we're doing ok regarding the March 1st code
+  freeze except me. I'm concerned that the continued state of flux
+  suggests we're not going to make it or we're not going to have a
+  March 1st Miro that's stable.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://manual.getmiro.com/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 71 bugs/feature-requests created
+* 10 bugs marked WORKSFORME
+* 3 bugs marked INVALID
+* 12 bugs marked DUPLICATE
+* 1 bugs marked WONTFIX
+* 54 bugs marked FIXED
+* 7 bugs marked INCOMPLETE

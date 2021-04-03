@@ -1,0 +1,54 @@
+.. title: Dev call 4/21/2010 minutes
+.. slug: devcall_20100421
+.. date: 2010-04-21 14:48:15
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* we're going to extend the development cycle to May 10th
+* considering dropping support for OSX 10.4
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* coming along nicely
+
+Janet:
+
+* updated the appcast for Miro 3.0.1
+* worked on cobranded players
+* coordinated testing
+
+Ben:
+
+* worked on bug 13169: trying to get miro working with xulrunner 1.9.2
+* looking at ditching gtkmozembed
+
+Paul:
+
+* working on a new point release for Miro Community to get a bunch of
+  bug fixes out to live sites
+* continuing to make good progress on Miro Community 1.0
+
+Luc:
+
+* landed conversion code in master
+* continued working on ui updates, adding menus, ... filling out the
+  functionality
+* working on code to display conversion status
+
+Will:
+
+* helped with getting 13169 worked out
+* helped with Bugzilla 3.6 setup
+* worked on copyright/license issues with Miro Video Converter
+* updated Miro User Manual
+
+**bugzilla**
+
+* 12 bugs/feature-requests created
+* 2 bugs marked WONTFIX
+* 7 bugs marked FIXED

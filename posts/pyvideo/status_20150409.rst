@@ -1,0 +1,75 @@
+.. title: pyvideo status: April 9th, 2015
+.. slug: status_20150409
+.. date: 2015-04-09 20:00
+.. tags: dev, python, richard, pyvideo
+
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+conference and user-group videos on the Internet. Saw a session you
+liked and want to share it? It's likely you can find it, watch it,
+and share it with pyvideo.org.
+
+This is the latest status report for all things happening on the site.
+
+.. TEASER_END
+   
+
+Status
+======
+
+It's been about a year since my last status report. The last year
+was tough for a bunch of reasons I don't want to go into. On top
+of that, I was pretty burned out and I had a ton of other stuff I
+needed to do. So I didn't do much with pyvideo for a long time.
+
+However, we had a lot of help from other people. Sheila Miguez took
+over adminning the site and added a bunch of conferences. Paul
+Collins did a ton of work fixing technical debt issues and cleaning up
+richard codebase. Trey Hunner got richard working with
+Python 3. Spencer Herzberg, Magnun Leno, Reiner Gerecke, Wes Turner,
+Benjamin Bertrand, and Burak Guven fixed a bunch of bugs, added new
+functionality and cleaned up documentation.
+
+I started to get back to things mid-March. I started with the ansible
+work that Sheila did and tweaked it so we could use it to deploy
+pyvideo. Then I redid all the infrastructure, updated richard to
+Django 1.7, fixed a bunch of django-browserid related issues, nixed
+some code and did some other cleanup. Then I had a few days left
+before PyCon US 2015 and I decided to throw together a rough playlist
+implementation.
+
+Playlists are something Sheila and I have talked about for a
+while. It's great that pyvideo is an index of videos, but until now
+there's been no good way of collecting a subset of videos you think
+are interesting to watch later. There's been no good way of curating a
+group of videos and then sharing that list with other people. Perhaps
+you want to help people learn Flask. Perhaps you want to share videos
+about debugging in Python. Perhaps you want to collect videos related
+to a class you're teaching. Perhaps you want everyone to experience
+`Erik Rose: Man of Mystery <http://pyvideo.org/playlist/1>`_.
+
+I landed a rough implementation of playlists today. It's not perfect;
+it's missing some key things. I wrote up some issues in the richard
+issue tracker for features that should get implemented to make it
+really useful. Even without some of those things, it's useful today.
+
+Want to try it out?
+
+Sign in to pyvideo. You'll see a "My playlists" link in the navbar at
+the top. Go to that page and create a playlist.
+
+Now you can go to any video page on the site and add that video to
+your playlists.
+
+All playlists are public. You can share the url of your playlists with
+other people.
+
+Next step is to implement some of the other features listed in the
+`richard issue tracker <https://github.com/pyvideo/richard/issues>`_.
+If there are other things you want to see or you bump into problems,
+toss an issue in the tracker.
+
+I hope you find it helpful!

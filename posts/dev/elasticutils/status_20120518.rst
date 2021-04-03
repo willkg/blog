@@ -1,0 +1,68 @@
+.. title: elasticutils status -- May 18th, 2012
+.. slug: status_20120518
+.. date: 2012-05-18 20:01:16
+.. tags: mozilla, webdev, work, elasticutils, dev, python
+
+A few months ago, I "took over" maintenance of `elasticutils
+<https://github.com/mozilla/elasticutils>`_. We use it in
+`SUMO <http://support.mozilla.org/>`_ as the API for building search
+queries with `elasticsearch <http://www.elasticsearch.org/>`_.
+
+One of the first things I did was spend some time figuring out whether
+we should keep working on elasticutils at all. `django-haystack
+<http://haystacksearch.org/>`_ also provides a django-ish API for
+working with elasticsearch. Why have two libraries that at a high level
+do the same thing?
+
+The thing is that they're not exactly the same. django-haystack is really
+great and supports a variety of backends for search, elasticsearch being
+one of them. Right now, it only has support for elasticsearch in 2.0
+which is in either an alpha or beta state now (their web-site could use
+some updates). However, because it supports a bunch of backends, it only
+supports functionality that works across all of them.
+
+elasticutils, on the other hand, is elasticsearch-specific. As elasticsearch
+adds functionality, we can, too. That's the compelling reason to keep working
+on this library. However, django-haystack has some awesome ideas that we'd
+like to implement in elasticutils, too. This will fix some sharp edges in
+elasticutils, but also make it much easier for projects to switch from one
+to the other.
+
+Currently, elasticutils only handles the query side of things. django-haystack
+handles that, but also has an API for defining mappings, indexing, and
+all the other things you need with a search system.
+
+Thus, `Rob Hudson <https://twitter.com/#!/robhudson>`_ and I are going to
+embrace and extend elasticutils to:
+
+1. fix the current situation where it seems every elasticutils user is
+   actually using their own branch with additional functionality in it (ew!)
+
+2. implement the rest of the things you need with a search system
+
+3. document the things we've learned while working with elasticutils because
+   at a minimum, it seems most of the Mozilla projects that use elasticutils
+   bumped into, spent time on, and solved the same problems---that's a huge
+   waste of time and a failure on my part
+
+One of the things users of a library need is for the library to be a mature
+project with releases, tagged version, documentation, tests, stability, 
+reliability, reproduceability, communication, community and all that.
+Thus, I'm also going to spend some time to turn this into a real project.
+Towards that end, I created ``#elasticutils`` on irc.mozilla.org where
+we'll talk dirty elasticutils stuff. If we end up with more people pitching
+in, we'll create a mailing list. But for now, IRC will do.
+
+My next step is to spend a little time cleaning up what's in the master
+branch, then tag and release a baseline version.
+
+After that, I'm going to spend time identifying, thinking about and merging
+in the divergent functionality in the various branches while Rob works on
+continuing his imperative mapping work.
+
+I think in a couple of months, we'll be in a better place and that'll make it
+easier for Mozilla projects and anyone else who wants to use elasticutils
+to use and contribute to it.
+
+If you're a user of elasticutils, please come hang out with us! Let us know
+how we can better help you.

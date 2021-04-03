@@ -1,0 +1,73 @@
+.. title: Dev call 8/4/2010 minutes
+.. slug: devcall_20100804
+.. date: 2010-08-04 11:23:41
+.. tags: miro, work
+
+Miro 3.5 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5>`__)
+
+* working on fixing up video conversion issues
+* working on fixing libcurl related issues
+
+Miro Community 1.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.1>`__)
+
+* working on it
+* finishing up implementing playlist features
+
+Janet:
+
+* having problems with downloading using Windows build
+* worked on Universal Subtitles test setup and testing
+
+Ben:
+
+* worked on `bug
+  14037 <http://bugzilla.pculture.org/show_bug.cgi?id=14037>`__.
+  created a test case that fails with gtk 2.20 and submitted the `bug
+  625972 <https://bugzilla.gnome.org/show_bug.cgi?id=625972>`__
+  upstream
+* working on creating an OSX build environment
+
+Will:
+
+* worked on Windows build environment issues
+* downgraded us to gtk 2.16 which doesn't have client-side windows
+* cleaned up and rebuilt the Windows build box to use the new
+  environment
+* started working on better community organization
+* fixed http://planet.getmiro.com/
+* upgraded the `Miro User Manual to
+  3.0.3 <http://getmiro.com/userguide/index.html>`__
+
+Luc:
+
+* working on video conversion problems in `bug
+  13821 <http://bugzilla.pculture.org/show_bug.cgi?id=13821>`__
+* worked on other complex video conversion problems
+
+Paul:
+
+* worked on playlists for MC 1.1
+* worked on the Windows installer
+
+Order of business
+
+* The Windows build environment work is now done and we're using Python
+  2.6.5 and VC++ 9.0 (yay!).
+* Priority is being put on finishing off this release. Any help with
+  this would be huge. There are a series of bugs on the roadmap that
+  need to be fixed. If you want to help out but don't know where to
+  start, see http://getmiro.com/userguide/contributing.html
+* If you can't contribute work, please consider contributing funding by
+  `donating <https://www.miroguide.com/donate>`__. Your money goes
+  directly to ongoing development of Miro and related projects.
+
+**Bugzilla stats for Miro:**
+
+* 10 bugs/feature-requests created
+* 2 bugs marked FIXED
+* 5 bugs marked WONTFIX
+* 1 bugs marked WORKSFORME
+* 5 bugs marked DUPLICATE
+* 4 bugs marked INCOMPLETE

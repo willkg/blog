@@ -1,0 +1,94 @@
+.. title: Dev call July 6th, 2011
+.. slug: devcall_20110706
+.. date: 2011-07-06 11:55:12
+.. tags: miro, work
+
+
+**Note**
+
+I was on vacation and missed the last couple of dev calls, thus there
+aren't any notes.
+
+
+**Miro status**
+
+* `4.1 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.1>`_
+* We pushed out Miro 4.0.2.
+* We're now working on Miro 4.1.
+
+
+Kaz:
+
+* Working on metadata stuff.
+
+Geoffrey:
+
+* Working on 4.1 things.  Merged in osx binary kit updates.
+
+Ben:
+
+* Released 4.0.2.
+* Working on 4.1 things; working on hybrid view.
+
+Paul:
+
+* Working on 4.1 tickets related to device syncing/support issues.
+
+Janet:
+
+* Adding tests to our automated test suites.
+
+Will:
+
+* Undid the single-package work I did for Ubuntu packaging.
+* Working on Windows overhaul.
+
+Jonas:
+
+* Working on winsparkle support for Miro on Windows.
+
+
+**Order of business:**
+
+* Talked about the things we want to refactor during this dev cycle.
+  We can't refactor everything, so we talked about what's in the
+  refactoring queue that affect things we're already working on for
+  4.1 and working on those.
+
+  * (Will) move infoupdater stuff from widgets to portable
+  * (Ben) 13182: filename unicode handling
+    * switch all internal stuff to unicode strings.
+    * rename unicode_to_filename method which sucks.
+
+  * (Ben) 17498: itemlist filtering
+  * (Kaz) 16783: refactoring widgetstatestore
+
+* We need to figure out a better way to test translations for
+  bogosity.  We need to balance fragility of whatever it is we
+  do with usefulness and effort it takes to implement/maintain.
+  Janet will think about this.
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .
+
+
+
+**Bugzilla stats for Miro for the last week:**
+
+* 30 bugs/feature-requests created
+* 1 bugs marked WORKSFORME
+* 13 bugs marked INVALID
+* 9 bugs marked DUPLICATE
+* 2 bugs marked WONTFIX
+* 13 bugs marked FIXED
+* 1 bugs marked INCOMPLETE

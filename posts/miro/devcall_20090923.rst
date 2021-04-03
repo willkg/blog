@@ -1,0 +1,49 @@
+.. title: Dev call 9/23/2009 minutes
+.. slug: devcall_20090923
+.. date: 2009-09-23 12:29:17
+.. tags: miro, work
+
+**minutes**
+
+Minutes for this morning's call:
+
+Luc:
+
+* Working on fixing problems with 10.6 build environment and getting
+  Miro working on 10.6.
+* Working on subtitles. (Please help us fund this!)
+* Having issues with .srt files rendering with Perian and 10.6.
+* Snow Leopard support is targeted for 2.5.3.
+* Talked about subtitle implementation specifics.
+
+Will:
+
+* Working on trying to get 2.5.3 out.
+* Working on 12101.
+
+Janet:
+
+* Testing fixes targeted for 2.5.3.
+* Working on Miro Community testing. Planning testing and manual
+  testing.
+* Suggested we build a pre-rollout/pre-demo checkoff list for testing.
+
+Paul:
+
+* Worked on Miro Community and it's almost at the 1.0 point.
+* Miro Community still needs polish, documentation, testing plans...
+* Two sites are live now.
+* There are a bunch of sites on deck.
+
+**kickstarter**
+
+Subtitles project on kickstarter has 24 backers for $494. We're hoping
+it clears $1000 by the end of the month--8 days to go.
+
+**bugzilla**
+
+* 19 bugs created
+* 4 bugs marked FIXED
+* 3 bugs marked DUPLICATE
+* 1 bug marked WONTFIX
+* 2 bugs marked WORKSFORME

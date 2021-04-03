@@ -1,0 +1,14 @@
+.. title: Nokia 770 Internet Tablet 2006
+.. slug: it2006
+.. date: 2006-07-06 10:14:09
+.. tags: nokia770
+
+I upgraded my Nokia 770 to Internet Tablet OS 2006 and it's fantastic.
+It's faster, more responsive, and more stable.  Additionally, there's
+an application manager that downloads from a repository just like
+Debian which is _hugely_ awesome.  The browser is faster, too.
+
+My only issue so far is that I haven't quite got the knack of launching 
+the thumbboard.  At some point, I'll look into that.
+
+`Review of the 2006 release <http://blogbeebe.blogspot.com/2006/07/nokia-770-internet-tablet-os-2006.html>`_.

@@ -1,0 +1,27 @@
+.. title: Python Miro Community status: 02-23-2010
+.. slug: status_20100223
+.. date: 2010-02-23 10:13:49
+.. tags: pmc, python, dev, work, miro, mirocommunity
+
+PyCon 2010 is over and the PyCon AV crew is working on taking the video
+they've recorded, editing it, and posting it. As they post it to the
+`Pycon blip.tv feed <http://pycon.blip.tv/>`__, I'm pulling it into
+`Python Miro Community <http://python.mirocommunity.org/>`__. You can
+keep track of my status
+`here <http://python.mirocommunity.org/category/pycon2010>`__
+(`RSS <http://python.mirocommunity.org/feeds/category/pycon2010>`__).
+
+I sent an email to the Cambridge Python Meetup (Cambridge, MA, USA)
+asking if they still record video and if so, where it gets posted.
+
+Nate Aune sent me a link to the PloneTV feed. I'm in the process of
+pulling those videos in.
+
+One thing I've noticed while curating Python Miro Community is that the
+quality of the image and audio make a *huge* difference in the
+usefulness of the video after the event. It's a *huge* project with a
+lot of finicky bits to reliably create great video.
+
+Many many props to Carl Karsten, the PyCon-AV team, and all the other
+people out there doing this work. It allows these presentations to live
+beyond a moment in time and reach a much larger audience.

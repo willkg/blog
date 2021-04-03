@@ -1,0 +1,60 @@
+.. title: Python Miro Community status: 06-25-2010
+.. slug: status_20100625
+.. date: 2010-06-25 11:05:13
+.. tags: pmc, python, dev, work, miro, mirocommunity
+
+I spent 20 or so hours over the last few weeks working through the
+moderator queue for `Python Miro
+Community <http://python.mirocommunity.org/>`__ and making changes to
+the site. We've almost posted all of the PyCon 2010 videos--I think
+there are three or four more still in the queue including one of the
+lightning talks.
+
+I've created a bunch of bugs in the `Miro Community bug
+tracker <http://bugzilla.pculture.org/buglist.cgi?query_format=specific&order=relevance+desc&bug_status=__open__&product=Miro+Community&content=>`__
+for bugs that I've encountered and enhancements that would make the site
+and curation of the site better. Miro Community is a Free Software
+project, so I'm hoping to find free time to fix/implement some of those.
+
+Carl Karsten is now a curator on the site--that makes two of us. He's
+been a huge help so far. Having someone to bounce ideas off of makes it
+a lot easier and he brings a lot of enthusiasm to the site. Right now
+we're coordinating things through email and we're tentatively going to
+use the pycon-av mailing list for PMC discussion. If we need to switch
+to another mailing list, then we'll do that.
+
+At Carl's suggestion, we added a new category of categories for Python
+user groups. The three groups we have listed now are
+`ChiPy <http://python.mirocommunity.org/category/chipy>`__ (Chicago,
+IL), `BostonPy <http://python.mirocommunity.org/category/bostonpy>`__
+(Boston, MA), and
+`PyAtl <http://python.mirocommunity.org/category/pyatl>`__ (Atlanta,
+GA). The PyAtl videos are mostly from last year--I need to catch up with
+a PyAtl member to find out what's going on. There are only two BostonPy
+videos now, but the group is interested in doing more. The ChiPy videos
+are fantastic. Additionally, Pior from Montreal-Python is working on
+getting their video workflow working--I really look forward to seeing
+their sessions.
+
+I've been tagging videos that I think are good for Python beginners with
+the tag "python-basics". At some point in the near future, we're going
+to move some/all of those videos into a `Learning
+Python <http://python.mirocommunity.org/category/learning-python>`__
+category. There's a large amount of decent introductory material for
+Python out there ranging from videos on YouTube to tutorials at PyCon. I
+think this category will make it easier for people new to Python to get
+their feet wet quickly and easily.
+
+On a slightly related note, the `Universal
+Subtitles <http://universalsubtitles.org/>`__ project recently `launched
+an alpha
+demo <http://blog.universalsubtitles.org/2010/06/16/launching-an-alpha-demo-of-our-subtitling-tool/>`__
+of their system. I'm looking forward to this project reaching a stable
+status since I'm planning to use it on PMC to add subtitle/transcription
+to all videos on Python Miro Community. The project is in Django and
+it's Free Software. If you're interested in this work, `they sure could
+use the
+help <http://blog.universalsubtitles.org/2010/06/22/developers-interested-in-contributing-to-universal-subtitles/>`__.
+
+That's it for this status report. Any thoughts, questions or
+concerns--let me know.

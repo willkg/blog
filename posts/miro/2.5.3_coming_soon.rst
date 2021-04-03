@@ -1,0 +1,42 @@
+.. title: 2.5.3 coming soon--I promise!
+.. slug: 2.5.3_coming_soon
+.. date: 2009-10-14 15:52:49
+.. tags: miro, work
+
+The Miro 2.5 series has been a total pain in the ass--I'm not going to
+lie. Not only has it infuriated a number of users, but it's been like a
+Sysaphusian struggle for the team.
+
+Right now there are 3 developers (Ben, Luc and myself) and 1 QA person
+(Janet) that work on Miro fulltime. Then we have a large community of
+testers, translators, and a handful of people who send in patches to fix
+the problems that irk them most. Even with this large community, the
+majority of the development, testing and support is done by 4 people.
+
+In the last three months, Janet's house was hit by lightning frying a
+bunch of her testing machines; I bought a house and moved (along with
+the build boxes); Ben went on vacation for a month; Luc bought an
+apartment, moved, and then had his Internet connection totally hosed for
+a month; I had unforeseen medical problems (that I don't really want to
+talk about), that resulted in me being offline for the last two weeks;
+and our ssl certificates expired.
+
+This week is the first time since the beginning of August when we've had
+all 4 of us working.
+
+We've been trying so hard to get a much-needed 2.5.3 release out. It has
+a slew of fixes that should alleviate an array of problems that users
+have been experiencing. We're finally on the verge of the release. I
+hope it'll happen today or tomorrow.
+
+I really appreciate the patience many of you have had with us as we
+scrambled to do the impossible over the last couple of months. I really
+wish it could have happened differently, but it's as if the forces of
+nature were completely against us.
+
+Though 2.5.3 should fix a variety of issues, we're working on
+re-architecting some portions of Miro that aren't working well with the
+database changes we made in Miro 2.5. On top of that, we're working on
+subtitle support, extensions, and continuing to make Miro a better
+experience for a larger group of people. Some/most/all of this will show
+up in Miro 2.6 and 2.7, hopefully in the next few months.

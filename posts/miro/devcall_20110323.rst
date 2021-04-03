@@ -1,0 +1,85 @@
+.. title: Dev call March 23rd, 2011
+.. slug: devcall_20110323
+.. date: 2011-03-23 12:19:36
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* lots of flux in git-master, but the code is stabilizing
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+* probably a release in April or May--we're working hard on it!
+
+Janet:
+
+*  worked on testing over the week
+*  worked on sikuli tests now that the ui is more stable
+*  feels that things are finally coming together
+
+Will:
+
+* worked on an upgrade problem with torrent directories
+* implemented Import Media dialog -- will talk to Nick about this to
+  figure out UI issues
+* strings are still in flux, so it's not stable enough for translations
+* working on conversion bugs now
+
+Paul:
+
+* worked on P1 bugs
+* working on P1 bugs assigned to admin and taking bugs from other
+  people
+
+Kaz:
+
+* worked on scrolling issues and selection issues
+* working on a bunch of P1 miscellaneous bugs
+
+Ben:
+
+* worked on a ton of P1 bugs
+* did a bunch of ui stuff: item details pane, standard view, conversion
+  item renderer
+
+Jonas:
+
+* finished up magnet uri support
+* working on P1 bugs
+
+Order of business:
+
+* Talked about how Miro does conversions and reworking it to fix some
+  problems.
+* Talked about where we're at with Miro 4.0. Things are looking good.
+  Bug data suggests we've reached a point of inflection where we're
+  fixing bugs faster than new bugs are coming in. There are still a
+  fair amount of P1 bugs to do, but it seems manageable.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are probably unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made. If you're interested in testing, but don't want to test
+  bleeding edge, then it's worth waiting until we hit the release
+  candidate portion of the dev cycle. We're currently thinking that'll
+  be in a couple of weeks.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by
+  `donating <https://www.miroguide.com/donate>`__. Your money goes
+  directly to ongoing development of Miro and related projects like
+  `Miro Community <http://mirocommunity.org/>`__ and `Universal
+  Subtitles <http://universalsubtitles.org/>`__. See
+  http://pculture.org/about/ for more details on these projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://manual.getmiro.com/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 34 bugs/feature-requests created
+* 5 bugs marked DUPLICATE
+* 47 bugs marked FIXED
+* 5 bugs marked WORKSFORME
+* 1 bugs marked INCOMPLETE

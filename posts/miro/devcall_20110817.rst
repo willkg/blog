@@ -1,0 +1,64 @@
+.. title: Dev call August 17th, 2011
+.. slug: devcall_20110817
+.. date: 2011-08-17 17:26:06
+.. tags: miro, work
+
+
+**Miro status**
+
+* `4.1 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.1>`_
+* We're working on Miro 4.1.
+
+Will:
+
+* continued working on windows overhaul stuff
+* should have my side of stuff checked in by the end of this week
+* will create bugs for the outstanding issues
+
+Janet:
+
+* tested 4.0.3 for the 4.0.3 release
+* continued to test Miro Mobile
+* hoping to work on Miro 4.1 testing
+* sounds like we're going to do a Miro 4.0.4 release
+
+Jonas:
+
+* working on winsparkle support for better seamless updating on
+  Windows
+
+Kaz:
+
+* working on the metadata overhaul
+* working on EchoNest support
+
+Ben:
+
+* worked on hybrid view functionality--almost done
+* worked on separating columns for different views
+* worked on podcast view
+* worked on extension infrastructure to make it better
+
+
+
+
+**Order of business:**
+
+* We talked about the particulars of how WinSparkle deals with an
+  unresponsive Miro.
+
+* We talked about extensions and how we want to develop the
+  infrastructure going forward.
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .

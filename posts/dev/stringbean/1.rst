@@ -1,0 +1,12 @@
+.. title: Not much progress (yet)
+.. slug: 1
+.. date: 2002-11-11 19:22:05
+.. tags: stringbean, dev, muds
+
+There isn't much progress on Stringbean yet.  I do want to re-tackle
+it when Lyntin 3.0 is released and development dies down to a slow
+murmer.  The first thing I'm going to do is overhaul all the Varium
+code and include a lot of the changes that I made for Bluemud
+(ansi parsing, word wrapping, ...).  Then build an online tavern
+from that.  It's not going to be much of an adventure mud from the
+beginning--I just want somewhere I can hang out with cool people (online).

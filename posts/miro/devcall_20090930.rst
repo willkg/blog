@@ -1,0 +1,60 @@
+.. title: Dev call 9/30/2009 minutes
+.. slug: devcall_20090930
+.. date: 2009-09-30 11:06:39
+.. tags: miro, work
+
+**minutes**
+
+Minutes for this morning's call:
+
+Janet:
+
+* Has gone through all of the tests on Windows XP for 2.5.3 rc1.
+* Working on testing Miro on OSX.
+* 2.5.3 rc1 is looking good so far.
+
+Luc:
+
+* Worked on 12212 and should have it fixed tomorrow.
+* Worked on subtitle ui--it's coming along nicely.
+* It's hard to determine which subtitle thing is which language which
+  makes it hard to allow users to choose a default subtitle language.
+* Worked on external .srt subtitle handling.
+* Perian doesn't support external .srt for movie containers it doesn't
+  open by itself (mp4, quicktime, ogg, ...). Luc's running into
+  problems with that and is trying to talk to the Perian developers.
+* VLC handles everything created so far just fine. Luc's tossing around
+  ditching Quicktime/Perian for VLC. *(ed note: I think I summarized
+  that right--but I could be completely mistaken about what Luc is
+  tossing around.)*
+* Will continue doing subtitle work in a subtitle branch that'll
+  eventually get pushed to g.p.o.
+
+Ben:
+
+* Hopped on the call to say hi.
+
+Will:
+
+* Worked on 2.5.3 bugs, put out a rc1 release.
+* Working on redoing release process, scripts and infrastructure to
+  make releases easier and cleaner with git.
+
+Paul:
+
+* Working on Miro Community--almost done with version 1.0.
+* Working on unit tests.
+
+**kickstarter**
+
+We achieved the $1000 goal in large part to a couple of key donations.
+Thank you!
+
+**bugzilla**
+
+* 21 bugs created
+* 7 bugs marked FIXED
+* 1 bug marked DUPLICATE
+* 8 bugs marked INCOMPLETE
+* 2 bugs marked INVALID
+* 1 bug marked WONTFIX

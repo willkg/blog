@@ -1,0 +1,63 @@
+.. title: Dev call 1/27/2010 minutes
+.. slug: devcall_20100127
+.. date: 2010-01-27 11:47:19
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0>`__)
+(was Miro 2.6)
+
+* went through P1s one by one to figure out where we were with them all
+* need help testing
+* shooting for a release candidate as soon as we can
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* Miro Community 0.9 was released!
+* working on 1.0 now
+
+Paul
+
+* rolled out Miro Community 0.9 (w00t!)
+* 308 Miro Communities out there
+* working on 1.0 now
+
+Janet
+
+* split time between testing Miro Community and Miro
+* working on Miro regression testing
+* continued building regression tests in Eggplant
+
+Luc
+
+* got his Internet connection back (w00t!)
+* updated overlay pallette in OSX code to display subtitle items all
+  the time
+* worked on slow first-playback issue on OSX
+* reimplemented MultilineTextEntry for OSX widgets
+* worked on fixing up Edit Item dialog
+* tracked down Perian developers and asked about their release
+  timeframe for 1.2.1
+
+Ben
+
+* worked on a ton of Miro 3.0 bugs
+* working on VLC playback issues; testing out vlc bindings
+
+Will
+
+* reworked GStreamer playback video renderer
+* did a huge pylint pass
+
+**bugzilla**
+
+* 24 bugs/feature-requests created
+* 5 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 2 bugs marked DUPLICATE
+* 3 bugs marked WONTFIX
+* 19 bugs marked FIXED
+* 3 bugs marked INCOMPLETE

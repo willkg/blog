@@ -1,0 +1,14 @@
+.. title: Stringbean overhaul completed!
+.. slug: 2003-01-08-20-20
+.. date: 2003-01-08 20:20:00
+.. tags: stringbean, dev, muds
+
+I finally finished the complete overhaul of the Stringbean driver.  It's
+now separated into a driver and a mudlib.  I have everything implemented
+as a series of hooks and managers.  Some portions are a bit awkward,
+though and could probably be re-written.  Some components are 
+implemented simplistically for now until I (or someone else) design
+and implement a more sophisticated version.  All in good time, though.
+
+Currently implemented: commands, emotes, heartbeats, lookables, exits,
+simple NPCs, connect, disconnect, and some other stuff.

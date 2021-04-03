@@ -1,0 +1,93 @@
+.. title: Dev call 01/19/2011
+.. slug: devcall_20110119
+.. date: 2011-01-19 11:38:53
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+
+Will:
+
+* upgraded libtorrent 0.15.5
+* will work on gstreamer switch next
+
+Ben:
+
+* continuing to work on performance fixes--wrote a bunch of unit tests
+  and now it's a matter of integrating it into the widget frontend
+
+Geoffrey:
+
+* looking into Bonjour on Windows. Apple ships a big metapackage
+  (printing services) that includes the core libraries. Pidgin open
+  source project advises you to install the library.
+* looking at ways to detect whether the user has installed the printing
+  services.
+* started looking into transcoding and working through the technical
+  issues.
+* going to start wrapping things up in the daap branch and get ready to
+  merge it into master.
+
+Paul:
+
+* fixed a bunch of item-overhaul related bugs.
+* added amazon store support
+
+Janet:
+
+* sent out a hitlist of bugs that should get fixed to make testing
+  easier
+* sikuli is the awesome!
+
+Asheesh:
+
+* sprint on MC 1.2 stuff
+* sprint on Duke bug fixing
+* planning to focus on performance issues
+
+Kaz:
+
+* worked on the view menu which is basically working
+
+Official business:
+
+* Should we switch Miro on Windows to use gstreamer? Worth trying out
+  and if it gets too hard, we can defer it.
+* Should we switch Miro on Windows to use webkit? Worth trying out and
+  if it gets too hard, we can defer it.
+* Talked about short-term solutions for keeping us all on the same
+  page. Worth doing a check-in/check-out on IRC using a tag.
+* Talked about moving our git repositories elsewhere. Benefits are that
+  we don't have to host it and deal with hosting work. Asheesh is going
+  to look into this.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* `PCF is looking to hire another Miro developer and a System
+  Administrator <http://www.pculture.org/pcf/jobs/>`__. See the jobs
+  page for more details.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://manual.getmiro.com/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 35 bugs/feature-requests created
+* 5 bugs marked WORKSFORME
+* 2 bugs marked INVALID
+* 5 bugs marked DUPLICATE
+* 2 bugs marked WONTFIX
+* 19 bugs marked FIXED
+* 1 bugs marked INCOMPLETE

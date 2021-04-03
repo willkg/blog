@@ -1,0 +1,79 @@
+.. title: Dev call June 8th, 2011
+.. slug: devcall_20110608
+.. date: 2011-06-08 15:09:46
+.. tags: miro, work
+
+
+**Miro status**
+
+* `4.0.2 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0.2>`_
+* `4.1 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.1>`_
+* we're going to keep working on Miro 4.0.2 for another week or two
+* we're starting work on Miro 4.1
+
+Ben:
+
+* 4.0.2 is going pretty well.  There are still a few blockers, but
+  most things are in a nearly done state.
+
+Jonas:
+
+* worked on improvements to sidebar and continuous playback support.
+* worked on gzip/deflate support for feeds
+* going to switch to 4.1 development
+
+Geoffrey:
+
+* worked on fixing a series of nits for 4.0.2
+
+Kaz:
+
+* worked on unit tests for metadata
+
+Janet:
+
+* worked on 4.0.2 testing
+* continuing to work on regression testing and updating test systems
+
+Will:
+
+* finished Miro User Manual updates
+* almost done overhauling our Ubuntu packaging to make it easier to
+  be easier to deal with
+* sent Steven a contributor assignment form
+* started working on the overhaul of Miro on Windows
+
+
+**Order of business:**
+
+* 4.0.2: Fix anything important, but this is probably our last point
+  release for the 4 series.  We're pretty close to having blockers
+  finished.
+* 4.1: We have a lot of clean-up work that we want to do, but probably
+  can only work through some of it for 4.1.  So we talked about doing
+  theme-focused clean-up similar to what we've done on previous
+  releases and clean up things related to things we're working on.
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .
+
+
+**Bugzilla stats for Miro for the last week:**
+
+* 58 bugs/feature-requests created
+* 4 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 2 bugs marked ---
+* 8 bugs marked DUPLICATE
+* 5 bugs marked WONTFIX
+* 19 bugs marked FIXED

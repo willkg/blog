@@ -1,0 +1,69 @@
+.. title: Dev call May 18th, 2011
+.. slug: devcall_20110518
+.. date: 2011-05-18 12:12:31
+.. tags: miro, work
+
+
+**Miro 4.0 status**
+
+* `roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`_
+* we're working on rc2 today
+* we're hoping to release on May 23rd
+
+
+Ben:
+
+* 6 bugs, some of them pretty icky, some should block and some shouldn't
+
+Kaz:
+
+* 4 bugs, 3 hours of work or so
+
+Geoffrey:
+
+* 1 bug, waiting for more information, shouldn't block an rc2
+* working on OSX Lion support, looks like it might be fine without
+  too many issues
+
+Jonas:
+
+* 1 bug, but it shouldn't block rc2
+
+Will:
+
+* 0 bugs, working on Miro User Manual updates and end-of-dev cycle
+  stuff, will pick up P1 bugs as needed
+
+Paul:
+
+* 0 bugs, will pick up P1 bugs as needed
+* working on MiroGuide stuff
+
+
+**Order of business:**
+
+* rc2 today
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .
+
+
+**Bugzilla stats for Miro for the last week:**
+
+* 113 bugs/feature-requests created
+* 10 bugs marked WORKSFORME
+* 5 bugs marked INVALID
+* 4 bugs marked DUPLICATE
+* 1 bugs marked WONTFIX
+* 74 bugs marked FIXED
+* 1 bugs marked INCOMPLETE

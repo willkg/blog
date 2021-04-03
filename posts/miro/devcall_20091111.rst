@@ -1,0 +1,65 @@
+.. title: Dev call 11/11/2009 minutes
+.. slug: devcall_20091111
+.. date: 2009-11-11 11:21:28
+.. tags: miro, work
+
+**minutes**
+
+2.5.4 status
+
+* Work is going well. There's a new bug that we should look into. But
+  we've done RC builds and we're sending notes to users who are having
+  problems with 12101 in hopes they'll test.
+* If things go well, we'll probably do a release in a week.
+
+Luc
+
+* Did most of the implementation for subtitle support in VLC with Miro
+  on Windows. Doesn't have a Windows build environment, so he's passing
+  this off to Ben or Will to finish up on Windows.
+* Hoping to have the repository changes done asap.
+
+Will
+
+* Keeping tabs on 2.5.4 rc1 testing progress.
+* Helped prisioner on IRC get Miro building on Windows with mingw32.
+  Keeping tabs on that progress with the hope that we can switch from
+  building with Visual Studio 2003 to mingw32.
+* Planning to do the big repository filtering today.
+* Planning to take on the subtitles in VLC on Windows work for Luc
+
+Ben
+
+* Did a bunch of 2.5.4 work.
+* Finished the fasttypes removal work.
+* Got some more data on 12301. Going to look into it to see if there's
+  anything we can divulge from it.
+
+Janet
+
+* 2.5.4 rc1 looks good except for bug 12426.
+* Continued working on building the test infrastructure for Miro
+  Community. Has two volunteers helping with building test cases.
+
+Paul
+
+* Working on Miro Community features: html editing for comments, fixing
+  the submit a video flow, added an RSS feed for categories, ...
+* Back to working on Miro Community bugs.
+
+Nick
+
+* Morgan is going to work on another theme for Miro Community.
+* Working on making Miro Community easier to modify.
+
+**bugzilla**
+
+* 11 bugs/feature-requests created
+* 1 bugs marked DUPLICATE
+* 7 bugs marked FIXED
+
+**notes**
+
+Are these reports useful to anyone? No one has commented, no one has
+mentioned them on IRC or email, ... If they're not useful and no one is
+reading them, then I should be spending my time elsewhere.

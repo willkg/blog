@@ -1,0 +1,53 @@
+.. title: pyvideo status: August 31st, 2012
+.. slug: status_20120831
+.. date: 2012-08-31 16:04:03
+.. tags: dev, python, richard, pyvideo
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+videos on the Internet. For the most part, it's a collection of
+videos from Python-related conferences. Saw a session you liked and
+want to share it? It's likely you can find it, watch it, and share
+it with pyvideo.org.
+
+
+Status
+======
+
+I posted the `videos for EuroPython 2011 <http://pyvideo.org/category/19/europython-2011>`_
+last night. Many thanks to N who pulled together metadata for the
+conference. That saved me gobs of time.
+
+I want to work on EuroPython 2012 next. I've pulled all the data
+in the YouTube channel, however, the description and speaker data
+isn't easily available. Best I can find is 
+`https://ep2012.europython.eu/p3/schedule/ep2012/ <https://ep2012.europython.eu/p3/schedule/ep2012/>`_
+which isn't in a form I can do much with.
+
+**I could really use some help!** I need someone to either find a
+conference organizer and ask them for the data in some easy-to-parse
+format or scrape it. If possible, a JSON format would be great, but I
+can do any format that has a parser in the Python stdlib, database dumps,
+and probably other formats as well.
+
+The key pieces of information I need are these:
+
+* title (this lets me match it up to the YouTube data I already have)
+* list of speakers
+* summary (short summary about the talk---sometimes called abstract)
+* description (longer-form description of the talk)
+* language the talk is in (English? Italian? ...)
+
+Bonus points:
+
+* everything is in utf-8
+* summary and description are marked up in HTML
+
+If you can help, please email me at willkg at bluesock dot org.
+
+Thank you!
+
+**Update:** Omar sent me an XML file with all the EuroPython 2012 metadata.
+I'm pretty sure I'm all set now. Thank you Omar!

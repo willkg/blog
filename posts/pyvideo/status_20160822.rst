@@ -1,0 +1,82 @@
+.. title: pyvideo last thoughts
+.. slug: status_20160822
+.. date: 2016-08-22
+.. tags: dev, python, pyvideo, pyvideo-data
+
+What is pyvideo?
+================
+
+`pyvideo.org`_ is an index of Python-related conference and user-group
+videos on the Internet. Saw a session you liked and want to share it? It's
+likely you can find it, watch it, and share it with pyvideo.org.
+
+This is my last update. pyvideo.org is now in new and better hands and
+will continue going forward.
+
+.. TEASER_END
+
+I started pyvideo.org in March 2012 as a successor to Python Miro
+Community. As I recall, I was frustrated with the Miro Community platform
+and was trying to figure out whether I should bail on the idea altogether
+or not. Then just before PyCon US 2012, I thought about all the things I
+actually needed in the site and all the things I didn't and decided to
+just write my own. I think that was a couple of weeks before PyCon US 2012.
+That happened and thus pyvideo.org was born and Python Miro Community
+was ended.
+
+In retrospect, one of the things I should have done afterwards was another
+rewrite to account for the things I learned while writing that prototype,
+but I never did that. The scope of pyvideo.org was huge, so I spent my time
+on other aspects of the project instead.
+
+I learned a lot while working on pyvideo.org. Many of the problems I ran into
+and things I experimented with turned into experience I relied on later 
+while working at Mozilla on the support and feedback sites. Architecture
+issues, code issues, Django things, Python things, infrastructure things,
+working with others, project communication, project infrastructure, education,
+accessibility, the long litanty of wtfs involved in video on the Internet,
+encoding formats, automation, processing pipelines, tagging taxonomies,
+search, indexing, languages, date/time formats, the complexities with
+peoples' names, etc. Side projects can have a long tail of value.
+
+Through my work on pyvideo, I had an opportunity to talk with people I never
+otherwise would have talked with. Sure we're all just people at heart, but
+I experience a lot of anxiety talking to people I admire. One of the things
+constantly going through my head when talking about pyvideo was, "Oh, please
+don't look at the code. Please please please please please." The code was
+crap. But I was often told it ran the site and the site ran ok and crappy
+code is better than no code some times. Talking with people about pyvideo
+and their thoughts and ideas and what they used the site for was always the
+highlight of my PyCon US experiences. I got a lot of encouragement. I really
+appreciated that.
+
+
+So what about pyvideo.org?
+==========================
+
+In January 2016 I announced I was pretty done. Then in February, Sheila and I
+decided to spend time pulling together the data we collected over the
+years, throwing some infrastructure around it and cleaning it up. I worked
+on that for a while.
+
+At PyCon US 2016, Paul Logston organized a sprint around PyTube using that
+data. We had some conversations and as of last week, he's running pyvideo.org.
+
+There are a few things here that make me happy:
+
+1. pyvideo.org is now a statically-generated site. That's something that
+   Sheila and I toyed with, but we had a bunch of requirements baggage that
+   made it difficult. A clean break doesn't have those problems.
+2. Paul is doing a great job of building a community around the work
+   involved. That's something I didn't do well and it's really a critical
+   part of running a huge site like this.
+3. Passing projects to other people is hard, but Sheila did a ton of
+   coordination leg work to make it all happen and Paul was thoughtful,
+   diligent, communicative and understanding through it all. I really
+   appreciate that.
+
+Ego, I think the handoff was successful and now pyvideo.org is in new and
+better hands!
+
+
+.. _pyvideo.org: http://pyvideo.org/

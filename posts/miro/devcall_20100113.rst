@@ -1,0 +1,57 @@
+.. title: Dev call 1/13/2010 minutes
+.. slug: devcall_20100113
+.. date: 2010-01-13 11:27:08
+.. tags: miro, work
+
+**minutes**
+
+Miro 2.6 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=2.6>`__)
+
+* Waiting on Perian fix.
+* Getting close to feature freeze.
+
+Miro Community 0.9 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=0.9>`__)
+
+* Developing is coming along very nicely.
+
+Janet
+
+* Worked on regression testing, found some issues which were fixed.
+* Working on building automated tests with Eggplant.
+
+Luc
+
+* Worked on issues for 2.6.
+* Followed Ben's footsteps. Fixed mediatype checking working, sidebar
+  update indicators, and some other things.
+* Worked on sidebar scrollbar issues.
+* Working on connecting subtitle files with items.
+* Most recent bugs are taking a lot longer.
+
+Will
+
+* Had a crummy week.
+* Fixed some issues, but didn't get much of what he wanted done.
+
+Ben
+
+* Implemented media type checking.
+* Animated the update indicator in the sidebar.
+* Fixed the Windows shutdown crash bug.
+* Totally awesome performance fixes.
+* Fixed a bunch of other issues.
+
+Paul
+
+* Implemented editor comments.
+* Worked on flat pages.
+* Worked on Miro Community 0.9 stuff--it's coming along nicely.
+
+**bugzilla**
+
+* 26 bugs/feature-requests created
+* 11 bugs marked FIXED
+* 1 bugs marked WORKSFORME
+* 1 bugs marked INVALID

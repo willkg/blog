@@ -1,0 +1,56 @@
+.. title: Dev call 1/6/2010 minutes
+.. slug: devcall_20100106
+.. date: 2010-01-06 19:55:31
+.. tags: miro, work
+
+**minutes**
+
+Miro 2.6 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=2.6>`__)
+
+* Ben landed a ton of awesome performance fixes.
+* Will worked on fixing unit tests and getting unit tests to pass on
+  Windows.
+* Development is progressing nicely.
+
+Miro Community 0.9 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=0.9>`__)
+
+* Paul is working diligently on it.
+
+Janet
+
+* worked on tests Miro Community
+* worked on tests for getmiro.com
+* started working with Eggplant to writing automation tests for Miro
+  but ran into a problem with text recognition
+* went through the regression tests with Miro and only found a few
+  issues
+
+Will
+
+* working on the Windows build box and trying to figure out why it
+  hangs at night like a naughty naughty machine
+* spent serious quality time with unit tests; more to do, though
+
+Luc
+
+* working on small irritating bugs that are hard to reproduce and some
+  of them seem to work fine (i.e. no bug)
+* working on support for connecting subtitle files to videos
+* talked with Perian folks and they fixed the bug Luc submitted; we're
+  waiting on the next version of Perian
+
+Paul
+
+* was on vacation most of last week
+* working on Miro Community 0.9 things
+
+**bugzilla**
+
+* 11 bugs/feature-requests created
+* 2 bugs marked WORKSFORME
+* 2 bugs marked INVALID
+* 2 bugs marked DUPLICATE
+* 4 bugs marked FIXED
+* 2 bugs marked INCOMPLETE

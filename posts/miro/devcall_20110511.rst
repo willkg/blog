@@ -1,0 +1,81 @@
+.. title: Dev call May 11th, 2011
+.. slug: devcall_20110511
+.. date: 2011-05-11 11:54:49
+.. tags: miro, work
+
+
+**Miro 4.0 status**
+
+* `roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`_
+* we're working on a rc for today
+* we're tentatively planning a rc for next week
+* we're hoping to release on May 23rd
+
+Will:
+
+* worked on P1 bugs, synced translations, did peer reviews
+* coordinated release candidate work
+* had the flu
+* fixed the keys on his Macbook except the spacebar
+
+Jonas:
+
+* worked on app indicator support and other P1 bugs
+
+Goeffrey:
+
+* worked on performance issues and crashes related to sharing
+* planning to look at OSX Lion support
+
+Paul:
+
+* worked on device issues/crashes and ui issues
+* waiting on information that we'll get in the next release candidate
+
+Ben:
+
+* fixed a bunch of issues
+
+Kaz:
+
+* worked on a ton of P1 blockers
+
+Janet:
+
+* did a ton of testing
+* worked on automated testing which is working pretty well
+
+
+**Order of business:**
+
+* rc1 today
+* rc2 may 18th?
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .
+
+
+**Bugzilla stats for Miro for the last week:**
+
+* 99 bugs/feature-requests created
+* 4 bugs marked WORKSFORME
+* 9 bugs marked INVALID
+* 6 bugs marked DUPLICATE
+* 1 bugs marked WONTFIX
+* 81 bugs marked FIXED
+
+
+**Unrelated side note**
+
+I finally added the rst plugin for PyBlosxom to my blog so now I can
+post in restructured text rather than HTML.  Yay!

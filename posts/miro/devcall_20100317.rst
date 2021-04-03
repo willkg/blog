@@ -1,0 +1,58 @@
+.. title: Dev call 3/17/2010 minutes
+.. slug: devcall_20100317
+.. date: 2010-03-17 12:20:36
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0>`__)
+(was Miro 2.6)
+
+* soon
+* going to cherry-pick a bunch of fixes in master back to the 3.0
+  branch
+* Perian is very close to a 1.2.1 release--this fixes some issues on
+  OSX
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* work is coming along nicely
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* coming along
+
+Luc:
+
+* worked on 3.1 issues
+* worked on transcoding issues for MiroVideoConverter project
+
+Paul:
+
+* reworked Miro Community infrastructure to make it easier to build new
+  Miro Communities and have them up and running immediately
+* worked on the new admin interface
+* started working on video series feature
+
+Janet:
+
+* worked on some stuff, but I couldn't hear her
+
+Ben:
+
+* worked on reworking urls for search feeds issue
+
+Will:
+
+* spent a lot of time researching
+* did some 3.1 work
+
+**bugzilla**
+
+* 8 bugs/feature-requests created
+* 1 bugs marked DUPLICATE
+* 3 bugs marked FIXED
+* 1 bugs marked WORKSFORME

@@ -1,0 +1,99 @@
+.. title: pyvideo status: November 24th, 2013
+.. slug: status_20131124
+.. date: 2013-11-24 12:00
+.. tags: dev, python, richard, pyvideo
+
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+conference and user-group videos on the Internet. Saw a session you
+liked and want to share it? It's likely you can find it, watch it,
+and share it with pyvideo.org.
+
+
+Status
+======
+
+Lot of stuff has happened since the last status report, but there
+are four things of note:
+
+1. Sheila is now a co-admin of pyvideo.org. She has been for a couple of
+   months. I need to update the site to reflect this.
+
+   I'm really psyched about this. It's a ton of work and I'm just not
+   managing it well. Splitting the work should make it more manageable.
+
+2. Back in July, Sheila poked me about a tweet Jesse wrote suggesting
+   Rackspace was interested in sponsoring Open Source projects. She
+   contacted Jesse and set everything up.
+
+   I'm psyched that `Rackspace <http://rackspace.com/>`_ agreed to sponsor
+   pyvideo.org by providing free hosting. Several months later, I moved
+   pyvideo.org from where it was before to a vm at Rackspace.
+
+   I'm really excited about this! It makes a bunch of problems that I
+   was trying to figure out what to do about go away.
+
+   Thank you, Rackspace!
+
+   I need to update the site to reflect this.
+
+3. Sheila discovered that blip.tv was expiring a bunch of accounts that
+   held conference videos and that those videos would go away. She and I
+   scrambled to download all the files from blip and move them to Rackspace
+   cloudfiles. It's about 600 videos and around 250gb of data.
+
+   In the process of doing that, we saved videos for DjangoCon EU 2010,
+   DjangoCon EU 2011 and PyGotham 2012. I added these to pyvideo.org today.
+   These videos have pages that are stubs with no metadata. I've got that
+   in my queue of things to fix.
+
+   Also, the thumbnails for all the videos on blip.tv are on my laptop which
+   isn't very helpful. I need to move those and update the videos in
+   pyvideo.org.
+
+   As a side note, if we didn't have hosting from Rackspace, we'd have been
+   totally screwed. Thank you, Jesse Noller and Rackspace!
+
+4. I've been working on the `richard <https://github.com/willkg/richard>`_
+   codebase fixing architectural problems, reducing the complexities
+   and trying to clean it up so it's in a better state. That work is
+   almost done. When it is, I'll update pyvideo.org with the new site.
+   At this rate, I think I can finish the work this year, but that assumes
+   there aren't any more emergencies.
+
+5. I've been thinking about how to build a better communication channel
+   for pyvideo.org so people can more easily follow what's going on so
+   they can act on things they're interested in.
+
+   pyvideo.org has a "site news" section. It's a pain in the ass to use
+   and it's not syndicated anywhere and it's likely no one sees it.
+
+   Blogging status reports like this on my blog is better, but I don't think
+   my blog is very widely read. Making my blog more widely-read seems
+   like a lot of work and I'm not sure I can do it effectively anyhow.
+
+   So I've decided to ditch the "site news" section of pyvideo.org and
+   switch to Twitter. I started a `@PyvideoOrg <https://twitter.com/PyvideoOrg>`_
+   account.
+
+   I'll tweet site updates, calls for help and newly posted conferences.
+   I'm tossing around tweeting new videos when they get posted, but videos
+   tend to get posted in huge batches and getting > 40 tweets all at once
+   is a total drag. I'll have to think about that some more.
+
+   Follow @PyvideoOrg if you're interested! Also, feel free to tweet at
+   that account.
+
+   I need to update the site to reflect this.
+
+
+Also, in my life things are pretty nuts. I have a new kid and juggling
+everything was impossible for a while. I think that should easy up now and
+I can spend more time on pyvideo.org going forward.
+
+That's the state of things!
+
+Also, thank you thank you thank you thank you Rackspace!

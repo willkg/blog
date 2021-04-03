@@ -1,0 +1,21 @@
+.. title: School has started again
+.. slug: fall_2006
+.. date: 2006-09-09 10:03:56
+.. tags: life, latex
+
+I'm back in classes for my Fall 2006 semester of grad school at NEU CCIS.  I'm
+taking two classes this semester: Semantics in Programming Languages with
+Professor Wand and Advanced Software Development with Professor Lieberherr.  
+
+I've had two sessions of the Semantics in Programming Languages class and it's
+been really educational so far.  I'm in the process of learning LaTeX so I can
+type up my notes and do my homework.  I picked up docbook a year ago or so to
+do the PyBlosxom manual and some other work--I like LaTeX a lot more than I
+liked docbook.
+
+While searching the Internet for LaTeX tutorial/manual resources, I bumped into
+`Getting to grips with LaTeX
+<http://www.andy-roberts.net/misc/latex/index.html>`_.  It's been really
+helpful--I've picked up almost enough to type up the first two days of notes.
+The issue I have now is that I need to code some math symbols but I don't
+really know what the name of the symbol is so it's difficult to find.

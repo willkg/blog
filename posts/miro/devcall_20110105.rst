@@ -1,0 +1,93 @@
+.. title: Dev call 01/05/2011
+.. slug: devcall_20110105
+.. date: 2011-01-05 11:41:52
+.. tags: miro, work
+
+Welcome to 2011!
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+
+Geoffrey:
+
+* continued working on pydaap--streaming is working now
+* working on getting Miro and Miro Video Converter into the Mac app
+  store
+* wrote up a long missive regarding signal and concurrency issues
+
+Kaz:
+
+* worked on automatic ratings based on play/skip counts
+* worked on coverart extraction from metadata
+* worked on views and other things, too
+
+Asheesh:
+
+* merged Duke code into main so we're not working on two different Miro
+  Community code bases
+* finishing up tiers
+
+Paul:
+
+* worked on refactoring Item code so there's more shared code between
+  Item and DeviceItem to make it easier for other data sources
+* worked on handling generic devices
+
+Will:
+
+* Worked on a bunch of analysis stuff.
+* Started tackling the flashscraper -> vidscraper project.
+* Feeling kind of overwhelmed with how much is going on and what's on
+  his plate.
+
+Ben:
+
+* Worked on GtkTreeModel performance issues when displaying and
+  manipulating item views.
+
+Order of business:
+
+* Morgan is almost done with new ui mockups.
+* Talked about how to do ui workflow and whether to have one person do
+  all the ui implementation or spread it out.
+* Elected chiefs of various domains:
+
+  * Electing Ben as Chief Architect.
+  * Electing Geoffrey as Chief OSX wrangler
+  * Electing Kaz as Chief Linux wrangler
+  * Electing Will as Chief infrastructure wrangler (unit tests,
+    localizations, bugzilla, wiki,
+  * Electing Will as Chief Windows wrangler
+  * Electing Janet as Chief of QA
+  * Electing Paul as Chief of Everything Else
+
+* Talked about GtkTreeModel performance issues.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* `PCF is looking to hire another Miro developer and a System
+  Administrator <http://www.pculture.org/pcf/jobs/>`__. See the jobs
+  page for more details.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 29 bugs/feature-requests created
+* 1 bugs marked DUPLICATE
+* 7 bugs marked FIXED
+* 2 bugs marked INCOMPLETE
+* 4 bugs marked INVALID

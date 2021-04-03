@@ -1,0 +1,83 @@
+.. title: Dev call 11/18/2009 minutes
+.. slug: devcall_20091118
+.. date: 2009-11-18 11:22:02
+.. tags: miro, work
+
+**minutes**
+
+2.5.4 status
+
+* Ben made some fixes for 12301, those will get merged in.
+* Need to sync translations
+* A new set of branch builds today and a release at the end of this
+  week or early next week
+
+subtitle support status
+
+* Luc has it implemented for OSX. Still need implementations for Linux
+  and Windows.
+* Will's working on the Windows implementation.
+* Ben's going to look into moving the menu/submenu code to portable.
+* Either Ben or Will will work on the Linux implementation when their
+  plates clear.
+
+Ben:
+
+* spent a while working on bug 12301. bunch of fixes that'll go into
+  2.5.4.
+* researched "pumping up the volume"; looks possible so he's going to
+  implement it.
+
+Luc:
+
+* frustrating week working on gstreamer subtitles support
+* had problems getting his test files to play correctly with Miro on
+  Ubuntu Karmic
+* wants to hand off gstreamer subtitle support to someone else
+* worked on scrollbar problem with osx
+
+Janet:
+
+* tested 2.5.4, tested 12301 fixes, and did a bunch of Miro Community
+  testing
+
+Paul:
+
+* worked on bugs for Miro Community 0.9
+
+Will:
+
+* will merge in ben's 12301 work, sync translations, and make a set of
+  2.5 branch builds
+* will work on subtitle support for windows
+* will work on subtitle support for linux
+
+**bugzilla**
+
+* 9 bugs/feature-requests created
+* 3 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 2 bugs marked DUPLICATE
+* 1 bugs marked WONTFIX
+* 1 bugs marked FIXED
+
+**notes**
+
+Several people said they read the reports weekly and find them very
+useful, so I'll continue writing them.
+
+One person mentioned how there's no public information about Miro
+development. That's not correct. Here's a list of urls of public
+information:
+
+* Bugzilla timeline http://bugzilla.pculture.org/roadmap.cgi
+* Bugzilla roadmap http://bugzilla.pculture.org/timeline.cgi
+* Git repository web frontend http://git.participatoryculture.org/miro
+* Release notes for releases
+  https://develop.participatoryculture.org/trac/democracy/wiki/ReleaseNotes
+* We have #miro and #miro-hackers on freenode.net for IRC.
+* Develop mailing list
+  http://participatoryculture.org/mailman/listinfo/develop
+* Planet Miro http://planet.getmiro.com/
+* Miro blog http://www.getmiro.com/blog/
+* Identi.ca group http://identi.ca/group/miro

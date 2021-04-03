@@ -1,0 +1,89 @@
+.. title: Dev call February 9th, 2011
+.. slug: devcall_20110209
+.. date: 2011-02-09 11:47:20
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* lots of flux in git-master, but the code is starting to stabilize
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+
+Janet:
+
+* writing up lots of bugs as she builds new Sikuli test cases
+* waiting on Sikuli release
+
+Will:
+
+* fixed the torrent directory bug
+* working on reworking fastresume--going carefully to make sure i'm not
+  creating new problems
+* Windows build box keeps hanging at night which blows, but I'm going
+  to keep kicking this can down the road as much as possible
+* haven't spent much time on Windows recently, but will spend more time
+  on it soon
+
+Paul:
+
+* working on implementing ui overhaul tickets
+
+Geoffrey:
+
+* worked on transcoding for streaming between Miro and other systems
+* worked on DAAP code
+
+Kaz:
+
+* reworked scrolling for views to fix a bunch of problems
+* working on saving display state between Miro runs
+
+Jonas:
+
+* worked on shuffle/repeat work and making it save per display between
+  Miro runs
+* working on support for magnet uris
+
+Ben:
+
+* worked on infolist fixes
+* noticed some things in the interface is still slow and is going to
+  look at them in the near-term
+
+Order of business:
+
+* Talked a little bit about the strings and code freezes.
+* Talked about the downloading tab sorting and how downloads flick
+  around. Janet's going to write up a bug for it.
+* Migrating fastresumedata. Will will test to see if a 3.5.1 to 4.0
+  upgrade with ditching fast resume data is ok, but otherwise plans to
+  dump the fastresume data.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* `PCF is looking to hire a System
+  Administrator <http://www.pculture.org/pcf/jobs/>`__. See the jobs
+  page for more details.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://manual.getmiro.com/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 63 bugs/feature-requests created
+* 8 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 3 bugs marked DUPLICATE
+* 1 bugs marked WONTFIX
+* 46 bugs marked FIXED
+* 8 bugs marked INCOMPLETE

@@ -1,0 +1,37 @@
+.. title: 4/7/2003 summary
+.. slug: summary-2003-04-07-22-00
+.. date: 2003-04-07 22:00:00
+.. tags: content, life, dev
+
+It's threatening to snow outside. Normally this sort of thing doesn't
+occur so it's a bit bizarre. Not to mention the fact that it'd be nice
+if it was nice outside. On the flip side, since I'm at work all day and
+the only windows in my cube are the ones on my monitor, I'm not wholly
+sure I care.
+
+I read a `terrible article <http://freshmeat.net/articles/view/774/>`__
+on Freshmeat about Open Source software. The dude says he's a software
+engineer and that he was "enlightened in 1997 by Free Software" (capital
+letters and verbiage are his) which is silliness. If he was
+"enlightened" and really understood the motivations of the hundreds of
+thousands of faceless developers out there silently (from a media
+perspective) working on open source software, he'd never have written
+this article. He'd have known about the synergy that occurs between
+projects who have some similar goals as they learn from each other--both
+mistakes and successes. He'd have known that most of us are decent
+developers looking to learn more about development--that many projects
+are done to learn--that the production is far far far more important for
+the developer in question than the product. He'd have known that most
+developers are not magic makers--that most of us specialize in a few
+aspects of software development and that a TEAM of people is responsible
+for a solid product that has solid design, solid goals, solid
+functionality, solid unit testing, solid documentation, and solid
+support. He'd have known that as a project matures and evolves as a
+function of its user base and its usage, it hits a point where the code
+becomes unwieldy and it needs refactoring. Sometimes it needs to be
+rewritten. This is good. He'd have known that there are a bunch of http
+software projects--with different missions and different
+characteristics. He'd have known the same about SMTP MTAs, database
+servers, and various other server components. He'd have known a lot of
+things. He's enlightened for incredibly loose usages of the word
+enlightened.

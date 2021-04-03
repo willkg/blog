@@ -1,0 +1,109 @@
+.. title: pyvideo status: April 3rd, 2013
+.. slug: status_20130403
+.. date: 2013-04-03 09:12
+.. tags: dev, python, richard, pyvideo
+
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index of Python-related
+conference and user-group videos on the Internet. Saw a session you
+liked and want to share it? It's likely you can find it, watch it,
+and share it with pyvideo.org.
+
+
+Status
+======
+
+* `Videos for PyCon US 2013
+  <http://pyvideo.org/category/33/pycon-us-2013>`_ are still going
+  up. There are 115 posted and live now. There are around 30 that are
+  waiting for presenters to look at the metadata and tell Carl whether
+  the metadata is good or not. More on that later.
+
+* Several new people submitted patches to `richard
+  <https://github.com/willkg/richard>`_! Several of the patches were
+  fixes to broken things they saw on pyvideo.org. I've applied the
+  fixes to the site directly, but have been waiting on making any
+  non-critical updates to the site until after things have cooled
+  off. I think I'll do a site update in the next week or so.
+
+* PyData 2013 was recorded. When videos are posted, they'll be in the
+  `PyData category <http://pyvideo.org/category/18/pydata>`_. I don't
+  know what the posting schedule is.
+
+* I was contacted a couple of times by the inimitable `Montréal Python
+  <http://montrealpython.org/>`_ to post their videos. They're going
+  to test out `steve <https://steve.readthedocs.org/en/latest/>`_
+  which is the tool I've been writing for the last 6 months to make it
+  possible for other folks to generate the video metadata needed by
+  pyvideo.org.
+
+  I eagerly look forward to their progress and to their videos getting
+  on the site.
+
+  If it works out well, I'll blog more about steve and look for
+  volunteers to use steve to generate the video metadata for the `ever
+  increasing backlog <http://pyvideo.org/suggestions/videos>`_.
+
+* Several people are gittip'ing me. It's not a lot of money, but that
+  and the many emails I've gotten over the last few weeks about the
+  site have been really great. I work on pyvideo.org in my free time
+  of which I don't have a lot. It's nice to know that prioritizing
+  pyvideo.org work over other things helps you.
+
+
+That's the gist of things!
+
+Most of the PyCon US 2013 videos that aren't live are waiting for
+presenters to tell Carl at NextDayVideo (carl at nextdayvideo dot com)
+whether the metadata is good.
+
+* If you see your name on this list and you've told Carl the metadata
+  is fine already, please send him a friendly reminder.
+* If you see your name on this list and you haven't told Carl
+  anything, please send him a "yes, this is great!" or the list of
+  things you need corrected.
+* If you see a friend on this list, tell your friend to do one of the
+  above.
+
+I'll update this list as I'm aware of changes. However, I don't work
+for NextDayVideo, so it's entirely possible my list is not current
+and/or there are errors. If so, please let me know.
+
+Here's the list (last updated 2013-04-12 7:13am -0400):
+
+* Digital signal processing through speech, hearing, and Python -- Mel Chua
+* Faster Python Programs through Optimization -- Mike Müller
+* Python beyond the CPU -- Andy Terrel, Travis Oliphant, Mark Florisson
+* Code to Cloud in under 45 minutes -- John Wetherill
+* A Gentle Introduction to Computer Vision -- Katherine Scott, Anthony Oliver
+* Documenting Your Project in Sphinx -- Brandon Rhodes
+* Contribute with me! Getting started with open source development -- Jessica McKellar
+* Intermediate Twisted: Test-Driven Networking Software -- Itamar Turner-Trauring
+* Gittip: Inspiring Generosity -- Chad Whitacre
+* The Magic of Metaprogramming -- Jeff Rush
+* You can be a speaker at PyCon! -- Anna Ravenscroft
+* sys._current_frames(): Take real-time x-rays of your software for fun and performance -- Leonardo Rochael
+* Planning and Tending the Garden: The Future of Early Childhood Python Education -- Kurt Grandis
+* powerful pyramid features -- Carlos de la Guardia
+* Python for Robotics and Hardware Control -- Jonathan Foote
+* Copyright and You -- Frank Siler
+* Chef: Automating web application infrastructure -- Kate Heddleston
+* Numba: A Dynamic Python compiler for Science -- Travis Oliphant, Siu Kwan Lam, Mark Florisson
+* Integrating Jython with Java -- Jim Baker, Shashank Bharadwaj
+* Iteration & Generators: the Python Way -- Luciano Ramalho
+* ApplePy: An Apple ][ emulator in Python -- James Tauber
+* Distributed Coordination with Python -- Ben Bangert
+* Become a logging expert in 30 minutes -- Gavin M. Roy
+* PyNES: Python programming for Nintendo 8 bits -- Guto Maia
+* Purely Python Imaging with Pymaging -- Jonas Obrist
+* Namespaces in Python -- Eric Snow
+
+These are all set now: 
+
+* IPython in-depth: high-productivity interactive and parallel python -- Fernando Perez, Brian Granger, Min RK
+* Pyramid for Humans -- Paul Everitt
+* Learn Python Through Public Data Hacking -- David Beazley
+* Rethinking Errors: Learning from Scala and Go -- Bruce Eckel

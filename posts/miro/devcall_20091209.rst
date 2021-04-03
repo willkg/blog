@@ -1,0 +1,53 @@
+.. title: Dev call 12/09/2009 minutes
+.. slug: devcall_20091209
+.. date: 2009-12-09 11:08:21
+.. tags: miro, work
+
+**minutes**
+
+2.6 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=2.6>`__)
+
+* subtitle work is almost done
+* lots of bugs to work on, but some might have been fixed in
+  2.5.4--Janet is going to retest
+* lots of little bugs to work on left--we could use the help if anyone
+  is interested in contributing!
+
+Paul
+
+* Worked on Miro Community 0.8.5. It's pretty close to done--there are
+  two outstanding bugs.
+* Hoping to push out Miro Community 0.8.5 out in the next few days.
+  Lots of bug fixes, cool new administration stuff.
+* After that, there are a few big bugs for 0.9 to work on.
+
+Janet
+
+* Worked on getting 2.5.4 out. Looks like it's been a good release with
+  few complaints.
+* Working on figuring out the shutdown crash for Miro on Windows. This
+  has been difficult and very trial-and-error.
+* Worked on Miro Community testing.
+
+Ben
+
+* Worked with Janet on that shutdown crash.
+
+Luc
+
+* Worked on Miro 2.6 issues from bugzilla. Just kind of going through
+  and cherry-picking easy issues and nasty issues.
+
+Will
+
+* Pushed out 2.5.4.
+* Worked on menu refactoring.
+* Worked on subtitles stuff.
+
+**bugzilla**
+
+* 10 bugs/feature-requests created
+* 3 bugs marked WONTFIX
+* 3 bugs marked FIXED
+* 1 bugs marked INVALID

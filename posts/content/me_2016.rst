@@ -1,0 +1,168 @@
+.. title: Me: 2016 retrospective
+.. slug: me_2016
+.. date: 2017-01-14 10:00
+.. tags: content, life, dev, python, pyvideo, mozilla, everett
+
+My 2016 retrospective in which I talk about projects I worked on, pushed off and
+other things.
+
+
+.. TEASER_END
+
+
+I spent some time in 2016 passing one of my big projects off:
+
+* `PyVideo <http://pyvideo.org>`_: In January 2016, I announced I was pretty
+  done and wanted to end the site. I didn't have anyone to hand it off to, so
+  that was going to be that. Sheila and I talked about that for a bit and then
+  decided to export all the data into a new project and spend some quality time
+  on improving the data and building infrastructure so a community could
+  maintain the data.
+
+  Then Paul showed up with a cadre of like-minded people and built a new
+  statically-generated PyVideo using the data Sheila and I had been curating.
+  Sheila and I worked with him and it was a smooth transition. The site is
+  `doing a lot better now and has a larger community of people maintaining it
+  <http://pyvideo.org/pages/thank-you-contributors.html>`_. That's fantastic!
+
+  In October 2016, `the Python Software Foundation awarded Sheila and I a
+  Community Service Award for our work on PyVideo
+  <https://www.python.org/community/awards/psf-awards/#october-2016>`_. I'm
+  really proud of this even though I wasn't as successful as I wanted to be.
+  There's a `blog post covering PyVideo, the handoff and the award
+  <http://pyfound.blogspot.com/2017/01/shelia-miguez-and-will-kahn-greene-and_19.html>`_.
+
+
+At this stage, I don't have many projects on my plate anymore. I continued
+working on existing projects:
+
+* `bleach <https://github.com/mozilla/bleach>`_: I continued to clean up issues
+  and pull requests, fix documentation to clarify the scope of the project and
+  worked on code changes for 1.4.3 and 1.5 releases. Started the work to switch
+  to html5lib 0.99999999 (8 9s).
+
+* `Standup <https://github.com/mozilla/standup>`_: Mozilla ended `Persona
+  <https://developer.mozilla.org/en-US/Persona>`_ which was the identity
+  management system Standup used. Further, the codebase was pretty rough and it
+  was hard to administrate the site. So Paul and I decided to rewrite Standup as
+  a Django app and switch to Github auth. There are still a lot of issues, but
+  the base is theoretically better and the site can keep operating even after
+  Persona has been shut down.
+
+* `Dennis <https://github.com/willkg/dennis>`_: I spent some time fiddling with
+  translation pipelines. It's been tricky. I haven't worked out an architecture
+  I like, yet. I don't use Dennis anymore and I don't have any help on it, so I
+  think I may look to pass this project off or end it in 2017. If you're
+  interested in it, let me know. I interpret silence as you're not interested
+  and don't use it.
+
+
+I started some new projects:
+
+* `Everett <https://github.com/willkg/everett>`_: Everett is the result of me
+  being unhappy with the landscape of Python configuration libraries. It started
+  out as an experiment, but I'm now using it in a few projects and I'm pretty
+  happy with it.
+
+  In 2017, I'll probably do more to make it a real project and write some posts
+  on architectural decisions.
+
+* `Antenna <https://github.com/mozilla/antenna>`_: At Mozilla, I'm currently on
+  the team working on `Socorro <https://github.com/mozilla/socorro>`_ which is
+  our system for crash report collection, processing and analysis for Firefox
+  and other Mozilla products. In 2016, I embarked on extracting and rewriting
+  the collector portion of the ingestion pipeline.
+
+  I spent some quality time with AWS, AWS Lambda, docker, Python 3, Falcon,
+  gevent and boto3. I also developed some things that are being spun out into
+  other projects: Everett, a logging mock, a boto3 S3 mock and a metrics
+  infrastructure.
+
+
+Generally 2016 was ok, but felt slower than previous years. I didn't feel like I
+got much accomplished. I switched from Input (now decommissioned) to `MDN
+<https://developer.mozilla.org/>`_ then to Socorro so I spent a large portion of
+the year onboarding onto big, complex projects.
+
+My manager says this is all expected and that I really did accomplish a lot, but
+the nature of what I accomplished was implicit and not explicit and so harder to
+itemize.
+
+I know I got some things done:
+
+* I wrote up onboarding docs for MDN developers.
+
+* I cleared the MDN security bug backlog.
+
+* I wrote Socorro onboarding documentation and cleaned up some of the project
+  infrastructure documentation. There's a ton more work to do here, but it's
+  probably better.
+
+* I rewrote the Socorro collector component. I read through the existing code,
+  wrote out a spec, experimented with some architectures, settled on one,
+  implemented it, wrote tests, wrote system tests, coordinated other peoples'
+  efforts and worked on a migration plan.
+
+  I actually did more work than that--I wrote two partial implementations with
+  two different methodologies and then started a third ground-up rewrite in
+  September which is the one we're going with now.
+
+  When writing the new collector (called Antenna), I ended up writing a
+  configuration library (Everett) to simplify the architecture.
+
+* I started a project to dockerize Socorro to make it easier to run a prod-like
+  environment on my local machine. I have a collector and a crashmover. I
+  experimented with how to structure it so that it's convenient for use in
+  development. This needs to be finished (processor, middleware, webapp,
+  crontabber), but I think I've settled on a good approach.
+
+* I assisted in upgrading Socorro from Python 2.7.5 to 2.7.11 which turned out
+  to be super hard because of how our infrastructure was set up and the bash
+  scripts we use to build and delpoy things are "interesting".
+
+* I took over the Socorro stage submitter which was having a lot of problems and
+  kept falling down which disrupted development and testing. After taking it
+  over, I cleaned up the node, reworked how it runs and wrote docs so others
+  could fix it when it went down. (Though it hasn't gone down since.)
+
+* I worked with Paul to rewrite Standup as a Django app making it easier to
+  maintain. We sill have a ways to go. We spent a lot of time dealing with
+  authentication and identity issues. We switched from Persona to Github auth
+  which created a lot of problems. Now we're switching from Github auth to
+  Mozilla's hosted Auth0 which is creating a new set of problems. I think I'm
+  going to have to fix everyone's accounts by hand at this point.
+
+  I spent a lot of time rewriting our Auth0 implementation so that it was easy
+  to extract into a Django library. If that's useful to other Mozilla sites and
+  I get some help with maintaining it, I'll split it out. Otherwise it'll
+  continue on as an overengineered auth system in Standup.
+
+* I switched to instant coffee for 6 months. I don't think I'm going to do that
+  again, but it was interesting.
+
+
+Challenges for the year:
+
+* Things feel slower than when I was working on Input.
+
+* Onboarding is hard. Joining teams with established development processes,
+  culture and lots of history is hard. Coordinating with other busy people is
+  hard.
+
+* Carving out time to do deep dives into big issues on side projects like bleach
+  and html5lib 0.99999999 (8 9s) support has been difficult. I've always had
+  this problem--it's nothing new, but it's still tough.
+
+* Dropping my FSF membership in June. I probably should have done this a couple
+  of years ago. Lots of reasons. Feeling much better about things now that I've
+  dropped my membership.
+
+
+In 2017, I want to:
+
+* Clean up my office. It's a mess (still).
+
+* Make awesome stickers for one of the things I work on.
+
+
+That's 2016 in a nutshell!

@@ -1,0 +1,80 @@
+.. title: Dev call 9/1/2010 minutes
+.. slug: devcall_20100901
+.. date: 2010-09-01 11:16:13
+.. tags: miro, work
+
+Miro 3.5 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5>`__)
+
+* working on fixing up video conversion issues
+* working on cleaning things up
+
+Miro Community 1.1.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.1.1>`__)
+
+* released!
+
+Miro Community 1.2 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.2>`__)
+
+* starting the new development cycle
+
+Paul:
+
+* worked on Miro Community 1.1.1 with added admin functionality and bug
+  fixes
+* updated sites on PCF7 to use the same database system the other sites
+  are using; should reduce load on that server and make things better
+
+Janet:
+
+* working on regression testing for Miro 3.5
+* Miro 3.5 is looking good
+* Universal Subtitles is in a state of flux that's hard to test
+* working on moving tests to selenium and doing nightly test runs
+* looking at `Sikuli <http://groups.csail.mit.edu/uid/sikuli/>`__
+
+Luc:
+
+* worked on Miro 3.5 bugs
+* fixed memory leaks that happened on OSX; fixed subtitle track display
+* working on crash when switching between site tabs
+* worked on subtitles freeze bug, but it seems like that's a problem in
+  Perian
+
+Ben:
+
+* worked on httpauth overhaul
+* worked on password-protected proxy support
+
+Will:
+
+* rebuilt libtorrent 0.14.11 with VC++ 9.0 (VS 2008)
+* helped move infrastructure from PCF2 to new server
+* did a pass through Miro bugs on the Fedora system, added comments,
+  fixed some issues
+* started peer reviewing conversions code
+
+Order of business
+
+* We talked about where we're at with Miro 3.5 development and what's
+  left to finish up. We re-prioritized some things.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+* Priority is being put on finishing development work on Miro 3.5. Any
+  help with this would be huge. There are a series of bugs on the
+  roadmap that need to be fixed. If you want to help out but don't know
+  where to start, see http://getmiro.com/userguide/contributing.html
+* If you can't contribute work, please consider contributing funding by
+  `donating <https://www.miroguide.com/donate>`__. Your money goes
+  directly to ongoing development of Miro and related projects.
+
+**Bugzilla stats for Miro:**
+
+* 20 bugs/feature-requests created
+* 1 bugs marked DUPLICATE
+* 7 bugs marked FIXED
+* 1 bugs marked WORKSFORME
+* 1 bugs marked WONTFIX
+* 2 bugs marked INVALID

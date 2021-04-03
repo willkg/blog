@@ -1,0 +1,68 @@
+.. title: Dev call 8/25/2010 minutes
+.. slug: devcall_20100825
+.. date: 2010-08-25 11:16:09
+.. tags: miro, work
+
+Miro 3.5 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5>`__)
+
+* working on fixing up video conversion issues
+* working on cleaning things up
+
+Miro Community 1.1.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.1.1>`__)
+
+* Miro Community 1.1 was released last week
+* working on some bug fixes targeted for 1.1.1
+
+Paul:
+
+* pushed Miro Community 1.1 out to the new servers
+* looking at moving the db to another machine
+
+Ben:
+
+* continued working on bugs for Miro 3.5
+* implemented font selection for subtitles on Windows
+
+Will:
+
+* implemented the PCF bug triage Firefox addon
+* worked on database startup failure problems
+
+Janet:
+
+* working on Windows installer things
+* and other things
+
+Order of business
+
+* We talked a little about what Miro 4 will entail. We're going to try
+  to plan it out in a wiki rather than plan it out in Bugzilla because
+  Bugzilla is difficult to use for iterative design. When tasks become
+  sufficiently defined, we'll move them to Bugzilla and start
+  implementing.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+* Priority is being put on finishing development work on Miro 3.5. Any
+  help with this would be huge. There are a series of bugs on the
+  roadmap that need to be fixed. If you want to help out but don't know
+  where to start, see http://getmiro.com/userguide/contributing.html
+* If you can't contribute work, please consider contributing funding by
+  `donating <https://www.miroguide.com/donate>`__. Your money goes
+  directly to ongoing development of Miro and related projects.
+
+**Bugzilla stats for Miro:**
+
+Lot's of bug churn this week in part because of focus on regression
+testing and because of the creation (and heavy usage of) the PCF bug
+triage Firefox addon.
+
+* 20 bugs/feature-requests created
+* 3 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 3 bugs marked DUPLICATE
+* 1 bugs marked WONTFIX
+* 12 bugs marked FIXED
+* 30 bugs marked INCOMPLETE

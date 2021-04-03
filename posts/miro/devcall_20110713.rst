@@ -1,0 +1,79 @@
+.. title: Dev call July 13th, 2011
+.. slug: devcall_20110713
+.. date: 2011-07-13 12:55:49
+.. tags: miro, work
+
+
+**Miro status**
+
+* `4.1 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.1>`_
+* We're now working on Miro 4.1.
+
+Will:
+
+* figured out gtk dll issues and continued working on upgrading the
+  Windows dependencies
+
+Paul:
+
+* worked on auto-fill code; ui is mostly there, but still working on
+  the functionality
+
+Geoffrey:
+
+* worked on usability issues
+* worked on improvements to sharing
+
+Jonas:
+
+* worked on WinSparkle integration
+
+Janet:
+
+* worked on regression tests; adding new ones; augmenting existing
+  ones
+* worked on update testing
+
+Ben:
+
+* worked on hybrid view mode; pushed the branch to g.p.o.; it's sort
+  of a proof-of-concept right now but looking good
+
+Kaz:
+
+* worked on metadata extraction and storage
+
+
+**Order of business:**
+
+* filename type overhaul: We should override FilenameType and
+  PlatformFilenameType so they throw errors when used.  That'll make
+  it easier to find issues.
+* Jonas is working on getting Miro to use WinSparkle, so we talked
+  about how we use Sparkle on OSX and how we get the appcast file and
+  move the data around to make it happy in Sparkle.  We also talked
+  about how to tweak the installer so that Miro passes to winsparkle
+  which kicks off the installer and shuts down Miro.  Then the
+  installer shows a progress bar and kicks off the new Miro.
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .
+
+
+**Bugzilla stats for Miro for the last week:**
+
+* 19 bugs/feature-requests created
+* 2 bugs marked DUPLICATE
+* 7 bugs marked FIXED
+* 1 bugs marked WONTFIX
+* 1 bugs marked INCOMPLETE

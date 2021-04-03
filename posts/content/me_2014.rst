@@ -1,0 +1,180 @@
+.. title: Me: 2014 retrospective
+.. slug: me_2014
+.. date: 2015-02-19 16:20
+.. tags: content, life, dev, python, pyvideo, mozilla
+
+
+This is belated because I've been busy. This is my 2014 retrospective.
+
+.. TEASER_END
+
+
+2014 was chaotic. It had a lot of epically lousy parts, but also had some good
+parts. Like 2013, I don't know what I did with my 2014 goals.
+
+2013 involved a lot of projects. 2014 involved fewer.
+
+* `dennis <https://github.com/willkg/dennis>`_: Lots of development on
+  Dennis. It's really come along as a tool, though I wish I had more
+  users since that would help flesh out issues.
+
+* `denise <https://github.com/willkg/denise>`_: A web front-end for
+  dennis. I did some work on it, but it needs some more to remove some
+  of the sharp edges.
+
+* `ernest <https://github.com/willkg/ernest>`_: Everyone has a
+  Bugizlla front-end--this is mine. I work on this with Mike, Ricky
+  and Rehan. We made some solid improvements in 2014. Having said
+  that, it's still pretty hacked-together and it's not generally
+  useful to anyone else.
+
+* `denton <https://github.com/willkg/denton>`_: A bunch of us keep a
+  log of what we've worked on day-to-day in Standup.  Denton pulls the
+  weekly data and throws it into an email. It doesn't sound like much,
+  but it runs on a RHEL 5 system with an aged Python 2.6 and it's a
+  pain in the ass to use. Given that, Denton has virtually no
+  dependencies and sports its own (mildly terrible) template
+  parser. It continues to be a mildly fun hobby project to tinker with
+  periodically.
+
+* `elasticutils <https://github.com/mozilla/elasticutils>`_: I did a
+  ton of work on ElasticUtils so that people could use it and get over
+  the Elasticsearch 0.90 -> 1.x hump. After talking with Honza,
+  Jannis, Erik and Rob at PyCon US 2014, we decided it wasn't worth
+  keeping ElasticUtils going. Honza built `elasticsearch-dsl
+  <https://github.com/elasticsearch/elasticsearch-dsl-py>`_
+  does some of the things ElasticUtils does, but better. Several
+  Django-focused shim libraries that sit on elasticsearch-dsl have
+  appeared since then. In January 2015, I deprecated the project and
+  no longer work on it.
+
+* `richard <https://github.com/pyvideo/richard>`_,
+  `steve <https://github.com/pyvideo/steve>`_ and
+  `pyvideo <http://pyvideo.org>`_: I did a bunch of work on these
+  three right after PyCon US 2014 and then I totally burned
+  out. Sheila took over admin of pyvideo. I tried to reduce my role to
+  fixing architectural problems with richard and steve. I haven't
+  spent much time on either, though. I'd like to spend more time on
+  them, but now I'm having difficulties finding free time to
+  spend. These projects are currently struggling.
+
+
+I also spent time on a bunch of other projects:
+
+* `peep <https://github.com/erikrose/peep>`_: I helped a bunch on peep
+  adding support for github tarball urls which we use a lot for Input
+  and SUMO. I'm now a maintainer and help out with project
+  maintenance.
+* `django-ratelimit <https://github.com/jsocol/django-ratelimit>`_: James did an
+  overhaul that I reviewed and helped with.
+* `Sandstone <https://github.com/schalkneethling/sandstone>`_: Schalk
+  built this project as a Bootstrap version of Mozilla Sandstone look
+  and feel. I was thinking I'd use it, but it seriously lacked documentation
+  so I helped work on that for a while.
+* `elasticsearch-dsl-py <https://github.com/elasticsearch/elasticsearch-dsl-py>`_:
+  I spent a portion of PyCon US 2014 sprints talking with Honza, Rob
+  and Jannis about what I liked about ElasticUtils and we worked out
+  parts of the elasticsearch-dsl-py API. Since then, I very occasionally
+  comment on issues. I'd like to spend more time on this project, but Input
+  and SUMO are still stuck on Elasticsearch 0.90, so I don't have anywhere
+  to use it, yet.
+
+
+At work, I spend most of my time on `fjord <https://github.com/mozilla/fjord>`_
+which powers `Mozilla Input <https://input.mozilla.org/>`_.
+
+
+2014 was interesting:
+
+* The sec-champs group fizzled out. I continue to help manage Django security
+  updates across the various Mozilla web-sites. (Security)
+
+* I continue to work on l10n issues by improving the Dennis PO/POT linter.
+  I also wrote Denise which anyone (particularly translators) can use without
+  having to install Dennis. (L10N)
+
+* I got around to writing a site-health dashboard for Input. This
+  makes it much easier to spot issues after deployments and code
+  changes. (IT)
+
+* I wrote a smoketests test suite using Selenium for Input. This reduced
+  goofs with feedback that we had periodically. (QA)
+
+* We set up Fjord to work with Vagrant. The vagrant provisioning
+  script is a bash shell script and isn't idempotent which is a bit of
+  a drag occasionally. However, this system has made it a lot easier
+  for new people to contribute to Fjord/Input development. L. Guruprasad
+  helped a ton here. (Community building)
+
+* I overhauled the feedback forms on Input making them more responsive,
+  accessible and generally better. (UX/UI)
+
+* I wrote a translation system for Input which does automated machine and
+  human translation. It's currently using Gengo, but the system is modular
+  so we could write modules for other translation companies. This translates
+  incoming feedback in non-English languages allowing our analysis tools
+  to operate on everything in English. (Software engineering)
+
+* I started a Dashboards for Everyone project which coupled an API for
+  querying feedback on Input with some examples using d3 for converting
+  that code into dashboards. I thought this project would do a lot to
+  alleviate peoples' needs for data, but as far as I can tell, it never
+  caught on. (Software engineering)
+
+* Early in 2014, I started working on a data retention policy for Input
+  data. Over the course of 2014, this policy gelled and was implemented.
+  (Privacy)
+
+* In 2014, I committed to writing up `project plans for the bigger
+  Input projects <https://wiki.mozilla.org/Firefox/Input>`_ and
+  maintaining them in public. The thinking was that this lets other
+  people follow along and correct missteps. Also we have a record of
+  why we did certain things the way we did them. In reality, I don't
+  think anyone really cared and/or looks at them. Still, it
+  occasionally helps me, so that's probably good enough. (Project
+  management)
+
+
+Challenges for the year:
+
+* I think I'm easier to work with than I was in previous years. I
+  spent some time fixing how I did things. Over the course of 2014,
+  the indications that I was hard to work with have mostly
+  disappeared. It's entirely possible that's because I switched
+  projects and work with different people now. As a side note, User
+  Advocacy group at Mozilla is amazing to work with.
+
+* I'm still working on too many things. I continued working on fixing
+  this. I retired ElasticUtils which was taking a lot of time. I
+  retired from working on playdoh, funfactory and friends. Still,
+  there are projects I want to work on that I haven't/can't, so that
+  bums me out.
+
+* Two roommates is still chaotic. It'll be like that for a while, I think.
+
+* Wearing lots of hats on the Fjord/Input project really took a toll:
+  project manager, architect, lead/solo developer, QA, deployer, ... I
+  do it all. I learned I can do this, but that it's exhausting and I
+  spent most of 2014 feeling overwhelmed and like I can't move fast
+  enough. I really appreciate Ricky, Rehan and Mike helping with
+  reviews and technical questions I have, else I would be sunk.
+
+
+In 2015, I want to:
+
+* Spend time working on pyvideo, richard, dennis and ernest and get them
+  to better places.
+
+* Overhaul my blog. Douglas is great, but the blog theme has issues and
+  has since I last overhauled it in like the mid-2000s.
+
+* Find more time to tinker. I had like zero tinker time in 2014--it was just
+  too chaotic. No tinker means I'm falling behind (or at least feeling like
+  I'm falling behind).
+
+* Blog more. I did a few impressive things. I wish I had blogged about them
+  so that there's a record of me doing those things and also so that others
+  could learn from my experiences. It's hard to find the time, though.
+
+
+That's 2014 in a nutshell!

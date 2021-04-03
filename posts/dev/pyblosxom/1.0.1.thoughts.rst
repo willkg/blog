@@ -1,0 +1,14 @@
+.. title: Thinking about releasing a 1.0.1
+.. slug: 1.0.1.thoughts
+.. date: 2004-06-30 16:33:45
+.. tags: dev, pyblosxom, python
+
+I think I may release 1.0.1 this weekend depending on what else is going
+on life-wise. I tossed a feeler email out to the dev list in regards to
+what else should be fixed for 1.0.1, but didn't get anything back--which
+isn't surprising as people are pretty busy these days.
+
+So... to do a release or not--that is the question. Is there anyone
+reading this blog who has things that they'd like to see for a very
+minor fix-it point release that's doable by one man who only has a bit
+of free time (unless they're interested in sending in a patch)?

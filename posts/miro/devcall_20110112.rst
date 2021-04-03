@@ -1,0 +1,100 @@
+.. title: Dev call 01/12/2011
+.. slug: devcall_20110112
+.. date: 2011-01-12 12:46:46
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+
+Janet:
+
+* playing catch-up on testing for Miro 4.0
+* updating tests with `Sikuli <http://sikuli.org/>`__, found a problem
+  which they fixed (thank you super cool Sikuli developers!)
+* tested Miro Video Converter
+* tested Universal Subtitles
+* started testing the Miro app for the iPad
+
+Kaz:
+
+* working on the new ui--tried to get it done for the call, but it's
+  not quite there, yet
+* working on the view menu--probably land it this week
+* working on ratings--almost done
+* researching adding MusicBrainz support
+* fixed some bugs
+
+Will:
+
+* did a bunch of stuff related to moving servers around
+* overhauled the windows build scripts and some of the code so that I
+  can work on Windows
+* fixed unit tests so we have proper test skipping
+* planning to land extensions
+
+Ben:
+
+* interviewing candidates
+* made changes to signals that we talked about on the last couple of
+  calls which caught some funky issues
+* fixed a bunch of bugs
+* working on performance fixes for tree inserts
+
+Paul:
+
+* fixed a bunch of bugs
+* working on Amazon store support
+
+Geoffrey:
+
+* merged the DAAP branch to master
+* did some release engineering for putting Miro in the app store
+* having problems with bonjour support on Windows
+
+Asheesh:
+
+* working on Miro Community tiers
+
+Order of business:
+
+* Can Will land extensions, yet? In the future, if you need peoples'
+  input, track them down and ping them until they submit to your needs.
+* talked about how to get bonjour support working for Miro on Windows
+
+  - problems with bonjour support on Windows
+  - could use mDNS responder (Apache license) but we can't get it to
+    compile with Visual Studio Express
+  - maybe the user should download the file and print sharing thing
+    and install it?
+
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* `PCF is looking to hire another Miro developer and a System
+  Administrator <http://www.pculture.org/pcf/jobs/>`__. See the jobs
+  page for more details.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://manual.getmiro.com/. (It just moved.)
+
+**Bugzilla stats for Miro for the last week:**
+
+* 46 bugs/feature-requests created
+* 1 bugs marked WORKSFORME
+* 6 bugs marked INVALID
+* 3 bugs marked DUPLICATE
+* 1 bugs marked WONTFIX
+* 20 bugs marked FIXED
+* 1 bugs marked INCOMPLETE

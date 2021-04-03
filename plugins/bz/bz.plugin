@@ -1,0 +1,9 @@
+[Core]
+Name = rest_bz
+Module = bz
+
+[Documentation]
+Author = Will Kahn-Greene
+Version = 0.1
+Website = http://bluesock.org/~willkg/
+Description = Directive for bugzilla links

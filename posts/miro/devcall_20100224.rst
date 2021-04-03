@@ -1,0 +1,56 @@
+.. title: Dev call 2/24/2010 minutes
+.. slug: devcall_20100224
+.. date: 2010-02-24 11:17:45
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0>`__)
+(was Miro 2.6)
+
+* we're ready for a release. srsly.
+* making builds today and pushing it out over the next few days.
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* coming along
+
+Will:
+
+* finishing up the user manual
+* will talk to Nick about putting manual on getmiro.com
+
+Luc:
+
+* worked on 10.4 super weird issues
+* blind fixes seem to be working--so that's good
+* talked to perian folks--they're close to a release
+
+Paul:
+
+* mostly worked on sysadmin things
+* changed the workflow for bug handling for Miro Community which should
+  make it easier to get fixes in faster
+* working with sys admins to move Miro Guide to a new server
+
+Ben:
+
+* really sick last week
+* triaged crash reports from 3.0 rc3
+* started organizing for 3.1 stuff
+
+Janet:
+
+* fell off the call
+* continued regression testing testing Miro 3.0
+* worked on User Manual for Miro 3.0
+
+**bugzilla**
+
+* 18 bugs/feature-requests created
+* 3 bugs marked DUPLICATE
+* 2 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 4 bugs marked FIXED

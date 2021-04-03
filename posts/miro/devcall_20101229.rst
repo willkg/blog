@@ -1,0 +1,85 @@
+.. title: Dev call 12/29/2010
+.. slug: devcall_20101229
+.. date: 2010-12-29 14:05:04
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+
+Kaz:
+
+* continued working on metadata-related work
+* working on a view menu for showing/hiding columns
+
+Ben:
+
+* rewrote search code
+* continuing to work on ui performance enhancements
+
+Geoffrey:
+
+* worked on pydaap
+* worked on bonjour support--running into license issues
+
+Paul:
+
+* mic was dead
+
+Will:
+
+* fixed a bunch of bugs
+* got extensions mostly done
+* planning to work on conversions-related bugs and looking into
+  ditching flashscraper
+
+Order of business:
+
+* Windows bonjour library: Licensed under the Apache license. Looks
+  like we can't compile it without a full version of Visual Studio.
+  Need to figure out what to do here.
+* database issues: there might be reentrant-related issues. Ben is
+  going to check to make sure all database changes happen in the
+  backend thread. Geoffrey is going to write up a bug about reentrant
+  issues he's seeing in regards to signal handling. Ben and Geoffrey
+  will continue researching this and we'll talk about it more next
+  week.
+* performance issues with Gtk TreeView: Ben and Kaz are going to look
+  into this over the next week.
+* extensions: Nick says he doesn't want any user-facing parts this time
+  around, so I may just leave that portion as is. I sent out an email
+  with where I'm at to the develop list. Is what I have ok so far? Are
+  there any additional uses for extensions that we want to think about
+  going forward? Is it ready to land?
+* How much work do we think we have left for 4.0? People should write
+  up bugs for all the things they're planning on doing for the 4.0
+  cycle so we have a good idea of where we're at.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* `PCF is looking to hire another Miro developer and a System
+  Administrator <http://www.pculture.org/pcf/jobs/>`__. See the jobs
+  page for more details.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 24 bugs/feature-requests created
+* 3 bugs marked WONTFIX
+* 14 bugs marked FIXED
+* 1 bugs marked WORKSFORME
+* 3 bugs marked DUPLICATE
+* 1 bugs marked INCOMPLETE

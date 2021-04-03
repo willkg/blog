@@ -1,0 +1,48 @@
+.. title: Dev call 7/21/2010 minutes
+.. slug: devcall_20100721
+.. date: 2010-07-21 11:16:49
+.. tags: miro, work
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* working on rebuilding the Windows build environment
+* working on fixing up video conversion issues
+* working on fixing libcurl related issues
+
+Miro Community 1.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.1>`__)
+
+* working on it
+
+Paul:
+
+* point release of Miro Community with video widget and fixes for
+  Internet Explorer
+
+Will:
+
+* continued to work on the windows build environment changes
+* fixed some minor bugs
+
+Luc:
+
+* worked on fixing small 3.1 issues
+* waiting on git repository fixes to check them in
+
+Janet:
+
+* worked on testing things
+* having problems with litmus test system after server died last week
+
+Ben:
+
+* boogie boarding
+
+**bugzilla:**
+
+* 3 bugs/feature-requests created
+* 3 bugs marked FIXED
+* 1 bugs marked WONTFIX
+* 1 bugs marked WORKSFORME
+* 5 bugs marked INCOMPLETE

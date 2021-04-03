@@ -1,0 +1,52 @@
+.. title: Dev call 10/28/2009 minutes
+.. slug: devcall_20091028
+.. date: 2009-10-28 11:08:03
+.. tags: miro, work
+
+**minutes**
+
+Paul:
+
+* Worked on Miro Community stuff over the week.
+* Talked about infrastructure for the MC services.
+
+Janet:
+
+* 2.5.3 looks like a pretty good release.
+* Tested Will's torrent-related fixes--looks good.
+* Testing Luc's subtitle work. Found some bugs with the subtitle code
+  and older versions of OSX. Otherwise, it's looking good so far.
+* Talked a bit about Miro Community testing. We have a few volunteers
+  helping, but there's still work to do.
+
+Luc:
+
+* Worked on subtitle stuff. Happy to see people are starting to test
+  subtitle-enabled builds.
+* Worked out some bugs so it now works on 10.4, 10.5, and 10.6.
+* Working on getting subtitles working on Miro on Windows with VLC.
+* This is coming along nicely and we decided it should land in Miro 2.6
+  so we're going to move the work to the master branch.
+
+Will:
+
+* Reworked Miro on Windows to use a packaged binary kit.
+* Switched Miro on Windows to use a pre-built libtorrent from the
+  binary kit.
+* Planning to do the same for Miro on OSX.
+* Pushed out a set of Karmic packages for 2.5.3, but they aren't well
+  tested.
+
+Ben:
+
+* Did some bug-fixing.
+
+**bugzilla**
+
+* 23 bugs/feature-requests created
+* 12 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 2 bugs marked DUPLICATE
+* 3 bugs marked WONTFIX
+* 3 bugs marked FIXED
+* 25 bugs marked INCOMPLETE

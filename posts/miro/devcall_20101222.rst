@@ -1,0 +1,106 @@
+.. title: Dev call 12/22/2010
+.. slug: devcall_20101222
+.. date: 2010-12-22 12:49:16
+.. tags: miro, work
+
+First off, I'm back from "paternity leave" as of Monday. I'm back to
+taking notes of the dev calls and posting the summaries.
+
+I'm game for changing the way these summaries work. If you have thoughts
+or criticisms along those lines, let me know either by email or by
+comments.
+
+Miro 3.5.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5.1>`__)
+
+* released!
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+
+Kaz:
+
+* fixed scroll position reset problems
+* working on audio/video detection
+* worked on bug triage
+
+Will:
+
+* back, but it'll take me a week or two to phase in completely
+* did a lot of bug triage
+* going to switch to Windows for primary development for a while so
+  that platform has someone paying attention to it
+* working on unit test framework bits
+* trying to finish up the extensions research work before the end of
+  the year
+
+Paul:
+
+* continued to work on device support
+* worked on bug triage
+
+Geoffrey:
+
+* working on media sharing code (daap) and getting things into the
+  Apple appstore
+
+Janet:
+
+* worked on Universal Subtitles testing
+* just got builds for the next version of MVC and will test that
+* worked on bug triage
+
+Ben:
+
+* worked on fast searching; looking at whoosh, but there are some
+  complications
+
+Official business:
+
+* talked about the state of unit testing and documentation for Miro
+* talked about how Miro will do device support; how users can add
+  support for additional devices; supporting generic devices;
+  supporting other USB mass storage devices (thumbdrives ftw!)
+* we spent a bunch of time over the last week having a **massive bug
+  triaging party**! We resolved around 200 bugs and now have around 700
+  open bugs. There were a lot of stale/obsolete bugs that were closed,
+  bugs that we needed input on but never got it that were marked as
+  INCOMPLETE, bugs that got fixed, bugs that got put in the 4.0 target,
+  and some enhancements we looked at and said, "That's just not the
+  direction we're stewarding Miro" and marked as WONTFIX. I think this
+  is the sort of thing we should do either after every new release or
+  at the end of the year.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* `PCF is looking to hire another Miro developer and a System
+  Administrator <http://www.pculture.org/pcf/jobs/>`__. See the jobs
+  page for more details.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro for the last 4 weeks:**
+
+* 132 bugs/feature-requests created
+* 30 bugs marked WORKSFORME
+* 12 bugs marked INVALID
+* 18 bugs marked DUPLICATE
+* 108 bugs marked WONTFIX
+* 74 bugs marked FIXED
+* 51 bugs marked INCOMPLETE
+
+Note: Numbers above are so high because this is 4 weeks of data--not the
+usual 1 week of data.

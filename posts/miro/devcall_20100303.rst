@@ -1,0 +1,51 @@
+.. title: Dev call 3/3/2010 minutes
+.. slug: devcall_20100303
+.. date: 2010-03-03 11:07:02
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0>`__)
+(was Miro 2.6)
+
+* should be pushed out soon
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* work is coming along nicely--probably 3 to 4 weeks of development
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* coming along
+
+Janet:
+
+* working on creating eggplant test cases from litmus test cases
+* 25% of them are created now
+
+Will:
+
+* worked on Python Miro Community and Gnome Miro Community
+* made source tree layout changes to master branch for Miro 3.1
+* finished up User Manual for Miro 3.0
+
+Paul:
+
+* moved Miro Guide to a new server--faster, fewer errors, better
+  performance
+* worked on performance fixes and bug fixes for Miro Community
+
+Ben:
+
+* working on Miro 3.1 stuff
+
+**bugzilla**
+
+* 14 bugs/feature-requests created
+* 1 bugs marked DUPLICATE
+* 3 bugs marked FIXED
+* 1 bugs marked WORKSFORME
+* 3 bugs marked INVALID

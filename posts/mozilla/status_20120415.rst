@@ -1,0 +1,58 @@
+.. title: mozilla status: April 15th, 2012
+.. slug: status_20120415
+.. date: 2012-04-15 20:35:57
+.. tags: work, mozilla, sumo, elasticsearch, pyvideo, richard
+
+
+I haven't had time to blog much in the last few months.
+At work, I've been spending all my time with
+`elasticsearch <http://www.elasticsearch.org/>`_, 
+`elasticutils <https://github.com/mozilla/elasticutils>`_,
+and `SUMO <https://github.com/mozilla/kitsune>`_ bug fixing.
+I've been working on the conversion from Sphinx search to elasticsearch
+for SUMO since I started at Mozilla, but I've only recently felt like I'm
+really getting the hang of it. There are a bunch of elasticutils-related
+things I want to blog about, but those will come in fugure entries.
+
+In my spare time, I've been working on `richard
+<https://github.com/willkg/richard>`_. This project has nothing to do with
+Richard of `air mozilla fame <https://wiki.mozilla.org/Air_Mozilla>`_,
+but rather is a video indexing web application. It's the software that
+runs `pyvideo.org <http://pyvideo.org/>`_.
+
+pyvideo.org has the distinction of being the first Django application I've
+built from the ground up. That distinction is both a virtue (yay for first
+apps!) and a vice (boo for silly things I did when doing it!).
+
+The one thing I did that I'm really proud of is that when building the
+software, I knew I needed help if it was to succeed and thus I worked to
+make it easy and inviting for contributors to get involved:
+
+* I wrote documentation: license file, README, documentation covering how to
+  install it for hacking, how to contribute, where to find me, ...
+* I parked the code on GitHub to make it easier for people to access. [1]_
+* I made sure there were a series of issues in the issue tracker that
+  showed the next round of things that needed to be done.
+* I made sure I had an IRC channel and that people knew where to find me
+  to ask questions.
+* I quickly got the documentation built on ReadTheDocs.
+* I had a test infrastructure set up. [2]_
+* I respond to everyone who sends an email, creates a pull request, writes
+  an issue, says hi on IRC, ...
+
+The end result of that is that there are 4 contributors to richard including
+myself and one of them is very active.
+
+`Asheesh <http://asheesh.org/>`_ did a talk at
+`LibrePlanet 2012 <http://libreplanet.org/wiki/LibrePlanet2012>`_ that
+mentioned `Mako <http://mako.cc/>`_'s power law of contributions to open
+source projects. The gist of it is that most open source projects only ever
+have one contributor. [3]_
+
+Well, I've got 5 on my video index web application software that I "launched"
+a month ago. I'm feeling good about that.
+
+.. [1] Several of my friends point out that GitHub kind of takes the D out of
+   DVCS.
+.. [2] Though didn't have any tests when I "launched".
+.. [3] I may fix this paragraph after Asheesh corrects me.

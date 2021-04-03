@@ -1,0 +1,98 @@
+.. title: Dev call 9/22/2010 minutes
+.. slug: devcall_20100929
+.. date: 2010-09-29 11:41:11
+.. tags: miro, work
+
+Miro 3.5 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5>`__)
+
+* did a Miro 3.5 rc1
+* couple of minor bugs to fix
+* planning to do a Miro 3.5 rc2
+* need help testing and translating Miro 3.5
+* probably a release on or around October 10th
+
+Miro Community 1.1.2 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.1.2>`__)
+
+* focusing on small bugs that should get fixed before the long haul for
+  1.2.
+
+Paul:
+
+* did a whole bunch of stuff on a bunch of different project
+* finished new new Miro installer work for Windows--we're trying
+  \_really\_ hard to get this right and balance the asstasticness with
+  income stream
+* fixed some small bugs on Miro Community for Miro Community 1.1.2
+* did some demo work with syncing for Miro 4--waiting on the Trac to
+  MediaWiki change
+* planning to update his Windows build environment
+
+Janet:
+
+* regression tested the Miro 3.5 rc1 builds
+* wrote some blog entries
+* we don't know how many downloads we're getting with release
+  candidates so that we can better figure that out
+* testing Universal Subtitles for their upcoming release
+
+Ben:
+
+* fixed the http auth bug (yay!)
+* fixed some other bugs for the Miro 3.5 rc1 builds and some bugs found
+  after the builds
+* built a new OSX build environment
+
+Will:
+
+* bugfixing for Miro
+* did Miro 3.5 rc1 release
+* worked on Ubuntu packaging
+* worked on miro user manual updates
+
+Order of business:
+
+* used Skype for the call. SO MUCH CLEARER.
+* Miro 3.5 release schedule
+
+  * going to do a Miro 3.5 rc2 Wednesday or Thursday
+  * lots and lots of testing and translation work
+  * do a final release around October 10th
+
+* need to know how many people are downloading nightlies and release
+  candidates. we need to fix the nightlies page so that it's using urls
+  that count downloads and redirect.
+* things we can hack on at OVC:
+
+  * performance (memory, speed) tuning
+  * extension system
+  * Miro 4 features that are well defined and ready to go
+  * talking to people about Miro user interface usage
+  * writing widget layer documentation; Miro widget tutorial
+
+* Ben, Nick, Paul, Dean, Will and a bunch of other PCF people will be
+  at `Open Video Conference <http://www.openvideoconference.org/>`__
+  this weekend in NYC. If you're there, please say hi!
+* Miro users need your help translating! See `Translations for Miro 3.5
+  -- we need your
+  help! <http://bluesock.org/~willkg/blog/miro/translations_miro_3_5.html>`__
+  for details.
+* Miro users need your help testing! See `Miro 3.5 RC1 builds are
+  available <http://www.getmiro.com/blog/2010/09/miro-3-5-rc1-builds-are-available/>`__
+  for details.
+* If you can't contribute your time, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro:**
+
+* 17 bugs/feature-requests created
+* 1 bug marked WONTFIX
+* 17 bugs marked FIXED
+* 1 bug marked WORKSFORME
+* 3 bugs marked DUPLICATE

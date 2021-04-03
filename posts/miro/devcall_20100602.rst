@@ -1,0 +1,45 @@
+.. title: Dev call 6/2/2010 minutes
+.. slug: devcall_20100602
+.. date: 2010-06-02 11:09:36
+.. tags: miro, work
+
+**note**
+
+I was away last week, so I wasn't on the call and didn't take notes.
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* osx build box needs to be rebuilt
+* video conversion code needs testing and probably some fixing
+
+Ben:
+
+* working on allowing the user to specify the encoding in the subtitle
+  file
+
+Janet:
+
+* worked on MVC testing and Universal Subtitles
+* switching back to Miro testing
+
+Luc:
+
+* reworked building Miro on OSX so we can do builds from OSX 10.6 that
+  work on other systems (yay!)
+* continuing to work on video conversion stuff
+
+Will:
+
+* messed up his router like a big idiot, then fixed it
+* spent some time trying to get the osx build box up and running but
+  had problems
+* implemented video conversion bits on Windows
+
+**bugzilla**
+
+* 25 bugs/feature-requests created
+* 8 bugs marked DUPLICATE
+* 2 bugs marked FIXED
+* 1 bugs marked WORKSFORME
+* 2 bugs marked INVALID

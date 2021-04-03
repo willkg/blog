@@ -1,0 +1,393 @@
+.. title: SUMO: 2013 retrospective
+.. slug: sumo_2013
+.. date: 2013-12-20 11:00
+.. tags: webdev, mozilla, work, sumo
+
+
+It was a big year for `SUMO <https://support.mozilla.org/>`_. In 2012,
+we got a lot accomplished: new search, new information architecture,
+
+
+One thing I didn't do was make my year-end script product better
+output.
+
+Anyhow---on with stats!
+
+::
+
+    Twas the year: 2013
+    ===================
+
+
+    Bugzilla
+    ========
+
+
+    Bugs created: 889
+
+                   a.topal : 156
+                  rrosario : 100
+                    willkg : 87
+               scoobidiver : 85
+                      ibai : 58
+                    mverdi : 54
+                   mcooper : 42
+                    feer56 : 35
+              krystaiceman : 26
+                    rdalal : 19
+                david.weir : 15
+                    shuhao : 13
+          swarnavasengupta : 9
+           andrei.hutusoru : 8
+               me+bugzilla : 7
+                tobbi.bugs : 6
+                     mluna : 6
+              joshua-smith : 6
+                   tdowner : 6
+                   leszekz : 6
+            yoshi.yokotani : 5
+            stephen.donner : 5
+                     slurp : 5
+                      mana : 5
+                 madperson : 4
+                  kbrosnan : 4
+                 tonnes.mb : 4
+                   rardila : 4
+                  pmcclard : 4
+                   dbialer : 4
+                 michaljev : 4
+                       abc : 4
+                      l10n : 4
+                   pcvrcek : 3
+                     rdaub : 3
+                  fabricio : 2
+                 rmcguigan : 2
+              sudheesh1995 : 2
+              alex_mayorga : 2
+              simone.lando : 2
+                nishant_cs : 2
+                      bram : 2
+                   smolejv : 2
+            bob.silverberg : 2
+                  rtanglao : 2
+            kdurant35rules : 2
+                amit103065 : 2
+             subedimahadev : 2
+                    lhenry : 2
+              thomas.lendo : 2
+                 shawnsumo : 2
+                  mhammond : 1
+            kdurant35rules : 1
+                      djst : 1
+                   curtisk : 1
+            chiorean.ioana : 1
+                    bermea : 1
+                   friedel : 1
+            bputstudentweb : 1
+         margaret.leibovic : 1
+                 rbillings : 1
+           nikitan.dolmart : 1
+           georgevidalakis : 1
+                nsm.nikhil : 1
+                  satishb3 : 1
+                bwbrowning : 1
+                  bugzilla : 1
+                      coce : 1
+                  EddyCarr : 1
+                  gryllida : 1
+            mohammed.samad : 1
+                      6a68 : 1
+             krupa.mozbugs : 1
+               John99-bugs : 1
+                 wjohnston : 1
+                  barderne : 1
+                   jan0286 : 1
+                   fwenzel : 1
+                   rnewman : 1
+               this4midhun : 1
+                  bjohnson : 1
+      bugzilla-fromthedeep : 1
+                 iamjithin : 1
+                   bmo2010 : 1
+        chrismore.bugzilla : 1
+                     evold : 1
+                  jbertsch : 1
+                    yousef : 1
+              pmjcreations : 1
+                   rhelmer : 1
+                  danishka : 1
+                      mail : 1
+                 gphemsley : 1
+                  Rebeccah : 1
+               ckreinbring : 1
+                   stephen : 1
+             berker.peksag : 1
+                    jezdez : 1
+                     nchen : 1
+             iamjayakumars : 1
+                netfuzzerr : 1
+                  benjamin : 1
+
+    Bugs resolved: 1116
+
+                  rrosario : 386 resolved, 273 fixed
+                    rdalal : 152 resolved, 150 fixed
+                   a.topal : 121 resolved, 41 fixed
+                   mcooper : 118 resolved, 105 fixed
+                    willkg : 72 resolved, 61 fixed
+               scoobidiver : 31 resolved, 0 fixed
+                 michaljev : 20 resolved, 17 fixed
+          swarnavasengupta : 18 resolved, 0 fixed
+                    shuhao : 16 resolved, 13 fixed
+               me+bugzilla : 12 resolved, 5 fixed
+             berker.peksag : 12 resolved, 12 fixed
+                    mverdi : 11 resolved, 5 fixed
+                      erik : 9 resolved, 9 fixed
+                    lhenry : 8 resolved, 1 fixed
+              krystaiceman : 7 resolved, 1 fixed
+                tobbi.bugs : 7 resolved, 6 fixed
+              joshua-smith : 6 resolved, 4 fixed
+                     jfong : 5 resolved, 5 fixed
+                   tdowner : 5 resolved, 2 fixed
+                    feer56 : 5 resolved, 0 fixed
+                david.weir : 5 resolved, 4 fixed
+                bwbrowning : 5 resolved, 5 fixed
+                      bram : 5 resolved, 4 fixed
+                      ibai : 4 resolved, 1 fixed
+       alastra.mariagrazia : 4 resolved, 2 fixed
+                     laura : 4 resolved, 4 fixed
+                  williamr : 3 resolved, 1 fixed
+             buchanae+bugs : 3 resolved, 3 fixed
+               bharath_ves : 3 resolved, 3 fixed
+                  paul+moz : 3 resolved, 3 fixed
+              chris.lonnen : 2 resolved, 2 fixed
+                   smolejv : 2 resolved, 1 fixed
+                 zcampbell : 2 resolved, 0 fixed
+             iamjayakumars : 2 resolved, 0 fixed
+                   curtisk : 2 resolved, 0 fixed
+                   leszekz : 2 resolved, 0 fixed
+                       abc : 2 resolved, 1 fixed
+                   pcvrcek : 2 resolved, 0 fixed
+              taygunagiali : 2 resolved, 2 fixed
+                      mail : 1 resolved, 0 fixed
+                   bmo2010 : 1 resolved, 1 fixed
+                   wymette : 1 resolved, 0 fixed
+                    beaotx : 1 resolved, 1 fixed
+                    nelson : 1 resolved, 1 fixed
+                 madperson : 1 resolved, 1 fixed
+                      coce : 1 resolved, 0 fixed
+                  pmcclard : 1 resolved, 1 fixed
+                 tgavankar : 1 resolved, 1 fixed
+      bugzilla-fromthedeep : 1 resolved, 0 fixed
+                  rtanglao : 1 resolved, 0 fixed
+            stephen.donner : 1 resolved, 1 fixed
+           guillermo.movia : 1 resolved, 1 fixed
+                  lorchard : 1 resolved, 1 fixed
+                  nukeador : 1 resolved, 0 fixed
+                 rtucker11 : 1 resolved, 0 fixed
+                nishant_cs : 1 resolved, 0 fixed
+                      stas : 1 resolved, 0 fixed
+                 mattbasta : 1 resolved, 1 fixed
+                  satishb3 : 1 resolved, 0 fixed
+                  ragsagar : 1 resolved, 1 fixed
+                 rmcguigan : 1 resolved, 1 fixed
+                     nchen : 1 resolved, 0 fixed
+                    kudrom : 1 resolved, 1 fixed
+           andrei.hutusoru : 1 resolved, 0 fixed
+                      reed : 1 resolved, 0 fixed
+               tiziana.sel : 1 resolved, 0 fixed
+           chance.zibolski : 1 resolved, 1 fixed
+                 alice0775 : 1 resolved, 0 fixed
+                      ravi : 1 resolved, 0 fixed
+                nsm.nikhil : 1 resolved, 0 fixed
+                  gryllida : 1 resolved, 1 fixed
+        deletesoftware+moz : 1 resolved, 0 fixed
+              pmjcreations : 1 resolved, 0 fixed
+                    boerni : 1 resolved, 1 fixed
+                   rforbes : 1 resolved, 0 fixed
+                   dbialer : 1 resolved, 1 fixed
+                    jgross : 1 resolved, 1 fixed
+
+                INCOMPLETE : 43
+                   WONTFIX : 51
+                 DUPLICATE : 64
+                   INVALID : 73
+                WORKSFORME : 121
+                     FIXED : 764
+
+    Research bugs: 15
+
+    761582: [research] Add feature: Articles that link to this article
+    788104: [research] [ux] Support multiple products in the support forum
+    815089: [research] Investigate telling apart Firefox for Desktop and Firefox for Mobile tweets
+    816970: [research] SurveyGizmo API to be used in automated exit survey
+    823060: [research] Use datetime instead of ints in ES mappings
+    823891: [research] Adding KB revisions feature
+    825621: [research] Store the templates, article links and images in each article
+    825624: [research] Investigate how to update to Twitter API v1.1
+    841412: [research] Bad localization strings shouldn't break the site.
+    845290: [research] URL bar should fade away on SUMO
+    854554: [research] Youtube embeds don't work with templates
+    889884: [research] Open Badges!
+    889890: [research][discuss] figure out how to improve our l10n situation with search
+    906992: [research] Add support for multiple ES indexes by doc type
+    937889: [research] Login users via a URL in email
+
+    Tracker bugs: 20
+
+    433161: [Tracker] Support for forums in other languages
+    625891: [tracker] HTML email
+    721462: [tracker] Taxonomy IA improvements
+    758598: [Tracker] Search UX suggestions
+    783262: [tracker] Add rate limiting to protect us from spammers
+    790785: [Tracker] L10n tools editing part
+    790786: [Tracker] L10n tools organization part
+    800962: [Tracker] Add activity history page for KB
+    815625: [Tracker] Segment dashboards and other contributor pages by product
+    817540: [tracker] AJAXify the refine+focus panel
+    825606: [tracker] Switch everything from Webtrends to Google Analytics
+    827640: [tracker] Localize Questions
+    838584: [Tracker] Getting ready for Firefox OS launch
+    845286: [tracker] Use as little bandwidth as possible on mobile version of SUMO
+    845773: [Tracker] move to an OS charting solution
+    848520: [tracker] Make all traffic HTTPS
+    851730: [tracker] Close threads pro-actively
+    871559: [tracker] update codebase to django 1.4 layout
+    897057: [tracker] Open Badges -- stage 1
+    920530: [tracker] support Webmaker on SUMO
+
+    git
+    ===
+
+    Total commits: 1138
+
+             Ricky Rosario : 492  (+16258, -16435, files 2972)
+          Will Kahn-Greene : 178  (+8311, -3748, files 438)
+               Rehan Dalal : 168  (+13016, -5554, files 680)
+               Mike Cooper : 145  (+46955, -22136, files 582)
+               Kadir Topal : 39  (+352, -110, files 61)
+          Michał Frontczak : 19  (+229, -182, files 78)
+             Berker Peksag : 15  (+570, -717, files 73)
+                 Shuhao Wu : 15  (+1523, -127, files 51)
+           Jen Fong-Adwent : 9  (+138, -18, files 17)
+                     Tobbi : 8  (+338, -204, files 13)
+                  browning : 5  (+140, -16, files 12)
+                 davd Weir : 4  (+15, -1, files 4)
+              Joshua Smith : 4  (+94, -87, files 13)
+             Tobias Markus : 3  (+8, -8, files 4)
+                     Anush : 3  (+4, -1, files 3)
+           Gaurav Dadhania : 3  (+3, -3, files 3)
+      Bharath Thiruveedula : 3  (+15, -14, files 3)
+                      ibai : 3  (+30, -30, files 4)
+                    kudrom : 2  (+9, -9, files 5)
+                 Nghi Tran : 2  (+2, -1, files 2)
+              Tanner Filip : 2  (+4, -4, files 2)
+                    Börni : 2  (+30, -15, files 4)
+                 madperson : 2  (+5, -4, files 2)
+             Taygun AGIALI : 2  (+7, -6, files 3)
+               TylerDowner : 2  (+3, -3, files 2)
+               James Socol : 2  (+37, -27, files 3)
+                   david-w : 1  (+1, -1, files 1)
+                  ragsagar : 1  (+16, -1, files 2)
+           Guillermo Movia : 1  (+1, -0, files 1)
+                  rosanaar : 1  (+9, -0, files 1)
+                  Gryllida : 1  (+26, -6, files 3)
+           Beatriz Nombela : 1  (+9, -9, files 6)
+
+    Total lines added:   88158
+    Total lines deleted: 49477
+    Total files changed: 5048
+
+
+
+1. Ricky does a lot of work! Holy cow!
+
+2. In 2011, we had 19 people who contributed code changes.
+
+   In 2012, we had 23 people.
+
+   In 2013, we had 32 people.
+
+3. Like 2011 and 2012, we resolved more bugs than we created
+   in 2013. That's three years in a row! I've never seen that happen
+   on a project I work on.
+
+4. There are a lot of people braving Bugzilla to write up bugs. 
+   Skimming the list, I see developers, non-developers, Support
+   contributors, localizers, support team and a lot of people I
+   don't recognize.
+
+
+Here's some number comparisons:
+
+==========================  ====  ====  ====
+name                        2011  2012  2013
+==========================  ====  ====  ====
+Bugs created:               1357  938   889
+Bugs resolved:              1637  1025  1116
+Total commits:              1137  916   1138
+Code contributors:          19    23    32
+==========================  ====  ====  ====
+
+I spent a good chunk of 2013 working on Input, but here's what I remember
+from SUMO development in 2013:
+
+1. We rearranged the codebase for better Django 1.4 layout. That was a
+   project. Oy.
+
+2. We added support for non-English languages to the support forums!
+
+3. We switched email to be HTML formatted. We also reworked email to be
+   localized.
+
+4. We switched to Google Analytics.
+
+5. We implemented Open Badges---though there's still a few important
+   pieces to finish there.
+
+6. We switched to YouTube for videos.
+
+7. We added support for Webmaker and Firefox OS. Thunderbird support
+   will be added to SUMO in 2014.
+
+8. Mike took a lantern, a crust of bread and a big sword and spelunked
+   into the darkest dungeons filled with stinky, squelchy muck and
+   rewrote the showfor code.
+
+9. We reworked our search code to handle multiple indexes, though we
+   haven't taken advantage of that, yet.
+
+10. We switched deployment to use `Dennis <https://github.com/willkg/dennis/>`_  to
+    lint all translated strings before pushing them to
+    production. This has almost assuredly saved us from production
+    fires. I hated those kinds of fires. Hooray for Dennis!
+
+11. We wrote and switched to `Ernest <https://github.com/willkg/ernest/>`_ for
+    sprint planning and coordination.
+
+12. We overhauled everything to add support for Persona
+    authentication, but had to push off deployment indefinitely
+    because of problems with Persona which are being ironed out by the
+    Persona team.
+
+13. We added an escalation system for questions that haven't received
+    a response in x hours for some positive value of x that is still
+    in flux.
+
+14. We ditched Highcharts.
+
+15. We wrote a command-line deployer which tells us exactly what's going
+    out and tells New Relic, too. This gives us a much better idea of what
+    we're deploying and how it affected the site afterwards. This command-line
+    deployer is named `chief-james <https://github.com/mythmon/chief-james>`_
+    in honor of James who has moved on to greener and well measured pastures.
+
+16. We added a bunch of new metrics, dashboards, history pages,
+    activity pages, icons, bicons, landing pages, take-off pages,
+    topics, subtopics, toe picks and all kinds of stuff.
+
+
+That's the gist of the year: it was a lot of work, but we accomplished a
+ton.
+
+w00t for 2013!

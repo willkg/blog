@@ -1,0 +1,62 @@
+.. title: Dev call 12/16/2009 minutes
+.. slug: devcall_20091216
+.. date: 2009-12-16 11:14:46
+.. tags: miro, work
+
+**minutes**
+
+2.6 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=2.6>`__)
+
+* talked about release planning
+* subtitle support almost done
+* we want to continue working on performance issues
+
+Janet
+
+* acquiring eggplant for testing
+* regression testing on miro master
+* tested miro community 0.8.5
+
+Luc
+
+* working on 2.6 bugs
+
+Will
+
+* worked on and submitted the PSF grant
+* worked on 2.6 bugs
+* doing a pylint pass on the codebase and working on code quality
+  issues
+* almost done the subtitle menu changes for linux and windows
+
+Ben
+
+* working on performance issues that happen when doing things with
+  multiple items
+* other 2.6 work
+
+Paul
+
+* released miro community 0.8.5 on friday afternoon (`miro community
+  0.8.5 release
+  announcement <http://www.getmiro.com/blog/2009/12/miro-community-0-8-5-released/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+miroblog+%28Miro+Blog%29>`__)
+* working on miro community 0.9
+  (`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=0.9>`__)
+  with better theme support and other things
+
+**bugzilla**
+
+* 9 bugs/feature-requests created
+* 3 bugs marked DUPLICATE
+* 12 bugs marked FIXED
+* 1 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 2 bugs marked INCOMPLETE
+
+**notes**
+
+We're working on Miro 2.6 targeted bugs. If there are issues that should
+be targeted for 2.6, let us know. If there's anything you can help with
+either by adding information or contributing patches to any of the bugs
+targeted for Miro 2.6, please do!

@@ -1,0 +1,67 @@
+.. title: Dev call 9/22/2010 minutes
+.. slug: devcall_20100922
+.. date: 2010-09-22 11:24:35
+.. tags: miro, work
+
+Miro 3.5 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5>`__)
+
+* focusing on P1 issues and trying to get the release done--almost
+  there
+
+Miro Community 1.1.2 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.1.2>`__)
+
+* focusing on small bugs that should get fixed before the long haul for
+  1.2.
+
+Will:
+
+* synced translations
+* worked on Miro 3.5 bugs
+* wrote a script to figure out contributors; still need to add Janet's
+  QA team (need to do manually), add translators (scrape launchpad?),
+  other contributors?
+* worked on ubuntu packaging and clearing out issues
+
+Ben:
+
+* worked on Miro 3.5 bugs
+
+Paul:
+
+* worked on a bunch of Miro and MC things
+
+Janet:
+
+* tested the Windows installers
+* tested bug fixes and regression tested for Miro 3.5
+
+Order of business:
+
+* Miro 4 plans:
+
+  * need clarification on cd/dvd ripping and bonjour/rondevous thing
+    where miro can broadcast to a device where it can stream or
+    download files
+  * work might get split into two or more releases
+
+* Priority is being put on finishing development work on Miro 3.5. Any
+  help with this would be huge. There are a series of bugs on the
+  roadmap that need to be fixed. If you want to help out but don't know
+  where to start, see http://getmiro.com/userguide/contributing.html.
+  If there are bugs you want fixed that aren't in our queue, consider
+  submitting a patch.
+* If you can't contribute work, please consider contributing funding by
+  `donating <https://www.miroguide.com/donate>`__. Your money goes
+  directly to ongoing development of Miro and related projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro:**
+
+* 36 bugs/feature-requests created
+* 1 bugs marked WONTFIX
+* 25 bugs marked FIXED
+* 2 bugs marked DUPLICATE

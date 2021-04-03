@@ -1,0 +1,66 @@
+.. title: Dev call August 10th, 2011
+.. slug: devcall_20110810
+.. date: 2011-08-10 17:42:31
+.. tags: miro, work
+
+
+**Miro status**
+
+* `4.0.3 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0.3>`_
+* `4.1 roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.1>`_
+* We're working on Miro 4.0.3 and 4.1.
+
+Will:
+
+* Helped Rob with bugzilla upgrade tests--we're probably upgrading
+  soon.
+* Continued working on the Windows overhaul.  Webkitgtk looks like a
+  showstopper because it doesn't support Flash/plugins, so I'm going
+  to pass browser upgrade work to Ben.  I'm now working on the
+  GStreamer upgrade and keeping gtk at the same version.
+* Last day at the end of August, but I'll hang out on IRC.
+
+Geoffrey:
+
+* Fixed YouTube downloads.
+* Implemented push notifications for client side for DAAP.
+* Fixed some regressions for push notifications on the server side.
+
+Ben:
+
+* Worked on item filter branch.
+* Got a new computer and is setting it up.
+* Continuing to work on hybrid view.
+
+Paul:
+
+* ...  (his skype was broken)
+
+**Order of business:**
+
+* Will will be handing things off to other people.
+* 4.0.3 planning
+
+  * YouTube fix, miro mobile fix
+  * Will will take the release hat, build builds, write an email and
+    get Janet to test tonight for a hopeful release tomorrow
+
+* Miro is developed by a community of people including you!  If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by `donating
+  <https://www.miroguide.com/donate>`_.  Your money goes directly to
+  ongoing development of Miro and related projects like `Miro
+  Community <http://mirocommunity.org/>`_ and `Universal Subtitles
+  <http://universalsubtitles.org/>`_.  See
+  http://pculture.org/about/ for more details on these projects.
+
+* Did you know there's a Miro User Manual?  If you haven't looked at
+  it yet, it's worth taking a look at.  You can find it at
+  http://manual.getmiro.com/ .
+
+
+**Bugzilla stats for Miro for the last week:**
+
+* 13 bugs/feature-requests created
+* 1 bugs marked WONTFIX
+* 13 bugs marked FIXED

@@ -1,0 +1,16 @@
+.. title: Python Miro Community status: 11-09-2010
+.. slug: status_20101109
+.. date: 2010-11-09 15:48:02
+.. tags: pmc, dev, miro, mirocommunity, python, work
+
+In my `status report on November
+1st <http://bluesock.org/~willkg/blog/pmc/status_20101101.html>`__, I
+reported that I had written a script to fix invalid download links.
+Turns out my script doesn't work as well as I had hoped. For example, I
+only fixed 30 of the 120 or so PyCon 2010 videos. I'm working on fixing
+it so that I can more programatically work through all the videos on
+`Python Miro Community <http://python.mirocommunity.org/>`__ and update
+download links.
+
+I'm really sorry about this. Not having working download links and
+podcast feeds sucks.

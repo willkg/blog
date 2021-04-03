@@ -1,0 +1,48 @@
+.. title: Dev call 7/7/2010 minutes
+.. slug: devcall_20100707
+.. date: 2010-07-07 11:00:22
+.. tags: miro, work
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* working on rebuilding the Windows build environment
+* this release cycle has been pretty long; we're switching gears and
+  going to focus on wrapping it up; help with this would be great,
+  otherwise we'll get there as we get there.
+
+Miro Community 1.0.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0.1>`__)
+
+* releasing soon
+
+Janet:
+
+* Universal Subtitles testing
+* regression testing on Miro
+
+Luc:
+
+* continued working on Miro shutdown problems on OSX--problems with
+  libtorrent
+* worked on conversions preferences, but is going to put it aside for
+  now because of complications
+
+Paul:
+
+* released Miro Community 1.0
+* working on Miro Community 1.0.2 and 1.1
+
+Will:
+
+* worked on windows build environment stuff
+* worked on Miro 3.1 bugs
+
+**bugzilla:**
+
+* 23 bugs/feature-requests created
+* 1 bugs marked ---
+* 3 bugs marked WONTFIX
+* 10 bugs marked FIXED
+* 5 bugs marked DUPLICATE
+* 1 bugs marked INVALID

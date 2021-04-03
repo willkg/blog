@@ -1,0 +1,95 @@
+.. title: Dev call 11/3/2010
+.. slug: devcall_20101103
+.. date: 2010-11-03 12:08:08
+.. tags: miro, work
+
+Miro 3.5.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5.1>`__)
+
+* there are a handful of fixes that suggest we should do a 3.5.1 soon
+* 3.5.1 will include updates to the conversions
+* Ben elected to coordinate and shepherd 3.5.1
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* working on audio file metadata retrieval, storage, and ui
+* working on device syncing
+* working on performance enhancements for startup and displaying tabs
+* working on extension framework
+* switching testing from eggplant to sikuli
+
+Will:
+
+* worked on documenting infrastructure, processes, and other things
+  he's involved in
+* did a lot of peer-review on incoming changes
+* fixed some minor things--added app.debugmode
+* could disappear any day now for paternity leave--ping me if there are
+  things you need me to do now
+
+Ben:
+
+* landed a bunch of performance changes (and fixes)
+* working on figuring out all the things that make the iteminfocache
+  invalid
+* sent email about setup_restored(...); working on that
+
+Kaz:
+
+* worked out a different way of doing metadata
+* working on ui bits for metadata
+
+Geoffrey:
+
+* worked on ui glitches and other bug fixing
+
+Janet:
+
+* working on converting eggplant tests to sikuli tests
+* there are a few bugs that we should make p1 for 3.5.1
+* we should start thinking about doing a 3.5.1
+
+Asheesh:
+
+* working on maturing Miro Community as a public FLOSS project
+
+Order of business:
+
+* we updated the appcast file which notifies users that there's a new
+  version of Miro out there; 3.5 is doing pretty well
+* talked about setup_restored(...); Ben has some steps for working on
+  this going forward
+* Ben's going to shepherd the Miro 3.5.1 release which involves making
+  sure all bugs for 3.5.1 are targeted appropriately and all fixes are
+  cherrypicked into the Miro-3.5 branch--he's going to coordinate the
+  3.5.1 release going forward
+* for Miro 4.0 on Windows, we're going to switch from VLC to gstreamer
+  and also from xulrunner to webkit; we talked about who's going to do
+  this work and when and we're all pretty busy right now, so it'll
+  likely happen in December or thereabouts
+* We decided to push off a Python 2.6 to 2.7 upgrade until a future
+  release unless we hit a really compelling reason to do otherwise
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro:**
+
+* 38 bugs/feature-requests created
+* 7 bugs marked WORKSFORME
+* 7 bugs marked INVALID
+* 9 bugs marked DUPLICATE
+* 19 bugs marked FIXED
+* 12 bugs marked INCOMPLETE
+
+As a side note, this is the third week we've been trending downwards in
+total open bug count for Miro. We're working on triaging and cleaning up
+bug reports. That's been a lot easier with additional staff--your
+donations go directly towards these efforts!

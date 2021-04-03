@@ -1,0 +1,69 @@
+.. title: Dev call April 27th, 2011
+.. slug: devcall_20110427
+.. date: 2011-04-27 22:45:48
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* things are stabilizing--if you've been waiting to test nightlies,
+  now's a good time to jump in
+
+Paul:
+
+* worked on P1 bugs related to devices and ui changes
+* worked on feed scraping for the Miro Guide and performance fixes
+* worked on small bugs on Miro Community
+
+Kaz:
+
+* worked through P1 bugs related to list view
+
+Jonas:
+
+* worked on P1 bugs and other problems he's found while testing
+
+Will:
+
+* synced translations
+* fixed 17120
+* updated to libtorrent 0.15.6 on OSX and Windows
+
+Ben:
+
+* fixed a bunch of P1 issues
+* spent a lot of time on metadata extraction issues
+* fixing the video search widget issues
+
+Order of business:
+
+* We need to do more testing with external hard drives on all three
+  platforms.
+* Talked about download notification: We talked about the specific
+  problem we're trying to solve and options for that.
+* Things are feeling much more stable. We're going to wait until Janet
+  has some time to catch up and figure out when the codefreeze should
+  happen.
+* Talked about making sure Miro works in 800x600 which touches on UI
+  resizing issues.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by
+  `donating <https://www.miroguide.com/donate>`__. Your money goes
+  directly to ongoing development of Miro and related projects like
+  `Miro Community <http://mirocommunity.org/>`__ and `Universal
+  Subtitles <http://universalsubtitles.org/>`__. See
+  http://pculture.org/about/ for more details on these projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  `<http://manual.getmiro.com/>`__.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 58 bugs/feature-requests created
+* 2 bugs marked WORKSFORME
+* 5 bugs marked INVALID
+* 14 bugs marked DUPLICATE
+* 1 bugs marked WONTFIX
+* 70 bugs marked FIXED
+* 8 bugs marked INCOMPLETE

@@ -1,0 +1,105 @@
+.. title: Dev call February 2nd, 2011
+.. slug: devcall_20110202
+.. date: 2011-02-02 11:28:32
+.. tags: miro, work
+
+**Note:** I'm changing the way I denote the date so it's not ambiguous.
+Sorry about that.
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* lots of flux in git-master, but the code is starting to stabilize
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+
+Nick:
+
+* Morgan's family had the flu last week which is why ui overhaul
+  related questions are taking a while to get answered.
+
+Ben:
+
+* Worked on sorting and playlists.
+* Planning to work on new InfoList issues.
+
+Janet:
+
+* Lost internet connection for most of the week.
+* Worked on sikuli tests--most of them are done now.
+* Implementing tests in sikuli has uncovered lots of issues.
+
+Geoffrey:
+
+* Continuing to work on sharing and other things on his plate.
+
+Kaz:
+
+* Worked on views and metadata stuff.
+
+Paul:
+
+* Worked on device syncing.
+* Worked on ui overhaul bugs. Updated the sidebar.
+
+Jonas:
+
+* Worked on shuffle/repeat and playback.
+
+Asheesh:
+
+* Working hard on Miro Community 1.2--hopefully will have a beta out
+  this week.
+
+Will:
+
+* Windows build box keeps hanging. Seems like it's predominantly
+  related to when the cron job to build the nightly kicks off, but it's
+  hung at other times, too. Hopefully we can get through this dev cycle
+  before we have to replace the Windows build box because that'll take
+  a chunk of time to do.
+* Investigating libtorrent issues of which there are several and
+  they're complicated.
+* Looking at storing fast resume as a downloader-specific thing and
+  storing it in files rather than the Miro sqlite database.
+
+Order of business:
+
+* Welcome Jonas! This is the largest group of Miro developers we've
+  ever had (6). Hopefully we can keep this group going forward, but it
+  depends on funding.
+* Talked about how to fix the handling of the fastresume data for
+  torrents. Will is going to change the downloader so that it's not
+  passing this data to the Miro process and instead is managing it
+  itself in files.
+* Talked about magnet uri support. Will thinks this is a big project
+  and is hesitant to do it because of its bigness. So we assigned it to
+  Jonas because he's new and isn't scared of anything, yet.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* `PCF is looking to hire a System
+  Administrator <http://www.pculture.org/pcf/jobs/>`__. See the jobs
+  page for more details.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://manual.getmiro.com/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 69 bugs/feature-requests created
+* 3 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 7 bugs marked DUPLICATE
+* 2 bugs marked WONTFIX
+* 41 bugs marked FIXED
+* 6 bugs marked INCOMPLETE

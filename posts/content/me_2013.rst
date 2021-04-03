@@ -1,0 +1,168 @@
+.. title: Me: 2013 retrospective
+.. slug: me_2013
+.. date: 2013-12-20 16:20
+.. tags: content, life, dev, python, mozilla
+
+
+I had a pretty intense 2013, but overall I think it was a good year.
+I say that with full knowledge that I had 2013 goals, but I have no
+idea where I wrote them down. Oh, well.
+
+First off, I started or helped start a lot of new projects this year:
+
+* `dennis <https://github.com/willkg/dennis>`_: lint .po files for strings that will set production on fire and translates .po files to aid development (awesome)
+* `ernest <https://github.com/willkg/ernest>`_: sprint coordination system (awesome)
+* `douglas <https://github.com/willkg/douglas>`_: my complete overhaul of Pyblosxom (in development)
+* `tedmund <https://github.com/willkg/tedmund>`_: console based slide presentation system
+* `james <https://github.com/mythmon/chief-james>`_: cli for deployment with chief
+* `eugene <https://github.com/willkg/eugene>`_: comms system for Artemis simulation
+* `victor <https://github.com/willkg/victor>`_: system for sussing out version information for dependencies (failed project)
+* `fredrik <https://github.com/willkg/fredrik>`_: Flask template (obsolete)
+* `harold <https://github.com/willkg/harold>`_: rough feedback/support system (prototype)
+* `captain <https://github.com/mozilla/captain>`_ `shove <https://github.com/mozilla/shove>`_: the mighty new deployment system we'll switch to in 2014
+* `hy <https://github.com/hylang/hy>`_: dialect of Lisp that runs in
+  Python vm
+
+Fredrik is obsolete. Victor was a failed project. Captain Shove and Hy
+are doing well and other than helping to start them off, I haven't
+touched either in some time.  I work on Dennis, Douglas and Ernest
+regularly. I'm thinking about Harold, but probably won't do anything
+with it for a while.
+
+
+I also spent a ton of time working on existing projects:
+
+* `django-badger <https://github.com/mozilla/django-badger>`_
+* `django-browserid <https://github.com/mozilla/django-browserid>`_
+* `elasticutils <https://github.com/mozilla/elasticutils>`_ and `pyelasticsearch <https://github.com/rhec/pyelasticsearch>`_
+* `tower <https://github.com/clouserw/tower>`_
+* `jingo-minify <https://github.com/jsocol/jingo-minify>`_
+* `django-ratelimit <https://github.com/jsocol/django-ratelimit>`_
+* `playdoh <https://github.com/mozilla/playdoh>`_,
+  `playdoh-lib <https://github.com/mozilla/playdoh-lib>`_
+  and `funfactory <https://github.com/mozilla/funfactory>`_
+* `richard <https://github.com/willkg/richard>`_ which powers `pyvideo.org <http://pyvideo.org>`_
+* `vidscraper <https://github.com/pculture/vidscraper>`_
+
+I'm probably missing a bunch there. It's hard to keep track of what one did
+on other peoples' projects.
+
+
+I got a lot accomplished at work this year:
+
+* I joined the sec-champs group and now help manage and coordinate
+  security releases for Django and other software we use on our
+  websites. (Security)
+
+* I performed an audit on playdoh-lib and helped coordinate a bunch of
+  updates including to Django 1.5. (Security)
+
+* I helped work on Captain Shove which is a new deployment system to
+  replace Chief. (IT)
+
+* I worked on l10n issues, created dennis and rewrote the deployment
+  scripts for Input and SUMO to eliminate production problems related
+  to errors in translated strings. (L10N)
+
+* I worked on community building as a mentor for SUMO and Input
+  projects (more Input than SUMO) helping guide new contributors
+  towards their first contributions. I should be doing a lot more on
+  this front. One thing I did with Miro, Pyblosxom and other projects
+  I've worked on is to keep track of people who have contributed to
+  help keep them around. That sounds goofy, but it helps build lasting
+  communities. (Community building)
+
+* I helped fix some quality problems with the Kitsune and Fjord test
+  suites and I'm working with Bob from QA on updating the Input
+  tests. (QA)
+
+* Implemented a more flexible filter/query system in Elasticutils and
+  maintained it for the year. (Maintainer)
+
+* Did a ton of work on SUMO and Input.
+
+
+Challenges I worked on this year:
+
+* I keep getting dinged in performace reviews for being acerbic (that's
+  probably the nicest word for it). I recognize that it sucks to work
+  with acerbic people and regardless of how busy or stressed out they are.
+
+  I finally started working on it in earnest probably around August. I
+  hope I'm more pleasant to work with. We'll see what people think.
+
+* Everyone above me in the Mozilla org chart left.
+
+  At the beginning of 2013, it was something like me -> James -> Mike
+  -> Todd -> Gary.
+
+  Now it's me -> Ricky -> Wil -> Rick -> Harvey -> Jay.
+
+  I'm still working on SUMO and Input, but the Webdev group went away
+  and the SUMO engineering team got shifted between groups. I'm
+  feeling ok about it, but wonder if all that shifting makes it
+  difficult for me to be noticed.
+
+* I'm working on too many things and thus many things are starving for
+  attention. That's a simple sentence for a very complex situation
+  which involves all sorts of thought-provoking questions like, "why?"
+  and "why is it important for all things to be worked on?"
+
+  I stopped maintaining Pyblosxom. I stepped down from my work on
+  MediaGoblin. I'm being more careful about what I commit to and try
+  to commit to things that I feel that I'm the best fit for. I'm
+  working on reducing context-switch time so I'll work on certain
+  projects for longer periods of time, then put them down for longer
+  periods of time. I'm trying to ask for help more often and spread
+  the workload around and I'm trying to make helping me easier.
+
+* I need to spend more time on pyvideo.
+
+  This is an important project. It just keeps getting back-burnered
+  and when I have time to work on it, urgent things come up which
+  need to get fixed immediately.
+
+  For example, blip.tv ditched a bunch of Python conference
+  accounts. We scrambled to download those videos and now we're
+  hosting them. That took a ton of time.
+
+  Regardless, I started several code overhauls that I need to finish.
+  That's blocking everything else and that sucks. I really need to
+  get that done.
+
+* I have a new roommate and having two roommates is chaotic at best. I don't
+  even know what to do to alleviate this short of just get through the
+  day one day at a time.
+
+* I need to take better care of myself.
+
+  This is a hard one. It's easy to push off me-focused things when there's
+  so many things that need doing. I haven't a good answer here, yet, but
+  maybe being more aware of it is helpful.
+
+* I got shingles. That sucked.
+
+
+In 2014, I want to:
+
+* Continue to get better at front-end development.
+
+* Spend time working on pyvideo, richard, dennis and ernest and get them
+  to better places.
+
+* Figure out what to do with Elasticutils: Overhaul it to make it suck
+  less? Pass it off to someone else to maintain? Figure out a list of 5
+  things to fix now and let it continue to be mediocre?
+
+* Overhaul my blog. Douglas is coming along nicely. After I finish
+  getting that working, I'll re-theme it. This is lower priority than
+  the other things here, but it'd be nice to finally do this year.
+
+* Work on empowering and enabling other people to do things rather than
+  blocking them. This one is hard and tricky especially where my free
+  time is unpredictable on account of roommates and obligations I have
+  no control over.
+
+
+It's been a busy year and there are things I should be doing better, but
+generally speaking, I think I did pretty ok.

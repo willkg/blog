@@ -1,0 +1,71 @@
+.. title: pyvideo status: March 20th, 2012
+.. slug: status_20120320
+.. date: 2012-03-20 20:52:22
+.. tags: dev, python, richard, pyvideo
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index
+of Python-related videos on the Internet.  For the most part, it's a
+collection of videos from Python-related conferences.  Saw a session you
+liked and want to share it?  It's likely you can find it, watch it, and
+share it with pyvideo.org.
+
+
+Status
+======
+
+I launched pyvideo.org on March 10th. That was 10 days ago. In those 10
+days, I fixed a bunch of issues, screwed up the site a couple of times,
+got dozens of emails many with encouragement and feature requests,
+talked to Craig with `Universal Subtitles <http://www.universalsubtitles.org>`_,
+and watched Google Analytics with some amazement. It's been a really
+wild 10 days.
+
+I think overall the experience was a successful one, but there were a
+series of failures most of which were because I wasn't ready to go
+live when I went live, but I had really run out of time. Lack of feeds,
+media urls, easy ways to fix data, crummy experience on iPads and Android
+tablets, ... The list is longish. So it goes.
+
+Of all the successes, I'm the happiest for the following:
+
+* **The site had 100,000 or so visitors.** That roughly means that PyCon
+  2012 reached 98,000 more people than it otherwise would have. That
+  means that 98,000 more people heard about programming practices,
+  robots, outreach, libraries, applications, case studies and all the
+  other things we learned at PyCon. That's a big win.
+
+  Thank you to the PyCon conference crew! You run a damn good conference.
+
+* **I got dozens of emails.** Many with encouragement, some with feature
+  requests, some with data fixing requests, and some pointing out
+  issues with the site. I think it's awesome that so many people
+  took the time to email me feedback to make this resource better.
+
+* **There are 8 forks on Github of richard.** Further, I've had the
+  pleasure to add two new people to the AUTHORS file and look forward to
+  adding a third very soon. Thank you to Reiner, David and Alejandro!
+
+  I work on richard and pyvideo in my spare time. I think this software
+  is useful for other conferences and other groups which is why I made
+  it Free Software and kept it separate from pyvideo. I can't possibly
+  do everything I want to do with it, so I spent time writing documentation
+  to ease the barriers to entry for new contributors. I feel really good
+  about the work I did.
+  
+I've spent the last few days writing bug reports for things that need
+to be fixed, fixing some, fixing some data, and working on feeds. I
+haven't spent a ton of time on feeds, yet. I really hope to finish it
+soon, though.
+
+If you're interested in helping out, I sure could use you! Testing,
+documenting, fixing the layout of some of the pages, implementing
+new features, fixing project infrastructure---there are a lot of
+different kinds of things you could help out with.
+
+Issue trackers are here:
+
+* `pyvideo.org issue tracker <http://github.com/willkg/pmc/issues/>`_
+* `richard issue tracker <http://github.com/willkg/richard/issues/>`_

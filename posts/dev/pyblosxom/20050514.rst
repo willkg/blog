@@ -1,0 +1,46 @@
+.. title: pyblosxom manual, pyblosxom 1.2.1, and contrib 1.2.2
+.. slug: 20050514
+.. date: 2005-05-14 14:20:17
+.. tags: dev, pyblosxom, python
+
+The last couple of weeks have been really chaotic.  S went off to
+New Jersey for the weekend, so I've had a few days to work through 
+the things in the bottomless queue of things to do.  I've been
+making a lot of progress, but the queue is still daunting.
+
+There were a few bugs found in the contributed plugins pack 1.2.1,
+so I'm going through, fixing the ones mentioned on the mailing lists
+and fixing some additional issues as well.  I think I'll be done with
+the things by Monday.
+
+In tracking down problems with conditionalhttp, I found a bug in 
+the PyBlosxom blosxom renderer.  I think it only affects conditionalhttp,
+but it does so in a way that makes conditionalhttp totally useless.
+If conditionalhttp looks at the If-Modified stuff and decides that 
+the content has not been modified, it issues an HTTP 304...
+but then the renderer goes and renders all the content and sends it
+down the stream just as it would with an HTTP 200.  Needless to say,
+this doesn't do much to curb bandwidth usage.
+
+I'm hoping to fix the problem where we fetch and filestat all
+the blog entries multiple times in a given PyBlosxom request.  It
+won't be the amazingly elegant fix I was hoping to do a couple of
+months ago--but that requires a whole lot more work and rewriting 
+a bunch of things in a non-backwards-compatible way and thus 
+disrupting plugins and such.
+
+That brings me to the PyBlosxom manual work I'm doing.  The manual
+is already 46 pages long (that include the GDFL text).  I haven't 
+covered developer topics yet--mostly I've spent my time writing 
+and re-writing content dealing with installation, setup, 
+configuration, flavours, plugins, static rendering, and writing 
+entries.  I'm still getting my feet wet with docbook, so that's 
+causing it to take longer.
+
+Manuals take a stupendous amount of time to write.
+
+Incidentally, if you've even looked at the manual, let me know.  
+I have no way of knowing whether I'm doing a lot of work for 
+nothing.  I'm also very interested with problems people have, 
+portions that are vague, and any other comments.  Additionally,
+if you want to help out, let me know.

@@ -1,0 +1,39 @@
+.. title: Python Miro Community status: October 20th, 2011
+.. slug: status_20111020
+.. date: 2011-10-20 11:39:29
+.. tags: pmc, dev, mirocommunity, python
+
+
+What is Python Miro Community
+=============================
+
+`Python Miro Community <http://python.mirocommunity.org>`_ is an index
+of Python-related videos on the Internet.  For the most part, it's a
+collection of videos from Python-related conferences.  Saw a session you
+liked and want to share it?  It's likely you can find it and share it
+with Python Miro Community.
+
+
+Status
+======
+
+I've finished posting
+`DjangoCon 2011 <http://python.mirocommunity.org/category/djangocon-2011>`_
+videos.
+
+They're all set up to be transcribed and translated.  If you have spare time,
+please think about taking the time to transcribe your favorite presentation.
+If it's transcribed already and you can translate it, please translate it.
+
+I'm keeping track of transcription/translation status now.
+
+I fixed the RSS links for categories so that if you subscribe to that RSS
+feed, it has the complete category in it--not just the most recent 30 videos.
+If you're using a podcast client and are subscribed to one of the category
+feeds, please fix the feed url in your podcast client.
+
+I've got `PyCon AU 2011 <http://pycon-au.org/>`_ in the queue.  In fact, I
+have an actual queue now maintained in the
+`PMC GitHub issue tracker <https://github.com/willkg/pmc/issues>`_.  That
+includes other things that need to be fixed in the site or in my scripts
+that help me maintain the site.

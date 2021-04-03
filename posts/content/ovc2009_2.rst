@@ -1,0 +1,41 @@
+.. title: Open Video Conference was awesome!
+.. slug: ovc2009_2
+.. date: 2009-06-22 19:33:30
+.. tags: content, work, miro
+
+I just got back from the `Open Video
+conference <http://openvideoconference.org/>`__ and it was really
+inpsiring and really awesome. From when I arrived in NYC late Thursday
+night to when I left this morning, the time flew by. I met a variety of
+people who have a stake in the Open Video game: producers, directors,
+creators, distributors, publishers, companies, representatives,
+individuals, codec hackers, renderer hackers, player hackers, site
+builders, community builders, independent journalists, movers, shakers,
+etc.
+
+I met a co-worker I've worked closely with for some months, but never
+met (and didn't realize who he was until after he was introduced). 7 out
+of 10 (or so) PCF staff were all there--the largest number of PCF staff
+in one place I've been a part of. Ben, Paul and I were able to do some
+Miro work and talk about issues we're having pushing 2.5 out the door. I
+met with Jean-Baptiste from `VideoLAN <http://videolan.org/>`__ (they
+make VLC) and talked about their impending 1.0 release (I scored a
+pre-release tarball and already started working on upgrading Miro on
+Windows to use VLC 1.0). I talked about metadata with a few people and I
+talked about problems with torrents in RSS enclosures with Kevin and
+[STRIKEOUT:Nathan (I'm pretty sure that's his name)] Michael from
+`LimeWire <http://www.limewire.com/>`__ on things they're working on
+that have a lot of synergy with things we're working on. I talked with
+Joe Born from `Neuros Technology <http://www.neurostechnology.com/>`__
+about work I did in March on the Neuros Link and how we should go
+forward working out issues that Miro has when running on the Link (it
+runs well, but could use some ui tlc). Seeing what people are thinking
+about and doing with HTML 5 video tag was great.
+
+It was a really productive conference for me. It's really clear what
+role Miro plays in the future of Open Video on the web. It'll be
+exciting to be a part of the future unfolding.
+
+**Updates:**
+
+6/23/2009: I met Michael from LimeWire--not Nathan.

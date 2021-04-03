@@ -1,0 +1,37 @@
+.. title: Python Miro Community status: 05-01-2010
+.. slug: status_20100501
+.. date: 2010-05-01 21:23:30
+.. tags: pmc, python, dev, work, miro, mirocommunity
+
+I spent a few hours with the Python Miro Community site today
+re-applying the template changes I made to the theme to the new version
+of the theme. Miro Community has released two versions since I tweaked
+the theme, so I was playing catch-up. I'm putting my edits into version
+control this time around so I don't lose them again (silly silly silly).
+
+One of the things I want to do with Python Miro Community is to build
+playlists of videos covering a specific theme for helping people come up
+to speed with those areas: testing in Python, basic Python programming,
+advanced Python programming, ... I've been faking this using tags, but
+it's pretty suboptimal because I can't control the order the videos get
+listed in on the tag listing page. Dean created `bug
+12627 <http://bugzilla.pculture.org/show_bug.cgi?id=12627>`__ for
+implemnting playlists/series. This would also fix the problem I have
+where YouTube duration maximums force a single "video" to span several
+YouTube urls and thus be several separated videos. Anyhow, looks like
+that isn't going to get implemented for Miro Community 1.0.
+
+I started slogging through the queue. We've got 80 videos or so in the
+approve/reject queue right now. A bunch of them are PyCon 2010 related.
+A bunch are from Carl's blip.tv feed and are from ChiPy and other
+things. 50 or so are from a Plone feed that Nate Aune sent me. I'm going
+to make a concerted effort to get through the queue over the next couple
+of weeks.
+
+Even though I'm behind in the queue, I encourage people to submit new
+videos. Some of the best material comes from Python user groups--I'd
+really like to see more groups videoing their sessions, posting them
+online, and submitting them to PMC. Don't let ChiPy and PyAtl outshine
+everyone else!
+
+You can find Python Miro Community at http://python.mirocommunity.org/.

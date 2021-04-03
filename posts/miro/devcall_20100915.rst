@@ -1,0 +1,66 @@
+.. title: Dev call 9/15/2010 minutes
+.. slug: devcall_20100915
+.. date: 2010-09-15 14:08:24
+.. tags: miro, work
+
+Miro 3.5 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5>`__)
+
+* focusing on P1 issues and trying to get the release done--almost
+  there
+
+Miro Community 1.1.2 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.1.2>`__)
+
+* focusing on small bugs that should get fixed before the long haul for
+  1.2.
+
+Janet:
+
+* Worked on Universal Subtitles testing.
+* There's been a ton of bug fixes for Miro in the last few days that
+  need to be tested and areas that need to be regression tested.
+
+Will:
+
+* Worked on 3.5 bugs.
+
+Ben:
+
+* Worked on 3.5 bugs, but mainly on http downloading and conversions.
+
+Paul:
+
+* Switching over from Miro Community to Miro.
+* We're having a lot of total failure problems with Amazon EC2 and RDS
+  and it's becoming a pain in the ass.
+
+Order of business:
+
+* We say goodbye to Luc. He's done a ton of work on Miro and has been
+  on the team for a long time. Good luck in your future endeavors!
+  We'll miss you!
+* Talked about switching to Skype for conference calls because the
+  system we're using now sucks.
+* Priority is being put on finishing development work on Miro 3.5. Any
+  help with this would be huge. There are a series of bugs on the
+  roadmap that need to be fixed. If you want to help out but don't know
+  where to start, see http://getmiro.com/userguide/contributing.html.
+  If there are bugs you want fixed that aren't in our queue, consider
+  submitting a patch.
+* If you can't contribute work, please consider contributing funding by
+  `donating <https://www.miroguide.com/donate>`__. Your money goes
+  directly to ongoing development of Miro and related projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro:**
+
+* 20 bugs/feature-requests created
+* 3 bugs marked WORKSFORME
+* 2 bugs marked INVALID
+* 2 bugs marked DUPLICATE
+* 1 bugs marked WONTFIX
+* 19 bugs marked FIXED
+* 9 bugs marked INCOMPLETE

@@ -1,0 +1,15 @@
+.. title: I'll be at the Open Video Conference
+.. slug: ovc2009
+.. date: 2009-06-18 09:33:05
+.. tags: content, work, miro
+
+My jury duty trial finished up yesterday freeing me up for going to the
+`Open Video Conference <http://openvideoconference.org/>`__. The
+conference schedule looks pretty interesting. I'll try to hit
+development related things as much as possible.
+
+Sunday is going to be a hackfest day--looking forward to seeing other
+Miro devs and devs from related projects and working on the future of
+Open Video.
+
+If you're at the conference, say hi!

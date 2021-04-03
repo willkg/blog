@@ -1,0 +1,22 @@
+.. title: Google Summer of Code 2007: PyBlosxom
+.. slug: gsoc_2007
+.. date: 2007-05-19 12:55:34
+.. tags: pyblosxom, dev, python
+
+Blake poked me via email and suggested I put together some ideas
+for a PyBlosxom GSoC project under the PSF umbrella a couple of months 
+ago.  It was a hectic time, but I threw some ideas together based on 
+items we had in the TODO list (many of which are pretty stale at this 
+point).  I'm happy to say that we had a great proposal for building
+a web front end for PyBlosxom--a tool that I think a good portion of
+PyBlosxom users would be happy to have.
+
+I'll be mentoring this project over the course of the summer.  Z has
+already started working on things and I think this will turn out nicely.
+
+As a side note, this is a huge motivator towards finishing up a release
+and getting out a new version of the PyBlosxom manual.  On the flip side,
+I'm getting married in a week so I'm finding it difficult to allocate
+time to get the work done.  Wedding planning is intense.  They should 
+use wedding planning to teach project management courses--talk about
+shifting requirements and general project shenanigans.

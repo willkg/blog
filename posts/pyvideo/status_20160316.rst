@@ -1,0 +1,118 @@
+.. title: pyvideo-data status: March 16th, 2016
+.. slug: status_20160316
+.. date: 2016-03-16
+.. tags: dev, python, pyvideo, pyvideo-data
+
+
+What is pyvideo-data?
+=====================
+
+`pyvideo-data`_ is a collection of Python-related conference video data in JSON
+format.
+
+This is an update of what's going on with `pyvideo.org`_ and `pyvideo-data`_.
+
+.. TEASER_END
+
+Status
+======
+
+In January, 2016, I wrote up a blog post about how I was ending pyvideo and why
+and roughly how I felt about everything. Many people wrote emails to me about
+how they used pyvideo and how pyvideo going away would affect them. Some people
+were interested in taking over the project.
+
+Some of those emails started discussions with Naomi and others at the PSF which
+got me thinking about the importance of the data that we had collected and the
+importance of continuing to curate that data.
+
+Sheila and I talked about this at length. It's hard to really get across just
+how ridiculously large a project pyvideo was and how much work and expertise is
+required to do it well and how awful we felt because we were underequipped for
+it. We knew we didn't want to reboot pyvideo, but we thought it was important
+that someone spent time bootstrapping pyvideo-data into a healthy community
+project. Everyone is busy, so we decided we'd start this process and see how far
+we got.
+
+This blog post is pretty overdue, but we wanted a few key things to happen
+before we started the ball rolling.
+
+1. We wanted a mailing list so that everyone who is interested in curating, using
+   or analyzing Python-related conference video data could collaborate.
+
+   Courtesy of the PSF, we have a `pyvideo-data mailing list`_. If you're
+   interested in curating, using or analyzing this data, please join.
+
+2. We wanted the infrastructure to allow for drive-by editing of the data.
+   Things like fixing names, fixing typos, adding additional related urls,
+   etc--these things should be easy to do, easy to review and easy to merge.
+
+   The repository on GitHub is the master copy of the data. Drive-by editing of
+   that data is possible using GitHub's interface and the barrier to entry is
+   having a GitHub account. If you don't have an account, you probably know
+   someone who does. Once you make an edit, it creates a Pull Request and the
+   changes you made are automatically validated. At that point, someone can
+   review and merge it.
+
+3. We wanted the tooling and infrastructure to make it possible for people to
+   add conference data.
+
+   We wrote clive which has a validation subcommand to validate JSON data and
+   make sure it's "correct". While the software and the validator probably have
+   issues, this infrastructure is there and we can improve it over time. clive
+   also has a fetch subcommand that pulls down metadata and generates the video
+   JSON files for it. This needs work, too, but it's there and I used it to add
+   DjangoCon 2013, DjangoCon 2014 and DjangoCon 2015.
+
+
+These are things we talked about over the many years we worked on pyvideo, but
+we could never figure out how to do them with the architecture and resources we
+had. I claim this is one of the reasons pyvideo just didn't work out. These are
+all in place to some degree with pyvideo-data today.
+
+
+So what now?
+============
+
+If you're interested in:
+
+1. curating the data (adding new conferences, editing existing data, improving
+   the data, ...)
+
+2. using the data (static site generation, static site of specific slices of
+   the data, ...)
+
+3. analyzing the data (conference speaker diversity, conference description
+   complexity, how many people are talking about Django, ...)
+
+please join the `pyvideo-data mailing list`_.
+
+The next set of things we need to work on are:
+
+* bootstrapping the community that will curate this data going forward
+* writing documentation for processes and tools so that it's easy to participate
+* solidifying the schema for the category and video data
+* improving the validator so that it catches more issues before changes are
+  committed
+* improving the infrastructure and tools so they're easier to use
+
+There are probably some others that I'm forgetting about.
+
+
+So what about pyvideo.org?
+==========================
+
+There are no plans to kill the site, yet. I'm hoping that as we bootstrap
+pyvideo-data, a bunch of people who are interested in setting up a statically
+generated site based on the pyvideo-data data will self-organize into a team
+that works on that project.
+
+Depending on how that works out and what they end up building, I'm game for
+transferring the pyvideo.org domain.
+
+Until then, we'll leave the existing site up for now.
+
+
+.. _pyvideo-data mailing list: https://mail.python.org/mailman/listinfo/pyvideo-data
+.. _pyvideo.org: http://pyvideo.org/
+.. _pyvideo-data: https://github.com/pyvideo/pyvideo-data/

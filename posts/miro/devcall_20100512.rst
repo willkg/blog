@@ -1,0 +1,54 @@
+.. title: Dev call 5/12/2010 minutes
+.. slug: devcall_20100512
+.. date: 2010-05-12 11:11:30
+.. tags: miro, work
+
+**minutes**
+
+Miro 3.0.2 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.0.2>`__)
+
+* need to cherry-pick Linux webkit fixes from master
+* need to test on Linux
+* it'll get pushed out this week or early next week
+
+Miro 3.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.1>`__)
+
+* dropped support for OSX 10.4
+* landed libcurl
+
+Miro Community 1.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro+Community&target=1.0>`__)
+
+* coming along nicely--single-digit number of bugs left
+
+Will:
+
+* Switched Linux platform from xulrunner 1.9.2 to webkit
+* Fixed a handful of 3.1 bugs
+* Struggled with getting translations for Miro 3.0 series working in
+  Launchpad (again)--looking forward to looking at Transifex
+
+Janet:
+
+* Regression testing on Windows
+* Tested libcurl changes for Miro
+
+Paul:
+
+* Miro Community work is going well
+* Working on last bugs for version 1.0
+
+Ben:
+
+* landed libcurl
+* worked on a bunch of other Miro 3.1 bugs
+
+**bugzilla**
+
+* 31 bugs/feature-requests created
+* 3 bugs marked WONTFIX
+* 21 bugs marked FIXED
+* 4 bugs marked DUPLICATE
+* 1 bugs marked INVALID

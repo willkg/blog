@@ -1,0 +1,30 @@
+.. title: Python Miro Community status: 01-22-2011
+.. slug: status_20110409
+.. date: 2011-04-09 21:55:18
+.. tags: pmc, dev, miro, mirocommunity, python, work
+
+I haven't posted the `PyCon 2011 <http://us.pycon.org/>`__ videos to
+`Python Miro Community <http://python.mirocommunity.org/>`__, yet.
+First, I was waiting for Ogg Theora versions of the videos to get
+posted. Then I was waiting for `Miro
+Community <http://mirocommunity.org/>`__ 1.2 to get released. Now I'm
+waiting for duplicate Ogg Theora versions of the videos to get removed
+so that I can successfully pull in all the videos without fear of them
+getting moved around and the urls to get stale.
+
+A month ago, I knew we were doing some things we hadn't done before and
+therefore it was going to take longer than it usually does. But I never
+expected it to take this long. It's sort of been a perfect storm of
+things to block on.
+
+Regardless, the Miro Community released 1.2 and it includes a bunch of
+fixes to the admin side of the site that make some things doable again.
+Additionally, it includes a few fixes I submitted upstream--these are my
+first contributions to Miro Community to fix issues I was working around
+with Python Miro Community. I look forward to fixing some more things
+especially now that I have a working Miro Community development
+environment. Congratulations to the Miro Community team on a successful
+release!
+
+That's where things are at. I haven't forgotten about PyCon 2011--it's
+just taking a lot longer than I expected it to.

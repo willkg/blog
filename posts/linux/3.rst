@@ -1,0 +1,20 @@
+.. title: On my (n + 1)th installation attempt
+.. slug: 3
+.. date: 2004-03-20 11:47:41
+.. tags: computers, debian
+
+Every week or so, I have a 30 minute block of time where I decide
+I'm going to go tackle installing Debian on my Dell Inspiron 7000.
+It's good for me to keep trying this because it's incredibly humbling.
+
+The machine has a CD-ROM drive, but it doesn't handle CD-RW discs (or
+at least it doesn't handle the ones I have).  So every attempt I make, 
+I create a coaster.
+
+Going to try one more time.  This time with a Knoppix cd.  The biggest
+problem I'm having is getting the machine on the network.  Once I
+get that done, then I'll be ok.  But I can't seem to get the machine
+on the network with either my 3Com 10baseT pcmcia card or my 
+SMC wireless pcmcia card.
+
+One more time....

@@ -1,0 +1,95 @@
+.. title: Dev call 11/10/2010
+.. slug: devcall_20101110
+.. date: 2010-11-10 12:05:57
+.. tags: miro, work
+
+Miro 3.5.1 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=3.5.1>`__)
+
+* still working on it
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* working on audio file metadata retrieval, storage, and ui
+* working on device syncing
+* working on performance enhancements for startup and displaying tabs
+* working on extension framework
+* switching testing from eggplant to sikuli
+
+Paul:
+
+* device syncing is looking good and is probably ready to land
+* automated syncing of feeds doesn't quite work, yet, but it's getting
+  there
+
+Asheesh:
+
+* got some MC work done--keeps bumping into access issues and other
+  roadblocks
+* wants to spend time with infrastructure to make things a lot easier
+  going forward: deployment scripts, ...
+
+Will:
+
+* finished up the documentation I needed to do
+* got most of the things in my queue done
+* working on 3.5.1 bugs and moving build boxes upstairs
+
+Kaz:
+
+* started adding metadata items to the list view
+* we need to figure out how to add metadata items to the item view, too
+
+Geoffrey:
+
+* did a lot of bug fixing on OSX
+* worked on importing itunes data into Miro
+
+Janet:
+
+* started testing on new OSX version for MVC
+* testing Miro 3.5.1 bug fixes
+* worked on Miro Community documentation and testing
+* worked on Universal Subtitles documentation and testing
+* Litmus is broken--sent emails to admin, but haven't heard anything
+  from it
+* one PC broke (Ubuntu and Windows 7 and Windows Vista and Windows XP)
+  and eggplant tests
+
+Ben:
+
+* worked on 3.5.1 bug fixes
+* fixed a bunch of playback issues
+* having a hell of a time tracking the VLC crash problem down
+
+Official business:
+
+* talked about coding standards/conventions/etc; we have a document and
+  it needs some additional bits covering utf-8/unicode/filename
+  handling
+* talked about swapping out flashscraper for vidscraper for Miro 4.0;
+  this would fix the problem where downloading a single item from
+  YouTube and other video hosting sites doesn't get useful metadata; it
+  should get done, but probably in January
+* talked about how to notify the user about things they can do with
+  Miro in a context-specific way
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://getmiro.com/userguide/.
+
+**Bugzilla stats for Miro:**
+
+* 49 bugs/feature-requests created
+* 1 bugs marked WORKSFORME
+* 3 bugs marked INVALID
+* 8 bugs marked DUPLICATE
+* 2 bugs marked WONTFIX
+* 18 bugs marked FIXED
+* 4 bugs marked INCOMPLETE

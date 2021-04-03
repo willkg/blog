@@ -1,0 +1,64 @@
+.. title: Dev call 9/16/2009 minutes
+.. slug: devcall_20090916
+.. date: 2009-09-16 14:55:08
+.. tags: miro, work
+
+**summary**
+
+Every Wednesday morning we have a conference call that we call the "dev
+call". This has been happening for years. Mostly we use it as a place to
+schedule upcoming development, talk with each other about problems we're
+working on, and come up to speed on where we're all at.
+
+I occasionally take minutes when someone isn't on the dev call. I'm
+experimenting with posting the minutes on this blog for the next month.
+If it turns out to be useful, I'll keep doing it. Otherwise I'll stop.
+
+**minutes**
+
+Minutes for this morning's call:
+
+Luc:
+
+* working on getting Miro working with Snow Leopard.
+* cleaning up the sandbox code.
+* it'll make things much easier when we drop support for 10.4--but
+  that's far in the future still. (15% of OSX users are using 10.4
+  according to Miro Guide stats.)
+* then we talked about the costs of supporting 10.4 users.
+
+Will:
+
+* worked on Miro 2.5.3 and 2.6 all week.
+* talked about bug status for 12028, 12150, 12166, 12101, and 12108.
+* talked about how we're building libtorrent and how we should bump it
+  to the binary kit which will definitely alleviate some issues and
+  possibly alleviate others because we're not really building it
+  "right" in the first place.
+* made changes to Planet Miro and took over curating.
+
+Janet:
+
+* got her machine back which was fried by lightning in August.
+* working through reworking her test environments.
+* testing the Miro 2.5 nightly that Will built.
+
+Paul:
+
+* working on Miro Community.
+* almost done with merging "users" and "authors". should get resolved
+  in the near future.
+* continuing to implement styling stuff from Morgan.
+
+**kickstarter**
+
+Subtitles project on kickstarter has 12 backers for $191. We're hoping
+it clears $1000 by the end of the month.
+
+**bugzilla**
+
+Rough Bugzilla stats:
+
+* 16 bugs created
+* 8 bugs marked FIXED
+* 4 bugs marked as DUPLICATE

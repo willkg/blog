@@ -1,0 +1,84 @@
+.. title: Dev call March 9th, 2011
+.. slug: devcall_20110309
+.. date: 2011-03-09 13:17:22
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* lots of flux in git-master, but the code is starting to stabilize
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+* past the codefreeze--switching to mini-deadlines for important
+  functionality.
+
+Ben:
+
+* got a lot of ui overhaul stuff done: main display, item details
+  widget
+* lot of other things to work on
+
+Paul:
+
+* worked on ui overhaul stuff: top chrome, sidebar tweaks, and
+  investigating complex issues
+* working on Amazon stores-related things
+
+Geoffrey:
+
+* picked up OSX titlebar bug
+* worked on sharing issues and tidying up the code
+
+Kaz:
+
+* worked on tablist issues and list view columns
+
+Will:
+
+* worked on windows build environment issues
+* fixed up a bunch of P1 bugs, synced translations, ...
+
+Jonas:
+
+* worked on magnet uri support and landed it today
+* worked on resume playback changes
+
+Asheesh:
+
+* worked on paypal payment system for MC tiers
+* worked on the POV theme
+
+Order of business:
+
+* Talked about associating Miro with magnet uris; the problem is that
+  magnet uris require a protocol association, so there's nothing in
+  Miro that currently does this. The other problem is that the
+  different platforms have different conventions for associations.
+  Jonas is going to create a few tickets and we'll figure out what to
+  do going forward.
+* We're pushing on P1 bugs--going to give mini-deadlines a break for a
+  week.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://manual.getmiro.com/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 134 bugs/feature-requests created
+* 6 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 8 bugs marked DUPLICATE
+* 3 bugs marked WONTFIX
+* 73 bugs marked FIXED

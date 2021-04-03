@@ -1,0 +1,32 @@
+.. title: PyBlosxom status 1-12-2004
+.. slug: status-01-12-2004
+.. date: 2005-01-12 11:44:51
+.. tags: pyblosxom, dev, python
+
+I finally got around to releasing PyBlosxom 1.1.  The big change is that I'm
+only planning to work on and maintain the core--I'm hoping someone will come
+along and pick up maintenance for all the contributed plugins.  I haven't
+figured out what the contingency plan will be.  I might maintain that too,
+but whine about it very loudly until someone gets tired of me whining.
+I'm also slowly getting through working on the documentation.  I noticed
+that `the wiki <http://wiki.subtlehints.net/moin/PyBlosxom>`_ that
+I'm basing a portion of my documentation on disappears every now and then.
+So...  I'm thinking that's a good sign that I should finish up quickly.
+
+George called me up and offered to take Planet PyBlosxom off my hands.  I
+want to pass off all the little things to other people in the PyBlosxom
+community so that:
+
+* I have more time to focus on PyBlosxom core
+* Other people are involved in the community--more people -> more ideas 
+  -> better community
+* Minimize the significance of me in the PyBlosxom world
+
+In the meantime, I'm working on finishing reading 
+`Dive into Python <http://diveintopython.net/>`_.
+It's one of those books I wished I had read years ago.  I got a hard-copy
+from my parents for Christmas.  I've put a halt on coding until I'm done.
+
+**Updates:**
+
+January 11, 2016 Updated the dive into python link.

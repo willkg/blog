@@ -1,0 +1,87 @@
+.. title: Dev call 01/26/2011
+.. slug: devcall_20110126
+.. date: 2011-01-26 15:52:30
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* working on metadata support, device syncing, performance
+  enhancements, extensions, streaming to other devices (ipad, ...), ...
+* working on project infrastructure: wiki, nightlies, nightly runs of
+  unit tests, ...
+
+Ben:
+
+* Landed InfoList performance changes.
+* Going to work on bug fixes.
+
+Geoff:
+
+* Merged the sharing stuff.
+* Spent time fixing things that were broken.
+* Will continue working on fixing broken things.
+* Planning to work on transcoding next--that's the last big thing on
+  his list for Miro 4.0.
+
+Kaz:
+
+* Hoping to push the new view menu soon.
+* Add metadata versioning.
+* Working on showing item metadata scanning progress.
+* Working on custom widgets for list view headers.
+
+Will:
+
+* Spent some time getting Miro running MeeGo.
+* Spent some time working on switching Miro on Windows to
+  gstreamer--too much work, so I'm going to defer it until a future
+  version.
+* Is it me or is our repository not git bisectable now? How can we fix
+  this?
+
+Asheesh:
+
+* Working on a MC 1.2 and hoping to fix it by next Wednesday.
+* Working with Rob to deploy patch to MC servers which tells us how
+  long Apache is taking to render certain pages.
+
+Paul:
+
+* Worked on device stuff and the new connect section.
+* Working on ui tickets.
+
+Order of business:
+
+* Talked about ItemInfo, ItemSource, and ItemHandler
+* Talked about ui overhaul and those bits should be going faster now.
+  New design work should be landing in tickets in the next few days.
+* Talked about how git bisect doesn't work now. Kaz said he has steps
+  to work around that. He's going to send an email about how he's
+  working around the problem.
+* git master is in pretty heavy flux right now and because of that
+  nightlies are pretty unstable--use them at your own risk. This will
+  sort itself over time when there are fewer massive changes being
+  made.
+* `PCF is looking to hire another Miro developer and a System
+  Administrator <http://www.pculture.org/pcf/jobs/>`__. See the jobs
+  page for more details.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work, please consider contributing
+  funding by `donating <https://www.miroguide.com/donate>`__. Your
+  money goes directly to ongoing development of Miro and related
+  projects. See http://pculture.org/about/ for more details on these
+  projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://manual.getmiro.com/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 59 bugs/feature-requests created
+* 6 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 9 bugs marked DUPLICATE
+* 1 bugs marked WONTFIX
+* 31 bugs marked FIXED
+* 7 bugs marked INCOMPLETE

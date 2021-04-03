@@ -1,0 +1,90 @@
+.. title: Dev call May 4th, 2011
+.. slug: devcall_20110504
+.. date: 2011-05-04 15:28:59
+.. tags: miro, work
+
+Miro 4.0 status
+(`roadmap <http://bugzilla.pculture.org/roadmap.cgi?product=Miro&target=4.0>`__)
+
+* we put out a beta on Saturday and things are looking awesome
+* there's still a lot of work to do, we need help with testing and
+  translations.
+
+Janet:
+
+* We did a beta release over the weekend. Huge number of Windows
+  downloads (2000ish). OSX downloads (100ish). Source downloads
+  (10ish).
+* Some minor issues discovered so far--things are looking ok.
+* Pulling in interns to do more testing on Miro.
+
+Will:
+
+* Worked on P1 bugs that were primarily TypeError issues and easily
+  fixed with some defensive programming.
+* Happy to have a beta channel---that'll solve a bunch of release
+  testing issues.
+* Going to switch gears and work on Miro User Manual stuff. Trying to
+  write a comprehensive but concise manual. It needs to be concise
+  because otherwise we'll spend tons of time writing and maintaining
+  it. Planning to do a few manual-writing sprints like we did last
+  cycle.
+
+Paul:
+
+* Worked on Miro Community project list page.
+* Working on P1 bugs for Miro and Miro Community.
+
+Rob:
+
+* Tighten up the systems, make them more automated, make them more
+  efficient.
+
+Geoffrey:
+
+* Worked on P1 bugs and trying to squeeze more performance from
+  transcoding.
+
+Kaz:
+
+* Worked on P1 bugs
+
+Jonas:
+
+* Worked on Windows playback issues and some other beta bugs.
+
+Asheesh:
+
+* Interested in fixing Miro stuff to make it easier to bring in new
+  contributors and also running some sprints
+
+Ben:
+
+* Worked on P1 bugs.
+
+Order of business:
+
+* More ui changes coming.
+* RC on Friday. Focus on outstanding ui changes.
+* Manual doesn't need to be totally up to date on release, so Will will
+  updated a bunch of stuff, and probably put in stubs for bits.
+* Miro is developed by a community of people including you! If you
+  can't contribute your time and work to development, testing, and
+  translations, please consider contributing funding by
+  `donating <https://www.miroguide.com/donate>`__. Your money goes
+  directly to ongoing development of Miro and related projects like
+  `Miro Community <http://mirocommunity.org/>`__ and `Universal
+  Subtitles <http://universalsubtitles.org/>`__. See
+  http://pculture.org/about/ for more details on these projects.
+* Did you know there's a Miro User Manual? If you haven't looked at it
+  yet, it's worth taking a look at. You can find it at
+  http://manual.getmiro.com/.
+
+**Bugzilla stats for Miro for the last week:**
+
+* 104 bugs/feature-requests created
+* 5 bugs marked WORKSFORME
+* 1 bugs marked INVALID
+* 8 bugs marked DUPLICATE
+* 54 bugs marked FIXED
+* 2 bugs marked INCOMPLETE

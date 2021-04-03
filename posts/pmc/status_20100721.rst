@@ -1,0 +1,32 @@
+.. title: Python Miro Community status: 07-21-2010
+.. slug: status_20100721
+.. date: 2010-07-21 14:13:03
+.. tags: pmc, python, dev, miro, work, mirocommunity
+
+This is the July status report for `Python Miro
+Community <http://python.mirocommunity.org>`__. This site indexes videos
+from around the Internet related to Python. In particular, we focus on
+indexing conference session video and videos from our more prolific
+Python user groups.
+
+In the last month, we've finished approving all the `PyCon
+2010 <http://us.pycon.org/2010/about/>`__ videos. They're all in the
+`PyCon 2010 conference
+category <http://python.mirocommunity.org/category/pycon2010>`__.
+
+I spent a few hours adding metadata to and approving videos from `PyCon
+AU 2010 <http://pycon-au.org/2010/about/>`__. There are some really
+great ones--definitely worth looking at. They're all in the `PyCon AU
+2010 conference
+category <http://python.mirocommunity.org/category/pycon-au-2010>`__.
+
+`PCF <http://pculture.org/>`__ released a new version of `Miro
+Community <http://mirocommunity.org/>`__ with some bug fixes and a
+widget that allows you to embed videos on other sites. I haven't played
+with that yet, but it sounds useful.
+
+I'm still working on recategorizing things per Carl's suggestions from
+last month.
+
+That's it for this status report. Any thoughts, questions or
+concerns--let me know.

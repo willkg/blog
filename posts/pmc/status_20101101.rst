@@ -1,0 +1,60 @@
+.. title: Python Miro Community status: 11-01-2010
+.. slug: status_20101101
+.. date: 2010-11-01 20:31:03
+.. tags: pmc, python, dev, miro, work, mirocommunity
+
+Last status update was in August and now it's November. I can't believe
+how fast the time is flying by.
+
+Last month, I imported the `DjangoCon
+2010 <http://python.mirocommunity.org/category/djangocon-2010>`__
+videos. That took a while. I might still be sitting on a lightning talk,
+but for the most part, they're all there.
+
+Today, Tom sent me an email pointing out that the enclosures in the
+`PyCon 2010 <http://python.mirocommunity.org/category/pycon2010>`__ feed
+weren't working. I spent an hour looking into the problem and cobbling
+together a script to link check all the enclosures. I discovered that
+there were a lot of problems. I balked at the workload and I sent an
+email to the pycon-av list to get some help. Carl pointed me at the code
+he uses for conference video post-production which allowed me to tweak
+my script and fix everything myself. As of now, the enclosures for the
+PyCon 2010 feed should be valid.
+
+Valid feeds are really important because they allow you to use a podcast
+client to download the videos. That makes it easier for you to watch it
+on devices that are convenient to you. That's an important method of
+access. I'll be running my new feed checker script on other conferences
+and feeds on the site and fixing problems I discover.
+
+In the queue of things to do:
+
+* checking feeds for valid enclosures
+* importing a few lightning talks I've been sitting on
+* DjangoConf EU
+* Kiwi PyCon
+* PyCon APAC 2010
+* PyCon India
+* fixing video listing templates so they're all listing videos the
+  "long way"
+* converting `Python
+  Basics <http://python.mirocommunity.org/listing/tag/python-basics/>`__
+  and `Advanced
+  Python <http://python.mirocommunity.org/listing/tag/python-advanced/>`__
+  to playlists
+* keeping an eye on `Universal
+  Subtitles <http://universalsubtitles.org/>`__--looking forward to
+  adding that to the site
+
+We pushed out `Miro 3.5 <http://getmiro.com/>`__, so I should have some
+more time I can spend on Python Miro Community things to clear out the
+queue.
+
+One last thing, I'd like to send a big welcome to Asheesh who's taken
+over `Miro Community <http://mirocommunity.org/>`__ development. He also
+works on `OpenHatch <http://openhatch.org/>`__ which is a site designed
+to connect new contributors looking for fun projects to work on with
+FLOSS projects that need help. It's exciting to have him on board at
+`PCF <http://pculture.org/>`__.
+
+And that's where things are at!

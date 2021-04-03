@@ -1,0 +1,56 @@
+.. title: pyvideo status: April 15th, 2012
+.. slug: status_20120415
+.. date: 2012-04-15 20:09:26
+.. tags: dev, python, richard, pyvideo
+
+
+What is pyvideo.org
+===================
+
+`pyvideo.org <http://pyvideo.org/>`_ is an index
+of Python-related videos on the Internet.  For the most part, it's a
+collection of videos from Python-related conferences.  Saw a session you
+liked and want to share it?  It's likely you can find it, watch it, and
+share it with pyvideo.org.
+
+
+Status
+======
+
+I started `richard <http://github.com/willkg/richard>`_ in order to build
+pyvideo.org. I threw it together in like 3 weeks and it had a lot of issues.
+Since then, I've had a lot of help from Reiner Gerecke and the project is
+moving along. There are a few more things I want before I consider richard
+to have a critical mass sufficient to do a version release, but we're
+pretty close. I'm pretty excited about that.
+
+I updated pyvideo.org with the latest richard code today. I also spent some
+time fixing the speaker data---it's still kind of screwy. Amongst other
+things we had 3 Wesley Chuns! Now there is only one.
+
+M.-A. Lemburg submitted two more conferences to get added for a grand total
+of three in my queue now. I upstreamed some fixes to `vidscraper
+<http://github.com/pculture/vidscraper>`_ a couple of weeks ago. Once we
+land the API changes in richard, I'll be able to add new conferences much
+more easily. Right now I have to do each video by hand... it's kind of a
+drag.
+
+Anyhow, things are going well, though the site looks the same and many of
+the issues are still there. You'll just have to take my word for it for
+now.
+
+If you're interested in helping out, I sure could use you! Testing,
+documenting, fixing the layout of some of the pages, implementing
+new features, fixing project infrastructure---there are a lot of
+different kinds of things you could help out with. Even looking through
+the code and pointing out egregious issues---that's also very helpful
+and very welcome.
+
+Issue trackers are here:
+
+* `pyvideo.org issue tracker <http://github.com/willkg/pmc/issues/>`_
+* `richard issue tracker <http://github.com/willkg/richard/issues/>`_
+
+Code is here:
+
+* `richard code <http://github.com/willkg>`_
