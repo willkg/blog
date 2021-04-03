@@ -2,6 +2,11 @@
 README
 ======
 
+This is my blog. It's built with Nikola now, but in the past it was built with
+some PHP journal system I don't recall the name of, the PyBlosxom, then
+Douglas.
+
+
 Set up server
 =============
 
