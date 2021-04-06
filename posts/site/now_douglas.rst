@@ -27,7 +27,7 @@ like a good idea at the time.
 Thus was born `Douglas <https://douglas.readthedocs.org>`_.
 
 Douglas resembles many of the static site blog generator systems
-written in Python that exist.  That suggests it was a dumb idea to go
+written in Python that exist. That suggests it was a silly idea to go
 and write it, but it has three compelling aspects that I think made it
 worth my time:
 

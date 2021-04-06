@@ -13,7 +13,7 @@ shouldn't be. For example:
 "First, never, ever, criticize someone in email. For reasons which I
 have never fully grasped, any negative emotion is always amplified by
 communication through email. Sometimes you intend to be critical -
-someone has done something dumb, or said something silly, or emailed
+someone has done something foolish, or said something silly, or emailed
 something ridiculous. Resist the urge to reply. Sometimes you don't mean
 to be critical - you're just making an observation, or engaging in
 technical debate, or adding facts to a discussion. But as soon as you

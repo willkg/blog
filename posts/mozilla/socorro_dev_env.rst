@@ -80,7 +80,7 @@ It started with socorro-zero, March 2016 to May 2017
 
 I like having a local development environment. I love the way you can throw them
 out, build a new one, and pretend nothing happened when you do something
-epically dumb.
+epically foolish.
 
 So one of the first things I did in March 2016 was start `socorro-zero
 <https://github.com/willkg/socorro-zero/>`_.
