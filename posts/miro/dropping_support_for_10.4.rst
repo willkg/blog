@@ -24,8 +24,8 @@ Miro 3.1 and future versions will no longer be supported on OSX 10.4.
 It's hard to tell exactly how many users are still using 10.4 since we
 don't sell Miro and we use OSUOSL for distributing binaries. We can get
 some probably-in-the-same-ballpark numbers from analytics on Miro Guide.
-I wrote some numbers in the `minutes for the 04/07/2010
-devcall <http://bluesock.org/~willkg/blog/miro/devcall_20100407.html>`__.
+I wrote some numbers in the :doc:`minutes for the 04/07/2010
+devcall <devcall_20100407>`.
 These numbers suggest that of the 470,000 users who looked at the Miro
 Guide, 12% of them are using OSX 10.4. Note that this is not 12% of all
 Miro users--just 12% of Miro users on OSX.

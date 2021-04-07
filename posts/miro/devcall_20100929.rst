@@ -74,9 +74,8 @@ Order of business:
 * Ben, Nick, Paul, Dean, Will and a bunch of other PCF people will be
   at `Open Video Conference <http://www.openvideoconference.org/>`__
   this weekend in NYC. If you're there, please say hi!
-* Miro users need your help translating! See `Translations for Miro 3.5
-  -- we need your
-  help! <http://bluesock.org/~willkg/blog/miro/translations_miro_3_5.html>`__
+* Miro users need your help translating! See
+  :doc:`Translations for Miro 3.5 -- we need your help! <translations_miro_3_5>`
   for details.
 * Miro users need your help testing! See `Miro 3.5 RC1 builds are
   available <http://www.getmiro.com/blog/2010/09/miro-3-5-rc1-builds-are-available/>`__
@@ -87,7 +86,7 @@ Order of business:
   projects.
 * Did you know there's a Miro User Manual? If you haven't looked at it
   yet, it's worth taking a look at. You can find it at
-  http://getmiro.com/userguide/.
+  `<https://getmiro.com/userguide/>`__.
 
 **Bugzilla stats for Miro:**
 

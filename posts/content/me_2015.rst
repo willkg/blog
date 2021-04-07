@@ -165,9 +165,9 @@ which powers `Mozilla Input <https://input.mozilla.org/>`_.
   making reducing bitrot in the tests and making sure each test tests something
   important. (Software engineering)
 
-* Wrote up a `blog post for upgrading from Django 1.7 to Django 1.8 for Mozilla
+* Wrote up a :doc:`blog post for upgrading from Django 1.7 to Django 1.8 for Mozilla
   sites that were based on Playdoh or had Playdoh-like things
-  <http://bluesock.org/~willkg/blog/mozilla/input_django_1_8_upgrade.html>`_.
+  <input_django_1_8_upgrade>`.
   I've heard that blog post helped a bunch of other Mozilla sites. I hope so
   because it was a pain in the ass to write. (Communicating)
 

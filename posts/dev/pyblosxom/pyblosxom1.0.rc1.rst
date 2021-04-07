@@ -7,7 +7,7 @@ I'm releasing pyblosxom 1.0 RC1 right now.  I overhauled the callback
 documentation in the ReadMeForPlugins file and read through other 
 documentation and I think we're good enough for a 1.0 release now.
 
-The RC1 is at `<http://bluesock.org/~willkg/dev/pyblosxom/pyblosxom-1.0-RC1.tar.gz>`_.
+The RC1 is at ``https://bluesock.org/~willkg/dev/pyblosxom/pyblosxom-1.0-RC1.tar.gz``.
 
 Feel free to download it and test it out--it's very much like alpha1 with
 a few differences:

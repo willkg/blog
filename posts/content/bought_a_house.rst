@@ -10,7 +10,7 @@ set.
 Thus, it's official: PCF-Boston will be moving and will become
 PCF-Near-Boston.
 
-I plan to continue co-working.
+I plan to continue co-working [1]_.
 
 There are a few ramifications. The first is that it'll be harder to take
 me out for a cup of coffee if you're in the Boston area. The second is

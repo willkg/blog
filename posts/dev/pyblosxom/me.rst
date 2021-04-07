@@ -3,7 +3,7 @@
 .. date: 2012-06-08 11:40:09
 .. tags: pyblosxom, python, dev
 
-I've been working on `Pyblosxom <http://pyblosxom.bluesock.org/>`_
+I've been working on `Pyblosxom <https://pyblosxom.github.io/>`__
 since January 9th, 2003. The initial commit from Wari is on November
 24th, 2002. I discovered that (according to the commits), I was the
 second person to commit to the codebase. I didn't know that.
@@ -44,3 +44,7 @@ So, two things:
    you for your patience as I figured a lot of things out.
 
 On to new horizons!
+
+**Updates:**
+
+April 7th, 2021: updated the Pyblosxom url

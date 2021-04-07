@@ -43,9 +43,9 @@ Looking at responses from other requests to Joseph's server leads
 me to believe that pages are gzipped.  I'm not sure if that's part
 of the issue or not.
 
-My site: <a href="http://www.bluesock.org/~willkg/blog/">http://www.bluesock.org/~willg/blog/</a>
+My site: `</~willkg/blog/>`__
 
-Joseph's site: <a href="http://reagle.org/joseph/blog/">http://reagle.org/joseph/blog/</a>
+Joseph's site: `<http://reagle.org/joseph/blog/>`__
 
 
 I'm running PyBlosxom 1.2.1 with the contributed plugins pack 1.2.2 with

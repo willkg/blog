@@ -3,7 +3,7 @@
 .. date: 2012-01-25 15:17:58
 .. tags: dev, office, work, remote
 
-Back in `October of 2010 <http://bluesock.org/~willkg/blog/content/goodweek.html>`_,
+Back in :doc:`October of 2010 <goodweek>`,
 I created a standing desk. A friend of mine bought a Sears workbench and was using
 that and while it was pretty cool looking, I wanted something I could more
 easily nail things into. I've been meaning to write about this for a while.

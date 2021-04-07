@@ -3,8 +3,8 @@
 .. date: 2007-05-19 12:47:23
 .. tags: pyblosxom, dev, python
 
-Someone posted my article `Cleaning Up PyBlosxom Using
-Cheesecake <http://bluesock.org/%7Ewillkg/cgi-bin/pybltrac.cgi/wiki/CleaningUpPyBlosxom>`__
+Someone posted my article ``Cleaning Up PyBlosxom Using
+Cheesecake``
 onto `programming.reddit <http://programming.reddit.com/>`__ which was a
 bit of a surprise to me.
 

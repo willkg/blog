@@ -18,3 +18,7 @@ which seems to be working nicely.  I'll look into the RSS 2.0 feed
 next, but that requires some planning because I don't want to hose
 any of the Planet feeds I'm on when I switch from the rss2renderer
 plugin to the native RSS 2.0 feed.
+
+**Updates:**
+
+April 7th, 2021: The feed is now at: https://bluesock.org/~willkg/blog/rss.xml

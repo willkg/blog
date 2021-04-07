@@ -3,7 +3,7 @@
 .. date: 2003-07-20 18:57:57
 .. tags: blog, pyblosxom
 
-First off, it's now "http://www.bluesock.org/~willkg/blog/". I followed
+First off, it's now ``http://www.bluesock.org/~willkg/blog/``. I followed
 `Rael's
 directions <http://www.raelity.org/apps/blosxom/faq.shtml#general_hiding_blosxom_cgi>`__
 and implemented the mod_rewrite adjustments. That worked super. Then it

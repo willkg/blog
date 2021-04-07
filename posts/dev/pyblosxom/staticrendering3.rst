@@ -6,7 +6,7 @@
 I checked in some fixes to the static rendering code and it's working
 nicely.  I fixed my flavour files, made some adjustments to my
 plugins and then re-rendered everything.  My statically rendered
-site is at <a href="/~willkg/test/">http://bluesock.org/~willg/test/</a>.
+site is at ``/~willkg/test/``.
 
 Things the static renderer is not good at:
 

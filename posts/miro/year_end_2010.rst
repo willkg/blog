@@ -32,10 +32,9 @@ This system is making that magic happen. It's awesome.
 
 It's been a huge year for PCF and the projects we work on.
 
-I want to bring it back down to the project I work on: Miro. `Last
-year <http://bluesock.org/~willkg/blog/miro/year_end_2010.html>`__ I
-wrote a year-end post with some stats I culled from Bugzilla and git
-along with some commentary. I do so again this year.
+I want to bring it back down to the project I work on: Miro. :doc:`Last year
+<year_end_2009>` I wrote a year-end post with some stats I culled from Bugzilla
+and git along with some commentary. I do so again this year.
 
 **Bugzilla stats:**
 

@@ -23,7 +23,7 @@ file has video tracks in it. Because of this, the sniffer code is pretty
 ham-fisted if you have earlier versions of VLC.
 
 The code is at
-`http://bluesock.org/~willg/download/vlcrenderer.py <http://bluesock.org/~willkg/download/vlcrenderer.py>`__
+`<https://bluesock.org/~willkg/download/vlcrenderer.py>`__
 if you're interested in fiddling with it. There's documentation at the
 top of the file that walks through installing and using it.
 

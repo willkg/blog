@@ -17,8 +17,7 @@ Today is the day I did the deed. As of
 the gtk-x11 platform of Miro no longer uses the xine renderer. This
 checkin removes all the xine code from the codebase.
 
-A while back, I threw together a `VLC
-renderer <http://bluesock.org/~willkg/blog/miro/vlc_renderer.html>`__
+A while back, I threw together a :doc:`VLC renderer <vlc_renderer>`
 that mostly works. Other renderers can be built in the same way--the
 infrastructure is there for anyone to create new renderers and ship them
 as separate packages.

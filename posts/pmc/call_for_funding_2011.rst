@@ -100,8 +100,8 @@ I really can't do this without funding, though.
 
 Ultimately, I'd love to raise $3000 which would go towards paying for
 the Miro Community service and also fund work on some/many/all of the
-above projects. I had talked about this a little in `my last status
-report <http://bluesock.org/~willkg/blog/pmc/status_20110122.html>`__
+above projects. I had talked about this a little in :doc:`my last status
+report <status_20110122>`
 but I hadn't figured out how it was going to work.
 
 In the next few days, I'm going to set up a Pledgie project and update

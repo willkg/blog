@@ -16,5 +16,5 @@ techniques) and it's been a wild semester so far.
 I've put everything else I normally do on hold until the end of the
 semester when I get some downtime.
 
-Interestingly, I wrote a `very similar blog entry last
-year <http://bluesock.org/~willkg/blog/content/status.10192005.html>`__.
+Interestingly, I wrote a :doc:`very similar blog entry last
+year <status.10192005>`.

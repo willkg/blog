@@ -34,7 +34,7 @@ interested, let me know.
 **The rest of my world:**
 
 My other web-site is at
-`http://bluesock.org/~willg/ <http://bluesock.org/~willkg/>`__.
+`<https://bluesock.org/~willkg/>`.
 
 I'm the maintainer of `PyBlosxom <http://pyblosxom.sourceforge.net/>`__.
 I've been doing some GSOC and GHOP work with the Python Software

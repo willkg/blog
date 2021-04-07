@@ -74,8 +74,7 @@ We accomplished a lot in 2018 quarter 3.
 * Lots of improvements to Socorro-style signature generation:
 
   * Extracted Socorro signature generation into a standalone library.
-    See `my blog post on socorro-siggen
-    <http://bluesock.org/~willkg/blog/mozilla/siggen_0_2_0.html>`_.
+    See :doc:`my blog post on socorro-siggen <siggen_0_2_0>`.
   * Fixed issues with C++ prefixes and types.
   * Added handling for C++ cv and ref qualifiers.
   * Built better support for Rust frames. 

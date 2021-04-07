@@ -165,7 +165,7 @@ suggests links to users leaving feedback that matches existing rules.
 
 `Trigger rule suggester <https://wiki.mozilla.org/Firefox/Input/Trigger_suggester>`_
 
-`Input: Trigger rule project Phase 1 <http://bluesock.org/~willkg/blog/mozilla/input_trigger_rules_phase1.html>`_
+:doc:`Input: Trigger rule project Phase 1 <input_trigger_rules_phase1>`
 
 **Upgrade to Django 1.8**: This took us a long time to work through
 because there were all kinds of things that needed to be fixed first.
@@ -173,7 +173,7 @@ It's done now!
 
 I wrote up a blog post summarizing all the things involved.
 
-`Input: Moving to Django 1.8 <http://bluesock.org/~willkg/blog/mozilla/input_django_1_8_upgrade.html>`_
+:doc:`Input: Moving to Django 1.8 <input_django_1_8_upgrade>`
 
 **Lots of updates**: We upgraded a lot of requirements to more recent
 versions of things. Further, we nixed a bunch that we weren't really

@@ -28,8 +28,8 @@ yet.
 
 **Current queue of things to do**
 
-My queue of things to do is pretty much the same as it was `in
-November <http://bluesock.org/~willkg/blog/pmc/status_20101101.html>`__:
+My queue of things to do is pretty much the same as it was :doc:`in
+November <status_20101101>`:
 
 * checking feeds for valid enclosures
 * importing a few lightning talks I've been sitting on

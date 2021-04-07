@@ -4,11 +4,10 @@
 .. tags: pyblosxom, dev, python
 
 I got a few comments from people who were interested in how I used `Cheesecake
-<http://pycheesecake.org/>`_ to clean up `PyBlosxom
-<http://pyblosxom.sf.net/>`_.  I tossed around making it a series of blog
-entries but then decided to write it up as a technical article: `Cleaning up
-PyBlosxom using Cheesecake
-<http://www.bluesock.org/~willkg/cgi-bin/pybltrac.cgi/wiki/CleaningUpPyBlosxom>`_.
+<https://pycheesecake.org/>`_ to clean up `PyBlosxom
+<https://pyblosxom.sf.net/>`_.  I tossed around making it a series of blog
+entries but then decided to write it up as a technical article: Cleaning up
+PyBlosxom using Cheesecake.
 
 I think it came out nicely, though parts of it are too "wordy".  I really liked
 writing the article using Trac's wiki system.  My only problem with Trac's wiki

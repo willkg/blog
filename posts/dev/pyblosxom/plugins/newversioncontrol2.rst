@@ -14,7 +14,7 @@ been able to replicate everything I did with CVS in Subversion.
 
 I'm still making modifications to the setup, but I'll be hosting all my PyBlosxom
 plugins work at 
-`<http://www.bluesock.org/~willg/cgi-bin/pybltrac.cgi/>`_.
+``https://bluesock.org/~willkg/cgi-bin/pybltrac.cgi/``.
 I've allowed anonymous ticket creation for feature requests, bug reports, and the
 like.  If you're sitting on issues, patches, and things of that nature, feel free
 to submit them.

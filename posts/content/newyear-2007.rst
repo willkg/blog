@@ -42,5 +42,5 @@ happy with where I left it. I'm not as happy with PyBlosxom, but I think
 that's mostly just a function of how much work I wanted to do versus how
 much time I actually spent on it.
 
-My resume is `here <http://www.bluesock.org/~willkg/me/resume.html>`__.
+My resume is ``here``.
 I'm Will Guaraldi and I'm looking for a job in May 2007.

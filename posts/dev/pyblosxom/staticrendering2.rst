@@ -4,6 +4,6 @@
 .. tags: dev, pyblosxom, python
 
 I have a statically rendered version of my site at
-`http://www.bluesock.org/~willg/test/ </~willkg/test/>`__. The links on
+`/~willkg/test/ </~willkg/test/>`__. The links on
 the right side are a bit off--but that's a problem with my flavour
 templates and not the static rendering code.

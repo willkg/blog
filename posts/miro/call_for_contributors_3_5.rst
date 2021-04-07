@@ -21,7 +21,6 @@ contributed to Miro development, let me know because I want to include
 you in the CREDITS file and other places. Either leave a comment or send
 me an email.
 
-If you read this entry (and `the previous
-one <http://bluesock.org/~willkg/blog/miro/translations_miro_3_5.html>`__,
+If you read this entry (and :doc:`the previous one <translations_miro_3_5>`,
 please dent it, tweet it, and mention it wherever you can so that we can
 credit as close to everyone we can as possible. Thank you!

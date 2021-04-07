@@ -3,8 +3,8 @@
 .. date: 2007-12-07 20:20:49
 .. tags: content, life, pyblosxom, books, ghop, coworking, miro
 
-Went out to lunch with `Chris <http://www.0xdeadbeef.com/weblog/>`__,
-`John <http://ejohn.org/>`__ and Dean (who I don't think has a blog).
+Went out to lunch with Chris Blizzard, 
+`John Resig <https://johnresig.com//>`__ and Dean (who I don't think has a blog).
 That was pretty cool. We talked about a bunch of stuff and the
 hamburgers at Christopher's in Porter Square (Cambridge, MA, USA) are
 really good.
@@ -15,7 +15,7 @@ Mental note: one wastes less time if one double-checks the tests to make
 sure they're testing correctly. Oops.
 
 I'm doing some minor mentoring for
-`GHOP <http://code.google.com/p/google-highly-open-participation-psf/>`__
+`GHOP <https://code.google.com/p/google-highly-open-participation-psf/>`__
 mostly on PyBlosxom related tasks. I'm on both of the mailing lists for
 GHOP-PSF and it's hard to keep in mind that the people working on these
 tasks are students in high school and early undergrad. It's like an army
@@ -38,7 +38,7 @@ IRC, Ryan, Michael and various other people who pop on, ask questions
 and help identify issues. Progress is excellent so far.
 
 In PCF land, I have a blog focused on PCF work and Miro development.
-It's at http://pculture.org/devblogs/wguaraldi. I figured I'd keep it
+It's at `<https://pculture.org/devblogs/wguaraldi>`__. I figured I'd keep it
 separate. It runs on WordPress so that's giving me some WordPress
 experience.
 
@@ -47,8 +47,7 @@ did an update on 12/4 and picked up a new set of packages and my
 perpetual wireless networking problems all went away. Bless you!
 
 Also, if you've got young children in your life, definitely take a look
-at `Bee Careful
-Marvin <http://www.bluesock.org/~willkg/cgi-bin/booktrac.cgi/wiki/BeeCarefulMarvin>`__.
+at `Bee Careful Marvin <https://bluesock.org/~willkg/marvin/beecarefulmarvin.html>`__
 It's geared towards children up to around 6 or so. You can get a
 professionally printed version at Lulu, but you can also download a PDF
 for free. It's released under a Creative Commons BY-NC-SA 3.0 license

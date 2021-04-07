@@ -22,4 +22,4 @@ Took me maybe 10 minutes to implement the whole thing--5 of which were
 used to update the filter plugin from the one at the link to something
 that works with Pyblosxom 1.0.1 (soon to be released).
 
-`Link to my links blog <http://bluesock.org/~willkg/blog/links/>`__.
+``Link to my links blog.``

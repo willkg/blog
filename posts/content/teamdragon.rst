@@ -12,17 +12,17 @@ our adventures. It was always a hope that I'd take these notes and do
 something with them.
 
 I played in another campaign in 2007 and used
-`InkScape <http://www.inkscape.org/>`__ to do `a comic of the first
+`InkScape <https://inkscape.org/>`__ to do `a comic of the first
 session or two of that
-campaign <http://dnd.bluesock.org/broadleaf_four/>`__ in the style of
-`Order of the Stick <http://www.giantitp.com/comics/ootslatest.html>`__.
+campaign <https://dnd.bluesock.org/broadleaf_four/>`__ in the style of
+`Order of the Stick <https://www.giantitp.com/comics/ootslatest.html>`__.
 It was a lot of fun, but took forever to do each panel. I decided it'd
 take me a long time to do 4 years worth of sessions in comic form.
 
 So I started a book version. I wrote a Python script (which I've since
 lost) that converted MoinMoin format into restructured text. Then I
 threw the whole thing together with
-`Sphinx <http://sphinx.pocoo.org/>`__. This allowed me to edit in
+`Sphinx <https://www.sphinx-doc.org/en/master/>`__. This allowed me to edit in
 restructured text, compile a LaTeX document, and then generate a PDF
 from that. Plus I got to spend some quality time with Sphinx to see how
 well it generates manuals.
@@ -49,7 +49,7 @@ While I was editing the LaTeX directly, I ended up changing some of the
 front matter and removed the index (didn't need an index to a novel).
 
 It took me a year to put the book together. It's around 240 pages or so.
-Today I finished it up, created a `Lulu <http://www.lulu.com/>`__
+Today I finished it up, created a `Lulu <https://www.lulu.com/>`__
 project for the book and had a bunch of copies printed for the others in
 the group. Feels good to have that done. I'm looking forward to getting
 a copy in the mail.

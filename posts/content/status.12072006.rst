@@ -20,6 +20,5 @@ and modify.
 I'm going to be doing a research project related to DAJ next semester
 which I'm excited about. But... that's a month away at least. For now
 I'm going to prioritize and cruise through my backlog of stuff I've been
-sitting on. Like finishing up `the
-work <http://bluesock.org/~willkg/blog/dev/pyblosxom/cleaningitup2.html>`__
+sitting on. Like finishing up :doc:`the work <cleaningitup2>`
 I was doing on PyBlosxom over the summer.

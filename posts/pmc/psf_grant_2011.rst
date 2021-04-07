@@ -13,8 +13,8 @@ the site. Things like:
 * implementing an API in Miro Community allowing for automated data
   validation
 
-I talked about all this at length in my `call for
-funding <http://bluesock.org/~willkg/blog/pmc/call_for_funding_2011.html>`__.
+I talked about all this at length in my
+:doc:`call for funding <call_for_funding_2011>`.
 
 I'm very pleased to announce that the PSF has awarded me a grant. I know
 how selective they are in their grant approval and I really appreciate

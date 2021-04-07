@@ -157,7 +157,7 @@ on the Thank You page.
 
 A lot of thinking went into this. I think it was a big success.
 
-`Thank you page project writeup <http://bluesock.org/~willkg/blog/mozilla/input_thankyou_phase1.html>`_
+:doc:`Thank you page project writeup <input_thankyou_phase1>`
 
 **Lots of upgrades and rewritings to make way for Django 1.8**: We're
 still using Django 1.7, but there are only a few blocking items

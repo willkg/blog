@@ -6,7 +6,7 @@
 I spent the last week pawning bugs off on other people while I come up
 to speed with Firefox development. Alex Faaborg wrote a blog entry
 `about Firefox and
-Miro <http://blog.mozilla.com/faaborg/2007/10/08/firefox-and-miro/>`__
+Miro <https://blog.mozilla.com/faaborg/2007/10/08/firefox-and-miro/>`__
 which piqued our interest. The result of the conversations around that
 blog entry launched me into Firefox development.
 
@@ -14,9 +14,8 @@ My first impression is that Mozilla has a massive code base. They've got
 a lot of code for a lot of products and they're managing it with an
 intricate series of make files and scripts. It has taken a while to come
 up to speed and I'm still spending time figuring things out. I've
-written `some loose notes about getting started with Firefox
-development <http://bluesock.org/~willkg/blog/static/gettingstarted_firefox>`__
-on my other blog. As a side note, it's tough having two blogs.
+written some loose notes about getting started with Firefox
+development on my other blog. As a side note, it's tough having two blogs.
 
 Today Alex formalized the issues into `bug
 400059 <https://bugzilla.mozilla.org/show_bug.cgi?id=400059>`__.

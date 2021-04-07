@@ -3,8 +3,8 @@
 .. date: 2010-11-09 15:48:02
 .. tags: pmc, dev, miro, mirocommunity, python, work
 
-In my `status report on November
-1st <http://bluesock.org/~willkg/blog/pmc/status_20101101.html>`__, I
+In my :doc:`status report on November
+1st <status_20101101>`, I
 reported that I had written a script to fix invalid download links.
 Turns out my script doesn't work as well as I had hoped. For example, I
 only fixed 30 of the 120 or so PyCon 2010 videos. I'm working on fixing

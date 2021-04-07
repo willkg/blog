@@ -3,8 +3,7 @@
 .. date: 2011-12-28 22:33:25
 .. tags: pyblosxom, python, dev
 
-While I was writing up the `release blog post
-<http://pyblosxom.bluesock.org/news/pyblosxom-1.5.html>`_, I figured out
+While I was writing up the release blog post for pyblosxom 1.5, I figured out
 that I've probably been working on Pyblosxom 1.5 on and off for the last
 three years or so.  That's pretty intense---I knew I'd been working on
 it for a while, but I didn't realize how long it actually was.
@@ -14,8 +13,7 @@ consistent contingent of friendly folks who hang out on ``#pyblosxom``.
 I really appreciate their humoring me with my period, "Pyblosxom 1.5 is
 almost done!  I just have to ..." announcements.
 
-Details of the release are in `the release blog post
-<http://pyblosxom.bluesock.org/news/pyblosxom-1.5.html>`_.  If you've
+Details of the release are in ``the release blog post``.  If you've
 been waiting to upgrade, this is a good version to upgrade to.
 
 Going forward, I'm going to take a hiatus from Pyblosxom development.

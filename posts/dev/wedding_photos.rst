@@ -3,7 +3,7 @@
 .. date: 2007-06-20 10:50:45
 .. tags: dev, software, python, photos
 
-S and I decided to get a wedding photographer [1]_in addition to allowing
+S and I decided to get a wedding photographer [1]_ in addition to allowing
 our guests to take as many photos as they wanted of all aspects of our
 wedding (except when we were getting dressed [and ...  undressed]).
 There were a few reasons for this one of which being the several horror

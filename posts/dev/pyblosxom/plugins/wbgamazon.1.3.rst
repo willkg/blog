@@ -4,7 +4,7 @@
 .. tags: pyblosxom, dev, python, plugins
 
 I got a comment from David Ascher on 
-`this entry <http://bluesock.org/~willkg/blog/dev/pyblosxom/wbgamazon.html>`_
+:doc:`this entry <wbgamazon>`
 which pointed out some issues with the wbgamazon plugin.  After
 a few minutes, I fixed the problems listed and released a new version.
 

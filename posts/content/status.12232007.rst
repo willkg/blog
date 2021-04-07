@@ -7,14 +7,14 @@ It was a pretty wild year for me. I had a massive health crisis at the
 beginning of the year, wrote an almost-working compiler for a functional
 language using SML targetting SPIM, finished up grad school, got
 married, landed a job at `Participatory Culture
-Foundation <http://pculture.org/>`__, made a lot of new friends,
+Foundation <https://pculture.org/>`__, made a lot of new friends,
 mentored a GSoC project, helped out with GHOP, started the big push for
 PyBlosxom 2.0, released a new version of `Bee Careful,
-Marvin <http://www.bluesock.org/~willkg/cgi-bin/booktrac.cgi/wiki/BeeCarefulMarvin>`__
+Marvin <https://www.bluesock.org/~willkg/marvin/beecarefulmarvin.html>`__
 under a CC BY-NC-SA 3.0 license and submitted my first patch for Firefox
 3.0.
 
-I started the `Nomadic Telecommuting Herd <http://herd.jottit.com/>`__
+I started the `Nomadic Telecommuting Herd <https://herd.jottit.com/>`__
 which has regular meetings, but hasn't extended beyond Chris and I, yet.
 I'll push this more at some point in the spring when it's more fun to go
 outside.
@@ -29,3 +29,7 @@ participate more in other projects, possibly learn C++ and reach out to
 other people in the area (Somerville, MA, USA) to get together and hack
 more. I'd also like to get a new laptop, but the longer I wait, the
 better the possibilities become.
+
+**Updates:**
+
+April 7th, 2021: updated urls
