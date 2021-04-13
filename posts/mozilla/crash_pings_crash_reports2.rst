@@ -1,7 +1,9 @@
 .. title: Crash pings (Telemetry) and crash reports (Socorro/Crash Stats): Part 2
 .. slug: crash_pings_crash_reports2
 .. date: 2019-07-03 15:00
-.. tags: mozilla, work, socorro, telemetry, crash_reports, crash_pings draft
+.. tags: mozilla, work, socorro, telemetry, crash_reports, crash_pings
+.. status: draft
+.. type: text
 
 Crash pings
 
