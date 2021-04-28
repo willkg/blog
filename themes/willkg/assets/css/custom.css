@@ -23,3 +23,8 @@ p.graphviz { text-align: center; }
 ul ul {
     margin-bottom: 1rem;
 }
+
+div.figure {
+    margin: 1em auto;
+    width: 100%;
+}
