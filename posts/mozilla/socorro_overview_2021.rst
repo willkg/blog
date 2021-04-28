@@ -39,7 +39,7 @@ Title slide
 
 Hi! I'm Will Kahn-Greene. I work on Socorro, the Mozilla crash ingestion
 pipeline, and it's spunky sidekick Tecken, the Mozilla symbols server. I, and my
-projects, joined Data Org in October 2020.
+projects, joined Data Org in August 2020.
 
 This presentation is a high-level overview of Socorro covering:
 
