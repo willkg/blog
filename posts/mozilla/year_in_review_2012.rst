@@ -1,4 +1,4 @@
-.. title: SUMO and Input: 2012
+.. title: Mozilla: 1 year review
 .. slug: year_in_review_2012
 .. date: 2012-12-31 17:52:00
 .. tags: webdev, mozilla, work, sumo, input
