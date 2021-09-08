@@ -84,6 +84,7 @@ I've given a few presentations [1]_:
 
 .. [1] I thought there were more, but I can't recall what they might have been.
 
+I've left lots of FIXME notes everywhere.
 
 I made some stickers:
 
