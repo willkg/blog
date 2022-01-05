@@ -229,6 +229,7 @@ THEME_CONFIG = {
 POSTS = (
     ("posts/*.rst", "", "post.tmpl"),
     # ("posts/*.md", "posts", "post.tmpl"),
+    ("posts/*.ipynb", "", "post.tmpl"),
     ("posts/*.txt", "", "post.tmpl"),
     # ("posts/*.html", "posts", "post.tmpl"),
 )
