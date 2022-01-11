@@ -66,7 +66,7 @@ So what is Kent?
 ================
 
 Kent is a fake Sentry service. You can run it, set the Sentry DSN of your
-application to soemthing like ``http://public@localhost:8000/1``, and then Kent
+application to something like ``http://public@localhost:8000/1``, and then Kent
 will capture Sentry error reports.
 
 Kent takes 2 seconds to set up. You can run it locally::
