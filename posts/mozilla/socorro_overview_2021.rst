@@ -142,7 +142,7 @@ Lars later rewrote his pellet stove automation system to use `Mozilla Things
 off the Socorro project.
 
 On the one hand, I do feel bad that we broke Lars' pellet stove. On the other
-hand, the situation is ludicrous. It never would have occurred to me that this
+hand, the situation is wild! It never would have occurred to me that this
 could happen outside of a Monty Python sketch. It doesn't have much bearing on
 crash ingestion pipelines, but I included it because it's a fantastic story in
 the Socorro project.
