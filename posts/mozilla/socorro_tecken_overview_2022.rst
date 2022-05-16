@@ -1,9 +1,8 @@
 .. title: Socorro/Tecken Overview: 2022, presentation
 .. slug: socorro_tecken_overview_2022
-.. date: 2022-05-12 11:28:08 UTC-04:00
+.. date: 2022-05-16 16:00:00 UTC-04:00
 .. tags: mozilla, work, socorro, tecken
 .. description: Socorro/Tecken Overview 2022 presentation
-.. status: draft
 .. type: text
 
 `Socorro`_ and `Tecken`_ make up the services part of our crash reporting system
