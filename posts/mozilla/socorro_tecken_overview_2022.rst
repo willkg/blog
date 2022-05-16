@@ -242,6 +242,10 @@ Slide 9
 
    *Explanation of symbols.*
 
+"Symbols?! We don't need no stinking symbols!"
+
+Well, yes. Yes we do.
+
 Mozilla builds software products. The build process generates binaries which we
 package up and ship as released products. One build step in the build process
 takes debugging binaries, extracts symbol information using `dump_syms`_,
