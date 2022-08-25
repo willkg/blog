@@ -10,7 +10,7 @@ fi
 
 # Show python version and what's in the virtualenv
 python --version
-: piprot
+pip list
 
 echo ">>> compiling site ..."
 nikola build -a
