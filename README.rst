@@ -17,13 +17,22 @@ Install post-receive-hook::
     $ cp post-receive-hook .git/hooks/post-receive
 
 
-Set up environment
-==================
+Blog
+====
+
+Clean and set up environment:
 
 ::
 
-    $ mkvirtualenv --python=/usr/bin/python3 blog
-    $ pip install -r requirements.txt
+    $ make clean
+
+Write posts in ``posts/``.
+
+As you're writing, you can have nikola re-compile live:
+
+::
+
+    $ make draft
 
 
 How to
@@ -131,14 +140,3 @@ code blocks:
        :number-lines:
 
        print("Our virtues and our failings are inseparable")
-
-
-Process
-=======
-
-1. write blog post in ``posts/``
-2. run::
-
-     nikola auto -b
-
-3. edit and recheck blog post

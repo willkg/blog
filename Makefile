@@ -29,9 +29,13 @@ rebuildreqs: .venv  ## | Rebuild the requirements.txt file
 
 .PHONY: compile
 compile: .venv  ## | Compile blog
-	mkdir output
+	-mkdir output
 	${VENVDIR}/bin/nikola build -a
 
 .PHONY: view
 view: .venv  ## | View blog
 	xdg-open output/index.html
+
+.PHONY: draft
+draft: .venv  ## | Compile and update whenever the rst file changes
+	${VENVDIR}/bin/nikola auto -b
