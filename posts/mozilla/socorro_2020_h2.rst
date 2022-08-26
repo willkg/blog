@@ -83,7 +83,7 @@ Highlights of 2020h2
   Later in the half, I sent an email to everyone who has protected data access
   reminding them of the policy details and where they can find it. 
 
-  The proected data policy is here:
+  The protected data policy is here:
   https://crash-stats.mozilla.org/documentation/protected_data_access/
 
 * **Socorro: Documented process for adding crash annotations**

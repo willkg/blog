@@ -82,7 +82,7 @@ Here's highlights of 2020h1:
 * **Fenix support**
 
   We did a lot of work on Socorro to support Fenix requirements. Some of that
-  work has benefitted Fennec and other projects as well. Socorro is in a much
+  work has benefited Fennec and other projects as well. Socorro is in a much
   better place for supporting projects that work differently than Firefox does.
 
   Socorro handles semver versions now in addition to the "Firefox version

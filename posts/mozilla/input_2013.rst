@@ -6,7 +6,7 @@
 
 It was a big year for `Input <https://input.mozilla.org/>`_. In 2012,
 we spent the last half rewriting Input. In 2013, it went through
-secreview, had a bunch of things fixed and then we migrated to the new
+sec-review, had a bunch of things fixed and then we migrated to the new
 system.
 
 Since then, we've been fixing bugs, reimplementing features that were
@@ -234,7 +234,7 @@ My goals for Input for 2014 are these:
 3. build infrastructure that we can use for better User Advocacy
    tools: watched alerts, email notifications, dashboards, ...
 
-4. flesh out tests: we're really light on smoketests and
+4. flesh out tests: we're really light on smoke tests and
    regression-catching tests
 
 5. work with Matt and Cheng to figure out where Input fits into the

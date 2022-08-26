@@ -215,10 +215,10 @@ ElasticUtils:
   # Elasticsearch that connects to "localhost".
   search = S(BlogMappingType).es(urls=['localhost'])
 
-  # Look at blog entires created on or after 6/20/2015.
+  # Look at blog entries created on or after 6/20/2015.
   search = search.filter(created__gte=datetime(2015, 6, 20))
 
-  # Look at blog entires that have titles that match elasticsearch
+  # Look at blog entries that have titles that match elasticsearch
   search = search.query(title__match='elasticsearch')
 
   # Only show the first 5.
@@ -237,10 +237,10 @@ elasticsearch-dsl-py:
   # Elasticsearch that connects to "localhost".
   search = Search(BlogDocType).using(Elasticsearch(urls=['localhost']))
 
-  # Look at blog entires created on or after 6/20/2015.
+  # Look at blog entries created on or after 6/20/2015.
   search = search.filter('range', created={'gte': datetime(2015, 6, 20)})
 
-  # Look at blog entires that have titles that match elasticsearch
+  # Look at blog entries that have titles that match elasticsearch
   search = search.query('match', title='elasticsearch')
 
   # Only show the first 5.

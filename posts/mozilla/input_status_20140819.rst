@@ -82,7 +82,7 @@ What I need help with
 3. (html) Fixing the date picker in Chrome (:bz:`1012965`) -- The issue
    is identified. Someone just needs to do the fixing.
 
-For details, see our GetInolved page:
+For details, see our GetInvolved page:
 
 https://wiki.mozilla.org/Webdev/GetInvolved/input.mozilla.org
 
@@ -104,7 +104,7 @@ access to where the data gets copied/moved to?", etc.
 I think we're doing pretty well. However, during the course of the
 audit, we identified a few things we should be doing better. Some of
 them already have bugs, one of them is being worked on already and the
-otehrs need to be written up.
+others need to be written up.
 
 Some time this week, I'll turn that into a project and write up
 missing bugs.

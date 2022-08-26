@@ -36,7 +36,7 @@ Python 3 runtime. That changed--now there's one with Python 3.6.
 
 In January, I decided to update Pigeon to work with Python 3.6. I tweaked the
 code, tweaked the unit tests, and voila--it was done! Then we deployed it to
-our -stage environment where it failed epically in technicolor glory (but no
+our -stage environment where it failed epically in Technicolor glory (but no
 sound!) and we had to back it out and return to the Python 2 version.
 
 What happened? I'll tell you what happened--we had a shit testing environment.
@@ -56,7 +56,7 @@ So our tests tested some things, but missed some important things and a big bug
 didn't get caught before going to -stage.
 
 It sucked. I felt chagrinned. I like to think I have a tolerance for failure
-since I do it a lot, but this felt particularly faily and some basic safeguards
+since I do it a lot, but this felt particularly fail-y and some basic safeguards
 would have prevented it from happening.
 
 
@@ -159,7 +159,7 @@ Let's walk through that:
    defined in my ``docker-compose.yml`` file.
 
 2. It mounts the ``./build`` directory as ``/var/task`` because that's where the
-   runtime expectes the code it's running to be.
+   runtime expects the code it's running to be.
 
 3. The ``DOCKER_LAMBDA_USE_STDIN=1`` environment variable causes it to look at
    stdin for the event. That's pretty convenient.

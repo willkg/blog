@@ -137,7 +137,7 @@ Highlights 2018
   everything they managed.**
 
   For years, Socorro engineering team worked on cleaning up the Gormenghast-like
-  sprawl that was postgres. For years, we've been generating PR after PR
+  sprawl that was Postgres. For years, we've been generating PR after PR
   tweaking things and removing things to reduce the spaghetti morass. It was
   like removing a mountain with a plastic beach toy.
 

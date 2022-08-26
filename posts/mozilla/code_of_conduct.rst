@@ -130,7 +130,7 @@ In Bleach, the long description set in ``setup.py`` includes the README::
     setup(
         name='bleach',
         version=get_version(),
-        description='An easy safelist-based HTML-sanitizing tool.',
+        description='An easy safe-list-based HTML-sanitizing tool.',
         long_description=get_long_desc(),
         ...
  

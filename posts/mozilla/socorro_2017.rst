@@ -110,7 +110,7 @@ accomplished a lot. Some highlights:
 * **Removed lots of code and other things from the repository.** Adrian and
   Peter worked on the "deprecation rampage" focusing on removing unused API
   endpoints. We spent time removing Postgres tables, stored procedures, and
-  views we weren't using. We removed the fakedata generation code. We removed
+  views we weren't using. We removed the fake data generation code. We removed
   the middleware component (most of it was folded into the webapp). We removed
   the aging and broken Vagrant development environment. We removed a bunch of
   scripts whose purpose has long been forgotten. We removed code for cron jobs
@@ -219,7 +219,7 @@ We had a bunch of highlights, but we also had some low lights:
   to migrate it over. We have a **lot** of data, so we had to copy the data from
   one cluster to another cluster and transform it along the way. It's really
   difficult to do that quickly. We were mucking with Groovy script embedded in a
-  reindex-from-remote command. The iteration cycle was rough, too--we'd run the
+  re-index-from-remote command. The iteration cycle was rough, too--we'd run the
   script for a day and then discover more issues that we had to fix.
 
   Second, we had to rewrite and update a lot of code and our testing had a lot
@@ -236,7 +236,7 @@ We had a bunch of highlights, but we also had some low lights:
 
   Meanwhile, we're also trying to redo our infrastructure. We have a really
   small team. We can't do two big projects like this at the same time. I
-  reprioritized them a few times hoping we could get one of them done and reduce
+  re-prioritized them a few times hoping we could get one of them done and reduce
   the number of big projects we were juggling. I think that only made things
   worse.
 

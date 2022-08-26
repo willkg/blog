@@ -112,7 +112,7 @@ We accomplished a lot in 2018 quarter 3.
 
 * Added a bunch of fields to supersearch.
 
-* Removed PostgreSQL from the processor. This is a big deal because it was one
+* Removed Postgres from the processor. This is a big deal because it was one
   of the things blocking a processor rewrite.
 
 * Audited who had access and removed access from a bunch of people. Auditing

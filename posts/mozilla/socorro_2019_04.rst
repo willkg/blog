@@ -43,7 +43,7 @@ Highlights of April
   This also made me overhaul my ``in_review.py`` script to support GitHub
   issues.
 
-* Decomissioned Pigeon.
+* Decommissioned Pigeon.
 
 * Replaced Crontabber with a Django command that can run arbitrary Django
   commands. This model fits our current and future architecture better.

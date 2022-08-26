@@ -77,10 +77,10 @@ highlights:
 
 * **I migrated Socorro from RabbitMQ to Google Pub/Sub.**
 
-  I redid how Socorro handles queueing crash reports for processing.
+  I redid how Socorro handles queuing crash reports for processing.
   Previously, it used RabbitMQ. I switched it to Google Pub/Sub. In doing this,
   I removed one of the components between the collector and the processor which
-  was sometimes flakey, so that was good. This was the first step in moving all
+  was sometimes flaky, so that was good. This was the first step in moving all
   of Socorro to Google Cloud Platform.
 
   Later in the year, we decided not to move Socorro to Google Cloud Platform.
@@ -100,7 +100,7 @@ highlights:
 
 * **We took over and audited Buildhub.**
   
-  In April-ish, John and I inheirited Buildhub. It was written a couple of years
+  In April-ish, John and I inherited Buildhub. It was written a couple of years
   prior to be an index of build information for Mozilla projects. The build
   process creates artifacts on archive.mozilla.org which is an AWS S3 bucket
   with a web interface of the directory structure. Buildhub consumes that
@@ -300,7 +300,7 @@ highlights:
 
 * **I redid the queueing code in Socorro to use AWS SQS.**
 
-  Since I switched Socorro to use Google Pub/Sub for queueing crash reports to
+  Since I switched Socorro to use Google Pub/Sub for queuing crash reports to
   process, Socorro has been split across two cloud platforms. That's kind of
   annoying. Since Socorro was staying in AWS, I decided to switch it to use AWS
   SQS.

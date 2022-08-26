@@ -64,7 +64,7 @@ working on Socorro. Since then, we've:
 * deprecated Buildhub in favor of Buildhub2 and updated projects to use
   Buildhub2
 
-Buildhub is decomissioned now and is being dismantled.
+Buildhub is decommissioned now and is being dismantled.
 
 We're passing Buildhub2 and PollBot off to another team. They'll take ownership
 of those projects going forward.

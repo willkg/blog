@@ -47,7 +47,7 @@ crashes in Socorro.
 
 I forked the Socorro signature generation code and created Siggen and
 `released it on PyPI <https://pypi.org/project/siggen>`_. Ben and I
-fixed some realllly rough edges and did a few releases. We documented
+fixed some really rough edges and did a few releases. We documented
 parts of signature generation that had never been documented before.
 
 Ben wrote some symbolication code to convert the frames to symbols,
@@ -133,18 +133,17 @@ I wrote some tools to update Siggen from changes in Socorro. That was how I
 built v0.2.0. I think that worked well and it's pretty easy to do, so I
 plan to keep this going for a while.
 
-If you use this library, pleeeeeeease tell me where you're using it. That's
-how I'll know it's being used and that the time and effort to maintain it
-are worth while. Even better, add a star in GitHub so I have a list of 
-you all and can contact you later. Plus it's a (terrible) indicator of
-library popularity.
+If you use this library, please tell me where you're using it. That's how I'll
+know it's being used and that the time and effort to maintain it are worth
+while. Even better, add a star in GitHub so I have a list of you all and can
+contact you later. Plus it's a (terrible) indicator of library popularity.
 
 If no one uses this library or if no one tells me (I can't tell the
 difference), then I'll probably stop maintaining it.
 
 If there's interest in this algorithm, but implemented with a different
-language, pleeeeeeeease let me know. I'm interested in helping to build a
-version in Rust. Possibly other languages.
+language, please let me know. I'm interested in helping to build a version in
+Rust. Possibly other languages.
 
 If there's interest in throwing a webapp with an API around this, chime
 in with specifics in :bz:`828452`.

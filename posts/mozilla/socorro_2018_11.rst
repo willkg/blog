@@ -65,7 +65,7 @@ procedures was a huge morass of technical debt. I've been working towards this
 for a year. Before me, Peter and Adrian had worked on it for a long time, too.
 The work was covered by a lot of bugs (:bz:`1361394`), Google docs,
 spreadsheets, meetings, hopes, dreams, and many quarterly goals. It was a
-monumental effort and now we can upgrade PostgreSQL versions.
+monumental effort and now we can upgrade Postgres versions.
 
 All the rewriting, reducing, and simplifying in November resulted in a codebase
 that's *10,000 lines smaller*.

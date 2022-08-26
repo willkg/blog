@@ -94,7 +94,7 @@ Rough plan for the next two weeks
 
 1. removing settings we don't need and implementing environment-based
    configuration for instance settings
-2. prepare for 2015q2
+2. preparing for 2015q2
 
 
 End of OPW and thank you to Adam!

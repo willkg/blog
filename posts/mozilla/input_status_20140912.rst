@@ -84,7 +84,7 @@ What I need help with
    cookie (bug #910691) -- I have no idea what's going on here because
    I haven't looked into it much.
 
-For details, see our GetInolved page:
+For details, see our GetInvolved page:
 
 https://wiki.mozilla.org/Webdev/GetInvolved/input.mozilla.org
 

@@ -197,7 +197,7 @@ things for the release.
 **Alerts v1**: We added an Alerts API. Input collects a variety of
 feedback-type data. After several discussions, we decided that it was
 a better idea to have alert systems live outside of Input, but push
-alert events to Input. This allows us to develope alert emitting
+alert events to Input. This allows us to develop alert emitting
 systems faster because they're outside of the Input development
 process. Further, it relaxes implementation details. The Alerts API
 has GET and POST abilities and lets us capture and report on arbitrary

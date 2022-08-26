@@ -33,7 +33,7 @@ makes it difficult for us to make architectural changes to Socorro without
 affecting everything and incurring uptime risk for components that have high
 uptime requirements.
 
-Because of that, in early 2016, we embarked on a rearchitecture to split out
+Because of that, in early 2016, we embarked on a re-architecture to split out
 some components of Socorro into separate services. The first component to get
 split out was the Socorro collector since it needs has the highest uptime
 requirements of all the Socorro components, but rarely changes, so it'd be a lot
@@ -148,7 +148,7 @@ on, one of which was cleaning up and reworking our AWS infrastructure. The
 schedule for that project changed regularly, which affected the schedule and
 requirements for the new collector, too. Because of this, I tried to establish
 "hard" requirements that I could figure out now and wouldn't change and "soft"
-requirements that I defered as long as possible to figure out.
+requirements that I deferred as long as possible to figure out.
 
 Other people had ideas for this project, too. I wanted to keep the project as
 small as possible so as to increase the likelihood that it shipped. At first, I
@@ -368,7 +368,7 @@ Further, it would notify us on failures.
 
 Matt, Richard, and I built load test scenarios and ran them with a distributed
 load broker across a bunch of EC2 nodes to simulate load. We ran a variety of
-different kinds of load tests: all at once firehose, stepped load increases,
+different kinds of load tests: all at once fire hose, stepped load increases,
 long duration loads, and so on.
 
 We built dashboards in Datadog and tuned the graphs so they were easier to read
@@ -467,7 +467,7 @@ Contents:
   Even if Antenna itself hadn't shipped, there was a lot of good work done on
   related projects.
 
-* Cutover from Socorro collector to Antenna was super smooth. There were some
+* Cut over from Socorro collector to Antenna was super smooth. There were some
   minor bugs (there are always bugs), but no data loss.
 
   We didn't lose any data.
@@ -485,7 +485,7 @@ the collector.
 
 Yay!
 
-.. [#] Interstingly, when we first pushed out Antenna, it was collecting like 8
+.. [#] Interestingly, when we first pushed out Antenna, it was collecting like 8
        million crashes per week. Now, two months later, it's down to like 6.3
        million crashes per week.
 

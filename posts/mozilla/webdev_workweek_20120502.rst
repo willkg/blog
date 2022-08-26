@@ -31,12 +31,12 @@ Things I'm taking away (so far):
 1. I should dig up my compilers book and re-read it because I really liked
    studying compilers way back when.
 
-2. I screwed up with spreading elasticsearch knowledge. I keep having
+2. I screwed up with spreading Elasticsearch knowledge. I keep having
    conversations about problems we've seen and solved in SUMO that other
    projects are having. Plus it seems like everyone has their own branch
-   of elasticutils with differing features.  I'm going to try to spend some
+   of ElasticUtils with differing features.  I'm going to try to spend some
    time working on making the situation better both by documenting things
-   and also improving elasticutils so we're not all maintaining our own
+   and also improving ElasticUtils so we're not all maintaining our own
    versions.
 
 3. Need to spend more time learning things.

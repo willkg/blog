@@ -335,7 +335,7 @@ Ted and others over the last year, I decided a mediocre fake data generation
 system is a significant project and it wasn't worth doing now.
 
 Instead, I wrote a script that pulls publicly available information from
-`<https://crash-stats.mozilla.com/>`_. That was waaaaay easier, has a much lower
+`<https://crash-stats.mozilla.com/>`_. That was way easier, has a much lower
 maintenance burden, and met our current needs.
 
 Maybe someone will attempt the white whale that is a mediocre fake crash data

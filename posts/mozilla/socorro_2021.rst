@@ -61,7 +61,7 @@ This is long.
   In 2021, I added the email field to the list of fields we remove from crash
   reports before ingestion. I removed all email-field-related bits from the
   processor and Crash Stats websites. I also removed the email field code from
-  Firefox crash reporter dialogs. This was incredibly difficult since that code
+  Firefox crash reporter dialogues. This was incredibly difficult since that code
   is ancient, has no tests, and is pretty fickle. For example, the macOS dialog
   is implemented in an old ``.nib`` format which xcode doesn't support so
   there's no way to edit it until we rewrite the crash reporter dialog.
@@ -141,8 +141,8 @@ This is long.
   <https://github.com/mozilla/fx-crash-sig>`_ to unblock the graphics and
   Fission teams trying to use the crash ping data. I started on a rewrite to
   improve the API making it easier to use especially for symbolicating and
-  generating signatures for large batches. I might be able to get to that in
-  1.    I pushed out 3 releases this year.
+  generating signatures for large batches. I might be able to get to that soon.
+  I pushed out 3 releases this year.
 
   I fixed a variety of issues in `socorro-siggen
   <https://github.com/willkg/socorro-siggen>`_. It still requires manual syncing
@@ -396,8 +396,7 @@ This is long.
   Jeff said we're switching to mermaid.js and diagrams.net. I had the same
   problems with mermaid.js that I did with graphviz/dot. I tried out
   diagrams.net and if I save the diagram as a SVG and export as PNG then I can
-  do all the things I want to do and I get a muuuuuuuch better diagram out of
-  it.
+  do all the things I want to do and I get a much better diagram out of it.
 
   * `Socorro diagram <https://socorro.readthedocs.io/en/latest/overview.html>`_
 

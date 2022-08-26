@@ -141,7 +141,7 @@ Take a moment and `fill out the feedback form
 <https://input.mozilla.org/feedback/?utm_campaign=willkgnewform2014>`_
 and tell us how you feel about Firefox.
 
-**Update: 1/18/2021**: Input was decomissioned, so this doesn't work anymore.
+**Update: 1/18/2021**: Input was decommissioned, so this doesn't work anymore.
 
 
 Thanks, etc

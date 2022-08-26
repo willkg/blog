@@ -23,7 +23,7 @@ Problem statement
 When we deploy `support.mozilla.org (SUMO) <https://support.mozilla.org/>`_ and
 `Input <https://github.com/mozilla/fjord/>`_ [1]_, it fetches the most recent
 localized strings ``.po`` files from SVN, compiles them to ``.mo`` files, and
-ships them with the site. Becuase SUMO supports many languages and the deploy
+ships them with the site. Because SUMO supports many languages and the deploy
 pulls down the most recent changes, there's no way to effectively test the
 entire site for all languages before deploying to production. Because of that,
 users experience HTTP 500 server errors on pages that have bad strings.

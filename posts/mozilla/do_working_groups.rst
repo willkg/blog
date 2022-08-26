@@ -216,7 +216,7 @@ I wanted to make sure our system supported all stages of group lifecycle:
   Have "recipes" for running groups.
 
   * How to run a group that's primarily public. How to run a group that's
-    primarly Mozilla-only.
+    primarily Mozilla-only.
   * How to run asynchronous groups that rely on mailing lists and other
     asynchronous methods.
   * How to run synchronous groups that have meeting cadences or Slack/Matrix

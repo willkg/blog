@@ -123,7 +123,7 @@ Dashboards for you, dashboards for everyone!
 I'm putting this in its own section because it's intriguing. I'll
 write another blog post about it later in July as things gel.
 
-On Thursday, a couple of days after d3 training that Matt organizied,
+On Thursday, a couple of days after d3 training that Matt organized,
 I threw together a better GET API for Input feedback responses. It's
 not documented, it probably has some bugs and it's probably going to
 change a bit, but the gist of it is that it lets you more easily build
