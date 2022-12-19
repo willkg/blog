@@ -1,7 +1,7 @@
 .. title: Installing Windows (2022)
 .. slug: installing_windows_2022
 .. date: 2022-12-19 16:05:56 UTC-05:00
-.. tags: dev, windows
+.. tags: dev, windows, mozilla
 .. type: text
 
 Installing Windows (2022)
