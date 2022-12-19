@@ -28,6 +28,7 @@ echo ">>> Activate virtualenv"
 
 # Update requirements to pick up new nikola changes, etc.
 echo ">>> update requirements"
+pip install -U pip
 pip install -U -r ./requirements.txt
 
 # Create logs directory if it doesn't exist.
