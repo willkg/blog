@@ -1,0 +1,111 @@
+.. title: Volunteer Responsibility Amnesty Day: December 2022
+.. slug: vrad_2022_12
+.. date: 2022-12-21 07:59:45 UTC-05:00
+.. tags: mozilla, work, dev, python
+.. type: text
+
+Today is `Volunteer Responsibility Amnesty Day
+<https://www.volunteeramnestyday.net/>`__ where I spend some time taking stock
+of things and maybe move some projects to the done pile.
+
+In June, I ran a
+:doc:`Volunteer Responsibility Amnesty Day <volunteer_responsibility_amnesty_day_2022_06>` [1]_
+for Mozilla Data Org because the idea really struck a chord with me and we were
+about to embark on 2022h2 where one of the goals was to "land planes" and finish
+projects. I managed to pass off `Dennis <https://github.com/mozilla/dennis>`__
+and end `Puente <https://github.com/willkg/puente>`__. I also spent some time
+mulling over better models for maintaining a lot of libraries.
+
+.. [1] I gave the post an exceedingly long slug. I wish I had thought about
+       future me typing that repeatedly and made it shorter like I did this time
+       around.
+
+This time around, I'm just organizing myself.
+
+Here's the list of things I'm maintaining in some way that aren't the big
+services that I work on:
+
+`bleach <https://github.com/mozilla/bleach>`__
+   :what is it: Bleach is an allowed-list-based HTML sanitizing Python library.
+   :role: maintainer
+   :keep doing: no
+   :next step: more on this next year
+   
+`everett <https://github.com/willkg/everett>`__
+   :what is it: Python configuration library.
+   :role: maintainer
+   :keep doing: yes
+   :next step: keep on keepin on
+
+`markus <https://github.com/willkg/markus>`__
+   :what is it: Python metrics library.
+   :role: maintainer
+   :keep doing: yes
+   :next step: keep on keepin on
+
+`fillmore <https://github.com/willkg/fillmore>`__
+   :what is it: Python library for scrubbing Sentry events.
+   :role: maintainer
+   :keep doing: yes
+   :next step: keep on keepin on
+
+`kent <https://github.com/willkg/kent>`__
+   :what is it: Fake Sentry server for local development.
+   :role: maintainer
+   :keep doing: yes
+   :next step: keep on keepin on, but would be happy to pass this off
+
+`sphinx-js <https://github.com/mozilla/sphinx-js>`__
+   :what is it: Sphinx extension for documenting JavaScript and TypeScript.
+   :role: co-maintainer
+   :keep doing: yes
+   :next step: keep on keepin on
+
+`crashstats-tools <https://github.com/willkg/crashstats-tools>`__
+   :what is it: Command line utilities for interacting with `Crash Stats <https://crash-stats.mozilla.org>`__
+   :role: maintainer
+   :keep doing: yes
+   :next step: keep on keepin on
+
+`paul-mclendahand <https://github.com/willkg/paul-mclendahand>`__
+   :what is it: Utility for combining GitHub pull requests.
+   :role: maintainer
+   :keep doing: yes
+   :next step: keep on keepin on
+
+`rob-bugson <https://addons.mozilla.org/en-US/firefox/addon/rob-bugson/>`__
+   :what is it: Firefox addon for attaching GitHub pull requests to Bugzilla.
+   :role: maintainer
+   :keep doing: yes
+   :next step: keep on keepin on
+
+`fx-crash-sig <https://github.com/mozilla/fx-crash-sig>`__
+   :what is it: Python library for symbolicating stacks and generating crash signatures.
+   :role: maintainer
+   :keep doing: maybe
+   :next step: keep on keepin on for now, but figure out a better long term plan
+
+`siggen <https://github.com/willkg/socorro-siggen>`__
+   :what is it: Python library for generating crash signatures.
+   :role: maintainer
+   :keep doing: yes
+   :next step: keep on keepin on
+
+`mozilla-django-oidc <https://github.com/mozilla/mozilla-django-oidc>`__
+   :what is it: Django OpenID Connect library.
+   :role: contributor (I maintain `docker-test-mozilla-django-oidc <https://github.com/mozilla/docker-test-mozilla-django-oidc>`__
+   :keep doing: maybe
+   :next step: think about dropping this at some point
+
+
+That's too many things. I need to pare the list down. There are a few I could
+probably sunset, but not any time soon.
+
+I'm also thinking about a maintenance model where I'm squishing it all into a
+burst of activity for all the libraries around some predictable event like
+Python major releases.
+
+I tried that out this fall and did a release of everything except Bleach (more
+on that next year) and rob-bugson which is a Firefox addon. I think I'll do
+that going forward. I need to document it somewhere so as to avoid the
+pestering of "Is this project active?" issues. I'll do that next year.
