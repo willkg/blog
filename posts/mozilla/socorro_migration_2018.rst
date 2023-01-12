@@ -73,15 +73,17 @@ infrastructure and migrate rather than continue to iterate on the existing one.
 Let's talk about some of the quirky and awkward things about the old
 infrastructure.
 
+**Complicated deploy pipelines and confusion about deploy artifacts.**
 Deploys to stage happened automatically any time we merged to the master branch.
 These would build an RPM of Socorro components, install the RPM on CentOS, bake
 an AMI, and push that out to stage. Deploys to prod happened by tagging a commit
 in the master branch. The AMIs associated with that commit would get pushed to
 prod. RPM filenames included the tag of the Socorro build it was built on.
-However since RPMs were built in the deploy to stage and the tag was created to
+However, since RPMs were built in the deploy to stage and the tag was created to
 deploy to prod, the RPMs that were in prod had the previous tag. That was
 constantly confusing for me.
 
+**Local development, stage, and production envirionments were too different.**
 Our local development environment was completely different from the stage and
 production environments. It was really hard to get them to more closely match
 stage and production. Periodically, we'd have problems in stage and production
@@ -94,10 +96,12 @@ where a migration I wrote would work fine on my local machine, work fine on
 stage, but fail in production because there was a stored procedure or a table
 with foreign keys that didn't exist in other environments.
 
+**Long running admin nodes with manual (often forgotten) updates.**
 Both stage and production had a long-running admin node that we updated manually
 after deploys. Further, we had to manually run migrations and do configuration
 changes.
 
+**Configuration was unwieldy and not tracked.**
 Configuration was managed in `Consul <https://www.consul.io/>`_. We had 170+
 environment variables (some with structurally complex values > 100 characters
 long) per environment controlling how Socorro worked. Configuration data wasn't
@@ -123,11 +127,13 @@ configuration change, Consul would restart all the processor processes
 immediately--we didn't have to wait for a deploy. That made the occasional
 feature-flipping or A/B testing a lot easier.
 
-Logs were created and existed on the individual nodes. There was no log
-aggregation and no central storage. To look at logs, we'd have to log into
-individual nodes. Every time we did a deploy, we'd lose all the logs. Thus we
-could never look very far back in time at logs.
+**Logs only existed on instances.**
+Logs were created and existed on the instances. There was no log aggregation
+and no central storage. To look at logs, we'd have to log into individual
+nodes. Every time we did a deploy, we'd lose all the logs. Thus we could never
+look very far back in time at logs.
 
+**Processor cluster didn't auto-scale.**
 The processor nodes were in a fixed autoscaling group and didn't scale
 automatically. Periodically, something in the world would happen and we'd get a
 larger-than-normal flow of crashes and the processors would be working
@@ -135,16 +141,18 @@ furiously, but the queue would back up and our ops person would have to manually
 add nodes to the group. After a deploy, it'd return to the original number and
 we'd have to manually scale it up again.
 
+**Periods in AWS S3 bucket names. Ugh.**
 We use AWS S3 for storage of crash data. However, when we set that up years ago,
 we put periods in our bucket names. For example, we had a bucket like
 ``org.allizom.crash-stats.rhelmer-test.crashes``. That becomes a problem when
 you're using HTTPS because the SSL wildcard certificate creates problems.
 
-Another thing we wanted to do was further reduce which things had access to what
-storage systems. Reducing access would reduce the likelihood of security
+**Too much access to too many things.**
+Another thing we wanted to do was further reduce which things had access to
+what storage systems. Reducing access would reduce the likelihood of security
 breaches and data leaks.
 
-Thus we had a list of things that we wanted:
+In summary, we had a list of things that we wanted:
 
 1. aggregated, centralized logs and log history
 2. Docker-based deploys
@@ -162,24 +170,26 @@ Knowing what we wanted out of a new infrastructure, we set about moving forward.
 Why'd it take a year and a half?
 ================================
 
-It took a year and a half because there was a lot that needed to be figured out,
-a lot to change, and you just can't rush baking a cake. Also, the team changed
+It took a year and a half because there was a lot that needed to be figured
+out, a lot to change, and you can't rush baking a cake. Also, the team changed
 over that time as people rolled on and off the project.
 
 What's involved in baking this cake? A lot of steps.
 
-We split out the Socorro collector as a separate project. The collector is the
-part of the crash ingestion pipeline that accepts incoming crash reports and
-saves the crash data. As such, it has a different uptime requirement than the
-rest of the system. Splitting it out into a separate project with its own deploy
-pipeline made this project a lot easier and a lot less risky.
-(See :doc:`Antenna: post-mortem and project wrap-up <antenna_project_wrapup>`)
+**We split out the Socorro collector as a separate project.** The collector is
+the part of the crash ingestion pipeline that accepts incoming crash reports
+and saves the crash data. As such, it has a different uptime requirement than
+the rest of the system. Splitting it out into a separate project with its own
+deploy pipeline made this project a lot easier and a lot less risky. (See
+:doc:`Antenna: post-mortem and project wrap-up <antenna_project_wrapup>`)
 
-Socorro was both Mozilla's crash-ingestion pipeline as well as an Open Source
-project for building crash-ingestion pipelines for other people to use. In order
-to maintain backwards compatibility, we had been piling on new features, generic
-implementations of APIs, backwards-compatible shims, HTTP url redirects, and
-other similar things almost monotonically for years.
+**We stopped supporting Socorro for non-Mozilla users allowing us to remove
+swaths of code we didn't use.** "Socorro" was both Mozilla's crash-ingestion
+pipeline as well as an Open Source project for building crash-ingestion
+pipelines for other people to use. In order to maintain backwards
+compatibility, we had been piling on new features, generic implementations of
+APIs, backwards-compatible shims, HTTP url redirects, and other similar things
+almost monotonically for years.
 
 I never met anyone else who ran Socorro, nor did I figure out how to find out
 who they were and interact with them. As far as I could tell, we were drowning
@@ -200,70 +210,80 @@ views, classes, Python libraries, HTTP views, models, API endpoints, and a
 variety of other things. (:bz:`1361394`, :bz:`1314814`, :bz:`1424027`,
 :bz:`1424370`, :bz:`1398946`, :bz:`1387493`, :doc:`Socorro in 2017 <socorro_2017>`, etc)
 
+**Folded the middleware into the webapp to centralize ownership of data storage.**
 We finished the work to fold the middleware functionality into the webapp and
 removed the middleware component. (:bz:`1353371`)
 
-We changed Super Search fields from being defined and stored in Elasticsearch to
-being defined and stored in a Python module. This unified the fields we had
-across all our environments. (:bz:`1100354`)
+**Moved Super Search fields definition from being stored in Elasticsearch to a
+Python module.** This unified Super Search fields and definitions across our
+environments. (:bz:`1100354`)
 
-We updated Python dependencies and reworked how we managed them. (:bz:`1306731`)
+**Updated Python dependencies and redid how we managed them.** We switched to
+requirements files. (:bz:`1306731`)
 
-We updated JavaScript dependencies and switched to npm. (:bz:`1388593`)
+**Updated JavaScript dependencies and redid how we managed them.** We switched
+to npm. (:bz:`1388593`)
 
-We redid the local development environment using Docker and setting it up
-behaviorally like stage and production. That let us build and debug in an
+**Redid the local dev environment using Docker.** This let us set it up so it
+was behaviorally like stage and production. That let us build and debug in an
 environment very similar to our server environments. That let us move a lot
 faster. (:doc:`Socorro local development environment <socorro_dev_env>`)
 
-We unified crontabber configuration and then audited crontabber and all the jobs
-it was running so that we could run crontabber on a disposable node.
-(:bz:`1388130`, :bz:`1407671`)
+**Cleaned up and improved crontabber.** We unified crontabber configuration and
+then audited crontabber and all the jobs it was running so that we could run
+crontabber on a disposable node. (:bz:`1388130`, :bz:`1407671`)
 
-We audited configuration across all environments and removed some
-configurability of Socorro by making it less general and more "this is how we
-run it at Mozilla". We moved a bunch of configuration into Python code. We
-audited configuration and reduced reduced the differences between local
-development, stage, and production environments. (:bz:`1296238`, :bz:`1434132`,
-:bz:`1430860`, :bz:`1434133`)
+**Audited and cleaned up configuration.** We audited configuration across all
+environments and removed some configurability of Socorro by making it less
+general and more "this is how we run it at Mozilla". We moved a bunch of
+configuration into Python code. We audited configuration and reduced reduced
+the differences between local development, stage, and production environments.
+(:bz:`1296238`, :bz:`1434132`, :bz:`1430860`, :bz:`1434133`)
 
-We audited the databases across all environments and made sure they had the same
-contents (tables, views, stored procedures, lookup table contents, etc).
-(:bz:`1435313`)
+**Audited and cleaned up database state.** We audited the databases across all
+environments and made sure they had the same contents (tables, views, stored
+procedures, lookup table contents, etc). (:bz:`1435313`)
 
-We threw together a proxy to allow minidump stackwalker access to the private
-symbols data for stack symbolication. (:bz:`1437928`)
+**Wrote a secure proxy for private symbols data.** We threw together a proxy to
+allow minidump stackwalker access to the private symbols data for stack
+symbolication. (:bz:`1437928`)
 
-We redid how minidump stackwalker was configured and unified that configuration
-across all environments. (:bz:`1407997`)
+**Cleaned up stackwalker configuration.** We redid how minidump stackwalker was
+configured and unified that configuration across all environments.
+(:bz:`1407997`)
 
-We had to figure out how to move 40 TB of data [#]_ from one AWS S3 bucket to
-another (and in the process discovered we had crappy keys--boo us!). We had
-problems with S3DistCp crashing after running for hours without doing any
-copying. We had more success with `s3s3mirror
+**Moved a ton of data.** We had to figure out how to move 40 TB of data [#]_
+from one AWS S3 bucket to another (and in the process discovered we had crappy
+keys--boo us!). We had problems with S3DistCp crashing after running for hours
+without doing any copying. We had more success with `s3s3mirror
 <https://github.com/cobbzilla/s3s3mirror>`_.
 
-We had to write a bunch of code to maintain data flows for some data I'm not
-going to mention that's a royal pain in the ass. It now resembles an MC Escher
-drawing, but it "works". I can't wait for it to go away.
+**Wrote a lot of scaffolding maintenance code.** We had to write a bunch of
+code to maintain data flows for some data I'm not going to mention that's a
+royal pain in the ass. It now resembles an MC Escher drawing, but it "works". I
+can't wait for it to go away.
 
-We wrote new deploy pipelines and Puppet files and templates.
+**Wrote new pipelines.** We wrote new deploy pipelines and Puppet files and
+templates.
 
-We figured out autoscaling rules for processor and webapp nodes.
+**Implemented new autoscaling.** We figured out autoscaling rules for processor
+and webapp nodes.
 
-We set up new dashboards in Datadog, new RabbitMQ accounts and queues, a new
-Elasticsearch cluster, new RDS instances, new AWS S3 buckets, monitors, alerts,
-deploy notifications, and so on. (:bz:`1419549`, :bz:`1419550`, :bz:`1425925`,
-:bz:`1426148`, :bz:`1438288`, :bz:`1438390`)
+**Implemented dashboards.** We set up new dashboards in Datadog, new RabbitMQ
+accounts and queues, a new Elasticsearch cluster, new RDS instances, new AWS S3
+buckets, monitors, alerts, deploy notifications, and so on. (:bz:`1419549`,
+:bz:`1419550`, :bz:`1425925`, :bz:`1426148`, :bz:`1438288`, :bz:`1438390`)
 
-We wrote migration plans, load test plans, system comparison/verification
-scripts, system checklists, tracker bugs, and meta tracker bugs. (:bz:`1429534`,
-:bz:`1429546`, :bz:`1439019`, etc)
+**Wrote lots and lots of bugs, plans, checklists, etc.** We wrote migration
+plans, load test plans, system comparison/verification scripts, system
+checklists, tracker bugs, and meta tracker bugs. (:bz:`1429534`, :bz:`1429546`,
+:bz:`1439019`, etc)
 
-We ran load tests. We tweaked things and ran some more.
+**Set up and ran load tests.** We ran load tests. We tweaked things and ran
+some more.
 
-We had meetings--tons of meetings! Pretty sure we had meetings to discuss when
-we should have meetings.
+**Meetings.** We had meetings--tons of meetings! Pretty sure we had meetings to
+discuss when we should have meetings.
 
 We did all this while maintaining an existing infrastructure and fixing bugs and
 adding features.
