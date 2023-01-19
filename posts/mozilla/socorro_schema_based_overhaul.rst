@@ -120,7 +120,7 @@ bad state.
   * RawCrash API allow list
   * ProcessedCrash API allow list
   * report view and template code
-  * telemetry crash storage
+  * Telemetry crash storage code
   * and other places
 
   We couldn't effectively manage permissions of fields in the stackwalker output
@@ -128,19 +128,21 @@ bad state.
 
 * **Poor documentation**
 
-  No documentation of fields other than `CrashAnnotations.yaml
+  No documentation of crash annotation fields other than `CrashAnnotations.yaml
   <https://hg.mozilla.org/mozilla-central/raw-file/tip/toolkit/crashreporter/CrashAnnotations.yaml>`__
-  which didn't enforce anything (process, data correctness, etc) and was
-  missing important information like data gotchas, data review urls, and
-  examples.
+  which didn't enforce anything in crash ingestion (process, valid type, data
+  correctness, etc) and was missing important information like data gotchas,
+  data review urls, and examples.
+
+  No documentation of processed crash fields at all.
 
 * **Making changes was high risk**
 
-  Making changes was high risk. Changing fields from public to protected was
-  high risk because you had to find all the places it might show up which was
-  intractable. Adding support for new fields often took multiple passes because
-  we'd miss things. Server errors happend with some regularity due to weirdness
-  with crash annotation values affecting the Crash Stats site.
+  Changing fields from public to protected was high risk because you had to
+  find all the places it might show up which was intractable. Adding support
+  for new fields often took multiple passes over several weeks because we'd
+  miss things. Server errors happend with some regularity due to weirdness with
+  crash annotation values affecting the Crash Stats site.
 
 * **Tangled concerns across the codebase**
 
