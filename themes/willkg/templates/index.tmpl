@@ -36,7 +36,7 @@
             <time class="published dt-published" datetime="{{ post.date.isoformat() }}" itemprop="datePublished" title="{{ post.formatted_date(date_format) }}">{{ post.formatted_date(date_format) }}</time>,
             <span class="byline-name fn">{{ post.author() }}</span>
             |
-            <a href="http://twitter.com/intent/tweet?url={{ post.permalink(absolute=True)|urlencode }}&text={{ post.title()|urlencode }}&via=willcage">Tweet this</a>
+            <a href="https://toot.kytta.dev/?text={{ post.title()|urlencode }}%20{{ post.permalink(absolute=True)|urlencode }}">share this (mastodon)</a>
         </div>
     </header>
     {% if index_teasers %}
