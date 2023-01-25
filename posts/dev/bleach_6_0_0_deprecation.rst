@@ -93,6 +93,21 @@ to the consensus that they never really needed Bleach in the first place.
    Bleach. Tired. At the end of its journey.
 
 
+Thanks!
+=======
+
+Many thanks to `Greg <https://github.com/g-k>`__ who I worked with on Bleach
+for a long while and maintained Bleach for several years. Working with Greg was
+always easy and his reviews were thoughtful and spot-on.
+
+Many thanks to `Jonathan <https://github.com/jvanasco>`__ who, over the years,
+provided a lot of insight into how best to solve some of Bleach's more
+squirrely problems.
+
+Many thanks to `Sam <https://github.com/gsnedders>`__ who was an indispensible
+resource on HTML parsing and sanitizing text in the context of HTML.
+
+
 Where to go for more
 ====================
 
