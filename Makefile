@@ -1,4 +1,5 @@
 VENVDIR=./.venv
+PYTHONVERSION := $(shell python --version)
 
 .DEFAULT_GOAL := help
 .PHONY: help
@@ -11,10 +12,20 @@ help:
 	    | column -t  -s '|'
 
 .venv:
-	python -m venv .venv
-	# ${PIP} install pip-tools
-	${VENVDIR}/bin/pip install --upgrade pip
-	${VENVDIR}/bin/pip install -r requirements.txt
+	@echo ">>> Using $(PYTHONVERSION)"
+	@echo ">>> Creating venv $(VENVDIR)"
+	python -m venv $(VENVDIR)
+	@echo ">>> Upgrading pip"
+	${VENVDIR}/bin/python -m pip install --upgrade pip
+	${VENVDIR}/bin/python -m pip --version
+	# @echo ">>> Installing pip-tools"
+	# ${VENVDIR}/bin/python -m pip install pip-tools
+	@echo ">>> Installing requirements"
+	${VENVDIR}/bin/python -m pip install -r requirements.txt
+
+.PHONY: status
+status:  ## | List status
+	@echo $(PYTHONVERSION)
 
 .PHONY: clean
 clean:  ## | Clean the project
@@ -22,6 +33,10 @@ clean:  ## | Clean the project
 	rm -rf output
 	find -name __pycache__ | xargs rm -rf
 	find -name '*.pyc' | xargs rm -rf
+
+.PHONY: buildvenv
+buildvenv: .venv  ## | Build a virtual environment
+	echo "Done!"
 
 .PHONY: rebuildreqs
 rebuildreqs: .venv  ## | Rebuild the requirements.txt file
