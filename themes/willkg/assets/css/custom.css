@@ -28,3 +28,35 @@ div.figure {
     margin: 1em auto;
     width: 100%;
 }
+
+blockquote {
+    margin-left: 2em;
+    padding-left: 1em;
+    border-left: 3px solid #66e;
+}
+blockquote p {
+    font-size: 1.1rem;
+}
+
+h2,
+h3 {
+    margin-top: 1em;
+}
+
+table {
+    border: 1px solid #e1e4e5;
+    margin-bottom:24px;
+}
+
+tr:nth-child(2n-1) td {
+    background-color: #f3f6f6;
+}
+
+th,
+td {
+    margin: 0;
+    text-align: left;
+    vertical-align: bottom;
+    overflow: visible;
+    padding: 8px 16px;
+}
