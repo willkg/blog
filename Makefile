@@ -1,4 +1,4 @@
-VENVDIR=./.venv
+VENVDIR=./venv
 PYTHONVERSION := $(shell python --version)
 
 .DEFAULT_GOAL := help
@@ -11,7 +11,7 @@ help:
 	    | sed -n 's/^\(.*\): \(.*\)##\(.*\)/\1\3/p' \
 	    | column -t  -s '|'
 
-.venv:
+venv:
 	@echo ">>> Using $(PYTHONVERSION)"
 	@echo ">>> Creating venv $(VENVDIR)"
 	python -m venv $(VENVDIR)
@@ -29,28 +29,28 @@ status:  ## | List status
 
 .PHONY: clean
 clean:  ## | Clean the project
-	rm -rf .venv
+	rm -rf venv
 	rm -rf output
 	find -name __pycache__ | xargs rm -rf
 	find -name '*.pyc' | xargs rm -rf
 
 .PHONY: buildvenv
-buildvenv: .venv  ## | Build a virtual environment
+buildvenv: venv  ## | Build a virtual environment
 	echo "Done!"
 
 .PHONY: rebuildreqs
-rebuildreqs: .venv  ## | Rebuild the requirements.txt file
+rebuildreqs: venv  ## | Rebuild the requirements.txt file
 	${VENVDIR}/bin/pip-compile --generate-hashes
 
 .PHONY: compile
-compile: .venv  ## | Compile blog
+compile: venv  ## | Compile blog
 	-mkdir output
 	${VENVDIR}/bin/nikola build -a
 
 .PHONY: view
-view: .venv  ## | View blog
+view: venv  ## | View blog
 	xdg-open output/index.html
 
 .PHONY: draft
-draft: .venv  ## | Compile and update whenever the rst file changes
+draft: venv  ## | Compile and update whenever the rst file changes
 	${VENVDIR}/bin/nikola auto -b

@@ -8,7 +8,7 @@ then
     mkdir ./output/
 fi
 
-. ./.venv/bin/activate
+source venv/bin/activate
 
 # Show python version and what's in the virtualenv
 python --version
