@@ -25,8 +25,15 @@ Clean and set up environment:
 ::
 
     $ make clean
+    $ make buildvenv
 
 Write posts in ``posts/``.
+
+Create a new post:
+
+::
+
+    $ ./.venv/bin/nikola new_post -t "Some Title" posts/some/path.rst
 
 As you're writing, you can have nikola re-compile live:
 
