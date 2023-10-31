@@ -362,11 +362,54 @@ Implementation decisions
 
 **Using the upload_fileupload table**
 
+There were two options for where to put the information about the symbols file:
+
+1. the ``upload_fileupload`` table which had a record per symbol file upload
+   *attempt*
+2. a separate table with a foreign key to the ``upload_fileupload`` table
+
+I decided to go with option 1. That meant we had to do a migration of a large
+table which meant we had to schedule an outage.
+
+This seemed like a better idea than have to worry about data in another table.
+It's easier to build views. It's easier to maintain the data some of which
+expires after 3 months and some which expires after 2 years.
 
 **Overloading the download API**
 
+There were three options here:
+
+1. use a completely separate API to do the code info lookup
+2. create a new version of the download API that includes the code info lookup
+   feature and also fixes issues with the download API (it's rooted at ``/``,
+   it's not versioned, ...)
+3. overload the existing download API with the new code info lookup feature
+
+I talked with Gabriele about this for a while especially how it impacts the
+undocumented symbols server protocol that is implemented by other symbols
+servers. We decided it made more sense to "generalize" the API such that it
+supports fetching symbols files by debug info (debug file / debug id) and code
+info (code file / code id).
+
+With Tecken, the files are stored in AWS S3 by their debug info path. We could
+have stored these files in a code info path as well, but since these are the
+``xul.dll`` files which are hundreds of mb in size, I decided to instead store
+the information in a database and implement a db lookup.
 
 **Checking all symbols suppliers**
+
+The stackwalker can be configured with multiple symbols suppliers. This is
+helpful if you're an engineer and you're running your own symbols supplier on
+your machine. This is helpful if you're some other company running your own
+Socorro and have multiple symbols servers you want to check.
+
+In the case of multiple symbols suppliers, the stackwalker doesn't know which
+support the code info lookup feature. Because symbols suppliers are configured
+by a single url and the stackwalker process is ephemeral (it runs, processes a
+minidump, and then terminates), it seemed best to assume that any of the
+symbols suppliers could support a code info lookup and we should first figure
+out a debug file and debug id before then querying the cache and symbols
+suppliers for the symbols file.
 
 
 Results
