@@ -33,7 +33,7 @@ Create a new post:
 
 ::
 
-    $ ./.venv/bin/nikola new_post -t "Some Title" posts/some/path.rst
+    $ ./venv/bin/nikola new_post -t "Some Title" posts/some/path.rst
 
 As you're writing, you can have nikola re-compile live:
 
