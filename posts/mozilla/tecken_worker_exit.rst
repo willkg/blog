@@ -219,13 +219,13 @@ manager first sends SIGABRT.
     +++ b/tecken/upload/utils.py
     @@ -241,6 +241,8 @@ def upload_file_upload(
      	    client_lookup or client, bucket_name, key_name
- 	    )
+        )
      
-    +	import time; time.sleep(70)
+    +   import time; time.sleep(70)
     +
- 	    size = os.stat(file_path).st_size
+        size = os.stat(file_path).st_size
      
- 	    if not should_compressed_key(key_name):
+        if not should_compressed_key(key_name):
 
 
 **Terminal 1: the webapp**
