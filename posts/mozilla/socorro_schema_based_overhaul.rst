@@ -311,12 +311,17 @@ crash.
 We'll rewrite existing parts of crash ingestion to use the schema:
 
 1. processing
+
    1. use processing instructions to validate and normalize annotation data
+
 2. super search
+
    1. field documentation
    2. permissions
    3. remove all the normalization and validation code from indexing
+
 3. crash stats
+
    1. field documentation
    2. permissions
    3. remove all the normalization and validation code from page rendering
@@ -343,8 +348,10 @@ This has some consequences for the code:
 1. any data not specified in a schema is treated as protected
 2. all schema fields need to specify permissions for that field
 3. any data in a schema is either:
+
    * marked public, OR
    * lists the permissions required to view that data
+
 4. for nested structures, any child field that is public has public ancesters
 
 We can catch some of these issues in CI and need to write tests to verify them.
