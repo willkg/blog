@@ -1,0 +1,288 @@
+.. title: Observability Team Newsletter (2024q1)
+.. slug: obs_2024q1
+.. date: 2024-04-16 8:00:00 UTC-05:00
+.. tags: mozilla, work, socorro, tecken, eliot, sentry, dev
+
+Observability Team is a team dedicated to the problem domain and discipline of
+Observability at Mozilla. 
+
+We own, manage, and support monitoring infrastructure and tools supporting
+Mozilla products and services. Currently this includes 
+`Sentry <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/609845437/Sentry>`__
+and crash ingestion related services 
+(`Crash Stats (Socorro) <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/6849069/Crash+Stats+Crash+Reports+Crash+ingestion+Socorro+Antenna>`__,
+`Mozilla Symbols Server (Tecken) <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/178061663/Symbols+aka+Tecken>`__,
+and `Mozilla Symbolication Service (Eliot) <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/178192647/Symbolication+Eliot>`__).
+
+In 2024, we'll be working with SRE to take over other monitoring services they
+are currently supporting like New Relic, InfluxDB/Grafana, and others.
+
+This newsletter covers an overview of 2024q1. Please forward it to interested
+readers.
+
+
+Highlights
+==========
+
+* 🤹 Observability Services: Change in user support
+* 🏆 Sentry: Change in ownership
+* ‼️ Sentry: Please don't start new trials
+* ⏲️ Sentry: Cron monitoring trial ending April 30th
+* ⏱️ Sentry: Performance monitoring pilot
+* 🤖 Socorro: Improvements to Fenix support
+* 🐛 Socorro: Support guard page access information
+
+See details below.
+
+
+Blog posts
+==========
+
+None this quarter.
+
+
+Detailed project updates
+========================
+
+Observability Services: Change in user support
+----------------------------------------------
+
+We overhauled our pages in Confluence, started an #obs-help Slack channel,
+created a new Jira OBSHELP project, built out a support rotation, and leveled
+up our ability to do support for Observability-owned services.
+
+See our `User Support Confluence page
+<https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/605978960/Observability+Service+User+Support>`__
+for:
+
+* where to get user support
+* documentation for common tasks (get protected data access, create a Sentry
+  team, etc)
+* self-serve instructions
+
+Hop in `#obs-help in Slack
+<https://app.slack.com/client/T027LFU12/C06N3QR11E0>`__ to ask for service
+support, help with monitoring problems, and advice.
+
+
+Sentry: Change in ownership
+---------------------------
+
+The Observability team now owns Sentry service at Mozilla!
+
+We successfully completed `Phase 1 of the transition
+<https://mozilla-hub.atlassian.net/browse/OBS-21>`__ in Q1. If you're a member
+of the Mozilla Sentry organization, you should have received a separate email
+about this to the `sentry-users
+<https://groups.google.com/a/mozilla.com/g/sentry-users>`__ Google group.
+
+We've overhauled Sentry user support documentation to improve it in a few ways:
+
+* easier to find "how to" articles for common tasks
+* best practices to help you set up and configure Sentry for your project needs
+
+Check out our
+`Sentry user guide <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/609452284/Sentry+User+Guide>`__.
+
+There's still a lot that we're figuring out, so we appreciate your patience and
+cooperation.
+
+
+Sentry: Please don't start new trials
+-------------------------------------
+
+Sentry sends marketing and promotional emails to Sentry users which often
+include links to start a new trial. Please contact us before starting any new
+feature trials in Sentry.
+
+Starting new trials may prevent us from trialing those features in the future
+when we’re in a better position to evaluate the feature. There's no way for
+admins to prevent users from starting a trial.
+
+
+Sentry: Cron monitoring trial ending April 30th
+-----------------------------------------------
+
+The `Cron Monitoring <https://docs.sentry.io/product/crons/>`__ trial that was
+started a couple of months ago will end April 30th.
+
+Based on feedback so far and other factors, we will not be enabling this
+feature once the trial ends.
+
+This is a good reminder to build in redundancy in your monitoring systems.
+Don't rely solely on trial or pilot features for mission critical information!
+
+Once the trial is over, we'll put together an evaluation summary.
+
+
+Sentry: Performance monitoring pilot
+------------------------------------
+
+`Performance Monitoring <https://docs.sentry.io/product/performance/>`__ is
+being piloted by a couple of teams; it is not currently available for general
+use.
+
+In the meantime, if you are not one of these pilot teams, please do not use
+Performance Monitoring. There is a shared transaction event quota for the
+entire Mozilla Sentry organization. Once we hit that quota, events are dumped.
+
+If you have questions about any of this, please reach out.
+
+Once the trial is over, we'll put together an evaluation summary.
+
+
+Socorro: Improvements to Fenix support
+--------------------------------------
+
+We worked on improvements to crash ingestion and the Crash Stats site for the
+Fenix project:
+
+`1812771: Fenix crash reporter's Socorro crash reports for Java exceptions have "Platform" = "Unknown" instead of "Android" <https://bugzilla.mozilla.org/show_bug.cgi?id=1812771>`__
+
+Previously, the platform would be "Unknown". Now the platform for Fenix crash
+reports is "Android". Further, the ``platform_pretty_version`` includes the
+Android ABI version.
+
+
+.. thumbnail:: /images/obs_2024q1_android_version.png
+
+   Figure 1: Screenshot of Crash Stats Super Search results showing Android
+   versions for crash reports.
+
+
+`1819628: reject crash reports for unsupported Fenix forks <https://bugzilla.mozilla.org/show_bug.cgi?id=1819628>`__
+
+Forks of Fenix outside of our control periodically send large swaths of crash
+reports to Socorro. When these sudden spikes happened, Mozillians would spend
+time looking into them only to discover they're not related to our code or our
+users. This is a waste of our time and resources.
+
+We implemented support for the ``Android_PackageName`` crash annotation and
+added a throttle rule to the collector to drop crash reports from any
+non-Mozilla releases of Fenix.
+
+From 2024-01-18 to 2024-03-31, Socorro accepted 2,072,785 Fenix crash reports
+for processing and rejected 37,483 unhelpful crash reports with this new rule.
+That's roughly 1.7%. That's not a huge amount, but because they sometimes come
+in bursts with the same signature, they show up in Top Crashers wasting
+investigation time.
+
+
+`1884041: fix create-a-bug links to work with java_exception <https://bugzilla.mozilla.org/show_bug.cgi?id=1884041>`__
+
+A long time ago, in an age partially forgotten, Fenix crash reports from a
+crash in Java code would send a crash report with a ``JavaStackTrace`` crash
+annotation. This crash annotation was a string representation of the Java
+exception. As such, it was difficult-to-impossible to parse reliably.
+
+In 2020, Roger Yang and Will Kahn-Greene spec'd out a new ``JavaException`` crash
+annotation. The value is a JSON-encoded structure mirroring what Sentry uses
+for exception information. This structure provides more information than the
+``JavaStackTrace`` crash annotation did and is much easier to work with because we
+don't have to parse it first.
+
+Between 2020 and now, we have been transitioning from crash reports that only
+contained a ``JavaStackTrace`` to crash reports that contained both a
+``JavaStackTrace`` and a ``JavaException``. Once all Fenix crash reports from
+crashes in Java code contained a ``JavaException``, we could transition Socorro
+code to use the ``JavaException`` value for Crash Stats views, signature
+generation, generate-create-bug-url, and other things.
+
+Recently, Fenix dropped the ``JavaStackTrace`` crash annotation. However, we
+hadn't yet gotten to updating Socorro code to use--and prefer--the
+``JavaException`` values. This broke the ability to generate a bug for a Fenix
+crash with the needed data added to the bug description.  Work on bug 1884041
+fixed that.
+
+Comments for Fenix Java crash reports went from:
+
+::
+
+    Crash report: https://crash-stats.mozilla.org/report/index/eb6f852b-4656-4cf5-8350-fd91a0240408
+
+to:
+
+::
+
+    Crash report: https://crash-stats.mozilla.org/report/index/eb6f852b-4656-4cf5-8350-fd91a0240408
+
+    Top 10 frames:
+
+    0  android.database.sqlite.SQLiteConnection  nativePrepareStatement  SQLiteConnection.java:-2
+    1  android.database.sqlite.SQLiteConnection  acquirePreparedStatement  SQLiteConnection.java:939
+    2  android.database.sqlite.SQLiteConnection  executeForString  SQLiteConnection.java:684
+    3  android.database.sqlite.SQLiteConnection  setJournalMode  SQLiteConnection.java:369
+    4  android.database.sqlite.SQLiteConnection  setWalModeFromConfiguration  SQLiteConnection.java:299
+    5  android.database.sqlite.SQLiteConnection  open  SQLiteConnection.java:218
+    6  android.database.sqlite.SQLiteConnection  open  SQLiteConnection.java:196
+    7  android.database.sqlite.SQLiteConnectionPool  openConnectionLocked  SQLiteConnectionPool.java:503
+    8  android.database.sqlite.SQLiteConnectionPool  open  SQLiteConnectionPool.java:204
+    9  android.database.sqlite.SQLiteConnectionPool  open  SQLiteConnectionPool.java:196
+
+This both fixes the bug and also vastly improves the bug comments from what we
+were previously doing with ``JavaStackTrace``.
+
+Between 2024-03-31 and 2024-04-06, there were 158,729 Fenix crash reports
+processed. Of those, 15,556 have the circumstances affected by this bug: a
+``JavaException`` but don't have a ``JavaStackTrace``. That's roughly 10% of
+incoming Fenix crash reports.
+
+While working on this, we refactored the code that generates these crash report
+bugs, so it's in a separate module that's easier to copy and use in external
+systems in case others want to generate bug comments from processed crash data.
+
+Further, we changed the code so that instead of dropping arguments in function
+signatures, it now truncates them at 80 characters.
+
+We're hoping to improve signature generation for Java crashes using
+``JavaException`` values in 2024q2. That work is tracked in
+`bug #1541120 <https://bugzilla.mozilla.org/show_bug.cgi?id=1541120>`__.
+
+
+Socorro: Support guard page access information
+----------------------------------------------
+
+`1830954: Expose crashes which were likely accessing a guard page <https://bugzilla.mozilla.org/show_bug.cgi?id=1830954>`__
+
+We updated the stackwalker to pick up the changes for determining
+``is_likely_guard_page``. Then we exposed that in crash reports in the
+``has_guard_page_access`` field. We added this field to the Details tab in
+crash reports and made it searchable. We also added this to the signature
+report.
+
+This helps us know if a crash is possibly due to a bug with memory access that
+could be a possible security vulnerability vector--something we want to
+prioritize fixing.
+
+Since this field is security sensitive, it requires protected data access to
+view and search with.
+
+
+Socorro misc
+------------
+
+* `crashstats-tools 2.0.0 release <https://pypi.org/project/crashstats-tools/2.0.0/>`__
+* `socorro-siggen 2.1.20240412 release <https://pypi.org/project/siggen/2.1.20240412/>`__
+* 4 signature generation changes. Thank you Andrew McCreight and Jim Blandy!
+* Maintenance and documentation improvements.
+* 6 production deploys. Created 71 issues. Resolved 61 issues.
+
+
+Tecken/Eliot misc
+-----------------
+
+* Maintenance and documentation improvements.
+* 5 production deploys. Created 21 issues. Resolved 28 issues.
+
+
+More information
+================
+
+Find us:
+
+* Confluence page: `Observability Team <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/428965889/Observability+Team>`__
+* User support hub: `User Support <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/605978960/Observability+Service+User+Support>`__
+* Support: `#obs-help <https://app.slack.com/client/T027LFU12/C06N3QR11E0>`__ (Slack)
+* Crash ingestion: `#crashreporting <https://matrix.to/#/%23crashreporting:mozilla.org>`__ (Matrix)
+
+Thank you for reading!
