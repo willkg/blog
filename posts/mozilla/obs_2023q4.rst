@@ -1,0 +1,209 @@
+.. title: Observability Team Newsletter (2023q4)
+.. slug: obs_2023q4
+.. date: 2023-12-22 9:26:00 UTC-05:00
+.. tags: mozilla, work, socorro, tecken, eliot, dev
+
+
+`Observability Team <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/428965889/Observability+Team>`__
+is a team dedicated to the problem domain and discipline of
+Observability at Mozilla. We will own, manage, and support infrastructure and
+tools supporting Mozilla products and services. Currently this includes crash
+ingestion related services:
+`Crash Stats and crash ingestion pipeline (Socorro) <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/6849069/Crash+Stats+Crash+Reports+Crash+ingesti>`__,
+`Mozilla Symbols Server (Tecken) <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/6849069/Crash+Stats+Crash+Reports+Crash+ingesti>`__,
+and `Mozilla Symbolication Service (Eliot) <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/6849069/Crash+Stats+Crash+Reports+Crash+ingesti>`__.
+In 2024, we'll be working with SRE to take over many of the observability tools
+that they are currently supporting like Sentry, Grafana, New Relic, and others.
+
+This newsletter covers an overview of 2023q4. Please forward it to interested readers.
+
+
+Highlights
+==========
+
+* 🎉 Team Changes: Socorro Engineering becomes Observability Team and picks up new members.
+* 📄 Documentation: Overhauled support documentation for crash ingestion services.
+* ❤️‍🩹 Socorro: Stability: Fixed ongoing Socorro processor stability problem. [bug 1795017]
+* 🏆 Socorro: Code-info lookup: Implemented code-info lookup for symbols files. [bug 1746940] [Retro]
+* 🔒 Tecken: Removed private symbols bucket support.[bug 1843356]
+* 📚 Tecken: Removed missing symbols bookkeeping. [bug 1774004]
+* 📱 Evolving SRE: Took over application support for crash ingestion services.
+
+See details below.
+
+
+Blog posts
+==========
+
+* `Code info lookup: retrospective (2023) | willkg's blog <https://bluesock.org/~willkg/blog/mozilla/socorro_tecken_code_info_retro.html>`__
+* `Long windy journey to reproducing a problem remove_orphaned_files fixes | willkg's blog <https://bluesock.org/~willkg/blog/mozilla/tecken_worker_exit.html>`__
+
+
+Detailed project updates
+========================
+
+Team changes
+------------
+
+Prior to October, 2023, the Socorro Engineering team maintained crash ingestion
+systems and related services: Crash Stats and the crash ingestion pipeline,
+Mozilla Symbols Server, and Mozilla Symbolication Service.
+
+In October 2023, that team picked up a couple of new people--Bianca and
+Sven--and changed names to become the Observability Team. In mid-December,
+Observability Team picked up a fourth teammate: Relud.
+
+As we move into 2024, we expect to pick up other observability related services
+and work on service stability, support, and building out documentation of best
+practices across them supporting Mozilla products and services.
+
+See our `Confluence page <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/428965889/Observability+Team>`__
+for contact information, roughly what we're working on, how to do various
+things (add crash annotations, get protected data access, etc), and
+service/support documentation.
+
+
+Overhauled support documentation for crash ingestion services
+-------------------------------------------------------------
+
+Documentation for crash ingestion services has been kind of all over the place.
+Going forward, we're working to make it clearer and easier to find.
+
+We're moving some "how to" documentation into `this tree in Confluence
+<https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/450723930/Obs+Service+Documentation>`__.
+Some interesting ones:
+
+* `How to: add support for a new product (Socorro) <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/452493541/How+to+Add+support+for+a+new+product+Socorro>`__
+* `How to: add support for crash annotations (Socorro) <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/453804150/How+to+Add+support+for+crash+annotations+Socorro>`__
+* `How to: get a data review for a crash annotation (Socorro) <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/453738637/How+to+Get+a+data+review+for+a+crash+annotation+Socorro>`__
+* `How to: upload symbols (Tecken) <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/456392904/How+to+Upload+symbols+Tecken>`__
+
+We'll add to that and improve it as time goes on. We'll be looking at
+centralizing API, tools, data dictionary, and other documentation over the next
+year as well.
+
+If there are things you have questions about and can't find documentation for
+it, `please let us know <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/428965889/Observability+Team>`__.
+
+
+Socorro: Fixed ongoing Socorro processor stability problem
+----------------------------------------------------------
+
+In September 2022, Mozilla began adding inline function data into symbols
+files. This increased the size of symbols files significantly. For example, the
+symbols file for ``xul.dll`` files went from around 200mb to 700mb. The increase in
+file size increased the time it takes for the stackwalker to download and parse
+symbols files, reduced the number of files the processor could store in the
+on-disk symbols cache, and caused the processor instances to suddenly slow down
+in periods of high load. This in turn would cause the processing queue to back
+up and page SRE causing work disruption as we scrambled to manually add more
+processor instances to increase throughput and reduce the queue.
+
+We spent a lot of time analyzing the situation, adding new metrics, rewriting
+portions of the code based on our theories at the time, and ended up with
+several mitigations that reduced the likelihood that the processing queue
+backed up and sat with that for several months while we worked on other things.
+
+One of the first things the Observability Team did was revisit the issue. New
+minds brought new theories, one of which was to change the instance type to one
+with a local ssd. That eliminated the disk io throttling the processors were
+incurring from using EBS for the symbols cache.
+
+Now the Socorro processors are performing much like they did prior to September
+2022, we've removed all the mitigations we had in place, and the processor
+queue isn't backing up anymore during periods of high load due to increased
+crash report volume and reprocessing. :bz:`1795017`
+
+
+Socorro: Stackwalker will use code id when debug id isn't available to fetch the symbols file
+---------------------------------------------------------------------------------------------
+
+This allows symbolication of stacks where the debug id for modules is unknown.
+This improves crash signatures. Better signatures gives us better visibility
+into what crashes our users are encountering and how often.
+
+For example, one of the problem signatures (#3 in Top Crashers at the time)
+looked like this::
+
+    OOM | large | mozalloc_abort | xul.dll | _PR_NativeRunThread | pr_root
+
+and now looks like this::
+
+    OOM | large | mozalloc_abort | webrender::renderer::Renderer::render_impl
+
+Rough estimate is that this significantly improved the crash signatures for 10k
+out of the 300k Firefox Windows crash reports we get a week.
+
+See`Code info lookup: retrospective <https://bluesock.org/~willkg/blog/mozilla/socorro_tecken_code_info_retro.html>`__
+for details. :bz:`1746940`
+
+
+Socorro misc
+------------
+
+* socorro-siggen v2.0.20231009 release.
+  [`v2.0.20231009 <https://github.com/willkg/socorro-siggen/releases/tag/v2.0.20231009>`__]
+* 11 signature generation changes most of which were self-serve.
+* Lots of maintenance and documentation improvements.
+* 11 production deploys. Created 61 issues. Resolved 58 issues. 
+
+
+Tecken: Remove support for private symbols bucket
+-------------------------------------------------
+
+The Mozilla Symbols Server stored uploaded symbols in several places: a default
+storage bucket for build symbols, a "try" storage bucket for symbols from try
+builds, and a private symbols bucket. Mozilla primarily used the private
+symbols bucket for Flash symbols. However, we don't support Flash anymore, so
+we removed the private symbols bucket and all the code to support it. Removing
+this simplified symbols upload/download code significantly. :bz:`1843356`
+
+
+Tecken: Remove missing symbols bookkeeping
+------------------------------------------
+
+Mozilla Symbols Server used to keep track of symbols that were requested but
+didn't exist in the symbols buckets. Tecken had an API for querying this data
+which was used for reporting on which symbols Mozilla is missing. This helps us
+understand which symbols files we're missing when unwinding and symbolication
+stacks in crash ingestion.
+
+There are better ways to get this data and keeping track of missing symbols in
+Tecken isn't helpful. We migrated users of this API and removed the data and
+code from Tecken. Removing this reduced the size of the database and simplified
+the download API code. :bz:`1774004`
+
+
+Tecken misc
+-----------
+
+* fx-crash-sig v1.0.1 and v1.0.2 releases.
+  [`v1.0.1 <https://github.com/mozilla/fx-crash-sig/releases/tag/v1.0.1>`__,
+  `v1.0.2 <https://github.com/mozilla/fx-crash-sig/releases/tag/v1.0.2>`__]
+* Lots of maintenance and documentation improvements.
+* 16 production deploys. Created 58 issues. Resolved 56 issues.
+
+
+Prototyping Evolving SRE
+------------------------
+
+In December, we finished the work to transition the application support role
+from Data SRE to the Observability Team making us an engineering team that also
+owns application support for the services we maintain.
+
+We've accrued a lot of experience in how to migrate from the separate
+Engineering team and SRE team model to the combined Engineering and SRE team
+model. If you're thinking about transitioning to a combined Engineering and SRE
+team model and have questions, come find us.
+
+
+More information
+================
+
+Find us:
+
+* Confluence page: `Observability Team <https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/428965889/Observability+Team>`__
+* Matrix: `#crashreporting <https://matrix.to/#/%23crashreporting:mozilla.org>`__
+
+
+Thank you for reading!
