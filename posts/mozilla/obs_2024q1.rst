@@ -3,8 +3,10 @@
 .. date: 2024-04-16 8:00:00 UTC-05:00
 .. tags: mozilla, work, socorro, tecken, eliot, sentry, dev
 
-Observability Team is a team dedicated to the problem domain and discipline of
-Observability at Mozilla. 
+`Observability Team
+<https://mozilla-hub.atlassian.net/wiki/spaces/CS1/pages/428965889/Observability+Team>`__
+is a team dedicated to the problem domain and discipline of Observability at
+Mozilla.
 
 We own, manage, and support monitoring infrastructure and tools supporting
 Mozilla products and services. Currently this includes 
