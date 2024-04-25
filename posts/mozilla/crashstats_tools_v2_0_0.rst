@@ -1,7 +1,7 @@
 .. title: crashstats-tools v2.0.0 released!
 .. slug: crashstats_tools_v2_0_0
 .. date: 2024-04-25 12:00
-.. tags: python, dev, socorro, mozilla, story
+.. tags: dev, socorro, mozilla, story
 
 What is it?
 ===========
