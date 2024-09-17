@@ -247,3 +247,12 @@ Update documentation for my projects and add a ``uv tool install PACKAGE``
 option to installation instructions.
 
 Probably discover some additional things to add to this doc.
+
+
+Thanks
+======
+
+Thank you to the Astral crew who wrote uv.
+
+Thank you to Rob Hudson who goaded me into posting this finally rather than sit
+on it another month.
