@@ -19,6 +19,7 @@ History
 
 * 2024-08-29: Initial writing.
 * 2024-09-12: Minor updates and publishing.
+* 2024-09-20: Rename uv-sync (which is confusing) to uv-python-symlink.
 
 
 Start state
@@ -194,10 +195,10 @@ Then I installed Python versions:
 
 
 When I type "python", I want it to be a Python managed by uv. Also, I like
-having "pythonX.Y" symlinks, so I created a ``uv-sync`` script which creates
-symlinks to uv-managed Python versions:
+having "pythonX.Y" symlinks, so I created a ``uv-python-symlink-sync`` script
+which creates symlinks to uv-managed Python versions:
 
-https://github.com/willkg/dotfiles/blob/main/dotfiles/bin/uv-sync
+https://github.com/willkg/dotfiles/blob/main/dotfiles/bin/uv-python-symlink
 
 Then I installed all my tools using ``uv tool install``.
 
