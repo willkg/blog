@@ -2,8 +2,12 @@
 Name = rest_bz
 Module = bz
 
+[Nikola]
+Compiler = rest
+PluginCategory = CompilerExtension
+
 [Documentation]
 Author = Will Kahn-Greene
 Version = 0.1
-Website = http://bluesock.org/~willkg/
+Website = https://bluesock.org/~willkg/
 Description = Directive for bugzilla links

@@ -13,7 +13,6 @@ from docutils import nodes
 from docutils.parsers.rst import roles
 
 from nikola.plugin_categories import RestExtension
-from nikola.utils import req_missing
 
 
 URL = 'https://bugzil.la/{bugid}'

@@ -1,8 +1,9 @@
 *~
-venv/
-__pycache__/
-cache/
+.venv
+__pycache__
+cache
 .doit.db
-output/
+output
 .doit*
 .python-version
+uv.lock
