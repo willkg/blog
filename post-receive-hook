@@ -15,29 +15,19 @@ env -i git reset --hard
 # unset GIT_DIR so that pip works right with git-based requirements.
 unset GIT_DIR
 
-# If venv doesn't exist, create it.
-if [[ ! -d ./venv ]]
-then
-    echo ">>> creating virtual environment"
-    python3 -m venv ./venv
-fi
-
-# Activate the venv.
-echo ">>> Activate virtualenv"
-. ./venv/bin/activate
-
-# Update requirements to pick up new nikola changes, etc.
-echo ">>> update requirements"
-pip install -U pip
-pip install -U -r ./requirements.txt
-
-# Create logs directory if it doesn't exist.
+# Create logs directory if needed
 if [[ ! -d ./logs/ ]]
 then
     echo ">>> logs directory doesn't exist; creating"
     mkdir ./logs/
 fi
 
+# Update venv if needed
+echo ">>> create devenv"
+echo ">>> create devenv" > build.log
+just devenv >> build.log
+
 # Compile the blog, time it and generate logs.
 echo ">>> compile"
-time ./compile.sh > ./logs/build.log
+echo ">>> compile" >> build.log
+time ./compile.sh >> ./logs/build.log

@@ -1,21 +1,21 @@
 #!/bin/bash
 
+# Ensures required directories exist and compiles the blog.
+
 set -o errexit
 
+# Create output directory if needed
 if [[ ! -d ./output/ ]]
 then
-    echo ">>> creating compiled_site directory ..."
+    echo ">>> output directory doesn't exist; creating"
     mkdir ./output/
 fi
 
-source venv/bin/activate
-
-# Show python version and what's in the virtualenv
-python --version
-pip list
+echo ">>> status ..."
+just status
 
 echo ">>> compiling site ..."
-nikola build -a
+just compile
 
 echo ">>> copying over the blog ..."
 cp -arv output/* /home/willkg/public_html/blog/

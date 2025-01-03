@@ -24,8 +24,8 @@ Clean and set up environment:
 
 ::
 
-    $ make clean
-    $ make buildvenv
+    $ just clean
+    $ just devenv
 
 Write posts in ``posts/``.
 
@@ -33,13 +33,13 @@ Create a new post:
 
 ::
 
-    $ ./venv/bin/nikola new_post -t "Some Title" posts/some/path.rst
+    $ just new-post -t "Some Title" posts/some/path.rst
 
 As you're writing, you can have nikola re-compile live:
 
 ::
 
-    $ make draft
+    $ just draft
 
 
 How to
