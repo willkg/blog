@@ -4,13 +4,6 @@
 
 set -o errexit
 
-# Create output directory if needed
-if [[ ! -d ./output/ ]]
-then
-    echo ">>> output directory doesn't exist; creating"
-    mkdir ./output/
-fi
-
 echo ">>> status ..."
 just status
 
