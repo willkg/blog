@@ -3,8 +3,11 @@
 set -o errexit
 
 # Set up local variables and export GIT_WORK_TREE because it
-# gets used.
+# gets used
 GITROOT=/home/willkg/projects/blog.git
+
+# Add ~/.local/bin to path because that's where just and uv are
+export PATH=$PATH:/home/willkg/.local/bin
 
 echo ">>> checking out main"
 cd ..
@@ -12,7 +15,7 @@ env -i git reset --hard
 
 # unset GIT_INDEX_FILE
 
-# unset GIT_DIR so that pip works right with git-based requirements.
+# unset GIT_DIR so that pip works right with git-based requirements
 unset GIT_DIR
 
 # Create logs directory if needed
