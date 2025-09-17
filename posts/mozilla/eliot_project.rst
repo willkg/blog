@@ -1,7 +1,7 @@
 .. title: Eliot: retrospective (2021)
 .. slug: eliot_project_wrapup
 .. date: 2021-11-15 13:10:24 UTC-05:00
-.. tags: mozilla, work, socorro, story, retrospective
+.. tags: mozilla, work, eliot, socorro, tecken, story, retrospective
 .. type: text
 
 
