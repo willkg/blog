@@ -608,7 +608,7 @@ It's got two kinds of things in it:
 * key/value pairs which we call *crash annotations*
 * files like minidumps and memory reports
 
-Most of the crash annotations are listed in `CrashAnnotations.yaml`_.
+Most of the crash annotations are documented in `CrashAnnotations.yaml`_.
 
 We have a complicated process for adding new crash annotations which is
 `documented in the Socorro docs on crash annotations
