@@ -25,25 +25,27 @@ release channel to ESR channel. Firefox / Windows / release is sampled by the
 Socorro collector, so the system only accepts and processes 10% of incoming
 crash reports. When the users were migrated, their crash reports moved to an
 unsampled group, so then we were getting 100% of those incoming crash reports.
-That caused a volume increase of 30k.
+That caused a `volume increase of 30k
+<https://github.com/willkg/socorro-jupyter/blob/main/notebooks/bug_1795017_volume_20230816.ipynb>`__.
 
-I looked into adding another sampling rule for Firefox / Windows < 8.1 / ESR,
-but many of the crash reports had a xul module where there wasn't a debug file
-and debug id in the module list stream in the minidump, so we couldn't get
-symbols files for them. Because of that, we didn't have much visibility into
-this group of crash reports.
+While looking into adding a sampling rule for Firefox / Windows < 8.1 / ESR, I
+noticed many crash reports listed a xul module without a debug file and debug
+id. Because of that, the stackwalker isn't able to get symbols and we end up
+with a large swatch of crash reports with generic signatures that we have no
+visibility into.
 
 I looked at :bz:`1746940` and worked out how to fix it. I thought it would be
-relatively straight-forward, so I prioritized working on it with the assumption
-it'd take a week to do.
+relatively straight-forward to implement and it would solve our visibility
+problem, so I prioritized working on it with the assumption it'd take a week to
+do.
 
-I hit a bunch of road bumps and it took me 6 weeks to work through several
-attempts, settle on a final architecture, implement it, test it, and push all
-the pieces to production. I finished the work on October 24th, 2023.
+Work wasn't as straight-forward as I predicted--I hit a bunch of road bumps and
+it took me 6 weeks to work through several attempts, settle on a final
+architecture, implement it, test it, and push all the pieces to production. I
+finished the work on October 24th, 2023.
 
-The end result is a radically reduced number of crash reports where the
-stackwalker couldn't symbolicate ``xul.dll`` addresses because of missing debug
-file and debug id.
+The end result is a large reduction in crash reports with generic signatures
+because the stackwalker couldn't find the symbols file for ``xul.dll``.
 
 
 .. TEASER_END
@@ -64,7 +66,8 @@ report, processes it, and has tools for viewing and analyzing crash data.
 Server where we store Breakpad-style symbols files for binaries.
 
 `rust-minidump <https://github.com/mozilla/rust-minidump>`__ is the set of Rust
-crates that make up the stackwalker that the Socorro processor uses.
+crates that make up the stackwalker that the Socorro processor uses to parse
+and symbolicate crash report minidumps.
 
 
 Problem
@@ -125,12 +128,12 @@ file and debug id::
 Here, the debug file is the empty string and the debug id is null represented
 by 33 0s. Because the Tecken download API requires the debug file and debug id,
 the stackwalker doesn't have the information it needs to request the symbols
-file. So it doesn't. So it marks the file as missing.
+file so it marks the file as missing.
 
 
 **Why does the minidump lack the debug file and debug id information?**
 
-Gabriele says this:
+Gabriele suggests:
 
     We don't know for sure, but most of the crashes which were missing those
     bits of information were OOMs. I suspect that windbg.dll failed to
@@ -160,8 +163,8 @@ icon-theme.cache  None                 000000000000000000000000000000000      16
 libxul.so         None                 000000000000000000000000000000000      1542
 ================  ===================  =====================================  ==================
 
-``xul.dll`` with no debug id accounts for like 10k crash reports out of like
-300k crash reports.
+``xul.dll`` with no debug id accounts for roughly 10k crash reports out of 
+300k crash reports we get in a day.
 
 Here's the top 10 signatures for the week ending October 22nd where
 ``xul.dll/000000000000000000000000000000000`` is a module in the stack:
@@ -181,13 +184,14 @@ Rank  Signature                                                               Co
 10    OOM | large | xul.dll | do_main                                         393    1.15%
 ====  ======================================================================  =====  ==========
 
-Not particularly helpful.
+These signatures are not particularly helpful--there's nothing we can do with
+them.
 
 
 **How do we tie code file and code id to debug file and debug id?**
 
 With our current system, the stackwalker has no way to figure out the debug
-file and debug id using the code file and code id. We need to maintain a map of
+file and debug id using the code file and code id. We need to map
 ``code file / code id`` -> ``debug file / debug id`` somewhere.
 
 Symbols files for Windows modules have this header::
@@ -205,9 +209,9 @@ that the stackwalker in the Socorro processor can access.
 A learning experience
 =====================
 
-My initial understanding suggested that to fix this, I would just need to make
-changes to Tecken and the stackwalker and Socorro wouldn't need any changes.
-That's what led me to believe I could fix this in a week. I was wrong.
+My initial understanding of the problem suggested I could fix this by making
+changes to Tecken and I wouldn't need to make any changes to the stackwalker or
+Socorro. That's what led me to believe I could fix this in a week. I was wrong.
 
 
 Attempt 1
@@ -228,12 +232,11 @@ Socorro processor and the stackwalker. The code was correct, but the
 stackwalker wasn't getting the symbols files.
 
 After debugging the stackwalker to figure out what the problem was, I
-discovered the stackwalker doesn't do a download API request when the debug
-file and debug id are empty. I re-read the bug and discovered that's what
-Gabriele had mentioned in comment 1 a couple of years ago. I didn't understand
-it until now.
-
-Boo.
+learned the stackwalker *only* does a download API request if the debug file
+and debug id are valid values. I re-read the bug and comments and discovered
+that's what Gabriele had mentioned in comment 1 a couple of years ago. I didn't
+understand it until now. This means in order to fix this, I would need to make
+more substantial changes to multiple services and components.
 
 
 Attempt 2
@@ -255,8 +258,6 @@ https://github.com/rust-minidump/rust-minidump/issues/870
 I then pushed the Tecken API changes to production on September 13th which
 resulted in a production outage because of several mistakes I made.
 
-Boo.
-
 
 Attempt 3
 ---------
@@ -265,31 +266,35 @@ I reworked the Tecken API changes I had made:
 
 1. **Added an index we could use for code file / code id queries**
 
-   This way the query wasn't doing a table scan on a large table which tied
-   up the db.
+   This improves the query--it doesn't have to do a table scan on a large table
+   which was tying up the db. I don't know why I missed this in the previous
+   attempt.
 
 2. **Added a separate API endpoint that I could use to test the query**
 
-   This way I could test the index and query without touching the download API
-   and causing another outage.
+   Given that I've caused an outage already and that I needed a way to tune
+   and test things without affecting the system, I created a new temporary
+   API enpoint that I could test with.
 
-   I did a few rounds of changes and honed the query using this new API.
+   I did a few rounds of changes and honed the query using this new temporary
+   API.
 
 3. **Constrained the code in the download API**
 
-   Once I had the query working, I re-added it to the download API.
+   Once I had the query working, I re-added it to the download API and
+   removed the temporary API.
 
    Previously, the download API would do a code info lookup *any time* the
-   symbols file wasn't found. I needed to constrain it to **only** do a code
+   symbols file wasn't found. I needed to constrain it to *only* do a code
    info lookup if the debug id looked like it was probably a code id.
 
 I implemented the rust-minidump changes:
 
 https://github.com/rust-minidump/rust-minidump/pull/872
 
-I reworked rust-minidump so that in the case where the debug file and debug id
-are empty, it does a lookup against all the symbols suppliers using the code
-file and code id.
+I changed it so that in the case where the debug file and debug id are empty,
+it does a lookup against all the symbols suppliers using the code file and code
+id.
 
 For symbols servers that support this (i.e. Tecken), it'll return an HTTP 302
 with the correct url with the debug file and debug id in the ``Location``
@@ -541,18 +546,19 @@ Random thoughts
 
 I've been working on Socorro and Tecken alone for a while. I do self-review
 because there isn't anyone else to review the work I do. Historically, this has
-been good enough. I occasionally make mistakes, but they're caught in CI or
-stage environments. In the case where it gets to production, it's usually minor
-and I can fix it and push out a fix.
+been good enough. I occasionally make mistakes, but they're usually caught in
+CI or stage environments during validation. In the case where it gets to
+production, it's usually minor and I can fix it and push out a fix.
 
-In this case, I made some big errors that probably would have been caught in
-code review. I definitely feel bad about them. I added a couple more things to
-think about when I do self-review so I don't do something like this again.
+In this case, I made a big error that probably would have been caught in code
+review. I definitely feel bad about that. I added a couple more things to think
+about when I do self-review so I don't do something like this again.
 
-Further, starting October 16th, I'll have a team with other people who can
-review, so this will further reduce the likelihood of this occurrence.
+Further, starting October 16th, I'm joining other people on a new team. The new
+team will review future PRs so this will further reduce the likelihood of this
+occurrence.
 
-Along with the changes for this project, I fixed a bunch of minor issues in the
+Along with the changes for this project, I fixed multiple minor issues in the
 Tecken, socorro-stackwalker, and Socorro repositories to make it easier to
 implement and test these changes.
 
