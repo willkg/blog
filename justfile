@@ -20,7 +20,12 @@ clean:
 # Compile blog
 compile: devenv
     mkdir output || true
-    uv run nikola build -a
+    uv run nikola build -a -n 5
+
+# Update compile blog
+update: devenv
+    mkdir output || true
+    uv run nikola build
 
 # Create a new post: -t TITLE path/to/post.rst
 new-post *args: devenv
