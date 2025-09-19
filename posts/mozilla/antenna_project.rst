@@ -137,25 +137,26 @@ Figuring out requirements
 When I started, there were no specifications covering how the collector worked,
 requirements it had, details on how it transformed the data, and a variety of
 other things. Further, the Socorro collector can be configured to do any number
-of things in addition to the specific configuration we ran in production. Thus I
-had to get a hold of the configuration we had in production, read through the
-code with that configuration in mind, take notes, and figure out what it was
-actually doing. This took a while. As I worked through it, I kept notes and
-these became part of the specification document.
+of things and this was dictated by how it was configured. I had to figure out
+exactly what it was doing as configured in our production environment. Thus
+I had to get a hold of the configuration we had in production, read through the
+code with that configuration in mind, and figure out what it was actually
+doing. I used this research to build the collector specification document
+that defined what we were building.
 
 This project existed in the context of a bunch of other projects we were working
 on, one of which was cleaning up and reworking our AWS infrastructure. The
 schedule for that project changed regularly, which affected the schedule and
 requirements for the new collector, too. Because of this, I tried to establish
-"hard" requirements that I could figure out now and wouldn't change and "soft"
-requirements that I deferred as long as possible to figure out.
+"hard" requirements that I needed to figure out now and wouldn't change and
+"soft" requirements that I pushed off as long as possible to figure out.
 
-Other people had ideas for this project, too. I wanted to keep the project as
-small as possible so as to increase the likelihood that it shipped. At first, I
-listened to new ideas and adjusted the project scope as we went along. As time
-went on, I switched to aggressively pushing off as many big ideas as possible,
-but made it clear that I wasn't saying "no way", but rather pushing ideas off to
-be figured out in later phases.
+Other people had ideas for this project, too. I wanted to keep the scope of the
+project as small as possible so as to increase the likelihood that it shipped.
+At first, I listened to new ideas and adjusted the project scope as we went
+along. As time went on, I switched to aggressively defering ideas, but in a
+"not now" manner rather than a "no way" manner--we could look at these other
+ideas in future phases.
 
 Over the course of the project, the requirements changed a bit. We ended up with
 these:
@@ -218,7 +219,7 @@ First pass: Antenna
 
 I named the first new collector Antenna. The figuring was that it's the data
 collection part of Socorro and Socorro is `named after a VLA
-<http://www.vla.nrao.edu/>`_ and "Antenna" seemed like a good choice for a
+<http://www.vla.nrao.edu/>`__ and "Antenna" seemed like a good choice for a
 component that collected signals from "space".
 
 Socorro is written in Python 2 and has code dating back a long time [#]_.
@@ -235,7 +236,7 @@ in a variety of way to meet a variety of needs [#]_.
 I proceeded with this for a couple of months. I was prototyping a new stack and
 toying with the various libraries and frameworks to find a set that worked for
 Antenna. I also decided I didn't like configuration libraries in Python and
-`wrote my own <https://everett.readthedocs.io/>`_. Also, I was new to the
+`wrote my own <https://everett.readthedocs.io/>`__. Also, I was new to the
 Socorro project, so I was also coming up to speed on everything while tackling
 this non-trivial project. I felt slow and like I wasn't making much progress.
 
@@ -285,7 +286,7 @@ Third pass: Antenna again
 -------------------------
 
 I stopped working on the socorro-collector project and went back to `Antenna
-<https://github.com/mozilla-services/antenna>`_. At this point, I had learned a
+<https://github.com/mozilla-services/antenna>`__. At this point, I had learned a
 lot about the Socorro collector and how it worked, so I rewrote most of what I
 had already written for Antenna and then continued with the ground-up rewrite.
 
@@ -394,7 +395,11 @@ Finishing up
 
 I wrote about Antenna's architecture details and some of the design decisions in
 the `"Antenna Project specification: v1" document
-<http://antenna.readthedocs.io/en/latest/spec_v1.html>`_.
+<https://github.com/mozilla-services/antenna/blob/c32687e6b975fab1cc6289a734cf8339226c99fa/docs/spec_v1.rst>`__.
+The spec was later moved to a Google doc. The Antenna spec was the basis from
+which I later derived the specification for submitting crash reports:
+`Specification: Submitting crash reports
+<https://socorro.readthedocs.io/en/latest/spec_crashreport.html>`__.
 
 During load testing, we bumped into additional issues, but pushed off as many as
 possible until after we had gotten Antenna to production.
@@ -417,6 +422,9 @@ ever since.
 
 All the work for Antenna: Phase 1 was done in the `switch to Antenna for incoming
 crashes tracker bug <https://bugzilla.mozilla.org/show_bug.cgi?id=1315258>`_.
+
+.. [#] The spec has been moved out of the ReadTheDocs docs and into a Google
+       Doc. This is the last version of it.
 
 
 How do I feel?
