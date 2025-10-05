@@ -1,4 +1,4 @@
-.. title: Socorro: Schema based overhaul of crash ingestion: retrospective (2022)
+.. title: Socorro: Schema-Based Overhaul of Crash Ingestion: Retrospective (2022)
 .. slug: socorro_schema_based_overhaul
 .. date: 2023-01-18 13:00:00 UTC-05:00
 .. tags: mozilla, work, socorro, dev, python, story, retrospective
@@ -8,34 +8,35 @@ Project
 
 :time: 2+ years
 :impact:
-    * radically reduced risk of data leaks due to misconfigured permissions
-    * centralized and simplified configuration and management of fields
-    * normalization and validation performed during processing
-    * documentation of data reviews, data caveats, etc
-    * reduced risk of bugs when adding new fields--testing is done in CI
+    * radically reduces the risk of data leaks due to misconfigured permissions
+    * centralizes and simplifies configuration and management of fields
+    * normalization and validation are performed during processing
+    * documentation of data reviews, data caveats, etc.
+    * reduces the risk of bugs when adding new fields—testing is done in CI
     * new crash reporting data dictionary with Markdown-formatted descriptions,
-      real examples, relevant links
+      real examples, and relevant links
 
 
 Summary
 =======
 
-I've been working on Socorro (crash ingestion pipeline at Mozilla) since the
-beginning of 2016. During that time, I've focused on streamlining maintainence
+I've been working on Socorro, the crash ingestion pipeline at Mozilla, since the
+beginning of 2016. During that time, I've focused on streamlining maintenance
 of the project, paying down technical debt, reducing risk, and improving crash
 analysis tooling.
 
-One of the things I identified early on is how the crash ingestion pipeline was
-chaotic, difficult to reason about, and difficult to document. What did the
-incoming data look like? What did the processed data look like? Was it valid?
-Which fields were protected? Which fields were public? How do we add support
-for a new crash annotation? This was problematic for our ops staff, engineering
-staff, and all the people who used Socorro. It was something in the back of my
-mind for a while, but I didn't have any good thoughts.
+Early on, I observed that the crash ingestion pipeline was difficult to reason
+about, poorly documented, and full of risk. What did the incoming data look
+like? What did the processed data look like? Was it valid? Which fields
+contained data anyone could look at? Which fields contained data that was
+sensitive and required access controls to access? How do we add support for new
+crash annotations? What happens when data is invalid or malformed? At a given
+point in the system, what did we know about the data?
 
-In 2020, Socorro moved into the Data Org which has multiple data pipelines.
-After spending some time looking at how their pipelines work, I wanted to
-rework crash ingestion.
+In 2020, Socorro moved into the Data Org, which has multiple data pipelines.
+After spending some time looking at how their pipelines work, I decided to
+rework the crash ingestion pipeline to be schema-driven and to move data
+validation and normalization earlier in the processor.
 
 The end result of this project is that:
 
@@ -48,19 +49,19 @@ The end result of this project is that:
 
    * typos, bugs, and mistakes when adding support for a new crash annotation
      are caught in CI
-   * permissions are specified in a central location, changing permission for
-     fields is trivial and takes effect in the next deploy, setting permissions
-     supports complex data structures in easy-to-reason-about ways, and
+   * permissions are specified in a central location; changing permission for
+     fields is trivial and takes effect in the next deploy; setting permissions
+     supports complex data structures in easy-to-reason-about ways; and
      mistakes are caught in CI
 
 3. the data is easier to use and reason about:
 
    * normalization and validation of crash annotation data happens during
-     processing and downstream uses of the data can expect it to be valid;
-     further we get a signal when the data isn't valid which can indicate
+     processing, and downstream uses of the data can expect it to be valid;
+     further, we get a signal when the data isn't valid, which can indicate
      product bugs
    * schemas describing incoming and processed data
-   * crash reporting data dictionary documenting incoming data fields,
+   * a crash reporting data dictionary documenting incoming data fields,
      processed data fields, descriptions, sources, data gotchas, examples, and
      permissions
 
@@ -71,8 +72,8 @@ What is Socorro?
 `Socorro <https://github.com/mozilla-services/socorro>`_ is the crash ingestion
 pipeline for Mozilla products like Firefox, Fenix, Thunderbird, and MozillaVPN.
 
-When Firefox crashes, the crash reporter asks the user if the user would like
-to send a crash report. If the user answers "yes!", then the crash reporter
+When Firefox crashes, the crash reporter asks the user if they would like
+to send a crash report. If the user answers "yes!", the crash reporter
 collects data related to the crash, generates a crash report, and submits that
 crash report as an HTTP POST to Socorro. Socorro saves the submitted crash
 report, processes it, and has tools for viewing and analyzing crash data.
@@ -102,8 +103,8 @@ bad state.
   * tests -- many of which had bad test data so who knows what they were really
     testing
 
-  Naive handling of minidump stackwalker output which meant that any changes in
-  the stackwalker output were predominantly unnoticed and there was no indication
+  Naive handling of minidump stackwalker output meant that any changes in
+  the stackwalker output were predominantly unnoticed, and there was no indication
   as to whether changed output created issues in the system.
 
   Further, since it was all over the place, there were no guarantees for data
@@ -123,16 +124,15 @@ bad state.
   * Telemetry crash storage code
   * and other places
 
-  We couldn't effectively manage permissions of fields in the stackwalker output
+  We couldn't effectively manage the permissions of fields in the stackwalker output
   because we had no idea what was there.
 
 * **Poor documentation**
 
-  No documentation of crash annotation fields other than `CrashAnnotations.yaml
-  <https://hg.mozilla.org/mozilla-central/raw-file/tip/toolkit/crashreporter/CrashAnnotations.yaml>`__
+  No documentation of crash annotation fields other than `CrashAnnotations.yaml`,
   which didn't enforce anything in crash ingestion (process, valid type, data
-  correctness, etc) and was missing important information like data gotchas,
-  data review urls, and examples.
+  correctness, etc.) and was missing important information like data gotchas,
+  data review URLs, and examples.
 
   No documentation of processed crash fields at all.
 
@@ -141,7 +141,7 @@ bad state.
   Changing fields from public to protected was high risk because you had to
   find all the places it might show up which was intractable. Adding support
   for new fields often took multiple passes over several weeks because we'd
-  miss things. Server errors happend with some regularity due to weirdness with
+  miss things. Server errors happened with some regularity due to weirdness with
   crash annotation values affecting the Crash Stats site.
 
 * **Tangled concerns across the codebase**
@@ -157,7 +157,7 @@ bad state.
 
   It was difficult to debug issues in crash ingestion and crash reporting.
 
-  The Crash Stats webapp contained lots of if/then/else bits to handle
+  The Crash Stats web app contained lots of if/then/else bits to handle
   weirdness in the crash annotation values. Nulls, incorrect types, different
   structures, etc.
 
@@ -168,13 +168,13 @@ bad state.
 
   The code for exporting data to Telemetry built the export data using a list
   of fields to *exclude* rather than a list of fields to *include*. This is
-  backwards and impossible to maintain--we never should have been doing this.
-  Further, it pulled data from the raw crash which we had no validation
-  guarantees for which would cause issues downstream in the Telemetry import
+  backward and impossible to maintain—we never should have been doing this.
+  Further, it pulled data from the raw crash, for which we had no validation
+  guarantees, which would cause issues downstream in the Telemetry import
   code.
 
-  There was no way to validate the data used in the unit tests which meant that
-  a lot of it was invalid. We had no way to validate the test data which meant
+  There was no way to validate the data used in the unit tests, which meant that
+  a lot of it was invalid. We had no way to validate the test data, which meant
   that CI would pass, but we'd see errors in our stage and production
   environments.
 
@@ -182,20 +182,20 @@ bad state.
 
   In 2020, Socorro was moved to the Data Org in Mozilla which had a set of
   standards and conventions for collecting, storing, analyzing, and providing
-  access to data. Socorro didn't follow any of it which made it difficult to
-  work on, to connect with, and to staff. Things Data Org has that Socorro
+  access to data. Socorro didn't follow any of it, which made it difficult to
+  work on, to connect with, and to staff. Things the Data Org has that Socorro
   didn't:
 
   * a schema covering specifying fields, types, and documentation
   * data flow documentation
   * data review policy, process, and artifacts for data being collected and
     how to add new data
-  * data dictionary for fields for users including documentation, data review
-    urls, data gotchas
+  * a data dictionary for fields for users including documentation, data review
+    URLs, and data gotchas
 
 
 In summary, we had a system that took a lot of effort to maintain, wasn't
-serving our users' needs, and was high risk of security/data breach.
+serving our users' needs, and was at high risk of a security/data breach.
 
 
 Project plan
@@ -212,11 +212,11 @@ When designing this schema-driven system, we should be thinking about:
 1. how easy is it to maintain the system?
 2. how easy is it to explain?
 3. how flexible is it for solving other kinds of problems in the future?
-4. what kinds of errors will likely happen when maintaining the system and how
+4. what kinds of errors will likely happen when maintaining the system, and how
    can we avert them in CI?
 5. what kinds of errors can happen and how much risk do they pose for data
    leaks? what of those can we avert in CI?
-6. how flexible is the system which needs to support multiple products
+6. how flexible is the system, which needs to support multiple products
    potentially with different needs?
 
 I worked out a minimal version of that vision that we could migrate to and then
@@ -238,7 +238,7 @@ The processed crash schema should define:
 
 Then we make the following changes to the system:
 
-1. write a processor rule to copy, nomralize, and validate data from
+1. write a processor rule to copy, normalize, and validate data from
    the raw crash based on the processed crash schema
 2. switch the Telemetry export code to using the processed crash for
    data to export
@@ -247,8 +247,8 @@ Then we make the following changes to the system:
 4. switch Super Search to using the processed crash for data to index
 5. switch Super Search to using the processed crash schema for documentation
    and permissions
-6. switch Crash Stats site to using the processed crash for data to render
-7. switch Crash Stats site to using the processed crash schema for
+6. switch the Crash Stats site to using the processed crash for data to render
+7. switch the Crash Stats site to using the processed crash schema for
    documentation and permissions
 8. switch the RawCrash, ProcessedCrash, and SuperSearch APIs to using the crash
    annotations and processed crash schemas for documentation and permissions
@@ -280,12 +280,12 @@ For example:
 
 https://searchfox.org/mozilla-central/source/toolkit/mozapps/update/metrics.yaml
 
-One long long long term goal for Socorro is to unify standards and practices
+One long-term goal for Socorro is to unify standards and practices
 with the Data Ingestion system. Towards that goal, it's prudent to build out a
 crash annotation and processed crash schemas using whatever we can take from
 the equivalent metrics schemas.
 
-We'll additionally need to build out tooling for verifying, validating, and
+We'll also need to build out tooling for verifying, validating, and
 testing schema modifications to make ongoing maintenance easier.
 
 
@@ -352,13 +352,13 @@ This has some consequences for the code:
    * marked public, OR
    * lists the permissions required to view that data
 
-4. for nested structures, any child field that is public has public ancesters
+4. for nested structures, any child field that is public has public ancestors
 
 We can catch some of these issues in CI and need to write tests to verify them.
 
 This is slightly awkward when maintaining the schema because it would be more
 reasonable to have "no permissions required" mean that the field is public.
-However, it's possible to accidentally not specify the permissions and we don't
+However, it's possible to accidentally not specify the permissions, and we don't
 want to be in that situation. Thus, we decided to go with explicitly marking
 public fields as public.
 

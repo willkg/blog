@@ -7,10 +7,10 @@ Switching from pyup to dependabot
 =================================
 
 I maintain a bunch of Python-based projects including some major projects like
-`Crash Stats <https://crash-stats.mozilla.org>`_, 
-`Mozilla Symbols Server <https://symbols.mozilla.org/>`_, and
-`Mozilla Location Services <https://location.services.mozilla.com/>`_.
-In order to keep up with dependency updates, we used pyup to monitor
+`Crash Stats <https://crash-stats.mozilla.org>`__, 
+`Mozilla Symbols Server <https://symbols.mozilla.org/>`__, and
+`Mozilla Location Services <https://location.services.mozilla.com/>`__.
+To keep up with dependency updates, we used pyup to monitor
 dependencies in those projects and create GitHub pull requests for
 updates.
 
@@ -19,17 +19,17 @@ dependency updates in it. I could then review the details, wait for CI to test
 everything, make adjustments as necessary, and then land the pull request and
 go do other things.
 
-Starting in October of 2019, pyup stopped doing monthly updates. A co-worker of
-mine tried to contact them to no avail. I don't know what happened. I got tired
-of waiting for it to start working again.
+Starting in October 2019, pyup stopped doing monthly updates. A co-worker tried
+to contact them to no avail. It's unclear what happened, but we couldn't
+continue to wait.
 
 Since my projects are all on GitHub, we had already switched to GitHub security
-alerts.  Given that, I decided it was time to switch from pyup to dependabot
+alerts. Given that, I decided it was time to switch from pyup to dependabot
 (also owned by GitHub).
 
 
-Switching from pyup to dependabot
-=================================
+The process
+===========
 
 I had to do a bunch of projects, so I ended up with a process along these lines:
 
@@ -43,7 +43,7 @@ I had to do a bunch of projects, so I ended up with a process along these lines:
 
    I had to ask Greg to remove my projects from pyup.
 
-   I wouldn't suggest proceeding until your project has been removed from pyup.
+   I wouldn't suggest proceeding until you've removed your project from pyup.
    Otherwise, it's possible you'll get PRs from pyup and dependabot for the
    same updates.
 
@@ -54,8 +54,8 @@ I had to do a bunch of projects, so I ended up with a process along these lines:
 
    I used these resources:
 
-   * configuration documentation `<https://dependabot.com/docs/config-file/>`_.
-   * configuration validator `<https://dependabot.com/docs/config-file/validator/>`_.
+   * configuration documentation `<https://dependabot.com/docs/config-file/>`__.
+   * configuration validator `<https://dependabot.com/docs/config-file/validator/>`__.
 
    I created a pull request with these changes, reviewed it, and landed it.
 
@@ -92,7 +92,7 @@ While working on PRs for Socorro, I hit a case where I needed to update
 multiple dependencies at the same time. I decided to write a tool that combined
 pull requests.
 
-Thus was born `paul-mclendahand <https://github.com/willkg/paul-mclendahand>`_.
+Thus was born `paul-mclendahand <https://github.com/willkg/paul-mclendahand>`__.
 Using this tool, I can combine pull requests. Using paul-mclendahand, I worked
 through 20 pull requests for Tecken in about an hour. This saves me tons of time!
 
@@ -119,12 +119,12 @@ additional commits, etc.
 When I'm done, I merge it and that's it!
 
 
-paul-mclendahand v1.0.0
-=======================
+Releasing paul-mclendahand v1.0.0
+=================================
 
-I released `paul-mclendahand <https://github.com/willkg/paul-mclendahand>`_ 1.0.0!
+I released `paul-mclendahand <https://github.com/willkg/paul-mclendahand>`__ 1.0.0!
 
-Install it with `pipx <https://pypi.org/project/pipx/>`_::
+Install it with `pipx <https://pypi.org/project/pipx/>`__::
 
     pipx install paul-mclendahand
 
@@ -136,6 +136,6 @@ It doesn't just combine pull requests from dependabot--it's general and can
 work on any pull requests.
 
 If you find any issues, please report them in `the issue tracker
-<https://github.com/willkg/paul-mclendahand/issues>`_.
+<https://github.com/willkg/paul-mclendahand/issues>`__.
 
 I hope this helps you!

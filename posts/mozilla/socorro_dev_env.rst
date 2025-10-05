@@ -8,23 +8,23 @@ Project
 
 :time: 1 year
 :impact:
-    * vastly reduced time-to-onboard for new developers and contributors
+    * vastly reduced time-to-onboard for new developers and contributors from months to days
     * vastly improved developer efficacy
 
 
 Summary
 =======
 
-`Socorro <https://github.com/mozilla-services/socorro>`_ is the crash ingestion
+`Socorro <https://github.com/mozilla-services/socorro>`__ is the crash ingestion
 pipeline for Mozilla's products like Firefox. When Firefox crashes, the Breakpad
-crash reporter asks the user if the user would like to send a crash report. If
+crash reporter asks the user if they would like to send a crash report. If
 the user answers "yes!", then the Breakpad crash reporter collects data related
-to the crash, generates a crash report, and submits that crash report as an HTTP
+to the crash, generates a crash report, and submits it as an HTTP
 POST to Socorro. Socorro saves the crash report, processes it, and provides an
-interface for aggregating, searching, and looking at crash reports.
+interface for aggregating, searching, and viewing crash reports.
 
-This (long-ish) blog post talks about how when I started on Socorro, there
-wasn't really a local development environment and how I went on a magical
+This (long-ish) blog post talks about how, when I started on Socorro, there
+wasn't really a local development environment, and how I went on a magical
 journey through dark forests and craggy mountains to find one.
 
 If you do anything with Socorro at Mozilla, you definitely want to at least read
@@ -37,29 +37,28 @@ When I started, March 2016
 ==========================
 
 When I joined the Socorro team in March 2016, there wasn't a functional local
-development environment. By that, I mean there was no local development
-environment you could use to run Socorro the way we run it at Mozilla.
-
-There were developers on Socorro and they were doing development, but not with a
-local development environment.
+development environment. This means there was no way to run Socorro on your
+laptop even remotely approaching how we run it in server environments. Existing
+developers working on Socorro were doing development, but not with a local
+development environment.
 
 There was a partially working Vagrant environment, but it was for "Socorro the
-product" rather than "Socorro as we run it at Mozilla". "Socorro the product" is
-vastly different than "Socorro as we run it at Mozilla". The latter is the
+product" rather than "Socorro as we run it at Mozilla". "Socorro the product"
+is vastly different than "Socorro as we run it at Mozilla". The latter is the
 former combined with:
 
 1. around 200 environment variables which determine at runtime which Socorro
    components are used and how they work
 
-2. data in a bunch of lookup tables covering products, releases, and other
-   information that Socorro needs to process and analyze crashes
+2. lookup table data covering products, releases, and other information that
+   Socorro needs to process and analyze crashes
 
-3. a pinch of salt
+3. database information setting up ElasticSearch schemas, Mozilla-specific
+   stored procedures, and other things
 
-At the time I joined, I think only my manager was using the Vagrant environment.
-Since then, the Nintendo Switch came out, so I'm not sure he uses it anymore.
-Other people did other things which I'm not going to go into here mostly because
-I never set up Socorro in those ways.
+At the time I joined, I think my manager was using the Vagrant environment, but
+no one else. The rest of the developers ran their own bespoke configurations of
+Socorro connecting to the stage server environment for data stores.
 
 The documentation for setting up the Vagrant environment was very involved and
 tangled with setup docs for other environments like running it on your host
@@ -67,23 +66,21 @@ machine or on Ubuntu using the Socorro package which we haven't produced in a
 long time. It was hard to follow. It was out of date. It could have won a prize
 in a small interactive fiction contest.
 
-No one had been onboarded on the Socorro team in a long long while, so updating
+No one had been onboarded to the Socorro team in a long while, so updating
 the Vagrant environment and relevant documentation had taken a back burner to
-the myriad of other things that had more impact to others and more value to
-Mozilla. That sort of makes sense--why maintain things that you don't need.
+other things that had more impact and value to Mozilla.
 
-Thus when I started, there was no functional local development environment.
+As such, there was no functional local development environment when I started.
 
 
-It started with socorro-zero, March 2016 to May 2017
-====================================================
+I started with socorro-zero, March 2016 to May 2017
+===================================================
 
-I like having a local development environment. I love the way you can throw them
-out, build a new one, and pretend nothing happened when you do something
-epically foolish.
+I like having a local development environment. Having an environment you can
+create, refrehs, and throw out and is self-contained is very powerful.
 
-So one of the first things I did in March 2016 was start `socorro-zero
-<https://github.com/willkg/socorro-zero/>`_.
+The first I did in March 2016 was start `socorro-zero
+<https://github.com/willkg/socorro-zero/>`__.
 
 My intention at the time was to:
 
@@ -94,14 +91,14 @@ My intention at the time was to:
 
 3. make it usable for others
 
-I started it as a separate project figuring I can prototype and tinker a lot
+I started it as a separate project, figuring I could prototype and tinker a lot
 faster if it's not tied to the Socorro repository. Then later if it turned out
-ok, I could pull it into Socorro proper.
+okay, I could pull it into Socorro proper.
 
 socorro-zero started out as a modified/updated Vagrant environment. Then in
 August 2016, I switched it to be Docker-based. I tinkered with it from time to
 time. I used it mostly to run tests. I told other people about it, but I don't
-think anyone else used it.
+think anyone other than me used it.
 
 
 What would a good local development environment for Socorro look like?
@@ -111,11 +108,11 @@ I was hoping to have the following things in a local development environment for
 Socorro:
 
 **Anyone who can run Docker can have a Socorro local development environment
-that runs Socorro as we run it at Mozilla in like 5 steps.**
+that runs Socorro as we run it at Mozilla in five steps.**
 
 There are other people who use Socorro that have an impetus to help fix the
 issues that affect them. It behooves us to make building a local development
-environment straight-forward without requiring people to become Socorro
+environment straightforward without requiring people to become Socorro
 domain experts.
 
 The Socorro team is changing. It behooves us to be able to onboard a new
@@ -123,14 +120,14 @@ developer in days rather than months. Building a local development environment
 is critical for that.
 
 I like having an environment that doesn't require a lot of work to
-maintain--that frees me up to work on actual work.
+maintain--one that frees me up to work on actual work.
 
 
 **Local development environments can be thrown away and rebuilt.**
 
 The local development environment needs to be trivial to throw away and rebuild
-because I want to be able to review pull requests some of which are going to be
-large ground-shaking changes.
+because I want to be able to review pull requests, some of which are going to be
+large, impactful changes.
 
 For example, switching to a new version of Elasticsearch is a big change and
 it's nice to be able to build that from scratch, test it, and then throw it out
@@ -138,18 +135,18 @@ and go back to the master branch without spending a half-day switching back and
 forth.
 
 If you can't throw the environment out and start over trivially, then these
-sorts of changes are much harder to work on and much harder to review.
+types of changes are much harder to work on and much harder to review.
 
 
 **Documentation covers getting started and important use cases, but isn't a
 maintenance burden.**
 
-I want documentation that doesn't fall out of date. I've tried to do this in a
-few ways:
+I want documentation that has a low maintenance burden. I've tried to do this
+in a few ways:
 
 1. Document critical things, but minimally.
 
-2. Make as much of the documentation sourced from the code where it's much more
+2. Make as much of the documentation sourced from the code, where it's much more
    likely to be updated and much easier to update.
 
    For example, instead of documenting all the arguments for a command line
@@ -163,14 +160,14 @@ few ways:
    it instead.
 
 
-**All behavioral-type configuration is codified in env files in the Socorro
+**All behavioral configuration is codified in env files in the Socorro
 repository.**
 
 Socorro has around 200 environment variables in our production environment.
 Those fall roughly into two groups:
 
 1. secrets and environment: usernames, passwords, keys, hosts, ports, database
-   urls
+   URLs
 
 2. behavioral: which crashstorage classes to save a crash to, the default
    product, which processing algorithm to use
@@ -182,19 +179,19 @@ can push out and roll back as a unit when all the things that affect those
 changes are in the same place.
 
 Plus then behavior configuration will get reviewed and approved along with the
-code changes it's related to. Fewer possibility of typos and other goofs.
+code changes it's related to. Less possibility of typos and other errors.
 
-Plus it's much more likely configuration will get cleaned up when the related
+Plus, it's much more likely that configuration will get cleaned up when the related
 code changes. We have a lot of obsolete configuration in consul right now
 because of typos and because people forget. It's a project to figure out what's
-required and what's not and to fix this situation. It's much easier if it's in
+required and what is not and to fix this situation. It's much easier if it's in
 version control.
 
 We will have an audit trail for behavior configuration changes in the repository
 with the rest of the code.
 
 
-**Configuration is easily overridden by inviduals in a way that's easy to build
+**Configuration is easily overridden by individuals in a way that's easy to build
 a mental model about, easy to verify, works across all of Socorro, and is
 difficult to accidentally commit to the repository.**
 
@@ -212,8 +209,8 @@ commit to the repository.
 Configuration files should be in formats that allow comments.
 
 
-**Build scripts that do "one thing well" with interfaces that lend themselves to
-be used in shell scripts for more complicated tasks.**
+**Build scripts that do "one thing well" with interfaces that are suitable for
+use in shell scripts for more complicated tasks.**
 
 If scripts do one thing well and can be strung together, you can orchestrate
 complex things with a minimal amount of code. This keeps the scripts small and
@@ -246,14 +243,15 @@ Building the Docker-based local development environment
 =======================================================
 
 In May 2017, I redid the Docker infrastructure that I had tinkered with in
-socorro-zero and put it in Socorro proper. It stunk. It wasn't very usable, but
-it could run the test suite which was really helpful. It had potential.
+socorro-zero and put it in Socorro proper. It was not very good. It wasn't very
+usable, but it could run the test suite which was really helpful. It had
+potential.
 
-Over the course of July, August, and September, I fixed a bunch of issues to get
-the local development environment to work with Socorro and Socorro to work with
-the local development environment.
+Over the course of July, August, and September, I fixed a bunch of issues to
+get the local development environment to work with Socorro and Socorro to work
+with the local development environment.
 
-I architected how all the pieces would come together.
+I designed how all the pieces would come together.
 
 I based the environment on Ubuntu rather than CentOS/RedHat.
 
@@ -275,7 +273,7 @@ Most of the scripts I wrote do one thing well, have inline documentation, and
 support command line and stdin arguments. They're written in a way that makes it
 easier to write unit tests for them. They're not tangled up with existing
 Socorro scripts for server, Vagrant, and other environments. Most of them have
-terrible names, but some day someone with opinions will show up and fix that.
+placeholder names, but hopefully, they will be improved in the future.
 
 I fixed the tests to run in a Docker container. Then I fixed them again to run
 in Circle CI 2.0's Docker infrastructure so we have CI for the local development
@@ -285,35 +283,35 @@ I rewrote the Socorro documentation basing it on the new local development
 environment and its tools.
 
 There are still things to do and some things that are broken, but generally,
-this local development environment is pretty solid now and I'm able to use it
+this local development environment is quite robust now and I'm able to use it
 full time for all my development needs.
 
 
 A bit about fake data
 =====================
 
-Socorro is a crash ingestion pipeline, so it thirsts for data and without data
-it's pretty boring. The local development environment needed a source for crash
+Socorro is a crash ingestion pipeline, so it thirsts for data, and without data
+it's not very engaging. The local development environment needed a source for crash
 report data.
 
 A crash report consists of a couple of parts:
 
 * a bunch of metadata about the crash: CPU, GPU, install time, version, build
-  id, and so on
+  ID, and so on
 * one or more memory dumps
 
 At first, I worked on writing a fake data generator for crash reports. I figured
-I could probably get a fake crash data generator for terrible crash data
-working. I soon tossed aside such a foolish notion for a few reasons:
+I could probably get a fake crash data generator for basic crash data
+working. I soon abandoned this idea for a few reasons:
 
-1. To generate really terrible crash data is easy--throw a bunch of random
+1. To generate really terrible crash data is easy: throw a bunch of random
    values in and a junk memory dump. However, the crash metadata is inextricably
    tied to the memory dump and we need a well-formed memory dump to test the
-   processor and if the output is gibberish, the results won't make sense in the
+   processor and if the output is nonsensical, the results won't make sense in the
    webapp.
 
-   To generate mediocre fake crash data is really hard. You need to build a
-   correctly structured memory dump with crash metadata to match. It's really hard
+   To generate mediocre fake crash data is challenging. You need to build a
+   correctly structured memory dump with crash metadata to match. It's difficult
    to generate a well-formed but fake memory dump.
 
 2. People making code changes to Firefox are constantly changing the shape and
@@ -321,25 +319,26 @@ working. I soon tossed aside such a foolish notion for a few reasons:
    had fake memory dumps, we'd have to update it every week to reflect changes
    in the data we're getting from crash reports from the nightly channel.
 
-   Why does it have to be so up-to-date? A chunk of the work we do on Socorro is
-   to deal with changes in crash reports just after they've happened.
+   Why does it have to be so up-to-date? A significant portion of the work we
+   do on Socorro is to deal with changes in crash reports just after they've
+   happened.
 
-3. Even if we could figure out mediocre fake crash data and accounted for
+3. Even if we could figure out mediocre fake crash data and taken into account
    Firefox crash reports changing regularly, the rest of the world is also
    changing. New processors. New GPUs. Changes in operating systems. Changes in
    libraries and stack frames.
 
 Between looking at the fake crash data generation system that Socorro has,
-tinkering with building a new one, and conversations I've had with Lonnen and
-Ted and others over the last year, I decided a mediocre fake data generation
+tinkering with building a new one, and conversations I've had with Lonnen, Ted,
+and others over the last year, I decided a mediocre fake data generation
 system is a significant project and it wasn't worth doing now.
 
 Instead, I wrote a script that pulls publicly available information from
-`<https://crash-stats.mozilla.com/>`_. That was way easier, has a much lower
+`<https://crash-stats.mozilla.com/>`__. That was way easier, has a much lower
 maintenance burden, and met our current needs.
 
-Maybe someone will attempt the white whale that is a mediocre fake crash data
-generation system some day.
+Maybe someone will attempt the challenging task of creating a mediocre fake
+crash data generation system some day.
 
 
 Tell me more about this local development environment
@@ -348,7 +347,7 @@ Tell me more about this local development environment
 The new local development environment gives me a lot more confidence that the
 changes I'm making are good *before* I push them to our -stage server
 environment. I can experiment and prototype and throw things away if I need to.
-I can more effectively review other peoples' code changes. It's empowering. It
+I can more effectively review other people's code changes. It's empowering. It
 gives me a hug on rainy days.
 
 But enough banal bluster! Let me show you!
@@ -489,7 +488,7 @@ They're small building blocks that you can alias or put together in different
 ways in shell scripts to meet your individual automation needs.
 
 `See more details in the documentation for these scripts.
-<http://socorro.readthedocs.io/en/latest/components/processor.html#processing-crashes>`_
+<http://socorro.readthedocs.io/en/latest/components/processor.html#processing-crashes>`__
 
 Plus we can use these with other scripts that we've been building.
 
@@ -508,4 +507,4 @@ it's shipped, it's usable, and it's in use. I hope it's a solid foundation upon
 which we can build, but also a minimal maintenance burden for us going forward.
 
 If you find yourself using it and bump into a bug, please `let us know
-<https://bugzilla.mozilla.org/enter_bug.cgi?format=__standard__&product=Socorro>`_.
+<https://bugzilla.mozilla.org/enter_bug.cgi?format=__standard__&product=Socorro>`__.

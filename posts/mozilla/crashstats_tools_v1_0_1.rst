@@ -1,4 +1,4 @@
-.. title: crashstats-tools v1.0.1 released! cli for Crash Stats.
+.. title: crashstats-tools v1.0.1 released! CLI for Crash Stats.
 .. slug: crashstats_tools_v1_0_1
 .. date: 2019-07-31 15:00
 .. tags: python, dev, socorro, mozilla, story
@@ -20,17 +20,18 @@ crashstats-tools comes with two commands:
 v1.0.1 released!
 ================
 
-I extracted two commands we have in the Socorro local dev environment as a
-separate Python project. This allows anyone to use those two commands without
-having to set up a Socorro local dev environment.
+I extracted two commands we have in the Socorro local dev environment into a
+separate Python project and released it on PyPI. This allows anyone to use
+those two commands without having to set up a Socorro local dev environment.
 
-The audience for this is pretty limited, but I think it'll help significantly
-for testing analysis tools.
+The audience for this library is pretty limited, but I think it'll help
+significantly with crash report testing and analysis tools.
 
-Say I'm working on an analysis tool that looks at crash report minidump files
-and does some additional analysis on it. I could use ``supersearch`` command to
-get me a list of crash ids to download data for and the ``fetch-data`` command
-to download the requisite data.
+For example, if I was looking at crash report minidump files and needed
+to automate identifying, downloading, and performing additional analysis
+on them, I could use the ``supersearch`` command to get a list of crash ids to
+download data for and the ``fetch-data`` command to download the crash report
+files.
 
 .. code-block:: bash
 
@@ -53,7 +54,7 @@ https://crash-stats.mozilla.org/documentation/memory_dump_access/
 Where to go for more
 ====================
 
-See the project on GitHub which includes a README which contains everything
+See the project on GitHub which includes a README that contains everything
 about the project including examples of usage, the issue tracker, and the
 source code:
 

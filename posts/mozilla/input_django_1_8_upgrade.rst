@@ -9,7 +9,7 @@ Project
 :time: 1 year
 :impact:
     * upgraded Input to Django 1.8
-    * paved road for AMO, MDN, and other Mozilla sites
+    * paved the road for AMO, MDN, and other Mozilla sites
     * wrapped up jingo, jingo-minify, and other playdough-era projects
     * built migration path from Tower to Puente and other l10n options
 
@@ -20,14 +20,13 @@ Summary
 Over the course of 2015, we've been reworking large parts of the Fjord
 codebase to do the following:
 
-1. ditch jingo and friends and other libraries that deviate from
-   typical Django and aren't active projects
-2. reduce complexity by moving closer to a "default/typical Django
-   project"
+1. ditch jingo and friends and other libraries that deviate from typical Django
+   and aren't active projects
+2. reduce complexity by moving closer to a "default/typical Django project"
 3. upgrade to Django 1.8
 
-This blog post covers many grueling details including order we did things,
-design decisions we made and some anecdotes.
+This blog post covers many grueling details, including the order we did things,
+the design decisions we made, and some anecdotes.
 
 
 .. TEASER_END
@@ -38,13 +37,13 @@ design decisions we made and some anecdotes.
 Intro
 =====
 
-First, history of this document
--------------------------------
+First, the history of this document
+-----------------------------------
 
 I'm writing this blog post both as a history of this project that I
 can look back on at some point in the future and bask in the glorious
-fact I never have to do this again, but also as a guide to help other
-projects who have to do similar work.
+fact that I never have to do this again, but also as a guide to help other
+projects that have to do similar work.
 
 Because of the latter reason, I plan to update this guide over time
 with fixes and comments from others.
@@ -59,22 +58,22 @@ History:
 Second, thank yous
 ------------------
 
-Ricky and I started the upgrade in April or May of 2015. Ricky did a
+Ricky and I started the upgrade in April or May 2015. Ricky did a
 lot of the research and other work through 2015q2. In 2015q3, I took
-all the work he did and finished it up. If it wasn't for him, it
+all the work he did and finished it up. If it weren't for him, it
 would have taken me ages.
 
 Ricky and Mike Cooper did a ton of code review. We made a lot of code
 changes as we dropped less active libraries for better
 alternatives. We upgraded libraries that had significant API
 changes. We refactored a bunch of things to make them easier to use,
-test or just to clean up code. I removed a ton of code covering
+test, or just to clean up code. I removed a ton of code covering
 features that were either never finished or were never used.
 
 Rehan did the jingo-minify to django-pipeline work.
 
 Mike Kelly worked out django-browserid support issues and did the work
-on Pontoon which I used as inspiration for figuring out how to do some
+on Pontoon, which I used as inspiration for figuring out how to do some
 things.
 
 Giorgos and everyone who worked on Sugardough helped me understand
@@ -82,14 +81,14 @@ some of the nuances between the old way of doing things and what we
 should be doing now. Between discussions on IRC and the Sugardough
 issue tracker, I learned a lot.
 
-Thank you to everyone who read a draft of this, shook their head and
-sighed: Josh, Mike, Ricky (who experienced pain from the memories)
+Thank you to everyone who read a draft of this, shook their head,
+and sighed: Josh, Mike, Ricky (who experienced pain from the memories),
 and Paul. It's possible other people read it but were too ashamed
 to be associated. I salute them, too.
 
 Also, thank you to the User Advocacy team who gave me the time to do
 the work, Lonnen who manages me with an iron fist holding a soggy
-waffle and all the people who persevered through reading drafts of
+waffle, and all the people who persevered through reading drafts of
 this blog post.
 
 
@@ -97,11 +96,11 @@ Third, a big caveat
 -------------------
 
 This is a complex project with a ton of moving parts. We're upgrading
-to Django 1.8 which has a lot of changes to the template system and
+to Django 1.8, which has a lot of changes to the template system and
 other things, too. We're dropping a bunch of libraries for a totally
 new set of libraries that work differently and have different quirks
-related to development process, translation/l10n workflow, testing and
-other things besides. Plus while doing all this, I'm seeing parts of
+related to the development process, translation/l10n workflow, testing,
+and other things besides. Plus, while doing all this, I'm seeing parts of
 the codebase I haven't seen in a while for which I hold a deep-seated
 shame.
 
@@ -112,12 +111,12 @@ While working through all of this, I had the following priorities:
    Input is a critical part of the Firefox development infrastructure
    so minimal downtime is important.
 
-2. Small, discrete upgrade steps to ease implementation, review and
+2. Small, discrete upgrade steps to ease implementation, review, and
    deployment
 
    Input is maintained by one full-time person (me) and a few
    part-time people who can come and go. Having small, discrete
-   upgrade steps make it easier to get the work implemented and
+   upgrade steps makes it easier to get the work implemented and
    reviewed. It also makes it easier to spot and fix problems caused
    by individual steps.
 
@@ -133,12 +132,12 @@ While working through all of this, I had the following priorities:
    yak-shaving.
 
    Having said that, we should fix bad stuff. If fixing it now makes
-   the upgrade project easier, then we'll write up a bug, fix it and
+   the upgrade project easier, then we'll write up a bug, fix it, and
    put the fix in its own pull request. Otherwise, we'll write up a
    bug and do it later.
 
 
-All decisions have trade-offs. Your priorities will be different and
+All decisions have trade-offs. Your priorities will be different, and
 thus you'll decide differently on some of these things. I make no
 claim that these decisions and this way of doing things should work
 for everyone.
@@ -147,7 +146,7 @@ for everyone.
 Where we started
 ================
 
-Django 1.8 released on April 1st, 2015. We started working after that.
+Django 1.8 was released on April 1st, 2015. We started working after that.
 We were using:
 
 * Django 1.7
@@ -159,7 +158,7 @@ Django 1.8 is an LTS release. Up to now, we've been upgrading Fjord to
 the latest Django every 6 months. Now that Django has migrations and
 Jinja support, I think continuing to upgrade every 6 months is too
 much work and not enough value. My thinking is that we'd do this
-massive overhaul to upgrade to Django 1.8, fix some infrastructure and
+massive overhaul to upgrade to Django 1.8, fix some infrastructure, and
 reduce some of the things that make Fjord a special-snowflake and then
 let it hang out on Django 1.8 for the next couple of years.
 
@@ -177,7 +176,7 @@ could make things easier later on.
 
 Fjord has a decent test suite which makes it easier to upgrade things
 with confidence. However, several of the libraries had non-trivial API
-changes and that took time to work through.
+changes, and that took time to work through.
 
 We also set Fjord up with `requires.io <https://requires.io/>`_ so we
 don't fall so miserably behind again.
@@ -186,7 +185,7 @@ don't fall so miserably behind again.
 Switching from jingo-minify to django-pipeline
 ==============================================
 
-This was pretty straight-forward. In doing this, we also started using
+This was pretty straightforward. In doing this, we also started using
 npm-lockdown, too.
 
 
@@ -199,7 +198,7 @@ Ditching Tower
    everything and created a new library called `Puente
    <https://puente.readthedocs.org/>`_. Puente replaces Tower. Further, future
    development of Puente is focused on phasing Puente out for more vanilla
-   Django, Jinja2 and Babel practices and libraries.
+   Django, Jinja2, and Babel practices and libraries.
 
    If you're using Tower, I highly encourage you to replace it with Puente. I
    even wrote a nice `Migrating from Tower
@@ -225,19 +224,19 @@ Tower does the following:
 * augments gettext to collapse whitespace in all msgid strings
 
 Fjord doesn't use msgctxt, so we didn't use this feature of Tower. Further,
-Django has ``p`` gettext functions which add msgctxt which probably
+Django has ``p`` gettext functions which add msgctxt, which probably
 didn't exist when Tower was first created.
 
 Fjord only has one ``.pot`` file, so we renamed that from ``messages.pot`` to
 ``django.pot`` to match how Django does things. This required us to change the
 domain name in the settings file. Fjord uses Verbatim to localize strings, so we
-had to rename the ``.pot`` file and all the ``.po`` files in svn. This was
-relatively easy to do. We talked with matjaz to coordinate it.
+had to rename the ``.pot`` file and all the ``.po`` files in SVN. This was
+relatively easy to do. We talked with Matjaž to coordinate it.
 
 We don't want our msgid strings to change because that creates a ton of work for
 translators, so we needed to maintain the whitespace collapsing things. Django
 has a ``makemessages`` command that sort of does what Tower's ``extract`` and
-``merge`` commands do, but doesn't work on Jinja2 templates and it doesn't
+``merge`` commands do, but it doesn't work on Jinja2 templates, and it doesn't
 collapse whitespace in msgid strings.
 
 django-jinja overrides Django's ``makemessages`` command to support Jinja2
@@ -246,15 +245,15 @@ strings. We could switch to that and monkeypatch the code to collapse whitespace
 in msgid strings.
 
 We decided we wanted to drop Tower as a small step before we switch to
-django-jinja so copied the ``extract`` and ``merge`` commands and the gettext
+django-jinja, so we copied the ``extract`` and ``merge`` commands and the gettext
 code into Fjord as a stopgap so we could drop Tower.
 
 
 Switching from jingo to django-jinja
 ====================================
 
-django-jinja works with Django 1.7 and 1.8, however the settings are
-completely different and possibly other things as well. I decided not
+django-jinja works with Django 1.7 and 1.8; however, the settings are
+completely different, and possibly other things are as well. I decided not
 to do the jingo -> django-jinja as a separate step and instead do it
 along with the Django 1.7 -> 1.8 upgrade.
 
@@ -264,18 +263,18 @@ along with the Django 1.7 -> 1.8 upgrade.
 
 Fjord kept all the Jinja and Django templates in the ``templates/``
 directory. I never liked this. It forced me to remember which files
-had which syntax. django-jinja suggests you use ``.jinja`` extension
+had which syntax. django-jinja suggests you use the ``.jinja`` extension
 for Jinja files. A conversation in the Sugardough project issue
 tracker came to the same conclusion with the compelling reason being
 that it's easier for editors to be in the right mode if the file
 extension was ``.jinja`` [#]_.
 
-Ricky, Mike and I talked about it and decided to move the Jinja
+Ricky, Mike, and I talked about it and decided to move the Jinja
 templates to a ``jinja2/`` directory instead of changing the file
 extension. There were three big reasons for this:
 
 1. Django and Jinja do template overriding by filename. In order to
-   override a file, you have to have the same filename which would
+   override a file, you have to have the same filename, which would
    prevent us from overriding a file and using a different template
    language.
 
@@ -284,19 +283,19 @@ extension. There were three big reasons for this:
    template so that we can extend our base template, then we need our
    template to be named ``libname/foo.html``.
 
-2. It's a lot of work to change the names of all the template files
+2. It's a lot of work to change the names of all the template files,
    and we'd also have to go through and update all the
    ``{% extends xyz %}`` and ``{% include xyz %}`` tags. That's a lot
    of work to do, then test, then review. Ugh.
 
-3. We preferred to name files after what they render to and the
+3. We preferred to name files after what they render to, and the
    editors we use don't have problems with associating the correct
    syntax highlighting with this.
 
 4. We thought it was less surprising to have Jinja templates in
-   ``jinja2/`` than have all templates mixed in ``templates/``.
+   ``jinja2/`` than to have all templates mixed in ``templates/``.
 
-Given all that we decided to move the Jinja2 templates to a ``jinja2/``
+Given all that, we decided to move the Jinja2 templates to a ``jinja2/``
 directory and keep the filenames the same.
 
 .. [#] https://github.com/mozilla/sugardough/issues/76
@@ -315,16 +314,16 @@ apps [#]_.
 
 I moved ``helpers.py`` to ``templatetags/jinja_helpers.py`` and then
 did the minor code changes so filters and functions were correctly
-registered with django-jinja. This was straight-forward.
+registered with django-jinja. This was straightforward.
 
 jingo also comes with a bunch of filters and functions that we use in
-our templates. I read through the code and for the ones that Fjord
+our templates. I read through the code, and for the ones that Fjord
 uses, I either copied it into the Fjord codebase or switched to an
 alternative.
 
-* switched the jingo ``{{ csrf() }}`` function to the ``{% csrf_token %}`` tag
+* switched the jingo ``{{ csrf() }}`` function to the ``{% csrf_token %}`` tag,
   which comes from Django
-* switched the jingo ``|nl2br`` filter to the ``|linebreaks`` filter which
+* switched the jingo ``|nl2br`` filter to the ``|linebreaks`` filter, which
   comes from Django
 * ditched the jingo ``|ifeq`` filter because it reads weird anyhow
 
@@ -338,7 +337,7 @@ django-browserid
 ----------------
 
 django-browserid 1.0 supports Django 1.8 and Jinja loaders other than jingo.
-However, there's nothing in the docs that tell you how to do it (I should
+However, there's nothing in the docs that tells you how to do it (I should
 fix that).
 
 The functions we need are all in ``django_browserid.helpers``. They're
@@ -369,19 +368,19 @@ This is a tough problem. We have a few pre-existing requirements that
 make things difficult:
 
 1. Fjord (through Tower) collapsed whitespace in msgid strings in
-   extraction and gettext
+   extraction and gettext.
 
 2. Fjord uses Jinja2 templates
 
 3. We can't change the msgid strings when upgrading to Django 1.8
 
 
-At this point, Fjord has its own ``extract`` and ``merge`` commands which
+At this point, Fjord has its own ``extract`` and ``merge`` commands, which
 are derived from Tower, but cleaned up a bit.
 
 Django has a ``makemessages`` command which **only** looks at Django
 templates. Further, it doesn't collapse whitespace in msgid
-strings. Thus we can't use that.
+strings. Thus, we can't use that.
 
 django-jinja overrides Django's ``makemessages`` command to look at
 Django and Jinja templates by tweaking some regular expressions. It
@@ -389,13 +388,13 @@ strips whitespace at the beginning and end of msgid strings because
 that's what the Jinja gettext functions do. However, it doesn't
 collapse whitespace in the middle of strings [#]_.
 
-We'll continue using our gettext functions which collapse whitespace
+We'll continue using our gettext functions, which collapse whitespace
 in msgid strings.
 
 It probably makes sense to switch to django-jinja's ``makemessages``
 and tweak it to collapse whitespace instead of just stripping it. I
 looked at it a bit and decided it was easier to get ``extract`` and
-``merge`` working with django-jinja and that seemed like a smaller set
+``merge`` working with django-jinja, and that seemed like a smaller set
 of changes. We'll do this as a stopgap. I wrote up a bug to look into
 switching to django-jinja's ``makemessages`` later.
 
@@ -431,13 +430,13 @@ I tossed around a couple of possibilities:
    check it for Django and Jinja templates
 
 I ended up going with number 3 because I could monkeypatch it only in
-the test situation where we need that information and I could do it
+the test situation where we need that information, and I could do it
 for everything that uses ``django.shortcuts.render``--not just the
 Fjord code.
 
 I also wrote a ``template_used`` function that's like
-``assertTemplateUsed`` but uses the new information, has a shorter
-name and isn't tied to Django's TestCase. Plus to check whether a
+``assertTemplateUsed``, but it uses the new information, has a shorter
+name, and isn't tied to Django's TestCase. Plus, to check whether a
 template wasn't used, I can just toss in a ``not``.
 
 .. [#] https://code.djangoproject.com/ticket/24622
@@ -456,6 +455,7 @@ to do that now, so I created a bug to do it later.
 In the meantime, we need to set it correctly in the options::
 
     'undefined': 'jinja2.Undefined',
+
 
 
 .. [#] http://jinja.pocoo.org/docs/dev/api/#jinja2.Undefined
@@ -530,7 +530,7 @@ django-grappelli
 
 Fjord uses django-grappelli to make the admin interface easier to use.
 
-django-grappelli versions are tied to Django versions [#]_. I upgraded to 2.7.1
+django-grappelli versions are tied to Django versions [#]_. I upgraded to 2.7.1,
 which is the most current version that works with Django 1.8.
 
 .. [#] http://django-grappelli.readthedocs.org/en/latest/#versions
@@ -539,25 +539,25 @@ which is the most current version that works with Django 1.8.
 management commands
 -------------------
 
-Fjord doesn't use django-cronjobs like other Mozilla sites do. Instead we
+Fjord doesn't use django-cronjobs like other Mozilla sites do. Instead, we
 implement our commands as regular Django management commands.
 
 Before Django 1.8, the command system used optparse for argument parsing. You'd
-provide a ``option_list`` class member which added the things you wanted
+provide an ``option_list`` class member which added the things you wanted
 to parse arguments-wise.
 
-Django 1.8 uses argparse. There's now a ``add_arguments`` method which
+Django 1.8 uses argparse. There's now an ``add_arguments`` method which
 you use to add arguments for parsing.
 
 Specifying arguments using the ``option_list`` continues to work in
 Django 1.8. If you want to stick with that, then you'll need to add
-parsing for positional parameters and they won't show up in the
+parsing for positional parameters, and they won't show up in the
 ``args`` anymore. [#]_
 
 Some of the commands in Fjord worked fine with the new system, but a
 couple of them didn't. I decided that instead of just going through
 and testing them all to see if there were other differences, I'd
-rewrite the argument handling and test them all since it was pretty
+rewrite the argument handling and test them all, since it was pretty
 easy to do.
 
 .. [#] https://docs.djangoproject.com/en/1.8/howto/custom-management-commands/#accepting-optional-arguments
@@ -575,7 +575,7 @@ down my experiences in this blog post, so maybe that'll save you time.
 
 There aren't enough people working on Input to make this work go by
 quickly. The implement -> review/test -> fix issues process takes more
-time than if we had 2 full time developers. Projects like this without
+time than if we had 2 full-time developers. Projects like this without
 a critical mass of people working on them are hard to get through.
 
 If you see problems in this post, please let me know.
