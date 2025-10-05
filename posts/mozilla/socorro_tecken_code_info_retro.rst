@@ -8,19 +8,19 @@ Project
 
 :time: 6 weeks
 :impact:
-    * improved visibility on set of crash reports by fixing symbolication and
-      signatures
-    * better understanding of consequences of sampling Firefox / Windows < 8.1
-      / ESR crash reports
+    * improved visibility 3% (10k / 300k) of Firefox crash reports from Windows
+      users by fixing symbolication and signatures
+    * better understanding of consequences from sampling Firefox / Windows <
+      8.1 / ESR crash reports
 
 
 Summary
 =======
 
-In November, 2021, we wrote up a bug in the Tecken product to support download
+In November 2021, we wrote up a bug in the Tecken product to support download
 symbols files using the code file and code id.
 
-In July, 2023, Mozilla migrated users for Windows 7, 8, and 8.1 from Firefox
+In July 2023, Mozilla migrated users for Windows 7, 8, and 8.1 from Firefox
 release channel to ESR channel. Firefox / Windows / release is sampled by the
 Socorro collector, so the system only accepts and processes 10% of incoming
 crash reports. When the users were migrated, their crash reports moved to an
@@ -31,8 +31,7 @@ That caused a `volume increase of 30k
 While looking into adding a sampling rule for Firefox / Windows < 8.1 / ESR, I
 noticed many crash reports listed a xul module without a debug file and debug
 id. Because of that, the stackwalker isn't able to get symbols and we end up
-with a large swatch of crash reports with generic signatures that we have no
-visibility into.
+with crash reports with generic signatures that we have no visibility into.
 
 I looked at :bz:`1746940` and worked out how to fix it. I thought it would be
 relatively straight-forward to implement and it would solve our visibility
@@ -44,8 +43,9 @@ it took me 6 weeks to work through several attempts, settle on a final
 architecture, implement it, test it, and push all the pieces to production. I
 finished the work on October 24th, 2023.
 
-The end result is a large reduction in crash reports with generic signatures
-because the stackwalker couldn't find the symbols file for ``xul.dll``.
+The end result is improved visibility for 3% of Firefox Windows crash reports
+and a reduction in crash reports with generic signatures because the
+stackwalker couldn't find the symbols file for ``xul.dll``.
 
 
 .. TEASER_END
@@ -439,7 +439,7 @@ You'll see evidence of this in a couple of places:
 1. crash reports that used to have "xul.dll" or other unsymbolicated things in
    them will now have symbolicated things--we'll see changes in signature
    reports and maybe topcrashers
-2. the cases of module/000000000000000000000000000000000 will drop in the
+2. the cases of ``module/000000000000000000000000000000000`` will drop in the
    missing symbols report
 
 

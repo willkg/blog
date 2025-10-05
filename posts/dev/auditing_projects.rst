@@ -3,13 +3,13 @@
 .. date: 2020-01-07 14:00
 .. tags: dev, python, mozilla, story
 
-Over the last year, I was handed a bunch of services in various states. One of
-the first things I do when being handed an existing service that I'm now
-suddenly responsible for is to audit the service. That helps me figure out what
-I'm looking at and what I need to do with it next.
+Over the last year, I was handed a set of services in various states of
+ownership. One of the first things I do when being handed ownerership of an
+existing service is to audit the service. That helps me figure out what state
+the service is in, what urgent work needs to be done, and what next steps look
+like.
 
-This blog post covers my process for auditing services I'm suddenly the proud
-owner of.
+This blog post covers my process for auditing services.
 
 
 .. TEASER_END
@@ -26,12 +26,15 @@ History
 A short note about service vs. non-service projects
 ===================================================
 
-I originally wrote this post about "auditing projects", but that's not wildly
-clear. I maintain software projects which are running as *services*. I also
-maintain software projects that are libraries and tools and other things.  I
-think the interesting dichotomy for the purposes of auditing is service
-projects and non-service projects and the two groups of projects have different
-auditing needs.
+I originally wrote this post about "auditing projects", but it's unclear what
+that means. I maintain software projects which are running as *services*. I
+also maintain software projects that are libraries and tools and other things.
+I think the interesting dichotomy for the purposes of auditing is:
+
+* service projects (web services, processors, data pipelines, etc), and
+* non-service projects (libraries, CLI tools, etc)
+
+I claim the two groups of projects have different auditing needs.
 
 I did a pass through this post and added notes clarifying whether items applied
 to only one of those groups. This makes it easier on me--it means I don't feel
@@ -41,23 +44,27 @@ compelled to write another post covering non-service projects.
 What do I mean by "audit"?
 ==========================
 
-When I was younger, I'd wander around a project and figure it out as I went
-along. That takes a long time during which I don't really know what I'm doing,
-I don't understand the full context of what I'm doing it in, I don't feel good
-about it, and I'm learning too many things from reacting to nasty surprises
-(outages, security bugs, etc). I don't enjoy that.
+When I was younger, I'd wander around a project, take notes, jot down
+questions, and figure it out as I went along. That takes a long time during
+which I don't really know what I'm doing, I don't understand the full context
+of what I'm doing it in, I don't feel good about progress, and I'm learning too
+many things from reacting to nasty surprises (outages, security bugs, etc). It's
+not a great process.
 
 Now I take a methodical approach to picking up a project. I spend a week or so
-working through a set of questions and writing everything up in a document. I
-find this approach makes for a good survey of the project and the context it
-exists in. It helps me to see what I don't understand, yet. It also surfaces
-issues for my preliminary list of things to do.
+working through an initial set of questions in a document. Answers to questions
+often begat more questions and I add those to the document and continue working
+through things. I find this approach makes for a good survey of the project and
+the context it exists in. It helps me to see what I don't understand, yet. It
+also surfaces issues for my preliminary list of things to do.
 
 The primary audience for the audit is me--I'm using this process as a way to
 explore the project to acquire a general understanding of it. I'm a software
-engineer so I'm focused on those aspects of a project.
+engineer so I'm focused on those aspects of a project, but this audit covers
+testing, deploy pipelines and processes, product management, infrastructure,
+data policies, security policies, etc as well.
 
-For services, this is something like:
+For services, the initial set of questions is something like:
 
 * why does this service exist and what are the goals?
 * development and maintenance load
@@ -72,7 +79,7 @@ For services, this is something like:
 * infrastructure, deploys, runbooks
 * documentation, training, and support
 
-For non-service projects, this is something like:
+For non-service projects, the initial set of questions is something like:
 
 * why does this service exist and what are the goals?
 * development and maintenance load
@@ -285,10 +292,10 @@ over that until I end up with two things:
 Last thoughts
 =============
 
-In Summer of 2019, my co-worker and I managed to pick up 5 additional services
-in various states of disrepair, audit them, and get them into a maintainable
-state. We couldn't have done that without being methodical about picking up
-projects.
+In Summer of 2019, my co-worker and I were handed 5 additional services in
+various states of ownership, audited them, and got them into a maintainable
+state over a couple of months. We couldn't have done that without being
+methodical about picking up projects.
 
 I find this is helpful for joining existing projects that are actively
 maintained as well.

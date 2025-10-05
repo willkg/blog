@@ -44,7 +44,8 @@ artifacts that I was going to present on or give to a manager for business
 decisions, I would have spent more time to finish them.
 
 Even though the audits were never *finished*, I continue to refer to these
-audit documents long after moving on from them.
+audit documents long after moving on from them and used them to hand off
+services to new owners.
 
 .. Note::
 
@@ -77,7 +78,11 @@ filling in bits until it was time to move on. Sketches can be very meaningful.
 I think it takes me a week or so to audit a small-to-medium sized project
 enough to figure out what it is, where it's at, and what needs work. Doing a
 complete audit where I've answered all the questions that need answering might
-take a month or two.
+take a month or two. The length of time is very dependent on the artifacts
+of the projects: what previous owners wrote down and whether that survived.
+Projects that have clear artifacts and are well documented are easy to audit.
+Projects where the original owners are gone, there is scant documentation left,
+and software engineering hygiene is poor are difficult to audit.
 
 I don't know how long it'd take to audit a large project (100K+ LOC?). Is the
 size to time-to-audit linear? Probably not.
@@ -91,8 +96,9 @@ I don't know what it's like to audit a project that's not open source. Open
 source projects tend to have artifacts and project resources with a certain
 shape and in a few typical places. If I was working at a company that wasn't
 open source, it might be harder to track down the pieces for a project,
-stakeholders, who's using it, etc. How much harder could it be? Ten times as
-hard? Maybe it depends on the company size and number of projects it has?
+stakeholders, past owners, who/what is currently using it, etc. How much harder
+could it be? Ten times as hard? Maybe it depends on the company size and number
+of projects it has?
 
 Lots of grains of salt here. Your experiences will be different.
 
@@ -292,9 +298,9 @@ MLS felt foreign, but at its heart it was a data ingestion pipeline, a set of
 APIs, and a webapp.
 
 We audited MLS, worked on the urgent tasks, converted the local dev environment
-to Docker, upgraded the project to Python 3, redid its infrastructure and
-deploy pipeline, overhauled the documentation, and fixed a bunch of data
-processing issues.
+to Docker, upgraded the project from Python 2 to Python 3, redid its
+infrastructure and deploy pipeline to match current standards, overhauled the
+documentation, and fixed data processing issues.
 
 I stayed on MLS until April 2020 but then slowly shifted back to Socorro and
 Tecken and then in August 2020, Socorro, Tecken, and I got moved to the Data

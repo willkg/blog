@@ -6,9 +6,10 @@
 Summary
 =======
 
-This post talks about a stability problem we have with Tecken, some work we're
-doing to make it better, and the steps to reproduce the problem in a local dev
-environment.
+This post talks about a stability problem we have with Tecken wherein the
+instance runs out of disk and then becomes unhealthy, some work we're doing to
+make it better, and the steps to reproduce the problem in a local dev
+environment so we can test possible fixes.
 
 
 .. TEASER_END
@@ -33,54 +34,52 @@ There are a handful of problems here.
 **Gunicorn workers sometimes take too long to process an upload request.**
 
 When a Gunicorn worker takes more than 5 minutes to process an upload request,
-the Gunicorn manager kills it off.
+the Gunicorn manager terminates it.
 
-We don't know in what scenarios this happens--we have no metrics or logging or
-anything to tell us how often it happens or in what circumstances.
+What is the scenario(s) in which this happens? How often are Gunicorn workers
+killed because they exceeded the timeout? What does the payload look like when
+a Gunicorn worker is killed? Are they big? Do they have a lot of files? Do they
+have files with specific properties?
 
-How often are Gunicorn workers killed because they exceeded the timeout?
+We currently have no metrics or logging covering these events, so we have no
+visibility into the issue.
 
-What does the payload look like when a Gunicorn worker is killed? Are they big?
-Do they have a lot of files? Do they have specific kinds of files?
-
-More recently, I wonder whether it happens frequently on Tecken instances that
-have exceeded the disk iops allotment and are being throttled--instances are
-c5.large and thus are using EBS disk. Changing that is covered in
+Recently, I've wonder whether it happens on Tecken instances that have exceeded
+the disk iops allotment and are being throttled--instances are c5.large and
+thus are using EBS disk. Changing that is covered in
 `OBS-68 <https://mozilla-hub.atlassian.net/browse/OBS-68>`__ [1]_.
 
 .. [1] You can't see this unless you're a Mozilla employee.
 
-We should look into providing more visibility here. Generally, we need more
-visibility into the health of the upload API. This is covered in
+We need more visibility here. Generally, we need more visibility into most
+aspects of the upload API. This is covered in
 `bug 1847235 <https://bugzilla.mozilla.org/show_bug.cgi?id=1847235>`__.
 
 
-**Instances that are hitting "disk is full" errors never indicate they're
-unhealthy in either the ``/__heartbeat__`` or ``/__lbheartbeat__`` endpoints so
+**Instances that are hitting "disk is full" errors don't show up as unhealthy so
 they never get taken out of service.**
 
 This is tricky.
 
-First, there are multiple Gunicorn workers that come and go and there's no
-centralized place to keep track of how many times a "disk is full" error is
-kicked up for an instance.
-
-Second, a "disk is full" error could be ephemeral and the Tecken instance could
+A "disk is full" error could be ephemeral and the Tecken instance could
 recover. We don't want to mark the instance unhealthy the first time it
 happens--we probably want to mark it unhealthy if it happens multiple times in
 a short period of time.
 
-This is an unsolved problem.
+There are multiple Gunicorn workers on a single instance and they get recycled
+after N requests so there's no centralized place to keep track of how many
+times a "disk is full" error is kicked up for an instance.
 
 
 **Instances run out of disk.**
 
-If multiple Gunicorn workers are terminated, an instance accumulates orphaned
-files on disk and eventually we hit a point where the instance can't handle
-uploads. There was nothing to reclaim that disk space.
+Our theory is that if multiple Gunicorn workers on an instance are terminated
+while handling symbol upload API requests, the instance accumulates orphaned
+files on disk and eventually hits a point where there's no disk left. There is
+no process or code to reclaim disk space from terminated work.
 
 We have mitigated this by adding a disk manager which runs
-remove_orphaned_files periodically.
+``remove_orphaned_files`` code periodically.
 
 This has been working, but it kicks in too slowly. Here's an event in early
 November where we see instances running out of disk and we see the
@@ -95,6 +94,8 @@ November where we see instances running out of disk and we see the
 
 .. [2] You can't see this unless you're a Mozilla employee.
 
+   2025-10-05: We no longer have this Grafana instance.
+
 When the lines go up, disk is being used for processing files. When an upload
 request is done being processed, the files are removed, so the line should go
 back down again.
@@ -104,10 +105,10 @@ come back down again.
 
 ``remove_orphaned_files`` will kick in and delete files that have been on disk for
 an hour--clearly they've been orphaned at this point. Then the lines will drop
-precipitously back to normal levels.
+quickly back to normal levels.
 
 In `bug 1863007 <https://bugzilla.mozilla.org/show_bug.cgi?id=1863007>`__, I
-dropped the cutoff time from 60 minutes to 15 minutes. That will reduce the
+lowered the cutoff time from 60 minutes to 15 minutes. That will reduce the
 time it takes to recoup disk and make it more likely instances won't run out of
 disk without accidentally incorrectly removing files that are being processed.
 
@@ -115,18 +116,18 @@ disk without accidentally incorrectly removing files that are being processed.
 **The disk manager isn't resilient to ephemeral service issues and silently
 fails.**
 
-We had an incident on September 9th, 2023 where I pushed a crummy change to
+We had an incident on September 9th, 2023 where I pushed a buggy change to
 production that caused the db to be tied up.
 
 The ``remove_orphaned_files`` command is a Django command. When it runs, it
-would first do Django checks one of which was to check if it could connect to
+first performs Django checks one of which is to check if it could connect to
 the database.
 
 In the case of September 9th, the bug caused the db to be tied up. Then this
 happened:
 
-1. ``remove_orphaned_files`` would go to do the Django checks and try to
-   connect to the database
+1. ``remove_orphaned_files`` would start up and perform Django checks and
+   try to connect to the database
 2. it would fail to connect to the database, so ``remove_orphaned_files`` would
    exit with a non-zero exit code
 3. the script that runs ``remove_orphaned_files`` had ``set -e``, so it would
@@ -152,8 +153,8 @@ shutting down. I removed the ``set -e``.
 
 Further, when ``remove_orphaned_files`` fails, we need some signal in Sentry
 about it. I wrap the ``remove_orphaned_files`` invocation with a
-``sentry-wrap`` script we have so if ``remove_orphaned_files`` terminates and
-doesn't manage to send a Sentry event, we still get a Sentry event.
+``sentry-wrap`` script we have so if ``remove_orphaned_files`` terminates with
+a non-zero exit code we get a Sentry event.
 
 Improving the disk manager's resilience is covered in
 `bug 1853962 <https://bugzilla.mozilla.org/show_bug.cgi?id=1853962>`__.
@@ -166,7 +167,7 @@ What happened this week?
 
 I'm trying to fix some of these stability issues with Tecken so there's less
 risk it has problems at the end of December when we have reduced staff because
-everyone is enjoying their holidays.
+everyone is on holiday.
 
 First, I dropped the cutoff in ``remove_orphaned_files`` from 60 minutes to 15
 minutes so it'll reclaim disk more quickly. That's covered in

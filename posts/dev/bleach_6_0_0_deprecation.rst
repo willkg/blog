@@ -30,7 +30,8 @@ Using Python 3.10.9:
 * 5.0.0: bleach.clean on 58,630 items 10x: minimum 2.793s
 * 6.0.0: bleach.clean on 58,630 items 10x: minimum 2.304s
 
-The other big change 6.0.0 brings with it is that it's now deprecated.
+The other big change in 6.0.0 is that I've deprecated the project and planning
+to move to a minimum-maintenance mode for the foreseeable future.
 
 
 Bleach is deprecated

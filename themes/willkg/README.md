@@ -1,1 +1,1 @@
-A bootstrap3 version of the bootstrap theme willkg-ified.
+A willkg-ified version of the bootstrap4-jinja theme.
