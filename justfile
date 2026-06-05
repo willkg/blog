@@ -20,7 +20,7 @@ clean:
 # Compile blog
 compile: devenv
     mkdir output || true
-    uv run nikola build -a -n 5
+    uv run nikola build --always-execute
 
 # Update compile blog
 update: devenv
@@ -33,7 +33,7 @@ new-post *args: devenv
 
 # View blog
 view: devenv
-    xdg-open output/index.html
+    open output/index.html
 
 # Compile and update whenever the rst file changes
 draft: devenv

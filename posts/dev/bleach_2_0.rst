@@ -234,7 +234,7 @@ Many thanks
 Many thanks to James Socol (previous maintainer) for walking me through why
 things were the way they were.
 
-Many thanks to Geoffrey Sneddon (html5lib maintainer) for answering questions,
+Many thanks to Sam Sneddon (html5lib maintainer) for answering questions,
 helping with problems I encountered and all his efforts on html5lib which is a
 huge library that he works on in his spare time for which he doesn't get
 anywhere near enough gratitude.
